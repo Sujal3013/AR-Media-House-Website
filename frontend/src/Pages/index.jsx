@@ -1,17 +1,19 @@
-import Home from "./Home";
-import Services from "./Services";
-import Technologies from "./Technologies";
 import About from "./About";
-import LetsWorkTogether from "./LetsWorkTogether";
-import Page404 from "./Page404";
+import Careers from "./Careers";
 import CaseStudies from "./CaseStudies";
+import Contact from "./Contact";
+import Home from "./Home";
+import Page404 from "./Page404";
+import Services from "./Services";
 import SharedLayout from "./SharedLayout";
+import Technologies from "./Technologies";
 
 export {
     About,
+    Careers, 
     CaseStudies,
+    Contact,
     Home, 
-    LetsWorkTogether,
     Page404,
     Services,
     SharedLayout, 

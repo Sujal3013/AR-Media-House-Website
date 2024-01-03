@@ -5,8 +5,9 @@ import {
   CaseStudies, 
   Technologies, 
   Services, 
-  Page404, 
-  LetsWorkTogether, 
+  Page404,
+  Careers,  
+  Contact, 
   About, 
   SharedLayout,
 } from "./Pages";
@@ -26,9 +27,10 @@ function App() {
           <Route path="technologies" element={<Technologies />} />
           <Route path="about" element={<About />} />
           <Route path="case-studies" element={<CaseStudies />} />
-          <Route path="lets-work-together" element={<LetsWorkTogether />} />
-          <Route path="*" element={<Page404 />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="careers" element={<Careers />} />
         </Route>
+        <Route path="*" element={<Page404 />} />
       </Routes>
     </BrowserRouter>
   )
