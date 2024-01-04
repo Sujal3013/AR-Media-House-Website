@@ -34,7 +34,7 @@ export default function Navbar() {
             }
         </div>
         <div className="flex justify-center items-center gap-3">
-            <Button primary className="bg-primary-500 text-secondary-500 text-sm">
+            <Button to="/contact" primary className="bg-primary-500 text-secondary-500 text-sm">
                 Let's Connect
             </Button>
             <img src="./assets/call-logo.svg" alt="call" className="w-8 h-8" />
