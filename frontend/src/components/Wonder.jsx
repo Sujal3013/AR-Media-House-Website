@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Wonders.css";
 
-const Wonders = () => {
+const Wonder = () => {
   return (
     <div className="Card">
       <div className="Wonders-flex">
@@ -18,4 +18,4 @@ const Wonders = () => {
   );
 };
 
-export default Wonders;
+export default Wonder;

@@ -7,33 +7,33 @@
 }
 
 .heading {
-  width: "100%";
-  height: "100%";
+  width: 100%;
+  height: 100%;
   margin-top: 52px;
   margin-left: 120px;
-  flex-direction: "column";
-  justify-content: "center";
-  align-items: "flex-start";
-  display: "inline-flex";
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  display: inline-flex;
+  word-wrap: break-word;
 }
 .heading h1 {
   margin: 0px;
   color: #ff9356;
-  font-size: 64px;
+  font-size: 3.5vw;
   font-family: Jost;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 55px;
-  word-wrap: break-word;
+  
 }
 
 .heading p {
   margin: 0px;
   color: #040c2f;
-  font-size: 48px;
+  font-size: 3.5vw;
   font-family: Playfair Display;
   font-weight: 700;
-  word-wrap: break-word;
 }
 
 .show{
@@ -183,8 +183,8 @@
   font-family: Playfair Display;
   font-weight: 700;
   word-wrap: break-word;
-  width: "100%";
-  height: "100%";
+  width: 100%;
+  height: 100%;
 }
 
 .Location-card-box{
@@ -194,7 +194,7 @@
 
 .Card-flex{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .Card-flex div{
@@ -205,11 +205,26 @@
   background-color: #fff;
 }
 
+.Card-flex div h1{
+  margin: 10px 20px;
+}
+
+.Card-flex div p{
+  word-wrap:break-word;
+  margin: 10px;
+}
+
+.Card-flex div a{
+  display: block;
+}
+
 .Card-flex div button{
   display: inline-block;
   background-color: #FF9356;
+  color: #fff;
   border-radius: 5px;
   border: none;
+  margin-top: 20px;
   font-size: 16px;
-  padding:10px 5px;
+  padding:15px 25px;
 }
