@@ -1,0 +1,14 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set box-sizing for better layout consistency */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Apply a basic font style */
+  body {
+    font-family: 'Arial', sans-serif;
+  }
