@@ -2,7 +2,7 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
   Home, 
-  CaseStudies, 
+  CaseStudy, 
   Technologies, 
   Services, 
   Page404,
@@ -26,7 +26,7 @@ function App() {
           <Route path="services" element={<Services />} />
           <Route path="technologies" element={<Technologies />} />
           <Route path="about" element={<About />} />
-          <Route path="case-studies" element={<CaseStudies />} />
+          <Route path="case-studies" element={<CaseStudy />} />
           <Route path="contact" element={<Contact />} />
           <Route path="careers" element={<Careers />} />
         </Route>
