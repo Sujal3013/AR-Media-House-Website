@@ -2,7 +2,7 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
   Home, 
-  CaseStudy, 
+  CaseStudies, 
   Technologies, 
   Services, 
   Page404,
@@ -10,7 +10,7 @@ import {
   ContactUs, 
   About, 
   SharedLayout,
-} from "./Pages";
+} from "./pages";
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
           <Route path="services" element={<Services />} />
           <Route path="technologies" element={<Technologies />} />
           <Route path="about" element={<About />} />
-          <Route path="case-studies" element={<CaseStudy />} />
+          <Route path="case-studies" element={<CaseStudies />} />
           <Route path="contact" element={<ContactUs />} />
           <Route path="careers" element={<Careers />} />
         </Route>

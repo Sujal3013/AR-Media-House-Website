@@ -1,17 +1,17 @@
 import About from "./About";
 import Careers from "./Careers";
-import CaseStudy from "./CaseStudy";
+import CaseStudies from "./CaseStudies";
 import Home from "./Home";
 import Page404 from "./Page404";
 import Services from "./Services";
 import SharedLayout from "./SharedLayout";
-import Technologies from "./Technology";
+import Technologies from "./Technologies";
 import ContactUs from "./ContactUs";
 
 export {
     About,
     Careers, 
-    CaseStudy,
+    CaseStudies,
     ContactUs,
     Home, 
     Page404,
