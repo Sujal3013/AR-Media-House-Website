@@ -1,18 +1,18 @@
 import About from "./About";
 import Careers from "./Careers";
 import CaseStudies from "./CaseStudies";
-import Contact from "./Contact";
 import Home from "./Home";
 import Page404 from "./Page404";
 import Services from "./Services";
 import SharedLayout from "./SharedLayout";
 import Technologies from "./Technologies";
+import ContactUs from "./ContactUs";
 
 export {
     About,
     Careers, 
     CaseStudies,
-    Contact,
+    ContactUs,
     Home, 
     Page404,
     Services,
