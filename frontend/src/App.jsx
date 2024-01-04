@@ -1,4 +1,3 @@
-import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
   Home, 
@@ -10,7 +9,7 @@ import {
   ContactUs, 
   About, 
   SharedLayout,
-} from "./Pages";
+} from "./pages";
 
 function App() {
   return (
