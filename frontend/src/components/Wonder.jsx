@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/Wonders.css";
 
 const Wonder = () => {
   return (
