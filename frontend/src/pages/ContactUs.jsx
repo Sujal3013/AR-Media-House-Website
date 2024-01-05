@@ -55,7 +55,7 @@ const ContactUs = () => {
         <h1 className="text-primary-500 text-4xl uppercase font-jost">LET'S CREATE</h1>
         <p className="text-secondary-500 text-4xl font-playfair-display">progress together</p>
       </div>
-      <div className="flex mb-12">
+      <div className="flex-col mb-12">
         <div>
           <form onSubmit={handleSubmit} className="mt-12 flex-col gap-y-4 message-form">
             <span>
