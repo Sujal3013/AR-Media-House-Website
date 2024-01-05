@@ -1,33 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap");
 
-.heading {
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  display: inline-flex;
-  word-wrap: break-word;
-}
-.heading h1 {
-  margin: 0px;
+/* .main{
+  
+} */
+/* .heading h1 {
   color: #ff9356;
   font-size: 3.5vw;
   font-family: Jost;
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 55px;
+  line-height: 40px;
   
-}
+} */
 
-.heading p {
-  margin: 0px;
+/* .heading p {
   color: #040c2f;
   font-size: 3.5vw;
   font-family: Playfair Display;
   font-weight: 700;
-}
+} */
 
 .show{
   display:block;
@@ -46,18 +38,18 @@
 .hidden{
   display:none;
 }
-.Contact-flex{
+/* .Contact-flex{
   display: flex;
   margin-bottom: 3rem;
-}
-.Options-flex{
+} */
+/* .Options-flex{
   display: grid;
-  grid-template-rows: repeat(2, auto); /* Two rows */
-  grid-template-columns: repeat(3, 1fr); /* First row with 3 columns */
+  grid-template-rows: repeat(2, auto); 
+  grid-template-columns: repeat(3, 1fr); 
   gap: 10px; 
   margin-bottom: 10px;
 
-}
+} */
 
 .Options-label{
   width: auto;
@@ -95,14 +87,9 @@
 
 
 
-.message-form{
-  margin-top: 50px;
-  display: flex;
-  row-gap: 15px;
-  flex-direction: column;
-}
 
-.message-form .input-text{
+
+/* .message-form .input-text{
   background-color: #DDDDDD;
   border-radius: 5px;
   width: 670px;
@@ -115,9 +102,9 @@
   padding-bottom: 5px;
   font-weight: 400;
   height: 40px;
-}
+} */
 
-.message-form textarea{
+/* .message-form textarea{
   background-color: #DDDDDD;
   border-radius: 5px;
   color: #4A4A4A;
@@ -131,7 +118,8 @@
   width: 670px;
   border:none;
   resize: none;
-}
+} */
+
 .message-form button{
   background-color: #FF9356;
   width: fit-content;
@@ -145,21 +133,21 @@
   border-radius: 3px;
 }
 
-.Location-section{
+/* .Location-section{
   width: 100%;
   padding: 50px 120px;
   display: flex;
   background-color:#040c2f;
   border-radius: 0 0 0 100px;
 
-}
+} */
 
-.Contact-heading{
+/* .Contact-heading{
   flex-grow: 3;
-}
+} */
 
 
-.Contact-heading h1 {
+/* .Contact-heading h1 {
   color: #ffffff;
   font-size: 64px;
   font-family: Jost;
@@ -167,9 +155,9 @@
   text-transform: uppercase;
   line-height: 55px;
   word-wrap: break-word;
-}
+} */
 
-.Contact-heading p {
+/* .Contact-heading p {
   color:#FF9356;
   font-size: 48px;
   font-family: Playfair Display;
@@ -177,19 +165,14 @@
   word-wrap: break-word;
   width: 100%;
   height: 100%;
-}
+} */
 
-.Location-card-box{
-  margin-left: 20px;
-  flex-grow: 6;
-}
-
-.Card-flex{
+/* .Card-flex{
   display: flex;
   justify-content: space-evenly;
-}
+} */
 
-.Card-flex div{
+/* .Card-flex div{
   
   border-radius: 10px;
   text-align: center;
@@ -199,16 +182,16 @@
 
 .Card-flex div h1{
   margin: 10px 20px;
-}
+} */
 
-.Card-flex div p{
+/* .Card-flex div p{
   word-wrap:break-word;
   margin: 10px;
-}
+} */
 
-.Card-flex div a{
+/* .Card-flex div a{
   display: block;
-}
+} */
 
 .Card-flex div button{
   display: inline-block;

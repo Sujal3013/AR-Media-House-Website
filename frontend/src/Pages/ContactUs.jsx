@@ -3,6 +3,7 @@ import "../styles/ContactUs.css";
 import Wonder from "../components/Wonder";
 
 const ContactUs = () => {
+  document.querySelector("title").innerHTML = "Contact - AR Media House";
   const [name, setName] = useState("");
   const [isName, setIsName] = useState(true);
   const [isOptions, setIsOptions] = useState(true);
@@ -13,15 +14,13 @@ const ContactUs = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
-  document.querySelector("title").innerHTML = "Contact - AR Media House";
+  
   const handleCheckboxChange = (value) => {
     if (selectedCheckboxes.includes(value)) {
-      // If the value is already in the array, remove it
       setSelectedCheckboxes(
         selectedCheckboxes.filter((item) => item !== value)
       );
     } else {
-      // If the value is not in the array, add it
       setSelectedCheckboxes([...selectedCheckboxes, value]);
     }
     selectedCheckboxes.length === 0 ? setIsOptions(false) : setIsOptions(true);
@@ -51,16 +50,16 @@ const ContactUs = () => {
     }
   };
   return (
-    <div className="main">
-      <div className="heading">
-        <h1>LET'S CREATE</h1>
-        <p>Progress Together</p>
+    <div className="w-full">
+      <div className="flex-col justify-center align-baseline break-words">
+        <h1 className="text-primary-500 text-4xl uppercase font-jost">LET'S CREATE</h1>
+        <p className="text-secondary-500 text-4xl font-playfair-display">progress together</p>
       </div>
-      <div className="Contact-flex">
+      <div className="flex-col mb-12">
         <div>
-          <form onSubmit={handleSubmit} className="message-form">
+          <form onSubmit={handleSubmit} className="mt-12 flex-col gap-y-4 message-form">
             <span>
-              <span className="Options-flex">
+              <span className="grid grid-rows-2 grid-cols-3 gap-3 mb-3">
                 <label
                   className={
                     selectedCheckboxes.includes("Media Buying")
@@ -69,7 +68,7 @@ const ContactUs = () => {
                   }
                 >
                   <input
-                    className="hidden-checkbox"
+                    className="absolute opacity-0 cursor-pointer"
                     type="checkbox"
                     value="Media Buying"
                     checked={selectedCheckboxes.includes("Media Buying")}
@@ -86,7 +85,7 @@ const ContactUs = () => {
                   }
                 >
                   <input
-                    className="hidden-checkbox"
+                    className="absolute opacity-0 cursor-pointer"
                     type="checkbox"
                     value="Content Marketing"
                     checked={selectedCheckboxes.includes("Content Marketing")}
@@ -103,7 +102,7 @@ const ContactUs = () => {
                   }
                 >
                   <input
-                    className="hidden-checkbox"
+                    className="absolute opacity-0 cursor-pointer"
                     type="checkbox"
                     value="Affiliate Marketing"
                     checked={selectedCheckboxes.includes("Affiliate Marketing")}
@@ -119,7 +118,7 @@ const ContactUs = () => {
                   }
                 >
                   <input
-                    className="hidden-checkbox"
+                    className="absolute opacity-0 cursor-pointer"
                     type="checkbox"
                     value="Media Queries"
                     checked={selectedCheckboxes.includes("Media Queries")}
@@ -135,7 +134,7 @@ const ContactUs = () => {
                   }
                 >
                   <input
-                    className="hidden-checkbox"
+                    className="absolute opacity-0 cursor-pointer"
                     type="checkbox"
                     value="Lead Generation"
                     checked={selectedCheckboxes.includes("Lead Generation")}
@@ -151,7 +150,7 @@ const ContactUs = () => {
                   }
                 >
                   <input
-                    className="hidden-checkbox"
+                    className="absolute opacity-0 cursor-pointer"
                     type="checkbox"
                     value="Careers"
                     checked={selectedCheckboxes.includes("Careers")}
@@ -167,7 +166,7 @@ const ContactUs = () => {
                   }
                 >
                   <input
-                    className="hidden-checkbox"
+                    className="absolute opacity-0 cursor-pointer"
                     type="checkbox"
                     value="Others"
                     checked={selectedCheckboxes.includes("Others")}
@@ -181,7 +180,7 @@ const ContactUs = () => {
               </span>
             </span>
             <input
-              className="input-text"
+              className=" bg-slate-300 rounded w-[120] text-slate-500 text-2xl font-jost border-none pl-4 py-2 font-normal h-10"
               type="text"
               name="name"
               id=""
@@ -197,7 +196,7 @@ const ContactUs = () => {
               This field is required
             </span>
             <input
-              className="input-text"
+              className=" bg-slate-300 rounded w-[120] text-slate-500 text-2xl font-jost border-none pl-4 py-2 font-normal h-10"
               type="text"
               name="contact"
               id=""
@@ -213,7 +212,7 @@ const ContactUs = () => {
               This field is required
             </span>
             <input
-              className="input-text"
+              className=" bg-slate-300 rounded w-[120] text-slate-500 text-2xl font-jost border-none pl-4 py-2 font-normal h-10"
               type="email"
               name="email"
               id=""
@@ -229,6 +228,7 @@ const ContactUs = () => {
               This field is required
             </span>
             <textarea
+            className="font-jost bg-slate-300 text-2xl py-1 pl-4 w-[120] border-none resize-none text-slate-500 font-normal"
               name="message"
               id=""
               cols="30"
@@ -251,29 +251,29 @@ const ContactUs = () => {
           {/* Apply : SVG ILLUSTRATION */}
         </div>
       </div>
-      <div className="Location-section">
-        <span className="Contact-heading">
-          <h1>Contact</h1>
-          <p>Information</p>
+      <div className="w-full px-12 py-32 flex bg-secondary-500 rounded-bl-3xl">
+        <span className="grow-[3] basis-10">
+          <h1 className="text-white text-6xl font-bold font-jost break-words uppercase leading-10">Contact</h1>
+          <p className="text-primary-500 text-5xl font-playfair-display font-bold break-words">Information</p>
         </span>
-        <div className="Location-card-box">
-        <span className="Card-flex">
-          <div>
+        <div className="grow-4 basis-14">
+        <span className="flex justify-evenly">
+          <div className="ml-4 rounded-xl text-center bg-white">
             <img src="" alt="location" />
-            <h1>United States</h1>
-            <p>
+            <h1 className="mx-2 my-3">United States</h1>
+            <p className="break-words m-3">
               2035 Sunset Lake <br/>RD,STE B2, Newark – 19702 <br /> Delaware, United States
             </p>
-            <a href="mailto:">contact@armediahouse.com</a>
+            <a className="block" href="mailto:">contact@armediahouse.com</a>
             <button>Get Directions</button>
           </div>
-          <div>
+          <div className="ml-4 rounded-xl text-center bg-white">
             <img src="" alt="location" />
-            <h1>United States</h1>
-            <p>
+            <h1 className="mx-2 my-3">United States</h1>
+            <p className="break-words m-3">
             2035 Sunset Lake <br/>RD,STE B2, Newark – 19702 <br /> Delaware, United States
             </p>
-            <a href="mailto:">contact@armediahouse.com</a>
+            <a className="block" href="mailto:">contact@armediahouse.com</a>
             <button>Get Directions</button>
           </div>
         </span>
