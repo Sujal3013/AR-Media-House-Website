@@ -14,7 +14,7 @@ const ContactUs = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
-  
+
   const handleCheckboxChange = (value) => {
     if (selectedCheckboxes.includes(value)) {
       setSelectedCheckboxes(
@@ -52,12 +52,19 @@ const ContactUs = () => {
   return (
     <div className="w-full">
       <div className="flex-col justify-center align-baseline break-words">
-        <h1 className="text-primary-500 text-4xl uppercase font-jost">LET'S CREATE</h1>
-        <p className="text-secondary-500 text-4xl font-playfair-display">progress together</p>
+        <h1 className="text-primary-500 text-4xl uppercase font-jost">
+          LET'S CREATE
+        </h1>
+        <p className="text-secondary-500 text-4xl font-playfair-display">
+          progress together
+        </p>
       </div>
-      <div className="flex-col mb-12">
+      <div className="flex mb-12">
         <div>
-          <form onSubmit={handleSubmit} className="mt-12 flex-col gap-y-4 message-form">
+          <form
+            onSubmit={handleSubmit}
+            className="mt-12 flex-col gap-y-4 message-form"
+          >
             <span>
               <span className="grid grid-rows-2 grid-cols-3 gap-3 mb-3">
                 <label
@@ -179,72 +186,84 @@ const ContactUs = () => {
                 This field is required
               </span>
             </span>
-            <input
-              className=" bg-slate-300 rounded w-[120] text-slate-500 text-2xl font-jost border-none pl-4 py-2 font-normal h-10"
-              type="text"
-              name="name"
-              id=""
-              placeholder="Name"
-              onChange={(e) => {
-                setName(e.target.value);
-                if (name) {
-                  setIsName(true);
-                }
-              }}
-            />
-            <span className={isName ? "hidden" : "show"}>
-              This field is required
+            <span className="flex-col basis-[600px] gap-2">
+              <span>
+                <input
+                  className=" bg-slate-300 rounded text-slate-500 text-2xl font-jost border-none pl-4 py-2 font-normal h-10"
+                  type="text"
+                  name="name"
+                  id=""
+                  placeholder="Name"
+                  onChange={(e) => {
+                    setName(e.target.value);
+                    if (name) {
+                      setIsName(true);
+                    }
+                  }}
+                />
+                <span className={isName ? "hidden" : "show"}>
+                  This field is required
+                </span>
+              </span>
+              <span>
+                <input
+                  className=" bg-slate-300 rounded w-[120] text-slate-500 text-2xl font-jost border-none pl-4 py-2 font-normal h-10"
+                  type="text"
+                  name="contact"
+                  id=""
+                  placeholder="Phone Number"
+                  onChange={(e) => {
+                    setContact(e.target.value);
+                    if (contact) {
+                      setIsContact(true);
+                    }
+                  }}
+                />
+                <span className={isContact ? "hidden" : "show"}>
+                  This field is required
+                </span>
+              </span>
+              <span>
+                <input
+                  className=" bg-slate-300 rounded w-[120] text-slate-500 text-2xl font-jost border-none pl-4 py-2 font-normal h-10"
+                  type="email"
+                  name="email"
+                  id=""
+                  placeholder="Email"
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    if (email) {
+                      setIsEmail(true);
+                    }
+                  }}
+                />
+                <span className={isEmail ? "hidden" : "show"}>
+                  This field is required
+                </span>
+              </span>
+
+              <span>
+                <textarea
+                  className="font-jost bg-slate-300 text-2xl py-1 pl-4 w-[120] border-none resize-none text-slate-500 font-normal"
+                  name="message"
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Your Message"
+                  onChange={(e) => {
+                    setMessage(e.target.value);
+                    if (message) {
+                      setIsMessage(true);
+                    }
+                  }}
+                ></textarea>
+                <span className={isMessage ? "hidden" : "show"}>
+                  This field is required
+                </span>
+              </span>
+
+              <button type="submit">Submit Your Message</button>
             </span>
-            <input
-              className=" bg-slate-300 rounded w-[120] text-slate-500 text-2xl font-jost border-none pl-4 py-2 font-normal h-10"
-              type="text"
-              name="contact"
-              id=""
-              placeholder="Phone Number"
-              onChange={(e) => {
-                setContact(e.target.value);
-                if (contact) {
-                  setIsContact(true);
-                }
-              }}
-            />
-            <span className={isContact ? "hidden" : "show"}>
-              This field is required
-            </span>
-            <input
-              className=" bg-slate-300 rounded w-[120] text-slate-500 text-2xl font-jost border-none pl-4 py-2 font-normal h-10"
-              type="email"
-              name="email"
-              id=""
-              placeholder="Email"
-              onChange={(e) => {
-                setEmail(e.target.value);
-                if (email) {
-                  setIsEmail(true);
-                }
-              }}
-            />
-            <span className={isEmail ? "hidden" : "show"}>
-              This field is required
-            </span>
-            <textarea
-            className="font-jost bg-slate-300 text-2xl py-1 pl-4 w-[120] border-none resize-none text-slate-500 font-normal"
-              name="message"
-              id=""
-              cols="30"
-              rows="10"
-              placeholder="Your Message"
-              onChange={(e) => {
-                setMessage(e.target.value);
-                if (message) {
-                  setIsMessage(true);
-                }
-              }}
-            ></textarea>
-            <span className={isMessage ? "hidden" : "show"}>
-              This field is required
-            </span>
-            <button type="submit">Submit Your Message</button>
           </form>
         </div>
         <div className="illustration-area">
@@ -253,31 +272,41 @@ const ContactUs = () => {
       </div>
       <div className="w-full px-12 py-32 flex bg-secondary-500 rounded-bl-3xl">
         <span className="grow-[3] basis-10">
-          <h1 className="text-white text-6xl font-bold font-jost break-words uppercase leading-10">Contact</h1>
-          <p className="text-primary-500 text-5xl font-playfair-display font-bold break-words">Information</p>
+          <h1 className="text-white text-6xl font-bold font-jost break-words uppercase leading-10">
+            Contact
+          </h1>
+          <p className="text-primary-500 text-5xl font-playfair-display font-bold break-words">
+            Information
+          </p>
         </span>
         <div className="grow-4 basis-14">
-        <span className="flex justify-evenly">
-          <div className="ml-4 rounded-xl text-center bg-white">
-            <img src="" alt="location" />
-            <h1 className="mx-2 my-3">United States</h1>
-            <p className="break-words m-3">
-              2035 Sunset Lake <br/>RD,STE B2, Newark – 19702 <br /> Delaware, United States
-            </p>
-            <a className="block" href="mailto:">contact@armediahouse.com</a>
-            <button>Get Directions</button>
-          </div>
-          <div className="ml-4 rounded-xl text-center bg-white">
-            <img src="" alt="location" />
-            <h1 className="mx-2 my-3">United States</h1>
-            <p className="break-words m-3">
-            2035 Sunset Lake <br/>RD,STE B2, Newark – 19702 <br /> Delaware, United States
-            </p>
-            <a className="block" href="mailto:">contact@armediahouse.com</a>
-            <button>Get Directions</button>
-          </div>
-        </span>
-      </div>
+          <span className="flex justify-evenly">
+            <div className="ml-4 rounded-xl text-center bg-white">
+              <img src="" alt="location" />
+              <h1 className="mx-2 my-3">United States</h1>
+              <p className="break-words m-3">
+                2035 Sunset Lake <br />
+                RD,STE B2, Newark – 19702 <br /> Delaware, United States
+              </p>
+              <a className="block" href="mailto:">
+                contact@armediahouse.com
+              </a>
+              <button>Get Directions</button>
+            </div>
+            <div className="ml-4 rounded-xl text-center bg-white">
+              <img src="" alt="location" />
+              <h1 className="mx-2 my-3">United States</h1>
+              <p className="break-words m-3">
+                2035 Sunset Lake <br />
+                RD,STE B2, Newark – 19702 <br /> Delaware, United States
+              </p>
+              <a className="block" href="mailto:">
+                contact@armediahouse.com
+              </a>
+              <button>Get Directions</button>
+            </div>
+          </span>
+        </div>
       </div>
       <div>
         <span>
