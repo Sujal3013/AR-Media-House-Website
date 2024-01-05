@@ -27,7 +27,7 @@ export default function Navbar() {
                             to={item.to}
                         >
                             {item.title}
-                            {location===item.to && <div className="bg-tertiary-500 h-[2px] w-12 absolute bottom-0 m-auto"></div>}
+                            {location===item.to && <div className="bg-tertiary-500 h-[2px] w-full absolute bottom-0 m-auto"></div>}
                         </Link>
                     )
                 })

@@ -1,15 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {
-  Home, 
-  CaseStudies, 
-  Technologies, 
-  Services, 
-  Page404,
-  Careers,  
-  ContactUs, 
-  About, 
-  SharedLayout,
-} from "./pages";
+import Home from "./pages/Home";
+import ContactUs from "./pages/ContactUs";
+import Careers from "./pages/Careers";
+import CaseStudies from "./pages/CaseStudies";
+import Page404 from "./pages/Page404";
+import About from "./pages/About";
+import Technologies from "./pages/Technologies";
+import Services from "./pages/Services";
+import SharedLayout from "./pages/SharedLayout";
+
 
 function App() {
   return (
