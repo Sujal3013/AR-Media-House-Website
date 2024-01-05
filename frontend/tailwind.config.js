@@ -41,6 +41,9 @@ export default {
         tertiary: {
           500: "#F8F8F8",
         },
+      },
+      padding: {
+        "screen-padding": "6vw",
       }
     },
   },

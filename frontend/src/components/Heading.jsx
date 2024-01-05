@@ -1,24 +1,22 @@
 import classNames from "classnames"
 
-export default function Heading({heading, subHeading, center, headingColor, subHeadingColor}) {
+export default function Heading({heading, subHeading, center, headingClassName, subHeadingClassName, className, ...other}) {
 
-  headingColor = "text-" + headingColor;
-  subHeadingColor = "text-" + subHeadingColor;
-
-  const p = "text-primary-500";
   const classes = classNames("", {
-    "flex flex-col justify-center items-center": center
+    "flex flex-col justify-center items-center": center,
+    [className]: className,
   })
-  const headingClasses = classNames("font-bold text-5xl uppercase mt-4", {
-      [p]: !headingColor,
-      [headingColor]: headingColor,
+  const headingClasses = classNames("font-bold text-5xl uppercase", {
+      "text-primary-500": !headingClassName,
+      [headingClassName]: headingClassName,
   })
   const subHeadingClasses = classNames("font-bold text-4xl", {
-      "text-secondary-500": !subHeadingColor,
-      [subHeadingColor]: subHeadingColor,
+      "text-secondary-500": !subHeadingClassName,
+      [subHeadingClassName]: subHeadingClassName,
   })
+
   return (
-    <div className={classes}>
+    <div className={classes} {...other}>
       <h1 className={headingClasses}>
         {heading}
       </h1>
