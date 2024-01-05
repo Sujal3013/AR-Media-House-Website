@@ -4,7 +4,7 @@ import Button from "./Button";
 export default function Navbar() {
   const location = useLocation().pathname;
   return (
-    <nav className="bg-secondary-500 w-full py-2 flex justify-around items-center">
+    <nav className="bg-secondary-500 w-full py-3 px-screen-padding flex justify-between items-center">
         <div className="flex justify-center items-center gap-1">
             <h2
                 className="p-0 px-2 bg-primary-500 text-2xl text-secondary-500 rounded-full"

@@ -6,10 +6,10 @@ import classNames from 'classnames';
 export default function ({primary, secondary, arrow, arrowWhite, to, children,className, ...other}) {
   if(!to || to==="") to = useLocation().pathname;
   
-  const classes = classNames("w-fit cursor-pointer py-1.5 max-w-32",{
+  const classes = classNames("w-fit cursor-pointer py-2 max-w-40 flex justify-center items-center",{
     [className]: className,
     "px-1.5": arrow,
-    "px-2.5": !arrow,
+    "px-3": !arrow,
   });
 
   return (
@@ -21,7 +21,7 @@ export default function ({primary, secondary, arrow, arrowWhite, to, children,cl
       {...other}
     >
     <Link
-      className='flex justify-center items-center gap-2 text-center leading-4'
+      className='flex justify-center items-center gap-2 font-medium text-center leading-4'
       to={to}
     >
         {children}
