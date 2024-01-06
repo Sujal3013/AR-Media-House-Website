@@ -1,45 +1,43 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import classNames from "classnames";
 
-export default function CompaniesAnimate({children, index, className, totalLength, direction, ...other}) {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  
-  const handleResize = () => {
-    setScreenWidth(window.innerWidth);
-  };
-  
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-  
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [screenWidth]);
-  const classes = classNames("max-w-32 max-h-28 flex justify-center items-center absolute", {
-    "left-[-400px]": !direction || direction >=0,
-    "right-[-400px]": direction && direction <0,
+export default function CompaniesAnimate({children, className, direction, ...other}) {
+  const classes = classNames("absolute left-0", {
     [className]: className,
-  })
+  });
 
-  const finalX = (!direction || direction>=0)? screenWidth + 400 : -screenWidth-400;
-  console.log(totalLength)
   return (
-    <motion.div
-      animate={{
-        x: finalX,
-        transition: {
-            duration: 15,
-            delay: index*2,
-            ease: "linear",
-            repeat: Infinity,
-            repeatDelay: totalLength*2 - 15,
-        }
-    }}
-      className={classes}
-      {...other}
-    >
+    <>
+      <motion.ul 
+            className={classes}
+            initial={{x: "calc(0px - 100% - 9rem)"}}
+            animate={{
+              x: 0,
+              transition: {
+                duration: 30,
+                ease: "linear",
+                repeat: Infinity,
+            }
+            }}
+      >
         {children}
-    </motion.div>
+      </motion.ul>
+      <motion.ul 
+            className={classes}
+            initial={{x: 0}}
+            animate={{
+              x: "calc(100% - 0px)",
+              transition: {
+                duration: 30,
+                ease: "linear",
+                repeat: Infinity,
+            }
+            }}
+      >   
+        {children}
+      </motion.ul>
+    </>   
   )
 }
+
+// flex justify-start items-center gap-20

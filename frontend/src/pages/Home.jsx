@@ -1,14 +1,15 @@
 import { 
   Button, 
+  CompaniesAnimate, 
   ClientCards, 
   ExploreBlog, 
   Heading, 
   HeroSectionWrapper, 
-  CompaniesAnimate, 
   Section, 
   ServicesCards, 
   Wonder, 
 } from "../components";
+import { motion } from "framer-motion";
 
 export default function Home() {
   document.querySelector("title").innerHTML = "AR Media House";
@@ -45,26 +46,22 @@ export default function Home() {
 
 
       {/* Companies Section */}
-      <div className="w-full flex flex-col justify-center items-center py-6 px-screen-padding overflow-hidden relative">
-        <h1 className="text-gray-500 font-bold text-xl z-1">Trusted by thousands of clients worldwide.</h1>
-
-        <div className="w-full h-28 flex justify-between items-center gap-20">
-          {
-            images.map((img, index)=>{
-              return (
-                <CompaniesAnimate 
-                  key={index} 
-                  index={index} 
-                  className="w-fit h-fit "
-                  totalLength={images.length}
-                >
-                  <img {...img} />
-                </CompaniesAnimate>
-              )
-            })
-          }
-        </div>
-      </div>
+      <section className="h-[35vh] pt-8 flex flex-col items-center justify-start px-screen-padding relative overflow-hidden">
+        <h1 className="font-bold text-gray-500 text-xl">Trusted by thousands of clients worldwide</h1>
+        <CompaniesAnimate className="top-14">
+          <ul className="flex justify-start items-center gap-32">
+            {
+              images.map((company, index)=>{
+                return (
+                  <li className="w-36 h-fit flex justify-center">
+                    <img {...company} />
+                  </li>
+                )
+              })
+            }
+          </ul>
+        </CompaniesAnimate>
+      </section>
 
       <img
         src="./assets/wave1.svg"
