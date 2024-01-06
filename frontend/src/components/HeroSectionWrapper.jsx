@@ -6,7 +6,7 @@ export default function HeroSectionWrapper({children, className, ...other}) {
     background: "linear-gradient(to bottom right, #050D2E, rgb(5, 13, 46, 0.92))",
   };
   
-  const classes = classNames("px-screen-padding rounded-br-[4rem] text-tertiary-500 relative", {
+  const classes = classNames("px-screen-padding rounded-br-[6rem] text-tertiary-500 relative", {
     [className]: className,
   });
 
