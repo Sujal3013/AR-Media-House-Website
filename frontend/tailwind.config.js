@@ -41,9 +41,11 @@ export default {
           800: '#4A690B',
           900: '#3E580F',
           950: "#1F3201",
+          "gradient-start": "rgb(5, 13, 46)",
+          "gradient-end": "rgb(5, 13, 46, 0.92),"
         },
         tertiary: {
-          500: "#F8F8F8",
+          500: "#F6F6F6",
         },
         additional:{
           200:"#F7F7F7"
