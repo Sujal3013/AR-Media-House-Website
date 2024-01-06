@@ -3,12 +3,12 @@ import { Link , useLocation  } from 'react-router-dom'
 import { motion } from 'framer-motion';
 import classNames from 'classnames';
 
-export default function ({primary, secondary, arrow, arrowWhite, to, children,className, ...other}) {
+export default function ({primary, secondary, arrow, arrowWhite, to, children, className, ...other}) {
   if(!to || to==="") to = useLocation().pathname;
   
   const classes = classNames("w-fit cursor-pointer py-2 max-w-40 flex justify-center items-center",{
     [className]: className,
-    "px-1.5": arrow,
+    "px-2": arrow,
     "px-3": !arrow,
   });
 
