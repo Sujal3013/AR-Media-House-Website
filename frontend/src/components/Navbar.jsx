@@ -3,6 +3,10 @@ import Button from "./Button";
 
 export default function Navbar() {
   const location = useLocation().pathname;
+  const phoneNumber="+918770644753"
+  const handlePhoneClick = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
   return (
     <nav className="bg-secondary-500 w-full py-3 px-screen-padding flex justify-between items-center">
         <div className="flex justify-center items-center gap-1">
@@ -37,7 +41,7 @@ export default function Navbar() {
             <Button to="/contact" primary className="bg-primary-500 text-secondary-500 text-sm">
                 Let's Connect
             </Button>
-            <img src="./assets/call-logo.svg" alt="call" className="w-8 h-8" />
+            <img src="./assets/call-logo.svg" onClick={handlePhoneClick} alt="call" className="w-8 h-8" />
         </div>
     </nav>
   )
