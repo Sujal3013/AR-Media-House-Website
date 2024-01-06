@@ -4,19 +4,38 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
+const SamplePrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return(
+    <div onClick={onClick} className={`arrow ${className}`} >
+      <AiOutlineArrowLeft class="arrows" style={{color:"white"}}/>
+    </div>
+  )
+  }
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return(
+    <div onClick={onClick} className={`arrow ${className}`} >
+      <AiOutlineArrowRight class="arrows" style={{color:"white"}}/>
+    </div>
+  )
+}
+
 export const CaseStudyCarousel = () => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,}
+    slidesToScroll: 1,
+}
   return (
     <div className='pt-10 p-4 gap-2'>
       <Slider {...settings}>
         {blogs.map((blog)=>(
-          <div className='bg-white shadow-sm hover:bg-slate-100 cursor-pointer h-auto w-auto text-black rounded-md p-2 pb-4 mx-auto overflow-hidden hover:scale-105 transition-transform duration-300'>
-            <div className='flex  rounded-md pt-4'>
+          <div className='bg-white shadow-sm cursor-pointer h-auto w-auto text-black rounded-md p-2 pb-4 mx-auto overflow-hidden hover:scale-105 transition-transform duration-300'>
+            <div className='flex  rounded-md pt-2'>
               <img src={blog.image} alt="Blog-image" className='rounded-md w-full' />
             </div>
             <div className=' flex flex-col justify-center items-center gap-4 p-4'>

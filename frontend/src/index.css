@@ -14,3 +14,37 @@ body {
 h2, h3, h4, h5, h6 {
     font-family: "Playfair-Display", serif;
 }
+
+.slick-slide>div{
+  margin: 0px 10px;
+}
+.slick-next{
+  right:-50px;
+}
+.slick-prev{
+  left:-50px;
+}
+
+.slick-arrow.slick-next{
+height:50px;
+width:50px;
+background: url("https://img.icons8.com/ios/50/000000/long-arrow-right.png");
+
+}
+.slick-arrow.slick-prev{
+  background: url("https://img.icons8.com/ios/50/000000/long-arrow-left.png");
+  width:50px ;
+  height: 50px;
+}
+
+
+
+.slick-prev::before,.slick-next::before{
+   display:none;
+  }
+
+.arrows{
+height:20px;
+width:20px;
+margin: 1px;
+} 
