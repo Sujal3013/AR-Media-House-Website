@@ -7,6 +7,7 @@ import Services from "./Services"
 import About from "./About";
 import Careers from "./Careers";
 import CaseStudies from "./CaseStudies";
+import IndividualCaseStudy from "./IndividualCaseStudy";
 
 export {
     Home,
@@ -17,5 +18,6 @@ export {
     Services,
     About ,
     Careers,
+    IndividualCaseStudy,
     CaseStudies,
 }
