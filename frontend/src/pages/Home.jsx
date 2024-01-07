@@ -9,7 +9,6 @@ import {
   ServicesCards, 
   Wonder, 
 } from "../components";
-import { motion } from "framer-motion";
 
 export default function Home() {
   document.querySelector("title").innerHTML = "AR Media House";
@@ -39,17 +38,24 @@ export default function Home() {
           </div>
         </div>
         {/* illustraion */}
-        <div  className="w-[35vw] h-[50vh] bg-tertiary-500 my-28 rounded">
+        <div  className="w-[35vw] h-[50vh] bg-primary-500 my-28 rounded">
 
         </div>
       </HeroSectionWrapper>
 
 
       {/* Companies Section */}
-      <section className="h-[35vh] pt-8 flex flex-col items-center justify-start px-screen-padding relative overflow-hidden">
+      <section 
+        className="h-[35vh] pt-8 flex flex-col items-center justify-start px-screen-padding relative overflow-hidden"
+        >
+        <div
+          className="absolute h-[30vh] w-full left-0 z-10"
+          style={{
+            background: 'linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0) 5%, rgba(255,255,255,0) 95%, rgba(255,255,255,1))'
+          }}
+        ></div>
         <h1 className="font-bold text-gray-500 text-xl">Trusted by thousands of clients worldwide</h1>
-        <CompaniesAnimate className="top-14">
-          <ul className="flex justify-start items-center gap-32">
+        <CompaniesAnimate className="top-14 flex justify-start items-center gap-32">
             {
               images.map((company, index)=>{
                 return (
@@ -59,7 +65,6 @@ export default function Home() {
                 )
               })
             }
-          </ul>
         </CompaniesAnimate>
       </section>
 
@@ -83,7 +88,7 @@ export default function Home() {
           </Button>
         }
         illustration={
-          <div className="rounded-full bg-white text-center w-96 h-72 my-4">Hello</div>
+          <div className="rounded-full bg-primary-500 text-center w-96 h-72 my-4"></div>
         }
         direction={-1}
       />
@@ -104,7 +109,7 @@ export default function Home() {
           </Button>
         }
         illustration={
-          <div className="rounded-full bg-white text-center w-96 h-72 my-4">Hello</div>
+          <div className="rounded-full bg-primary-500 text-center w-96 h-72 my-4"></div>
         }
       />
 
@@ -123,7 +128,7 @@ export default function Home() {
         />
 
         <div className="flex flex-col items-center gap-8">
-          <ul className="w-full flex justify-between py-8 relative">
+          <ul className="w-full flex justify-center gap-[6vw]  py-8 relative">
             {
               services.slice(0,4).map((s, index)=>{
                 return (
@@ -132,7 +137,7 @@ export default function Home() {
               })
             }
           </ul>
-          <ul className="w-[48%] flex justify-between relative first:">
+          <ul className="w-full gap-[6vw]  flex justify-center relative first:">
             {
               services.slice(4).map((s, index)=>{
                 return (
@@ -151,14 +156,14 @@ export default function Home() {
         middleLine="GO"
         middleLineClassName="text-primary-500 my-[-4px]"
         subHeading="through the roof"
-        allHeadingClassName="mt-6 mb-12"
+        allHeadingClassName="mb-12"
         Button1={
           <Button className="bg-primary-500 text-secondary-500 mt-6 mb-12" arrow>
             Let's Connect
           </Button>
         }
         illustration={
-          <div className="h-72 w-96 rounded-3xl bg-tertiary-500"></div>
+          <div className="h-72 w-96 rounded-3xl bg-primary-500"></div>
         }
       />
 
@@ -176,7 +181,7 @@ export default function Home() {
           subHeadingClassName="text-secondary-500 mt-[-4px]"
         />
 
-        <img src="./assets/1-2-3-line.svg" alt="" className="absolute h-[140vh] left-[50%] translate-x-[-55%] translate-y-20"/>
+        <img src="./assets/1-2-3-line.svg" alt="" className="absolute h-[140vh] left-[50%] translate-x-[-60%] translate-y-20"/>
 
         <Section
           backgroundClassName="bg-tertiary-500 py-6"
@@ -189,7 +194,7 @@ export default function Home() {
           strategize actions for maximum revenue."
           textClassName="mb-16"
           illustration={
-            <div className="h-72 w-96 rounded-3xl bg-white"></div>
+            <div className="h-72 w-96 rounded-3xl bg-primary-500"></div>
           }
           direction={-1}
         />
@@ -206,7 +211,7 @@ export default function Home() {
           driven strategy."
           textClassName="mb-16"
           illustration={
-            <div className="h-72 w-96 rounded-3xl bg-white"></div>
+            <div className="h-72 w-96 rounded-3xl bg-primary-500"></div>
           }
         />
 
@@ -222,7 +227,7 @@ export default function Home() {
           and profit."
           textClassName="mb-16"
           illustration={
-            <div className="h-72 w-96 rounded-3xl bg-white"></div>
+            <div className="h-72 w-96 rounded-3xl bg-primary-500"></div>
           }
           direction={-1}
         />
@@ -230,7 +235,10 @@ export default function Home() {
 
 
 
-      <HeroSectionWrapper className="rounded-tl-[5rem] h-96 mb-56">
+      <HeroSectionWrapper 
+        className="rounded-tl-[6rem] h-96 mb-56 relative"
+        behindBackground="bg-tertiary-500"
+      >
         <Heading
           heading="Our Client"
           subHeading="loves us"
@@ -251,6 +259,8 @@ export default function Home() {
             }) 
           }
         </ul>
+        
+        <div className="h-[40vh] w-full absolute bottom-[-40vh] left-0 bg-tertiary-500 z-[-1]"></div>
       </HeroSectionWrapper>
 
 
@@ -280,12 +290,12 @@ const images = [
 const icon = <div className="h-32 w-32 rounded-3xl bg-primary-500"></div>
 
 const services = [
-  { className: "first:translate-y-28 last:translate-y-28", icon: icon, heading: "E-commerce", text: "Innovative outbound strategies to drive more sales and traffic for your brand. Advertising and innovation that will help both retailers and affiliates grow their businesses in different ways." },
-  { className: "first:translate-y-28 last:translate-y-28", icon: icon, heading: "Performance Marketing", text: "Place ads about your company, services, or products on websites that help drive more sales in the online market." },
-  { className: "first:translate-y-28 last:translate-y-28", icon: icon, heading: "Lead Generation", text: "Convert your prospects into delighted clients solely meant for your agency." },
-  { className: "first:translate-y-28 last:translate-y-28", icon: icon, heading: "Media Buying", text: "We use immense technologies to determine strategy, to compile content, execute content, & analyze results." },
-  { icon: icon, heading: "Martech", text: "A strategic marketing approach to help your valuable content reach key audiences." },
-  { icon: icon, heading: "Content Marketing", text: "We use immense technologies to determine strategy, to compile content, execute content, & analyze results." }
+  { className: "first:absolute first:top-32 last:absolute last:top-32 last:right-0 first:left-0", icon: icon, heading: "E-commerce", text: "Innovative outbound strategies to drive more sales and traffic for your brand. Advertising and innovation that will help both retailers and affiliates grow their businesses in different ways."},
+  { className: "first:absolute first:top-32 last:absolute last:top-32 last:right-0 first:left-0", icon: icon, heading: "Performance Marketing", text: "Place ads about your company, services, or products on websites that help drive more sales in the online market."},
+  { className: "first:absolute first:top-32 last:absolute last:top-32 last:right-0 first:left-0", icon: icon, heading: "Lead Generation", text: "Convert your prospects into delighted clients solely meant for your agency."},
+  { className: "first:absolute first:top-32 last:absolute last:top-32 last:right-0 first:left-0", icon: icon, heading: "Media Buying", text: "We use immense technologies to determine strategy, to compile content, execute content, & analyze results."},
+  { className: "shadow-lg shadow-gray-500", icon: icon, heading: "Martech", text: "A strategic marketing approach to help your valuable content reach key audiences." },
+  { className: "shadow-lg shadow-gray-500", icon: icon, heading: "Content Marketing", text: "We use immense technologies to determine strategy, to compile content, execute content, & analyze results." }
 ]
 
 const icon2 = <img src="./assets/person.png" alt="person" className="w-16 h-16"/>

@@ -6,7 +6,7 @@ import classNames from 'classnames';
 export default function ({primary, secondary, arrow, arrowWhite, to, children, className, ...other}) {
   if(!to || to==="") to = useLocation().pathname;
   
-  const classes = classNames("w-fit cursor-pointer py-2 max-w-40 flex justify-center items-center",{
+  const classes = classNames("w-fit cursor-pointer py-2.5 max-w-40 flex justify-center items-center",{
     [className]: className,
     "px-2": arrow,
     "px-3": !arrow,

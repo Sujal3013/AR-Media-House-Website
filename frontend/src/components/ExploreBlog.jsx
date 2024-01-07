@@ -13,7 +13,7 @@ export default function ExploreBlog({list, className}) {
     <section className={classes}>
       <Heading
         heading="Explore Our"
-        subHeading="Blogs"
+        subHeading="Case Studies"
         className="items-center"
       />
       <div className="w-full py-8 flex items-center justify-between gap-4">
