@@ -1,7 +1,7 @@
 import classNames from "classnames"
 
 export default function ClientCards({heading, subHeading, icon, text, className, ...other}) {
-  const classes = classNames("px-3 py-6 w-[24vw] bg-white rounded flex flex-col gap-3 justify-between items-center text-secondary-500" ,{
+  const classes = classNames("px-3 py-6 w-[24vw] bg-white rounded flex flex-col gap-3 justify-between items-center text-secondary-500 shadow-lg shadow-gray-600" ,{
     [className] : className,
   })
 
