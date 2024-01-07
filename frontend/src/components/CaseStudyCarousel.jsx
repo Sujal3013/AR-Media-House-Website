@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from "../components/Button"
 import Slider from 'react-slick';
+import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
@@ -43,7 +44,7 @@ export const CaseStudyCarousel = () => {
               <h1 className='underline break-words'>{blog.name}</h1>
               <p>{blog.description}</p>
             </div>
-            <Button to={`/blog/${blog.id}`} className="bg-primary-500 mx-auto px-4 py-3 rounded-sm">Read more</Button>
+            <Button to={`/case-studies/${blog.name}`}  className="bg-primary-500 mx-auto px-4 py-3 rounded-sm">Read more</Button>
           </div>
         ))}
         </Slider>
