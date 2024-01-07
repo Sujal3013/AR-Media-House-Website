@@ -24,17 +24,18 @@ function SampleNextArrow(props) {
 
 export const CaseStudyCarousel = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 500,
+    // speed: 400,
     slidesToShow: 3,
     slidesToScroll: 1,
+    // easing: 'ease',
 }
   return (
     <div className='pt-10 p-4 gap-2'>
       <Slider {...settings}>
         {blogs.map((blog)=>(
-          <div className='bg-white shadow-sm cursor-pointer h-auto w-auto text-black rounded-md p-2 pb-4 mx-auto overflow-hidden hover:scale-105 transition-transform duration-300'>
+          <div className='bg-white shadow-sm cursor-pointer h-auto w-auto text-black rounded-sm px-2 py-1 pb-4 mx-auto overflow-hidden hover:scale-[1.02] transition-transform duration-300'>
             <div className='flex  rounded-md pt-2'>
               <img src={blog.image} alt="Blog-image" className='rounded-md w-full' />
             </div>
