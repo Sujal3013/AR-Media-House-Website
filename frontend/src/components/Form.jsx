@@ -37,8 +37,8 @@ const Form = () => {
         <label
           className={
             selectedOptions.includes("Media Buying")
-            ? "border-2 border-primary-500 bg-primary-500 text-white px-3 py-2"
-            : "border-2 border-primary-500 px-3 py-2 text-primary-500 bg-white"
+            ? "border-2 border-primary-500 bg-primary-500 font-jost font-semibold text-white px-3 py-2"
+            : "border-2 border-primary-500 px-3 py-2 font-jost font-semibold text-primary-500 bg-white"
           }
         >
           <input
@@ -54,8 +54,8 @@ const Form = () => {
         <label
           className={
             selectedOptions.includes("Content Marketing")
-            ? "border-2 border-primary-500 bg-primary-500 text-white px-3 py-2"
-            : "border-2 border-primary-500 px-3 py-2 text-primary-500 bg-white"
+            ? "border-2 border-primary-500 bg-primary-500 font-jost font-semibold tracking-wide text-white px-3 py-2"
+            : "border-2 border-primary-500 px-3 py-2 font-jost font-semibold tracking-wide text-primary-500 bg-white"
           }
         >
           <input
@@ -71,8 +71,8 @@ const Form = () => {
         <label
           className={
             selectedOptions.includes("Affiliate Marketing")
-            ? "border-2 border-primary-500 bg-primary-500 text-white px-3 py-2"
-            : "border-2 border-primary-500 px-3 py-2 text-primary-500 bg-white"
+            ? "border-2 border-primary-500 bg-primary-500 font-jost font-semibold tracking-wide text-white px-3 py-2"
+            : "border-2 border-primary-500 px-3 py-2 font-jost font-semibold tracking-wide text-primary-500 bg-white"
           }
         >
           <input
@@ -89,8 +89,8 @@ const Form = () => {
        <label
           className={
             selectedOptions.includes("Media Queries")
-              ? "border-2 border-primary-500 bg-primary-500 text-white px-3 py-2"
-              : "border-2 border-primary-500 px-3 py-2 text-primary-500 bg-white"
+              ? "border-2 border-primary-500 bg-primary-500 font-jost font-semibold tracking-wide text-white px-3 py-2"
+              : "border-2 border-primary-500 px-3 py-2 font-jost font-semibold tracking-wide text-primary-500 bg-white"
           }
         >
           <input
@@ -105,8 +105,8 @@ const Form = () => {
         <label
           className={
             selectedOptions.includes("Lead Generation")
-            ? "border-2 border-primary-500 bg-primary-500 text-white px-3 py-2"
-            : "border-2 border-primary-500 px-3 py-2 text-primary-500 bg-white"
+            ? "border-2 border-primary-500 bg-primary-500 font-jost font-semibold tracking-wide text-white px-3 py-2"
+            : "border-2 border-primary-500 px-3 py-2 font-jost font-semibold tracking-wide text-primary-500 bg-white"
           }
         >
           <input
@@ -121,8 +121,8 @@ const Form = () => {
         <label
           className={
             selectedOptions.includes("Careers")
-            ? "border-2 border-primary-500 bg-primary-500 text-white px-3 py-2"
-            : "border-2 border-primary-500 px-3 py-2 text-primary-500 bg-white"
+            ? "border-2 border-primary-500 bg-primary-500 font-jost font-semibold tracking-wide text-white px-3 py-2"
+            : "border-2 border-primary-500 px-3 py-2 font-jost font-semibold tracking-wide text-primary-500 bg-white"
           }
         >
           <input
@@ -137,8 +137,8 @@ const Form = () => {
         <label
           className={
             selectedOptions.includes("Others")
-            ? "border-2 border-primary-500 bg-primary-500 text-white px-3 py-2"
-            : "border-2 border-primary-500 px-3 py-2 text-primary-500 bg-white"
+            ? "border-2 border-primary-500 bg-primary-500 font-jost font-semibold tracking-wide text-white px-3 py-2"
+            : "border-2 border-primary-500 px-3 py-2 font-jost font-semibold tracking-wide text-primary-500 bg-white"
           }
         >
           <input
@@ -158,23 +158,23 @@ const Form = () => {
             {/* Input form */}
             <form onSubmit={handleSubmit} className="flex-col py-6">
               <span>
-              <input className="block bg-slate-100 w-full my-6 px-4 py-2 text-slate-400 text-lg rounded-md" type="text" name="name" id="" placeholder="Your Name" onChange={(e)=>{setName(e.target.value)}} />
+              <input className="block bg-slate-200 w-full my-6 px-4 py-2 text-slate-600 text-lg rounded-md" type="text" name="name" id="" placeholder="Your Name" onChange={(e)=>{setName(e.target.value)}} />
               <span className={validator.isName?"hidden":"block"}>This field is Required</span>
               </span>
               <span>
-              <input className="block bg-slate-100 w-full my-6 px-4 py-2 text-slate-400 text-lg rounded-md"  type="email" name="name" id="" placeholder="Email" onChange={(e)=>setEmail(e.target.value)} />
+              <input className="block bg-slate-200 w-full my-6 px-4 py-2 text-slate-600 text-lg rounded-md"  type="email" name="name" id="" placeholder="Email" onChange={(e)=>setEmail(e.target.value)} />
               <span className={validator.isEmail?"hidden":"block"}>This field is Required</span>
               </span>
                 <span>
-                <input className="block bg-slate-100 w-full my-6 px-4 py-2 text-slate-400 text-lg rounded-md" type="text" name="name" id="" placeholder="Contact Number" onChange={(e)=>setContact(e.target.value)} />
+                <input className="block bg-slate-200 w-full my-6 px-4 py-2 text-slate-600 text-lg rounded-md" type="text" name="name" id="" placeholder="Contact Number" onChange={(e)=>setContact(e.target.value)} />
                 <span className={validator.isContact?"hidden":"block"}>This field is Required</span>
                 </span>
                 <span className="block">
-                <textarea className="block bg-slate-100 w-full my-6 px-4 pt-3 text-slate-400 text-lg rounded-md resize-none" name="" id="" cols="30" rows="10" placeholder="Your Message" onChange={(e)=>setMessage(e.target.value)}/>
+                <textarea className="block bg-slate-200 w-full my-6 px-4 pt-3 text-slate-600 text-lg rounded-md resize-none" name="" id="" cols="30" rows="10" placeholder="Your Message" onChange={(e)=>setMessage(e.target.value)}/>
                 <span className={validator.isMessage?"hidden":"block"}>This field is Required</span>
                 </span>
                 
-                <button type="submit" className="bg-primary-500 text-xl border-none p-3 rounded">Send Your Message</button>
+                <button type="submit" className="bg-[#FF9356] text-lg border-none py-3 px-4 rounded">Send Your Message</button>
             </form>
           </div>
       </div>
