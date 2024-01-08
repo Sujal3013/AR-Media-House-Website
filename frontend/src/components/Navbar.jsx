@@ -8,13 +8,13 @@ export default function Navbar() {
     window.location.href = `tel:${phoneNumber}`;
   };
   return (
-    <nav className="bg-secondary-500 w-full py-3 px-screen-padding flex justify-between items-center">
+    <nav className="bg-secondary-500 w-full py-3 px-screen-padding flex justify-between items-center h-20">
         <div className="flex justify-center items-center gap-1">
-            <h2
+            <h1
                 className="p-0 px-2 bg-primary-500 text-2xl text-secondary-500 rounded-full"
             >
                 A
-            </h2>
+            </h1>
             <h1 
                 className="inline text-tertiary-500 text-sm"
             >
@@ -37,7 +37,7 @@ export default function Navbar() {
                 })
             }
         </div>
-        <div className="flex justify-center items-center gap-3">
+        <div className="flex justify-center items-center gap-6">
             <Button to="/contact" primary className="bg-primary-500 text-secondary-500 text-sm">
                 Let's Connect
             </Button>
