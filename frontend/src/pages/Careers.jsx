@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Button from "../components/Button";
 import { Jobopeningcard } from "../components/Jobopeningcard";
+import { Wonder } from "../components";
 
 export default function Careers() {
   document.querySelector("title").innerHTML = "Careers - AR Media House";
@@ -11,15 +12,16 @@ export default function Careers() {
   const count=0;
 
   return (
+    <>
     <div className="mb-10">
       {/* Hero Section */}
       <div className="bg-[url('/assets/Careers-Hero.svg')] h-[95vh] bg-cover bg-center h-96 bg-no-repeat flex items-center justify-center text-white">
         {/* Replace 'your-image-url' with the actual URL of your hero image */}
         <div className="text-center items-center">
-          <h1 className="text-8xl font-jost font-bold mb-4 text-primary-500">
+          <h1 className="text-7xl font-jost font-extrabold mb-4 text-primary-500 leading-3">
             MORE THAN A TEAM
           </h1>
-          <p className="text-6xl font-bold font-playfair-display text-secondary-500">
+          <p className="text-[54px] font-bold font-playfair-display text-secondary-500">
             We are a Family
           </p>
           <Button className="bg-primary-500 text-secondary-500 mx-auto mt-4">
@@ -29,12 +31,12 @@ export default function Careers() {
       </div>
 
       {/* Careers Text */}
-      <div className="py-8 text-center">
-        <h2 className="text-6xl font-jost font-bold uppercase text-primary-500">
-          Careers At
+      <div className="py-12 text-center">
+        <h2 className="text-6xl font-jost font-extrabold uppercase text-primary-500 leading-10">
+          Careers
         </h2>
-        <p className="text-secondary-500 font-playfair-display text-6xl mt-2">
-          AR Media House
+        <p className="text-secondary-500 font-bold font-playfair-display text-5xl mt-2">
+          @AR Media House
         </p>
       </div>
 
@@ -52,7 +54,10 @@ export default function Careers() {
           />
         ))}
       </div>
+      
     </div>
+    <Wonder/>
+    </>
   );
 }
 

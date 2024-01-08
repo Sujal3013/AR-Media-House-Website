@@ -10,7 +10,7 @@ export default function CaseStudies() {
     <>
     <div className='px-screen-padding py-20 bg-[url("/assets/wave1.svg")] bg-no-repeat bg-contain bg-bottom'>
       <div className=''>
-            <p className='uppercase text-[64px] block text-center font-jost text-primary-500 font-bold leading-8'>Explore Our</p>
+            <p className='uppercase text-[64px] block text-center font-jost text-primary-500 font-extrabold leading-8'>Explore Our</p>
             <p className='text-secondary-500 text-center font-semibold text-[48px] font-playfair-display'>groundbreaking case studies</p>
       </div>
     </div>
