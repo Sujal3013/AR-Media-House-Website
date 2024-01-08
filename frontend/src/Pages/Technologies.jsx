@@ -41,7 +41,7 @@ export default function Technologies() {
           <div className="text-start py-4">
             <h1 className="text-primary-500 text-[64px] font-extrabold leading-10">
               TECHNOLOGIES <br />
-              <span className="text-secondary-500 text-[48px] font-playfair-display font-bold">
+              <span className="text-secondary-500 text-[52px] font-playfair-display font-bold">
                 we use
               </span>
             </h1>

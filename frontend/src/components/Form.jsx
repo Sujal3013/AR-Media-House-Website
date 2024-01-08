@@ -26,6 +26,7 @@ const Form = () => {
     } else {
       // show form validation-issues
       setValidator({...validator,isName:name!=="",isContact:contact!=="",isEmail:email!=="",isMessage:message!==""})
+      setIsOptions(selectedOptions.length>0)
     }
   };
   return (

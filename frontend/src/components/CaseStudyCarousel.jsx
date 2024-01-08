@@ -4,24 +4,9 @@ import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import CustomArrows from './CustomArrows';
 
-const SamplePrevArrow = (props) => {
-  const { className, style, onClick } = props;
-  return(
-    <div onClick={onClick} className={`arrow ${className}`} >
-      <AiOutlineArrowLeft class="arrows" style={{color:"white"}}/>
-    </div>
-  )
-  }
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return(
-    <div onClick={onClick} className={`arrow ${className}`} >
-      <AiOutlineArrowRight class="arrows" style={{color:"white"}}/>
-    </div>
-  )
-}
 
 export const CaseStudyCarousel = () => {
   const settings = {
@@ -30,7 +15,9 @@ export const CaseStudyCarousel = () => {
     // speed: 400,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // easing: 'ease',
+    prevArrow: <CustomArrows direction="prev" />,
+    nextArrow: <CustomArrows direction="next" />,
+    easing: 'ease',
 }
   return (
     <div className='pt-10 p-4 gap-2'>
