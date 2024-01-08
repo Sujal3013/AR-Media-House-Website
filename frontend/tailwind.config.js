@@ -53,6 +53,9 @@ export default {
       },
       padding: {
         "screen-padding": "6vw",
+      },
+      backgroundSize:{
+        "55%":"55%"
       }
     },
   },
