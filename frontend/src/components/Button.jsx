@@ -14,7 +14,7 @@ export default function ({primary, secondary, arrow, arrowWhite, to, children, c
 
   return (
     <motion.div
-      className={classes}
+      className={classes} 
       whileHover={{scale:1.05}}
       whileTap={{scale: 0.95}}
       transition={{ duration: 0.1, ease: 'linear' }}

@@ -14,7 +14,7 @@ export default function Heading({
   const classes = classNames("flex flex-col gap-[-2px]", {
     [className]: className,
   })
-  const headingClasses = classNames("font-black text-5xl uppercase", {
+  const headingClasses = classNames("font-extrabold text-5xl uppercase", {
     "text-primary-500": !headingClassName,
     [headingClassName]: headingClassName,
   })
