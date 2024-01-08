@@ -35,7 +35,7 @@ const ContactUs = () => {
         </div>
         <img className="absolute bottom-[-5rem] -z-10 rotate-45 left-[40rem]" src="/assets/Triangle-Orange.svg" alt="" />
       </div>
-      <div className="bg-secondary-500 h-[55vh] rounded-bl-[100px]">
+      <div className="bg-secondary-500 h-[55vh] rounded-bl-[125px]">
         <span className="px-screen-padding flex justify-around items-center">
           <span className="basis-[20rem] flex-col items-center text-center">
             <h1 className="text-white block font-jost font-extrabold text-[64px] tracking-wide leading-8">
