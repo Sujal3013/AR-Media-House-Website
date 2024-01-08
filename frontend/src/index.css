@@ -28,34 +28,34 @@ h2, h3, h4, h5, h6 {
 }
 
 .slick-next{
-  right:-55px;
+  right:-50px;
 }
 .slick-prev{
   left:-50px;
 }
 
 .slick-arrow.slick-next{
-height:30px;
-width:30px;
-background: url("/assets/arrow-right.png");
+height:50px;
+margin-top: 20px;
+width:50px;
+background: url("/assets/next-page.png");
 background-repeat: no-repeat;
 background-size: cover;
 
 }
 .slick-arrow.slick-prev{
-  background: url("/assets/arrow-right.png");
+  background: url("/assets/next-page.png");
   transform: rotate(180deg);
   background-size: cover;
-  width:30px ;
-  height: 30px;
+  width:50px ;
+  height: 50px;
   background-repeat: no-repeat;
 }
 
 
-
 .slick-prev::before,.slick-next::before{
    display:none;
-  }
+}
 
 .arrows{
 height:20px;
