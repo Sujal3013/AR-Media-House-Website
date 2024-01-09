@@ -6,6 +6,7 @@ import Navbar from "./Navbar";
 import Heading from "./Heading";
 import HeroSectionWrapper from "./HeroSectionWrapper";
 import CompaniesAnimate from "./CompaniesAnimate";
+import RoundedCornersSection from "./RoundedCornersSection";
 import Section from "./Section";
 import ServicesCards from "./ServicesCards";
 import Wonder from "./Wonder";
@@ -19,6 +20,7 @@ export {
     Heading,
     HeroSectionWrapper,
     Navbar,
+    RoundedCornersSection, 
     Section,
     ServicesCards, 
     Wonder, 

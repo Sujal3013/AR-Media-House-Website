@@ -1,9 +1,11 @@
-
-import { useState, useEffect, useCallback, } from "react";
+import { 
+  useState, 
+  // useEffect, 
+  // useCallback, 
+} from "react";
 import classNames from 'classnames'
-import { useInView } from 'react-intersection-observer';
 import { motion } from "framer-motion";
-
+import { useInView } from "react-intersection-observer"
 export default function FadeInUp({children, className, downLength}) {
     // const [y, setY] = useState(0);
     // const [scrollDown, setScrollDown] = useState(false);
@@ -26,7 +28,6 @@ export default function FadeInUp({children, className, downLength}) {
     //     };
     // }, [handleNavigation]);
 
-  if(!downLength) downLength = 100;
   const [ref, inView] = useInView({triggerOnce: true});
 
   const classes = classNames("", {
@@ -34,8 +35,9 @@ export default function FadeInUp({children, className, downLength}) {
   })
 
   const animationVariants = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: downLength, },
+    animate: { opacity: 1, y: 0, transition: {duration: 0.6}},
+    // visible: {opacity: 1, y: 0, transition: {duration: 0.0001,}},
+    hidden: { opacity: 0, y: downLength || 100, },
   };
 
   return (
@@ -44,8 +46,7 @@ export default function FadeInUp({children, className, downLength}) {
       ref={ref}
       variants={animationVariants}
       initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      transition={{duration: 0.4, ease: "easeOut"}}
+      animate={inView ? "animate" : "hidden"}
     >
         {children}
     </motion.div>
