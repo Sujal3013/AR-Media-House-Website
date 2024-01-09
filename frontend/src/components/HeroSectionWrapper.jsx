@@ -1,6 +1,6 @@
 import classNames from "classnames"
 
-export default function HeroSectionWrapper({children, className, behindBackground, ...other}) {
+export default function HeroSectionWrapper({children, className, behindBackground,home, ...other}) {
   
   const classes = classNames("px-screen-padding bg-secondary-500 text-tertiary-500 relative", {
     [className]: className,
@@ -14,7 +14,7 @@ export default function HeroSectionWrapper({children, className, behindBackgroun
       >
           {children}
       </div>
-      <img className="bg-tertiary-500" src="./assets/dark-wave-2.svg" alt="wave" />
+      <img className="bg-tertiary-500 w-full" src={`${!home?"./assets/wave-extra.svg":"./assets/home_banner_wave1.svg"}`} alt="wave" />
     </>
   )
 }

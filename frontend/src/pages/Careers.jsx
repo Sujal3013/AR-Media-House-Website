@@ -15,7 +15,7 @@ export default function Careers() {
     <>
     <div className="mb-10">
       {/* Hero Section */}
-      <div className="bg-[url('/assets/Careers-Hero.svg')] h-[95vh] bg-cover bg-center h-96 bg-no-repeat flex items-center justify-center text-white">
+      <div className="bg-[url('/assets/Careers-Hero.svg')] h-[95vh] bg-cover bg-center bg-no-repeat flex items-center justify-center text-white">
         {/* Replace 'your-image-url' with the actual URL of your hero image */}
         <div className="text-center items-center">
           <h1 className="text-7xl font-jost font-extrabold mb-4 text-primary-500 leading-3">

@@ -15,16 +15,16 @@ export default function Home() {
   document.querySelector("title").innerHTML = "AR Media House";
   return (
     <>
-      <HeroSectionWrapper className="flex flex-col gap-4 items-center justify-between">
+      <HeroSectionWrapper className="flex py-6 flex-col gap-4 items-center justify-between" home={true}>
         <div className="w-full flex justify-between items-center">
           {/* text content right side */}
-          <div className="w-[45vw] my-2">
+          <div className="w-[45vw] my-4">
             <Heading
               heading="Digital Marketing"
               subHeading="that drives result"
               subHeadingClassName="text-tertiary-500"
             />
-            <p className="text-sm my-12">
+            <p className="text-sm my-12 w-[30vw]">
               AR Media House works with reputable global brands to deliver data-driven lead
               generation, customer acquisition, and brand awareness campaigns through 
               various digital spaces.
@@ -40,14 +40,14 @@ export default function Home() {
             </div>
           </div>
           {/* illustraion */}
-          <div  className="w-[32vw] h-[60vh] bg-primary-500 my-16 rounded">
-  
+          <div  className="w-auto h-auto rounded">
+              <img src="/assets/Banner1.svg" alt="" />
           </div>
         </div>
 
         {/* Companies */}
-        <div className="flex flex-col items-center justify-center">
-          <h1 className="font-black text-xl tracking-wider my-8">Trusted by thousands of client worldwide</h1>
+        <div className="flex flex-col items-center justify-center ">
+          <h1 className="font-bold font-jost text-2xl text-slate-200 tracking-wider my-8">Trusted by thousands of client worldwide</h1>
           <div className="w-[98vw] h-28 mb-8 flex justify-center items-center relative overflow-hidden">
           <CompaniesAnimate className="flex justify-center items-center gap-16">
             {
@@ -80,7 +80,9 @@ export default function Home() {
           </Button>
         }
         illustration={
-          <div className="rounded-full bg-primary-500 text-center w-96 h-72 my-4"></div>
+          <div className="rounded-full text-center w-[40vw] h-auto my-4">
+            <img src="/assets/What_makes_us.svg" alt="" />
+          </div>
         }
         direction={-1}
       />
@@ -88,7 +90,7 @@ export default function Home() {
 
 
       <Section
-        backgroundClassName="bg-tertiary-500 pt-24 pb-10"
+        backgroundClassName="bg-tertiary-500 pt-12 pb-10"
         heading="We SkyRocket"
         subHeading="brand's growth"
         text="We have contributed to the growth of startups of nearly every size,
@@ -101,14 +103,16 @@ export default function Home() {
           </Button>
         }
         illustration={
-          <div className="rounded-full bg-primary-500 text-center w-96 h-72 my-4"></div>
+          <div className="rounded-full text-center w-[40vw] h-auto">
+            <img src="/assets/Growth_curve.svg" alt=""  className=""/>
+          </div>
         }
       />
 
       <img
         src="./assets/wave-downward-1.svg"
         alt="wave"
-        className="bg-secondary-500"
+        className="bg-secondary-500 w-full"
       />
 
       <div className="flex flex-col gap-4 bg-secondary-500 py-6 pt-0  px-screen-padding items-between">
@@ -141,7 +145,7 @@ export default function Home() {
         </div>
       </div>
 
-      <img src="./assets/dark-wave-1.svg" alt="wave" />
+      <img className="w-full" src="./assets/dark-wave-1.svg" alt="wave" />
 
       <Section
         backgroundClassName="py-8"
@@ -156,13 +160,16 @@ export default function Home() {
           </Button>
         }
         illustration={
-          <div className="h-72 w-96 rounded-3xl bg-primary-500"></div>
+          <div className="rounded-full text-center w-[40vw] h-auto">
+            <img src="/assets/GO_image.svg" alt=""  className=""/>
+          </div>
         }
       />
 
       <img
         src="./assets/wave3.svg"
         alt="wave"
+        className="w-full"
       />
 
       <section className="bg-tertiary-500 pt-8">
@@ -170,57 +177,63 @@ export default function Home() {
           className="items-center"
           heading="3-easy step"
           subHeading="our growth"
-          headingClassName="text-primary-500"
+          headingClassName="text-primary-500 text-6xl"
           subHeadingClassName="text-secondary-500 mt-[-4px]"
         />
 
-        <img src="./assets/1-2-3-line.svg" alt="" className="absolute h-[140vh] left-[50%] translate-x-[-60%] translate-y-20"/>
+        <img src="./assets/1-2-3-path.svg" alt="" className="absolute h-[180vh] left-[50%] translate-x-[-65%] translate-y-[15%]"/>
 
         <Section
-          backgroundClassName="bg-tertiary-500 py-6"
+          backgroundClassName="bg-tertiary-500 py-8"
           heading="Diagnosis & Strategy"
-          headingClassName="!text-4xl text-secondary-500"
-          subHeadingClassName="pl-1 mt-[-8px] !text-3xl text-primary-500"
+          headingClassName="text-4xl text-secondary-500"
+          subHeadingClassName="pl-1 mt-[-8px] text-4xl text-primary-500"
           subHeading="planning"
           allHeadingClassName="mt-16 mb-12"
           text="Analyzing audience online behavior and tendencies to convert and
           strategize actions for maximum revenue."
           textClassName="mb-16"
           illustration={
-            <div className="h-72 w-96 rounded-3xl bg-primary-500"></div>
+            <div className="rounded-full text-center w-auto h-auto">
+            <img src="/assets/Diagnosis.svg" alt=""  className=""/>
+          </div>
           }
           direction={-1}
         />
 
         <Section
-          backgroundClassName="bg-tertiary-500 py-6"
-          heading="Digital Foundation"
-          headingClassName="!text-4xl text-secondary-500"
-          subHeadingClassName="pl-1 mt-[-8px] !text-3xl text-primary-500"
+          backgroundClassName="bg-tertiary-500 py-2"
+          heading="Digital Foundations"
+          headingClassName="text-4xl text-secondary-500"
+          subHeadingClassName="pl-1 mt-[-8px] text-4xl text-primary-500"
           subHeading="test phase"
-          allHeadingClassName="mt-16 mb-12"
+          allHeadingClassName="mt-0 mb-12"
           text="Testing multiple creatives with varied target audience settings
           and narrowing down best-performing creatives based on data
           driven strategy."
           textClassName="mb-16"
           illustration={
-            <div className="h-72 w-96 rounded-3xl bg-primary-500"></div>
+            <div className="rounded-full text-center w-auto h-auto">
+            <img src="/assets/Foundations.svg" alt=""  className=""/>
+          </div>
           }
         />
 
         <Section
-          backgroundClassName="bg-tertiary-500 py-6"
+          backgroundClassName="bg-tertiary-500 py-0"
           heading="Verify Benchmarks"
-          headingClassName="!text-4xl text-secondary-500"
-          subHeadingClassName="pl-1 mt-[-8px] !text-3xl text-primary-500"
+          headingClassName="text-4xl text-secondary-500"
+          subHeadingClassName="pl-1 mt-[-8px] text-4xl text-primary-500"
           subHeading="scale phase"
-          allHeadingClassName="mt-16 mb-12"
+          allHeadingClassName="mt-0 mb-12"
           text="Using in-house technology to create AI-driven strategies and increase the frequency,
           targeting, and budget for the best performing ads in order to improve revenue
           and profit."
           textClassName="mb-16"
           illustration={
-            <div className="h-72 w-96 rounded-3xl bg-primary-500"></div>
+            <div className="rounded-full text-center w-auto h-auto">
+            <img src="/assets/BenchMarks.svg" alt=""  className=""/>
+          </div>
           }
           direction={-1}
         />
@@ -231,7 +244,7 @@ export default function Home() {
       <RoundedCornersSection  
         className="bg-secondary-500 relative px-screen-padding pb-28"
         behindBackground="bg-tertiary-500"
-        // bothRounded={true}
+        bothRounded={true}
       >
         <Heading
           heading="Our Client"

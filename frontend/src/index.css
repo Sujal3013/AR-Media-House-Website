@@ -15,6 +15,7 @@ h2, h3, h4, h5, h6 {
     font-family: "Playfair-Display", serif;
 }
 
+
 .slick-slide>div{
   margin: 0px 10px;
 }
@@ -27,42 +28,15 @@ h2, h3, h4, h5, h6 {
   transition: transform 0.6s ease; /* Adjust the duration and easing function as needed */
 }
 
-.slick-next{
-  right:-50px;
-}
-.slick-prev{
-  left:-50px;
-}
-
-.slick-arrow.slick-next{
-height:50px;
-margin-top: 20px;
-width:50px;
-background: url("/assets/next-page.png");
-background-repeat: no-repeat;
-background-size: cover;
-
-}
-.slick-arrow.slick-prev{
-  background: url("/assets/next-page.png");
-  transform: rotate(180deg);
-  background-size: cover;
-  width:50px ;
-  height: 50px;
-  background-repeat: no-repeat;
-}
-
-
-.slick-prev::before,.slick-next::before{
-   display:none;
-}
-
-.arrows{
-height:20px;
-width:20px;
-margin: 1px;
-} 
-
 .job-card:nth-child(even) {
   background-color: #ffffff; /* Alternate color */
+}
+
+
+.navbar{
+  @apply bg-secondary-500 w-full py-3 px-screen-padding flex justify-between items-center h-20;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }

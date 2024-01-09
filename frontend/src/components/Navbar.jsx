@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import Button from "./Button";
+import "../index.css";
 
 export default function Navbar() {
   const location = useLocation().pathname;
@@ -8,7 +9,7 @@ export default function Navbar() {
     window.location.href = `tel:${phoneNumber}`;
   };
   return (
-    <nav className="bg-secondary-500 w-full py-4 px-screen-padding flex justify-between items-center h-20">
+    <nav className="navbar">
         <div className="flex justify-center items-center gap-1">
             <h1
                 className="p-0 px-2 bg-primary-500 text-2xl text-secondary-500 rounded-full"

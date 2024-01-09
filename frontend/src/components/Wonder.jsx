@@ -9,9 +9,10 @@ const Wonder = () => {
         <Heading
           className="py-8"
           heading="We Can do"
+          headingClassName="text-[64px] text-primary-500"
           subHeading="wonders for you"
         />
-        <div className="h-56 w-56 bg-tertiary-500">{/* SVG OR ANIMATION */}</div>
+        <div className="h-auto w-auto bg-tertiary-500"><img src="/assets/wonders_image.png" alt="" /></div>
       </div>
     </div>
   );
