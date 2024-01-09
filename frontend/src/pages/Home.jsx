@@ -5,6 +5,7 @@ import {
   ExploreBlog, 
   Heading, 
   HeroSectionWrapper, 
+  RoundedCornersSection, 
   Section, 
   ServicesCards, 
   Wonder, 
@@ -14,68 +15,59 @@ export default function Home() {
   document.querySelector("title").innerHTML = "AR Media House";
   return (
     <>
-      <HeroSectionWrapper className="flex gap-[4vw] items-center justify-between">
-        {/* text content right side */}
-        <div className="w-[40vw] my-[10vh]">
-          <Heading
-            heading="Digital Marketing"
-            subHeading="that drives result"
-            subHeadingClassName="text-tertiary-500"
-          />
-          <p className="my-12">
-            AR Media House works with reputable global brands to deliver data-driven lead
-            generation, customer acquisition, and brand awareness campaigns through 
-            various digital spaces.
-          </p>
-          {/* Buttons */}
-          <div className="flex gap-6 pt-8">
-            <Button arrow className="bg-primary-500 text-secondary-500">
-              Let's Connect
-            </Button>
-            <Button className="bg-transparent border-2 border-primary-500">
-              About Us
-            </Button>
+      <HeroSectionWrapper className="flex flex-col gap-4 items-center justify-between">
+        <div className="w-full flex justify-between items-center">
+          {/* text content right side */}
+          <div className="w-[45vw] my-2">
+            <Heading
+              heading="Digital Marketing"
+              subHeading="that drives result"
+              subHeadingClassName="text-tertiary-500"
+            />
+            <p className="text-sm my-12">
+              AR Media House works with reputable global brands to deliver data-driven lead
+              generation, customer acquisition, and brand awareness campaigns through 
+              various digital spaces.
+            </p>
+            {/* Buttons */}
+            <div className="flex gap-6 py-10">
+              <Button arrow className="bg-primary-500 text-secondary-500">
+                Let's Connect
+              </Button>
+              <Button className="bg-transparent border-2 border-primary-500">
+                About Us
+              </Button>
+            </div>
+          </div>
+          {/* illustraion */}
+          <div  className="w-[32vw] h-[60vh] bg-primary-500 my-16 rounded">
+  
           </div>
         </div>
-        {/* illustraion */}
-        <div  className="w-[35vw] h-[50vh] bg-primary-500 my-28 rounded">
 
-        </div>
-      </HeroSectionWrapper>
-
-
-      {/* Companies Section */}
-      <section 
-        className="h-[35vh] pt-8 flex flex-col items-center justify-start px-screen-padding relative overflow-hidden"
-        >
-        <div
-          className="absolute h-[30vh] w-full left-0 z-10"
-          style={{
-            background: 'linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0) 5%, rgba(255,255,255,0) 95%, rgba(255,255,255,1))'
-          }}
-        ></div>
-        <h1 className="font-bold text-gray-500 text-xl">Trusted by thousands of clients worldwide</h1>
-        <CompaniesAnimate className="top-14 flex justify-start items-center gap-32">
+        {/* Companies */}
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="font-black text-xl tracking-wider my-8">Trusted by thousands of client worldwide</h1>
+          <div className="w-[98vw] h-28 mb-8 flex justify-center items-center relative overflow-hidden">
+          <CompaniesAnimate className="flex justify-center items-center gap-16">
             {
-              images.map((company, index)=>{
+              companies.map((c, index)=>{
                 return (
-                  <li className="w-36 h-fit flex justify-center">
-                    <img {...company} />
+                  <li>
+                    {c}
                   </li>
                 )
               })
             }
-        </CompaniesAnimate>
-      </section>
-
-      <img
-        src="./assets/wave1.svg"
-        alt="wave"
-      />
+          </CompaniesAnimate>
+          </div>
+        </div>
+        
+      </HeroSectionWrapper>  
 
 
       <Section
-        backgroundClassName="bg-tertiary-500 py-24"
+        backgroundClassName="bg-tertiary-500 py-8"
         heading="What Make Us"
         subHeading="different"
         text="AR Media House works with reputable global brands to deliver
@@ -96,7 +88,7 @@ export default function Home() {
 
 
       <Section
-        backgroundClassName="bg-tertiary-500 pb-24"
+        backgroundClassName="bg-tertiary-500 pt-24 pb-10"
         heading="We SkyRocket"
         subHeading="brand's growth"
         text="We have contributed to the growth of startups of nearly every size,
@@ -114,12 +106,12 @@ export default function Home() {
       />
 
       <img
-        src="./assets/wave-dark1.svg"
+        src="./assets/wave-downward-1.svg"
         alt="wave"
         className="bg-secondary-500"
       />
 
-      <div className="flex flex-col gap-4 bg-secondary-500 py-6 pt-0  px-screen-padding items-between h-[120vh] mb-36">
+      <div className="flex flex-col gap-4 bg-secondary-500 py-6 pt-0  px-screen-padding items-between">
         <Heading 
           heading="We have Got"
           subHeading="a lot to offer"
@@ -137,7 +129,7 @@ export default function Home() {
               })
             }
           </ul>
-          <ul className="w-full gap-[6vw]  flex justify-center relative first:">
+          <ul className="w-full gap-[6vw] flex justify-center relative mb-4">
             {
               services.slice(4).map((s, index)=>{
                 return (
@@ -149,9 +141,10 @@ export default function Home() {
         </div>
       </div>
 
-
+      <img src="./assets/dark-wave-1.svg" alt="wave" />
 
       <Section
+        backgroundClassName="py-8"
         heading="We Make Your"
         middleLine="GO"
         middleLineClassName="text-primary-500 my-[-4px]"
@@ -235,9 +228,10 @@ export default function Home() {
 
 
 
-      <HeroSectionWrapper 
-        className="rounded-tl-[6rem] h-96 mb-56 relative"
+      <RoundedCornersSection  
+        className="bg-secondary-500 relative px-screen-padding pb-28"
         behindBackground="bg-tertiary-500"
+        // bothRounded={true}
       >
         <Heading
           heading="Our Client"
@@ -260,8 +254,7 @@ export default function Home() {
           }
         </ul>
         
-        <div className="h-[40vh] w-full absolute bottom-[-40vh] left-0 bg-tertiary-500 z-[-1]"></div>
-      </HeroSectionWrapper>
+      </RoundedCornersSection>
 
 
       <ExploreBlog list={blogsList}/>
@@ -343,3 +336,17 @@ const blogsList = [
     text: "lorem ipsum hli eaofe oiveawr oiveawhvoie ievuawh ovwe ae veawda vdsd ea vewaad aewrew cewa onv njkvewa  cewa vinwe jknuh oinwe",
   }
 ]
+
+const companies = [
+  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "fantasy"}}>denver</h1>,
+  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "system-ui"}}>Angle one</h1>,
+  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "inherit"}}>Maruti Suzuki</h1>,
+  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "fantasy"}}>gamezy</h1>,
+  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "system-ui"}}>WAHL</h1>,
+  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "inherit"}}>NMIMS</h1>,
+  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "system-ui"}}>medAce</h1>,
+  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "fantasy"}}>SILAII</h1>,
+  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "system-ui"}}>Arunika</h1>,
+  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "fantasy"}}>ClickHouse</h1>,
+  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "system-ui"}}>INSTA Transfer</h1>,
+];
