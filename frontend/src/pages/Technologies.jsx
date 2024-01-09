@@ -15,8 +15,8 @@ export default function Technologies() {
       "linear-gradient(0deg, rgb(255, 255, 255) 50%, #f7f7f7 50%)",
   };
   return (
-    <>
-      <HeroSectionWrapper className="flex gap-[4vw] h-[70vh] py-10 justify-between">
+    <div className="overflow-hidden">
+      <HeroSectionWrapper className="flex gap-[4vw] h-[70vh] py-10 justify-between" >
         {/* text content right side */}
         <div className="flex-col w-[60vw] my-[0vh]">
           <Heading
@@ -33,7 +33,9 @@ export default function Technologies() {
           </div>
         </div>
         {/* illustraion */}
-        <div className="w-[35vw] h-[40vh] bg-primary-500 my-28 rounded"></div>
+        <div  className="w-auto h-auto rounded">
+              <img src="/assets/Technology_banner.svg" alt="" />
+          </div>
       </HeroSectionWrapper>
       {/* Tech-stack section */}
       <div className="flex-col justify-evenly px-screen-padding py-20 bg-[url('/assets/wave1.svg')] bg-no-repeat bg-contain bg-bottom">
@@ -81,7 +83,9 @@ export default function Technologies() {
           </Button>
         }
         illustration={
-          <div className="rounded-full bg-primary-500 text-center w-96 h-72 my-4"></div>
+          <div className="rounded-full text-center w-[40vw] h-auto my-4">
+            <img src="/assets/Automation_pic.svg" alt="" />
+          </div>
         }
         direction={1}
       />
@@ -105,7 +109,9 @@ export default function Technologies() {
           </Button>
         }
         illustration={
-          <div className="rounded-full bg-primary-500 text-center w-96 h-72 my-4"></div>
+          <div className="rounded-full text-center w-[40vw] h-auto my-4">
+            <img src="/assets/Automation_pic.svg" alt="" />
+          </div>
         }
         direction={-1}
       />
@@ -131,34 +137,25 @@ export default function Technologies() {
           </Button>
         }
         illustration={
-          <div className="rounded-full bg-primary-500 text-center w-96 h-72 my-4"></div>
+          <div className="rounded-full text-center w-[40vw] h-auto my-4">
+            <img src="/assets/Automation_pic.svg" alt="" />
+          </div>
         }
         direction={1}
       />
       {/* HELP CARD */}
-      <>
-        <div className="pt-4 flex justify-center" style={gradientStyle}>
-          <div className="z-4 flex justify-start items-start py-8 w-[80vw] h-72 rounded-[5rem] bg-secondary-500 relative">
-            <div
-              className="h-1/2 absolute w-full top-0 rounded-t-[5rem] shadow-xl"
-              style={{
-                "box-shadow": "#DDDDDD 8px -8px 10px, #DDDDDD -8px -8px 10px",
-              }}
-            ></div>
-            <Heading
-              className="py-8 mx-auto"
-              heading="We'll help you excel"
-              subHeading="your technologies"
-              subHeadingClassName="text-white"
-            />
-            <div className="mt-32">
-              <Button arrow className="bg-white text-secondary-500">
-                Let's Work Together
-              </Button>
-            </div>
-          </div>
+      <div className="px-screen-padding py-16 bg-tertiary-500">
+      <div className="rounded-[4rem] p-20  pb-16 bg-secondary-500">
+          <Heading
+            heading="WE'LL HELP YOU EXCEL"
+            subHeading="with our technologies"
+            subHeadingClassName="text-tertiary-500"
+          />
+          <Button className="bg-primary-500 mt-14" arrow>
+            Learn More
+          </Button>
         </div>
-      </>
+      </div>
       {/* ROCKET SECTION */}
       <div className="py-10">
         <Section
@@ -198,7 +195,7 @@ export default function Technologies() {
         <ExploreBlog list={blogsList} />
       </div>
       <Wonder />
-    </>
+    </div>
   );
 }
 
