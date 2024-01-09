@@ -181,7 +181,7 @@ export default function Home() {
           subHeadingClassName="text-secondary-500 mt-[-4px]"
         />
 
-        <img src="./assets/1-2-3-path.svg" alt="" className="absolute h-[180vh] left-[50%] translate-x-[-65%] translate-y-[15%]"/>
+        <img src="./assets/1-2-3-path.svg" alt="" className="absolute h-[180vh] left-[50%] translate-x-[-60%] translate-y-[10%]"/>
 
         <Section
           backgroundClassName="bg-tertiary-500 py-8"

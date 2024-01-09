@@ -40,3 +40,10 @@ h2, h3, h4, h5, h6 {
   top: 0;
   z-index: 1000;
 }
+
+.nav_bar::after{
+  @apply content-[''] bg-white h-[2px] w-[0%] left-0  -bottom-[0px] rounded-xl absolute duration-500
+}
+.nav_bar:hover::after{
+  @apply w-[100%]
+}

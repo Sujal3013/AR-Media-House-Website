@@ -28,7 +28,7 @@ export default function Navbar() {
                 list.map((item, index)=> {
                     return (
                         <Link 
-                            className="uppercase text-sm font-medium text-tertiary-500 relative py-1 flex justify-center"
+                            className="uppercase nav_bar text-sm font-medium text-tertiary-500 relative py-1 flex justify-center"
                             to={item.to}
                         >
                             {item.title}
