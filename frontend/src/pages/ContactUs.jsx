@@ -8,13 +8,13 @@ const ContactUs = () => {
 
   return (
     <>
-      <img className="absolute top-[30px] -z-10 right-10" src="/assets/Sphere-orange.svg" alt="" />
-      <img className="absolute top-[10rem] rotate-12 left-[50rem]" src="/assets/Triangle-Orange.svg" alt="" />
+      <img className="absolute top-[30px] -z-10 right-10 max-w-sm:hidden" src="/assets/Sphere-orange.svg" alt="" />
+      <img className="absolute top-[10rem] rotate-12 left-[50rem] max-w-sm:hidden" src="/assets/Triangle-Orange.svg" alt="" />
       <div className="px-screen-padding py-10 relative">
         <div className="flex-col">
           <div>
             {/* heading */}
-            <h1 className="font-jost text-[64px]  text-[#FF9356] break-words leading-[64px] font-extrabold">
+            <h1 className="font-jost text-[64px]  text-[#FF9356] break-words leading-[64px] font-extrabold ">
               LET'S CREATE
             </h1>
             <p className="font-playfair-display text-5xl font-extrabold  text-secondary-500 break-words">

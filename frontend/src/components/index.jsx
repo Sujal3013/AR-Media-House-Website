@@ -10,6 +10,8 @@ import RoundedCornersSection from "./RoundedCornersSection";
 import Section from "./Section";
 import ServicesCards from "./ServicesCards";
 import Wonder from "./Wonder";
+import StoryComponent from "./StoryComponent";
+
 
 export {
     Button,
@@ -22,6 +24,7 @@ export {
     Navbar,
     RoundedCornersSection, 
     Section,
-    ServicesCards, 
+    ServicesCards,
     Wonder, 
+    StoryComponent
 }
