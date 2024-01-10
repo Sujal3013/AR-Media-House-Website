@@ -1,5 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import {
   Home,
   ContactUs,
@@ -13,7 +12,10 @@ import {
   SharedLayout,
 } from "./pages";
 
+
 function App() {
+  
+
   return (
     <BrowserRouter>
       <Routes>
@@ -30,6 +32,7 @@ function App() {
         <Route path="*" element={<Page404 />} />
       </Routes>
     </BrowserRouter>
+
   );
 }
 

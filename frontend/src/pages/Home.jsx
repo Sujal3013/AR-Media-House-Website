@@ -47,7 +47,7 @@ export default function Home() {
 
         {/* Companies */}
         <div className="flex flex-col items-center justify-center ">
-          <h1 className="font-bold font-jost text-2xl text-slate-200 tracking-wider my-8">Trusted by thousands of client worldwide</h1>
+          <h1 className="font-bold font-jost text-3xl text-slate-200 tracking-wider my-8">Trusted by <span className="text-primary-500">thousands</span> of client worldwide</h1>
           <div className="w-[98vw] h-28 mb-8 flex justify-center items-center relative overflow-hidden">
           <CompaniesAnimate className="flex justify-center items-center gap-16">
             {
@@ -67,7 +67,7 @@ export default function Home() {
 
 
       <Section
-        backgroundClassName="bg-tertiary-500 py-8"
+        backgroundClassName="bg-tertiary-500 pt-1 pb-2"
         heading="What Make Us"
         subHeading="different"
         text="AR Media House works with reputable global brands to deliver
@@ -90,7 +90,7 @@ export default function Home() {
 
 
       <Section
-        backgroundClassName="bg-tertiary-500 pt-12 pb-10"
+        backgroundClassName="bg-tertiary-500 pt-2 pb-10 !items-start"
         heading="We SkyRocket"
         subHeading="brand's growth"
         text="We have contributed to the growth of startups of nearly every size,
@@ -149,7 +149,8 @@ export default function Home() {
 
       <Section
         backgroundClassName="py-8"
-        heading="We Make Your"
+        heading="We Make Your Sales"
+        headingClassName="text-black"
         middleLine="GO"
         middleLineClassName="text-primary-500 my-[-4px]"
         subHeading="through the roof"
@@ -181,13 +182,13 @@ export default function Home() {
           subHeadingClassName="text-secondary-500 mt-[-4px]"
         />
 
-        <img src="./assets/1-2-3-path.svg" alt="" className="absolute h-[180vh] left-[50%] translate-x-[-60%] translate-y-[10%]"/>
+        <img src="./assets/1-2-3-path.svg" alt="" className="absolute h-[180vh] left-[48%] translate-x-[-60%] translate-y-[10%]"/>
 
         <Section
           backgroundClassName="bg-tertiary-500 py-8"
           heading="Diagnosis & Strategy"
-          headingClassName="text-4xl text-secondary-500"
-          subHeadingClassName="pl-1 mt-[-8px] text-4xl text-primary-500"
+          headingClassName="text-5xl text-secondary-500"
+          subHeadingClassName="pl-1 mt-[-8px] text-5xl text-primary-500"
           subHeading="planning"
           allHeadingClassName="mt-16 mb-12"
           text="Analyzing audience online behavior and tendencies to convert and
@@ -202,10 +203,10 @@ export default function Home() {
         />
 
         <Section
-          backgroundClassName="bg-tertiary-500 py-2"
+          backgroundClassName="bg-tertiary-500 py-4"
           heading="Digital Foundations"
-          headingClassName="text-4xl text-secondary-500"
-          subHeadingClassName="pl-1 mt-[-8px] text-4xl text-primary-500"
+          headingClassName="text-5xl text-secondary-500"
+          subHeadingClassName="pl-1 mt-[-8px] text-5xl text-primary-500"
           subHeading="test phase"
           allHeadingClassName="mt-0 mb-12"
           text="Testing multiple creatives with varied target audience settings
@@ -220,10 +221,10 @@ export default function Home() {
         />
 
         <Section
-          backgroundClassName="bg-tertiary-500 py-0"
+          backgroundClassName="bg-tertiary-500 py-5"
           heading="Verify Benchmarks"
-          headingClassName="text-4xl text-secondary-500"
-          subHeadingClassName="pl-1 mt-[-8px] text-4xl text-primary-500"
+          headingClassName="text-5xl text-secondary-500"
+          subHeadingClassName="pl-1 mt-[-8px] text-5xl text-primary-500"
           subHeading="scale phase"
           allHeadingClassName="mt-0 mb-12"
           text="Using in-house technology to create AI-driven strategies and increase the frequency,
@@ -249,7 +250,7 @@ export default function Home() {
         <Heading
           heading="Our Client"
           subHeading="loves us"
-          headingClassName="text-tertiary-500"
+          headingClassName="text-primary-500"
           subHeadingClassName="text-tertiary-500 mt-[-4px]"
           className="items-center py-8 pt-12"
         />

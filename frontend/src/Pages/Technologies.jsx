@@ -63,7 +63,7 @@ export default function Technologies() {
       </div>
       {/* PROCESS SECTION */}
       <Section
-        backgroundClassName="bg-tertiary-500 px-32 py-20"
+        backgroundClassName="bg-tertiary-500 px-32 py-1"
         heading="AUTOMATION MARKETING"
         subHeading="platform"
         headingClassName="text-secondary-500 font-jost text-[64px] font-extrabold"
@@ -90,7 +90,7 @@ export default function Technologies() {
         direction={1}
       />
       <Section
-        backgroundClassName="bg-tertiary-500 px-32 py-20"
+        backgroundClassName="bg-tertiary-500 px-0  !justify-evenly"
         heading="DATA"
         subHeading="collection"
         headingClassName="text-secondary-500 font-jost text-[64px] font-extrabold"
@@ -144,8 +144,9 @@ export default function Technologies() {
         direction={1}
       />
       {/* HELP CARD */}
-      <div className="px-screen-padding py-16 bg-tertiary-500">
-      <div className="rounded-[4rem] p-20  pb-16 bg-secondary-500">
+      <div className="px-screen-padding py-16 h-full">
+        
+      <div className="rounded-[4rem] p-20 pb-16 bg-secondary-500 ">
           <Heading
             heading="WE'LL HELP YOU EXCEL"
             subHeading="with our technologies"
@@ -165,7 +166,7 @@ export default function Technologies() {
           middleLineClassName="text-[96px] text-primary-500"
           subHeading="your revenue"
           headingClassName="text-secondary-500 font-jost text-[64px] w-[100vw] font-extrabold"
-          subHeadingClassName="text-secondary-500 font-playfair-display font-bold text-[48px]"
+          subHeadingClassName="text-secondary-500 font-playfair-display font-bold text-[56px]"
           text="Generate an impactful revenue with our company’s specific revenue objectives."
           textClassName="py-10 w-[35rem]"
           Button1={

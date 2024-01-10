@@ -8,8 +8,8 @@ export default function ({primary, secondary, arrow, arrowWhite, to, children, c
   
   const classes = classNames("w-fit cursor-pointer py-2.5 flex justify-center items-center",{
     [className]: className,
-    "px-2": arrow,
-    "px-3": !arrow,
+    "px-4": arrow,
+    "px-6": !arrow,
   });
 
   return (
@@ -17,7 +17,7 @@ export default function ({primary, secondary, arrow, arrowWhite, to, children, c
       className={classes} 
       whileHover={{scale:1.05}}
       whileTap={{scale: 0.95}}
-      transition={{ duration: 0.1, ease: 'linear' }}
+      transition={{ duration: 0.2, ease: 'linear' }}
       {...other}
     >
     <Link

@@ -24,7 +24,7 @@ export {
     Navbar,
     RoundedCornersSection, 
     Section,
-    ServicesCards, 
+    ServicesCards,
     Wonder, 
     StoryComponent
 }
