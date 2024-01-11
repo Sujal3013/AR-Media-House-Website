@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import classNames from "classnames";
 
 export default function Circle({className, primary, secondary}) {
-  const classes = classNames("w-32 h-32 rounded-full absolute blur hover:cursor-grab active:cursor-grabbing", {
+  const classes = classNames("w-24 h-24 sm:w-32 sm:h-32 rounded-full absolute blur hover:cursor-grab active:cursor-grabbing", {
     [className]: className,
   })
 

@@ -50,7 +50,7 @@ export default function Navbar() {
                     return (
                         <Link 
                             className="uppercase nav_bar text-sm font-medium text-tertiary-500 relative py-1 flex justify-center"
-                            to={"/contact"}
+                            to={item.to}
                             key={index}
                         >
                             {item.title}
