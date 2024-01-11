@@ -55,7 +55,7 @@ export default function Home() {
             {
               companies.map((c, index)=>{
                 return (
-                  <li>
+                  <li key={index}>
                     {c}
                   </li>
                 )

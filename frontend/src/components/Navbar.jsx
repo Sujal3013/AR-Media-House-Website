@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import Button from "./Button";
+import Hamburger from "./Hamburger";
 import "../index.css";
 
 export default function Navbar() {
@@ -23,13 +24,34 @@ export default function Navbar() {
             </h1>
         </div>
 
-        <div className="flex items-center gap-[2.5vw]">
+        {/*Hamburger Menu*/}
+        <Hamburger list={list.map((item,index)=>
+            <Link 
+                className="!block w-full p-2 hover:text-primary-500"
+                to={item.to}
+                key={index}
+            >
+                {item.title}
+                {location===item.to}
+            </Link>
+        ).concat(
+            <Link 
+                className="!block w-full p-2 hover:text-primary-500"
+                to="/contact"
+                key={-1}
+            >
+                Contact
+                {location==="/contact"}
+            </Link>
+        )} />
+        <div className="hidden lg:flex items-center gap-[2vw]">
             {
                 list.map((item, index)=> {
                     return (
                         <Link 
                             className="uppercase nav_bar text-sm font-medium text-tertiary-500 relative py-1 flex justify-center"
-                            to={item.to}
+                            to={"/contact"}
+                            key={index}
                         >
                             {item.title}
                             {location===item.to && <div className="bg-primary-500 h-[1px] w-full absolute bottom-0 m-auto"></div>}
@@ -38,7 +60,7 @@ export default function Navbar() {
                 })
             }
         </div>
-        <div className="flex justify-center items-center gap-6">
+        <div className="hidden lg:flex justify-center items-center gap-4">
             <Button to="/contact" primary className={`${location==="/contact"?"opacity-0 transition-opacity duration-500":"bg-primary-500 transition-opacity opacity-100 duration-500 text-secondary-500 text-sm"}`}>
                 Let's Connect
             </Button>
