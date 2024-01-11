@@ -9,7 +9,7 @@ export default function ({primary, secondary, arrow, arrowWhite, to, children, c
   const classes = classNames("w-fit cursor-pointer py-2.5 flex justify-center items-center",{
     [className]: className,
     "px-4": arrow,
-    "px-6": !arrow,
+    "px-5": !arrow,
   });
 
   return (
@@ -21,7 +21,7 @@ export default function ({primary, secondary, arrow, arrowWhite, to, children, c
       {...other}
     >
     <Link
-      className='flex justify-center items-center gap-2 font-medium text-center leading-4'
+      className='w-full flex justify-center items-center gap-2 text-center leading-4'
       to={to}
     >
         {children}

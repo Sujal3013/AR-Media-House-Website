@@ -17,9 +17,10 @@ export default function Section({
     direction, 
     backgroundClassName,
     illustration,
+    Shapes,
 }) {
 
-  const bgClasses = classNames("flex justify-between px-screen-padding items-center gap-4", {
+  const bgClasses = classNames("flex justify-between px-screen-padding items-center gap-4 relative", {
     [backgroundClassName]: backgroundClassName,
     "flex-row-reverse": direction && direction<0,
   })
@@ -68,6 +69,10 @@ export default function Section({
       </div>
         {
           illustration && illustration
+        }
+
+        {
+          Shapes && Shapes
         }
     </section>
   )

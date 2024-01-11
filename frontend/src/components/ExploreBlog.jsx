@@ -53,9 +53,7 @@ export default function ExploreBlog({ list, className }) {
         
         <Slider {...settings} className="w-full h-full" ref={sliderRef}>
           {list.map((blog, index) => (
-            <div key={index} className="mb-24 ">
-              <ExploreBlogList blog={blog} />
-            </div>
+              <ExploreBlogList blog={blog} focus={index===currentSlide} className="mt-24" />
           ))}
         </Slider>
         

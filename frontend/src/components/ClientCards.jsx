@@ -10,7 +10,7 @@ export default function ClientCards({heading, subHeading, icon, text, className,
       <div className="flex w-full justify-center gap-4">
         {icon}
         <div className="flex flex-col justify-center">
-          <h1 className="font-semibold">{heading}</h1>
+          <h1 className="text-lg">{heading}</h1>
           <h1 className="text-sm">{subHeading}</h1>
         </div>
       </div>

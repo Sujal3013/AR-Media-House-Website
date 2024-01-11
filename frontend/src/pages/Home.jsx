@@ -1,5 +1,6 @@
 import { 
   Button, 
+  Circle, 
   CompaniesAnimate, 
   ClientCards, 
   ExploreBlog, 
@@ -8,6 +9,7 @@ import {
   RoundedCornersSection, 
   Section, 
   ServicesCards, 
+  Triangle, 
   Wonder, 
 } from "../components";
 
@@ -15,10 +17,10 @@ export default function Home() {
   document.querySelector("title").innerHTML = "AR Media House";
   return (
     <>
-      <HeroSectionWrapper className="flex py-6 flex-col gap-4 items-center justify-between" home={true}>
+      <HeroSectionWrapper className="flex py-6 flex-col gap-4 items-center justify-between relative" home={true}>
         <div className="w-full flex justify-between items-center">
           {/* text content right side */}
-          <div className="w-[45vw] my-4">
+          <div className="w-auto my-8">
             <Heading
               heading="Digital Marketing"
               subHeading="that drives result"
@@ -34,13 +36,13 @@ export default function Home() {
               <Button arrow className="bg-primary-500 text-secondary-500">
                 Let's Connect
               </Button>
-              <Button className="bg-transparent border-2 border-primary-500">
+              <Button className="bg-transparent border-2 border-primary-500 text-primary-500">
                 About Us
               </Button>
             </div>
           </div>
           {/* illustraion */}
-          <div  className="w-auto h-auto rounded">
+          <div  className="w-[38vw] h-auto rounded">
               <img src="/assets/Banner1.svg" alt="" />
           </div>
         </div>
@@ -49,7 +51,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center ">
           <h1 className="font-bold font-jost text-3xl text-slate-200 tracking-wider my-8">Trusted by <span className="text-primary-500">thousands</span> of client worldwide</h1>
           <div className="w-[98vw] h-28 mb-8 flex justify-center items-center relative overflow-hidden">
-          <CompaniesAnimate className="flex justify-center items-center gap-16">
+          <CompaniesAnimate className="flex justify-center items-center gap-24">
             {
               companies.map((c, index)=>{
                 return (
@@ -63,34 +65,44 @@ export default function Home() {
           </div>
         </div>
         
+
+        {/* Shapes */}
+        <Circle className="top-[4%] right-[2%]" secondary/>
+        <Circle className="top-[50%] left-[25%]" secondary/>
+        <Triangle className="top-[-4%] left-[20%]" secondary/>
+        <Triangle className="bottom-[-5%] right-[10%]" secondary duration={10} />
       </HeroSectionWrapper>  
 
 
       <Section
-        backgroundClassName="bg-tertiary-500 pt-1 pb-2"
+        backgroundClassName="bg-tertiary-500 py-10"
         heading="What Make Us"
         subHeading="different"
         text="AR Media House works with reputable global brands to deliver
         data-driven lead generation, customer acquisition, and brand awareness
         campaigns through various digital spaces."
-        textClassName="py-10"
+        textClassName="my-10"
         Button1={
           <Button arrow primary className="mt-4 text-secondary-500 bg-primary-500">
             Learn More
           </Button>
         }
         illustration={
-          <div className="rounded-full text-center w-[40vw] h-auto my-4">
-            <img src="/assets/What_makes_us.svg" alt="" />
-          </div>
+            <img src="/assets/What_makes_us.png" alt="" className="h-auto w-[35vw]"/>
         }
         direction={-1}
+        Shapes={
+          <>
+            <Circle className="top-[4%] left-[-2%]" />
+            <Circle className="top-[56%] right-[8%]" />
+          </>
+        }
       />
 
 
 
       <Section
-        backgroundClassName="bg-tertiary-500 pt-2 pb-10 !items-start"
+        backgroundClassName="bg-tertiary-500 py-10 !items-start"
         heading="We SkyRocket"
         subHeading="brand's growth"
         text="We have contributed to the growth of startups of nearly every size,
@@ -104,8 +116,11 @@ export default function Home() {
         }
         illustration={
           <div className="rounded-full text-center w-[40vw] h-auto">
-            <img src="/assets/Growth_curve.svg" alt=""  className=""/>
+            <img src="/assets/Growth_curve.svg" alt=""  className="w-[30vw]"/>
           </div>
+        }
+        Shapes={
+          <Triangle className="top-[70%] left-[25%]" />
         }
       />
 
@@ -115,7 +130,7 @@ export default function Home() {
         className="bg-secondary-500 w-full"
       />
 
-      <div className="flex flex-col gap-4 bg-secondary-500 py-6 pt-0  px-screen-padding items-between">
+      <div className="flex flex-col gap-4 bg-secondary-500 py-6 pt-0 px-screen-padding items-between relative">
         <Heading 
           heading="We have Got"
           subHeading="a lot to offer"
@@ -173,7 +188,7 @@ export default function Home() {
         className="w-full"
       />
 
-      <section className="bg-tertiary-500 pt-8">
+      <section className="bg-tertiary-500 pt-8 relative">
         <Heading
           className="items-center"
           heading="3-easy step"
@@ -182,10 +197,10 @@ export default function Home() {
           subHeadingClassName="text-secondary-500 mt-[-4px]"
         />
 
-        <img src="./assets/1-2-3-path.svg" alt="" className="absolute h-[180vh] left-[48%] translate-x-[-60%] translate-y-[10%]"/>
+        <img src="./assets/1-2-3-path.svg" alt="steps" className="absolute z-10 mt-8 h-[200vh] left-[50%] translate-x-[-60%]"/>
 
         <Section
-          backgroundClassName="bg-tertiary-500 py-8"
+          backgroundClassName="bg-tertiary-500 py-4"
           heading="Diagnosis & Strategy"
           headingClassName="text-5xl text-secondary-500"
           subHeadingClassName="pl-1 mt-[-8px] text-5xl text-primary-500"
@@ -203,7 +218,7 @@ export default function Home() {
         />
 
         <Section
-          backgroundClassName="bg-tertiary-500 py-4"
+          backgroundClassName="bg-tertiary-500"
           heading="Digital Foundations"
           headingClassName="text-5xl text-secondary-500"
           subHeadingClassName="pl-1 mt-[-8px] text-5xl text-primary-500"
@@ -221,7 +236,7 @@ export default function Home() {
         />
 
         <Section
-          backgroundClassName="bg-tertiary-500 py-5"
+          backgroundClassName="bg-tertiary-500 py-4 pb-20"
           heading="Verify Benchmarks"
           headingClassName="text-5xl text-secondary-500"
           subHeadingClassName="pl-1 mt-[-8px] text-5xl text-primary-500"
@@ -301,8 +316,8 @@ const services = [
   { className: "first:absolute first:top-32 last:absolute last:top-32 last:right-0 first:left-0", icon: icon, heading: "Performance Marketing", text: "Place ads about your company, services, or products on websites that help drive more sales in the online market."},
   { className: "first:absolute first:top-32 last:absolute last:top-32 last:right-0 first:left-0", icon: icon, heading: "Lead Generation", text: "Convert your prospects into delighted clients solely meant for your agency."},
   { className: "first:absolute first:top-32 last:absolute last:top-32 last:right-0 first:left-0", icon: icon, heading: "Media Buying", text: "We use immense technologies to determine strategy, to compile content, execute content, & analyze results."},
-  { className: "shadow-lg shadow-gray-500", icon: icon, heading: "Martech", text: "A strategic marketing approach to help your valuable content reach key audiences." },
-  { className: "shadow-lg shadow-gray-500", icon: icon, heading: "Content Marketing", text: "We use immense technologies to determine strategy, to compile content, execute content, & analyze results." }
+  { icon: icon, heading: "Martech", text: "A strategic marketing approach to help your valuable content reach key audiences." },
+  { icon: icon, heading: "Content Marketing", text: "We use immense technologies to determine strategy, to compile content, execute content, & analyze results." }
 ]
 
 const icon2 = <img src="./assets/person.png" alt="person" className="w-16 h-16"/>
