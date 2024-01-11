@@ -48,6 +48,21 @@ h2, h3, h4, h5, h6 {
   @apply w-[100%]
 }
 
+/* width and height for the scrollbar track */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* background of the scrollbar track */
+::-webkit-scrollbar-track {
+  @apply bg-secondary-500
+}
+
+/* color of the scrollbar handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-500 rounded-xl
+}
+
 @media (max-width: 639px) {
   .max-w-sm-responsive {
     @apply max-w-sm;
