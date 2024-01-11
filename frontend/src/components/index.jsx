@@ -11,6 +11,7 @@ import Section from "./Section";
 import ServicesCards from "./ServicesCards";
 import Wonder from "./Wonder";
 import StoryComponent from "./StoryComponent";
+import ScrolltoTop from "./ScrolltoTop";
 
 
 export {
@@ -22,6 +23,7 @@ export {
     Heading,
     HeroSectionWrapper,
     Navbar,
+    ScrolltoTop,
     RoundedCornersSection, 
     Section,
     ServicesCards,
