@@ -6,14 +6,14 @@ import classNames from 'classnames';
 export default function ({primary, secondary, arrow, arrowWhite, to, children, className, ...other}) {
   if(!to || to==="") to = useLocation().pathname;
   
-  const classes = classNames("w-fit cursor-pointer py-2.5 flex justify-center items-center",{
+  const classes = classNames("w-fit cursor-pointer py-2 md:py-2.5 flex justify-center items-center",{
     [className]: className,
-    "px-4": arrow,
-    "px-5": !arrow,
+    "px-3 md:px-4": arrow,
+    "px-4 md:px-5": !arrow,
   });
 
   return (
-    <motion.div
+    <motion.button
       className={classes} 
       whileHover={{scale:1.05}}
       whileTap={{scale: 0.95}}
@@ -21,7 +21,7 @@ export default function ({primary, secondary, arrow, arrowWhite, to, children, c
       {...other}
     >
     <Link
-      className='w-full flex justify-center items-center gap-2 text-center leading-4'
+      className='text-sm sm:text-base w-full flex justify-center items-center gap-2 text-center leading-4'
       to={to}
     >
         {children}
@@ -31,6 +31,6 @@ export default function ({primary, secondary, arrow, arrowWhite, to, children, c
           : ""
         }
     </Link>
-    </motion.div>
+    </motion.button>
   )
 }

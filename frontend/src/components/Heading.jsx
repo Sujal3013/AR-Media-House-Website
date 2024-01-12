@@ -14,14 +14,14 @@ export default function Heading({
   const classes = classNames("flex flex-col gap-[-2px]", {
     [className]: className,
   })
-  const headingClasses = classNames("font-bold text-6xl uppercase", {
+  const headingClasses = classNames("font-bold text-4xl sm:text-5xl lg:text-6xl uppercase", {
     "text-primary-500": !headingClassName,
     [headingClassName]: headingClassName,
   })
-  const middleLineClasses = classNames("font-bold text-8xl uppercase", {
+  const middleLineClasses = classNames("font-bold text-6xl sm:text-7xl lg:text-8xl uppercase", {
     [middleLineClassName]: middleLineClassName,
   });
-  const subHeadingClasses = classNames("font-semibold text-5xl mt-[-2px]", {
+  const subHeadingClasses = classNames("font-semibold text-3xl sm:text-4xl lg:text-5xl mt-[-2px]", {
     "text-secondary-500": !subHeadingClassName,
     [subHeadingClassName]: subHeadingClassName,
   })

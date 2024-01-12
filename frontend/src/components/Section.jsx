@@ -22,7 +22,8 @@ export default function Section({
 
   const bgClasses = classNames("flex justify-between px-screen-padding items-center gap-4 relative", {
     [backgroundClassName]: backgroundClassName,
-    "flex-row-reverse": direction && direction<0,
+    "flex-col md:flex-row-reverse": direction && 1*direction<0,
+    "flex-col md:flex-row": !direction || 1*direction>0,
   })
   const headingClasses = classNames("", {
     [headingClassName]: headingClassName,
@@ -34,7 +35,7 @@ export default function Section({
     [allHeadingClassName]: allHeadingClassName,
   })
 
-  const textClasses = classNames("" , {
+  const textClasses = classNames("text-sm sm:text-base" , {
     [textClassName]: textClassName,
     "text-secondary-500": !textClassName,
   })
@@ -70,7 +71,6 @@ export default function Section({
         {
           illustration && illustration
         }
-
         {
           Shapes && Shapes
         }

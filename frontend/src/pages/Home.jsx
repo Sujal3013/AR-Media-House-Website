@@ -13,6 +13,9 @@ import {
   Wonder, 
 } from "../components";
 
+const SECTION5_HEADING_CLASS = "!text-5xl text-secondary-500"
+const SECTION5_SUB_HEADING_CLASS = "pl-1 mt-[-8px] !text-5xl text-primary-500"
+
 export default function Home() {
   document.querySelector("title").innerHTML = "AR Media House";
   return (
@@ -26,7 +29,7 @@ export default function Home() {
               subHeading="that drives result"
               subHeadingClassName="text-tertiary-500"
             />
-            <p className="text-sm my-12 w-[30vw]">
+            <p className="min-w-[172px] md:w-[35vw] md:min-w-0 text-sm my-12">
               AR Media House works with reputable global brands to deliver data-driven lead
               generation, customer acquisition, and brand awareness campaigns through 
               various digital spaces.
@@ -42,20 +45,20 @@ export default function Home() {
             </div>
           </div>
           {/* illustraion */}
-          <div  className="w-[38vw] h-auto rounded">
+          <div  className="hidden w-[38vw] min-w-80 md:block h-auto rounded">
               <img src="/assets/Banner1.svg" alt="" />
           </div>
         </div>
 
         {/* Companies */}
         <div className="flex flex-col items-center justify-center ">
-          <h1 className="font-bold font-jost text-3xl text-slate-200 tracking-wider my-8">Trusted by <span className="text-primary-500">thousands</span> of client worldwide</h1>
+          <h1 className="text-md sm:text-xl lg:text-2xl text-center font-bold font-jost text-slate-200 tracking-wider my-8">Trusted by <span className="text-primary-500">thousands</span> of client worldwide</h1>
           <div className="w-[98vw] h-28 mb-8 flex justify-center items-center relative overflow-hidden">
-          <CompaniesAnimate className="flex justify-center items-center gap-24" length={companies.length}>
+          <CompaniesAnimate className="flex justify-center items-center gap-12 sm:gap-16 md:gap-20 lg:gap-24" length={companies.length}>
             {
               companies.map((c, index)=>{
                 return (
-                  <li>
+                  <li key={index}>
                     {c}
                   </li>
                 )
@@ -67,7 +70,7 @@ export default function Home() {
         
 
         {/* Shapes */}
-        <Circle className="top-[4%] right-[2%]" secondary/>
+        <Circle className="top-[30%] sm:top-[35%] md:top-[4%] right-[2%]" secondary/>
         <Circle className="top-[50%] left-[25%]" secondary/>
         <Triangle className="top-[-4%] left-[20%]" secondary/>
       </HeroSectionWrapper>  
@@ -88,7 +91,7 @@ export default function Home() {
           </Button>
         }
         illustration={
-            <img src="/assets/What_makes_us.png" alt="" className="h-auto w-[35vw]"/>
+            <img src="/assets/What_makes_us.png" alt="" className=" ImgResponsive h-auto w-[35vw]"/>
         }
         direction={-1}
         Shapes={
@@ -115,9 +118,7 @@ export default function Home() {
           </Button>
         }
         illustration={
-          <div className="rounded-full text-center w-[40vw] h-auto">
-            <img src="/assets/Growth_curve.svg" alt=""  className="w-[30vw]"/>
-          </div>
+            <img src="/assets/Growth_curve.svg" alt=""  className="ImgResponsive w-[30vw]"/>
         }
         Shapes={
           <Triangle className="top-[70%] left-[25%]" />
@@ -173,16 +174,14 @@ export default function Home() {
         middleLine="GO"
         middleLineClassName="text-primary-500 my-[-4px]"
         subHeading="through the roof"
-        allHeadingClassName="mb-12"
+        allHeadingClassName="mb-6 sm:mb-12"
         Button1={
-          <Button className="bg-primary-500 text-secondary-500 mt-6 mb-12" arrow>
+          <Button className="bg-primary-500 text-secondary-500 mt-6 mb-6 sm:mb-12" arrow>
             Let's Connect
           </Button>
         }
         illustration={
-          <div className="rounded-full text-center w-[40vw] h-auto">
-            <img src="/assets/GO_image.svg" alt=""  className=""/>
-          </div>
+            <img src="/assets/GO_image.svg" alt=""  className="ImgResponsive w-[40vw]"/>
         }
         Shapes={
           <Circle className="top-[56%] left-[30%]" />
@@ -200,17 +199,15 @@ export default function Home() {
           className="items-center pb-2"
           heading="3-easy step"
           subHeading="our growth"
-          headingClassName="text-primary-500 text-6xl"
-          subHeadingClassName="text-secondary-500 mt-[-4px]"
         />
 
-        <img src="./assets/1-2-3-path.svg" alt="steps" className="absolute z-10 mt-8 h-[200vh] left-[50%] translate-x-[-60%]"/>
+        <img src="./assets/1-2-3-path.svg" alt="steps" className="hidden lg:block absolute z-10 mt-8 h-[200vh] left-[50%] translate-x-[-60%]"/>
 
         <Section
           backgroundClassName="bg-tertiary-500 py-4"
           heading="Diagnosis & Strategy"
-          headingClassName="text-5xl text-secondary-500"
-          subHeadingClassName="pl-1 mt-[-8px] text-5xl text-primary-500"
+          headingClassName={SECTION5_HEADING_CLASS}
+          subHeadingClassName={SECTION5_SUB_HEADING_CLASS}
           subHeading="planning"
           allHeadingClassName="mt-16 mb-12"
           text="Analyzing audience online behavior and tendencies to convert and
@@ -227,8 +224,8 @@ export default function Home() {
         <Section
           backgroundClassName="bg-tertiary-500"
           heading="Digital Foundations"
-          headingClassName="text-5xl text-secondary-500"
-          subHeadingClassName="pl-1 mt-[-8px] text-5xl text-primary-500"
+          headingClassName={SECTION5_HEADING_CLASS}
+          subHeadingClassName={SECTION5_SUB_HEADING_CLASS}
           subHeading="test phase"
           allHeadingClassName="mt-0 mb-12"
           text="Testing multiple creatives with varied target audience settings
@@ -245,8 +242,8 @@ export default function Home() {
         <Section
           backgroundClassName="bg-tertiary-500 py-4 pb-20"
           heading="Verify Benchmarks"
-          headingClassName="text-5xl text-secondary-500"
-          subHeadingClassName="pl-1 mt-[-8px] text-5xl text-primary-500"
+          headingClassName={SECTION5_HEADING_CLASS}
+          subHeadingClassName={SECTION5_SUB_HEADING_CLASS}
           subHeading="scale phase"
           allHeadingClassName="mt-0 mb-12"
           text="Using in-house technology to create AI-driven strategies and increase the frequency,
@@ -374,15 +371,15 @@ const blogsList = [
 ]
 
 const companies = [
-  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "fantasy"}}>denver</h1>,
-  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "system-ui"}}>Angle one</h1>,
-  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "inherit"}}>Maruti Suzuki</h1>,
-  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "fantasy"}}>gamezy</h1>,
-  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "system-ui"}}>WAHL</h1>,
-  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "inherit"}}>NMIMS</h1>,
-  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "system-ui"}}>medAce</h1>,
-  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "fantasy"}}>SILAII</h1>,
-  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "system-ui"}}>Arunika</h1>,
-  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "fantasy"}}>ClickHouse</h1>,
-  <h1 className="text-white text-4xl text-center leading-8" style={{"font-family": "system-ui"}}>INSTA Transfer</h1>,
+  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "fantasy"}}>denver</h1>,
+  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "system-ui"}}>Angle one</h1>,
+  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "inherit"}}>Maruti Suzuki</h1>,
+  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "fantasy"}}>gamezy</h1>,
+  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "system-ui"}}>WAHL</h1>,
+  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "inherit"}}>NMIMS</h1>,
+  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "system-ui"}}>medAce</h1>,
+  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "fantasy"}}>SILAII</h1>,
+  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "system-ui"}}>Arunika</h1>,
+  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "fantasy"}}>ClickHouse</h1>,
+  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "system-ui"}}>INSTA Transfer</h1>,
 ];
