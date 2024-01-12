@@ -1,4 +1,4 @@
-import React from 'react'
+import { Circle, Triangle } from "./";
 
 const Footer = () => {
   return (
@@ -73,6 +73,9 @@ const Footer = () => {
       <div className='absolute bottom-4 text-xs'>
         Copyrights @2023 are reserved with the ARMEDIAHOUSE. For more details contact +91 XXXXXXXXXX or armediahouse@gmail.com
       </div>
+
+      <Triangle className="top-[-30%] left-[5%]" secondary />
+      <Triangle className="bottom-[8%] right-[16%]" secondary />
     </footer>
   )
 }

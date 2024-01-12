@@ -20,7 +20,7 @@ export default function Section({
     Shapes,
 }) {
 
-  const bgClasses = classNames("flex justify-between px-screen-padding items-center gap-4 relative", {
+  const bgClasses = classNames("flex justify-between px-screen-padding items-center lg:gap-16 gap-4 relative", {
     [backgroundClassName]: backgroundClassName,
     "flex-col md:flex-row-reverse": direction && 1*direction<0,
     "flex-col md:flex-row": !direction || 1*direction>0,
@@ -39,7 +39,7 @@ export default function Section({
     [textClassName]: textClassName,
     "text-secondary-500": !textClassName,
   })
-  const divClasses = classNames("flex flex-col justify-center", {})
+  const divClasses = classNames("flex flex-col justify-center basis-1/2", {})
 
   return (
     <section className={bgClasses}>

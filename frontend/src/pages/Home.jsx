@@ -10,7 +10,8 @@ import {
   Section, 
   ServicesCards, 
   Triangle, 
-  Wonder, 
+  Wonder,
+  BlackSection, 
 } from "../components";
 
 const SECTION5_HEADING_CLASS = "!text-5xl text-secondary-500"
@@ -91,7 +92,7 @@ export default function Home() {
           </Button>
         }
         illustration={
-            <img src="/assets/What_makes_us.png" alt="" className=" ImgResponsive h-auto w-[35vw]"/>
+          <img src="/assets/What_makes_us.png" alt="" className="ImgResponsive h-auto w-[35vw]"/>
         }
         direction={-1}
         Shapes={
@@ -125,13 +126,8 @@ export default function Home() {
         }
       />
 
-      <img
-        src="./assets/triple-wave-dark-up.svg"
-        alt="wave"
-        className="bg-secondary-500 w-full"
-      />
 
-      <div className="flex flex-col gap-4 bg-secondary-500 py-6 pt-0 px-screen-padding items-between relative">
+      <BlackSection className="flex flex-col gap-4 items-between relative">
         <Heading 
           heading="We have Got"
           subHeading="a lot to offer"
@@ -163,9 +159,8 @@ export default function Home() {
         {/* Shapes */}
         <Triangle className="top-[10%] left-[10%]" secondary />
         <Triangle className="bottom-[6%] right-[21%]" secondary />
-      </div>
+      </BlackSection>
 
-      <img className="w-full" src="./assets/triple-wave-dark-2.svg" alt="wave" />
 
       <Section
         backgroundClassName="py-8"

@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Heading } from "./";
+import { Circle, Heading } from "./";
 import { useState, useRef } from "react";
 import Slider from "react-slick";
 import ExploreBlogList from "./ExploreBlogList";
@@ -22,7 +22,7 @@ export default function ExploreBlog({ list, className }) {
   };
 
   const classes = classNames(
-    "bg-tertiary-500 px-screen-padding pt-12 pb-32 flex flex-col items-center",
+    "bg-tertiary-500 px-screen-padding pt-12 pb-32 flex flex-col items-center relative",
     {
       [className]: className,
     }
@@ -59,6 +59,9 @@ export default function ExploreBlog({ list, className }) {
         
         <img className="w-6 h-12 hover:cursor-pointer -translate-x-10" src="./assets/rightArrow.png" alt="arrow" onClick={()=>nextSlide()}/>
       </div>
+
+      {/* Shapes */}
+      <Circle className="top-[-5%] left-[5%]" />
     </section>
   );
 }
