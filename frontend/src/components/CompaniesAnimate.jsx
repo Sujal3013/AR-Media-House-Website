@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import classNames from "classnames";
 
-export default function CompaniesAnimate({children, className, direction, ...other}) {
+export default function CompaniesAnimate({children, className, direction, length, ...other}) {
   const classes = classNames("absolute left-0", {
     [className]: className,
   });
@@ -10,14 +10,14 @@ export default function CompaniesAnimate({children, className, direction, ...oth
     <>
       <motion.ul 
             className={classes}
-            initial={{x: "calc(0px - 100% - 9rem)"}}
+            initial={{x: "calc(0px - 100% - 7rem)"}}
             animate={{
               x: 0,
               transition: {
                 duration: 30,
                 ease: "linear",
                 repeat: Infinity,
-            }
+              }
             }}
       >
         {children}
@@ -26,12 +26,12 @@ export default function CompaniesAnimate({children, className, direction, ...oth
             className={classes}
             initial={{x: 0}}
             animate={{
-              x: "calc(100% - 0px)",
+              x: "calc(100% - 0px + 7rem)",
               transition: {
                 duration: 30,
                 ease: "linear",
-                repeat: Infinity,
-            }
+                repeat: Infinity, 
+              }
             }}
       >   
         {children}

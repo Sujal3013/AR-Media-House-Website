@@ -17,7 +17,7 @@ export default function Home() {
   document.querySelector("title").innerHTML = "AR Media House";
   return (
     <>
-      <HeroSectionWrapper className="flex py-6 flex-col gap-4 items-center justify-between relative" home={true}>
+      <HeroSectionWrapper className="flex py-6 flex-col gap-4 items-center justify-between relative">
         <div className="w-full flex justify-between items-center">
           {/* text content right side */}
           <div className="w-auto my-8">
@@ -51,7 +51,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center ">
           <h1 className="font-bold font-jost text-3xl text-slate-200 tracking-wider my-8">Trusted by <span className="text-primary-500">thousands</span> of client worldwide</h1>
           <div className="w-[98vw] h-28 mb-8 flex justify-center items-center relative overflow-hidden">
-          <CompaniesAnimate className="flex justify-center items-center gap-24">
+          <CompaniesAnimate className="flex justify-center items-center gap-24" length={companies.length}>
             {
               companies.map((c, index)=>{
                 return (
@@ -70,8 +70,8 @@ export default function Home() {
         <Circle className="top-[4%] right-[2%]" secondary/>
         <Circle className="top-[50%] left-[25%]" secondary/>
         <Triangle className="top-[-4%] left-[20%]" secondary/>
-        <Triangle className="bottom-[-5%] right-[10%]" secondary duration={10} />
       </HeroSectionWrapper>  
+      <Triangle className="top-[125%] right-[10%]" secondary duration={10} />
 
 
       <Section
@@ -125,7 +125,7 @@ export default function Home() {
       />
 
       <img
-        src="./assets/wave-downward-1.svg"
+        src="./assets/triple-wave-dark-up.svg"
         alt="wave"
         className="bg-secondary-500 w-full"
       />
@@ -158,9 +158,13 @@ export default function Home() {
             }
           </ul>
         </div>
+
+        {/* Shapes */}
+        <Triangle className="top-[10%] left-[10%]" secondary />
+        <Triangle className="bottom-[6%] right-[21%]" secondary />
       </div>
 
-      <img className="w-full" src="./assets/dark-wave-1.svg" alt="wave" />
+      <img className="w-full" src="./assets/triple-wave-dark-2.svg" alt="wave" />
 
       <Section
         backgroundClassName="py-8"
@@ -180,17 +184,20 @@ export default function Home() {
             <img src="/assets/GO_image.svg" alt=""  className=""/>
           </div>
         }
+        Shapes={
+          <Circle className="top-[56%] left-[30%]" />
+        }
       />
 
       <img
-        src="./assets/wave3.svg"
+        src="./assets/triple-wave-white-1.svg"
         alt="wave"
         className="w-full"
       />
 
       <section className="bg-tertiary-500 pt-8 relative">
         <Heading
-          className="items-center"
+          className="items-center pb-2"
           heading="3-easy step"
           subHeading="our growth"
           headingClassName="text-primary-500 text-6xl"

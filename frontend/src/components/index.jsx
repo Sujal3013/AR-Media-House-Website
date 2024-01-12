@@ -8,6 +8,7 @@ import Heading from "./Heading";
 import HeroSectionWrapper from "./HeroSectionWrapper";
 import CompaniesAnimate from "./CompaniesAnimate";
 import RoundedCornersSection from "./RoundedCornersSection";
+import ScreenCard from "./ScreenCard";
 import Section from "./Section";
 import ServicesCards from "./ServicesCards";
 import Triangle from "./Triangle";
@@ -28,6 +29,7 @@ export {
     Navbar,
     ScrolltoTop,
     RoundedCornersSection, 
+    ScreenCard, 
     Section,
     ServicesCards,
     Triangle, 

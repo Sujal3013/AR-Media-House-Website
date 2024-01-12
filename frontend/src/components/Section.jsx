@@ -38,7 +38,7 @@ export default function Section({
     [textClassName]: textClassName,
     "text-secondary-500": !textClassName,
   })
-  const divClasses = classNames("flex flex-col justify-center basis-1/2", {})
+  const divClasses = classNames("flex flex-col justify-center", {})
 
   return (
     <section className={bgClasses}>
