@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { 
   Button, 
   Circle, 
@@ -13,8 +14,10 @@ import {
   Wonder, 
 } from "../components";
 
-const SECTION5_HEADING_CLASS = "!text-5xl text-secondary-500"
-const SECTION5_SUB_HEADING_CLASS = "pl-1 mt-[-8px] !text-5xl text-primary-500"
+const SECTION5_HEADING_CLASS = "!text-3xl sm:!text-4xl lg:!text-5xl text-secondary-500"
+const SECTION5_SUB_HEADING_CLASS = "!text-3xl sm:!text-4xl lg:!text-5xl pl-1 mt-[-8px] text-primary-500"
+const SECTION5_ALL_HEADING_CLASS = "mt-16 mb-4 sm:mb-6 md:mb-12"
+const SECTION5_TEXT_CLASS = "mb-8 md:mb-12 lg:mb-16"
 
 export default function Home() {
   document.querySelector("title").innerHTML = "AR Media House";
@@ -91,7 +94,7 @@ export default function Home() {
           </Button>
         }
         illustration={
-            <img src="/assets/What_makes_us.png" alt="" className=" ImgResponsive h-auto w-[35vw]"/>
+            <img src="/assets/What_makes_us.png" alt="" className="ImgResponsive h-auto w-[35vw]"/>
         }
         direction={-1}
         Shapes={
@@ -105,7 +108,7 @@ export default function Home() {
 
 
       <Section
-        backgroundClassName="bg-tertiary-500 py-10 !items-start"
+        backgroundClassName="bg-tertiary-500 py-10"
         heading="We SkyRocket"
         subHeading="brand's growth"
         text="We have contributed to the growth of startups of nearly every size,
@@ -139,26 +142,7 @@ export default function Home() {
           className="items-center"
         />
 
-        <div className="flex flex-col items-center gap-8">
-          <ul className="w-full flex justify-center gap-[6vw]  py-8 relative">
-            {
-              services.slice(0,4).map((s, index)=>{
-                return (
-                    <ServicesCards key={index}  {...s} />
-                )
-              })
-            }
-          </ul>
-          <ul className="w-full gap-[6vw] flex justify-center relative mb-4">
-            {
-              services.slice(4).map((s, index)=>{
-                return (
-                    <ServicesCards key={index}  {...s} />
-                )
-              })
-            }
-          </ul>
-        </div>
+        <Services />
       </div>
 
       <img className="w-full" src="./assets/dark-wave-1.svg" alt="wave" />
@@ -172,7 +156,7 @@ export default function Home() {
         subHeading="through the roof"
         allHeadingClassName="mb-6 sm:mb-12"
         Button1={
-          <Button className="bg-primary-500 text-secondary-500 mt-6 mb-6 sm:mb-12" arrow>
+          <Button className="bg-primary-500 text-secondary-500 mt-3 md:mt-6 mb-6 sm:mb-8 md:mb-12" arrow>
             Let's Connect
           </Button>
         }
@@ -202,10 +186,10 @@ export default function Home() {
           headingClassName={SECTION5_HEADING_CLASS}
           subHeadingClassName={SECTION5_SUB_HEADING_CLASS}
           subHeading="planning"
-          allHeadingClassName="mt-16 mb-12"
+          allHeadingClassName={SECTION5_ALL_HEADING_CLASS}
           text="Analyzing audience online behavior and tendencies to convert and
           strategize actions for maximum revenue."
-          textClassName="mb-16"
+          textClassName={SECTION5_TEXT_CLASS}
           illustration={
             <div className="rounded-full text-center w-auto h-auto">
             <img src="/assets/Diagnosis.svg" alt=""  className=""/>
@@ -220,11 +204,11 @@ export default function Home() {
           headingClassName={SECTION5_HEADING_CLASS}
           subHeadingClassName={SECTION5_SUB_HEADING_CLASS}
           subHeading="test phase"
-          allHeadingClassName="mt-0 mb-12"
+          allHeadingClassName={SECTION5_ALL_HEADING_CLASS}
           text="Testing multiple creatives with varied target audience settings
           and narrowing down best-performing creatives based on data
           driven strategy."
-          textClassName="mb-16"
+          textClassName={SECTION5_TEXT_CLASS}
           illustration={
             <div className="rounded-full text-center w-auto h-auto">
             <img src="/assets/Foundations.svg" alt=""  className=""/>
@@ -238,11 +222,11 @@ export default function Home() {
           headingClassName={SECTION5_HEADING_CLASS}
           subHeadingClassName={SECTION5_SUB_HEADING_CLASS}
           subHeading="scale phase"
-          allHeadingClassName="mt-0 mb-12"
+          allHeadingClassName={SECTION5_ALL_HEADING_CLASS}
           text="Using in-house technology to create AI-driven strategies and increase the frequency,
           targeting, and budget for the best performing ads in order to improve revenue
           and profit."
-          textClassName="mb-16"
+          textClassName={SECTION5_TEXT_CLASS}
           illustration={
             <div className="rounded-full text-center w-auto h-auto">
             <img src="/assets/BenchMarks.svg" alt=""  className=""/>
@@ -291,6 +275,83 @@ export default function Home() {
   )
 }
 
+function Services(){
+  const [winWidth, setWinWidth] = useState(window.innerWidth)
+  useEffect(()=>{
+    const handler = ()=>{
+      setWinWidth(window.innerWidth)
+      console.log(winWidth)
+    }
+    window.addEventListener('resize', handler)
+    return ()=>{
+      window.removeEventListener('resize', handler)
+    }
+  },[])
+  let toReturn;
+  if(winWidth > 768){
+    toReturn = <div className="flex flex-col items-center gap-8">
+      <ul className="w-full flex justify-between gap-[3vw] lg:gap-[6vw] py-8 relative">
+        {
+          services.slice(0,4).map((s, index)=>(
+            <ServicesCards key={index}  {...s} />
+          ))
+        }
+      </ul>
+      <ul className="w-full gap-[3vw] lg:gap-[6vw] flex justify-center relative mb-4">
+        {
+          services.slice(4).map((s, index)=>{
+            return (
+                <ServicesCards key={index}  {...s} />
+            )
+          })
+        }
+      </ul>
+    </div>
+  }
+  else if(winWidth > 480){
+    toReturn = <div className="flex flex-col items-center gap-8">
+      <ul className="w-full flex justify-evenly gap-[3vw] lg:gap-[6vw] py-8 relative">
+        {
+          services.slice(0,2).map((s, index)=>(
+            <ServicesCards key={index}  {...s} />
+          ))
+        }
+      </ul>
+      <ul className="w-full gap-[3vw] lg:gap-[6vw] flex justify-evenly relative mb-4">
+        {
+          services.slice(2,4).map((s, index)=>{
+            return (
+                <ServicesCards key={index}  {...s} />
+            )
+          })
+        }
+      </ul>
+      <ul className="w-full gap-[3vw] lg:gap-[6vw] flex justify-evenly relative mb-4">
+        {
+          services.slice(4).map((s, index)=>{
+            return (
+                <ServicesCards key={index}  {...s} />
+            )
+          })
+        }
+      </ul>
+    </div>
+  }
+  else{
+    toReturn = <div className="flex flex-col items-center gap-8">
+      <ul className="w-full flex flex-col gap-[3vw] py-8 items-center">
+        {
+          services.map((s, index)=>(
+            <ServicesCards key={index}  {...s} />
+          ))
+        }
+      </ul>
+    </div>
+  }
+
+  return toReturn
+}
+
 const images = [
   { src: "./assets/angelOne.png", alt: "angelOne",  },
   { src: "./assets/denver.jpg", alt: "denver"},
@@ -309,10 +370,10 @@ const images = [
 const icon = <div className="h-32 w-32 rounded-3xl bg-primary-500"></div>
 
 const services = [
-  { className: "first:absolute first:top-32 last:absolute last:top-32 last:right-0 first:left-0", icon: icon, heading: "E-commerce", text: "Innovative outbound strategies to drive more sales and traffic for your brand. Advertising and innovation that will help both retailers and affiliates grow their businesses in different ways."},
-  { className: "first:absolute first:top-32 last:absolute last:top-32 last:right-0 first:left-0", icon: icon, heading: "Performance Marketing", text: "Place ads about your company, services, or products on websites that help drive more sales in the online market."},
-  { className: "first:absolute first:top-32 last:absolute last:top-32 last:right-0 first:left-0", icon: icon, heading: "Lead Generation", text: "Convert your prospects into delighted clients solely meant for your agency."},
-  { className: "first:absolute first:top-32 last:absolute last:top-32 last:right-0 first:left-0", icon: icon, heading: "Media Buying", text: "We use immense technologies to determine strategy, to compile content, execute content, & analyze results."},
+  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32", icon: icon, heading: "E-commerce", text: "Innovative outbound strategies to drive more sales and traffic for your brand. Advertising and innovation that will help both retailers and affiliates grow their businesses in different ways."},
+  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32", icon: icon, heading: "Performance Marketing", text: "Place ads about your company, services, or products on websites that help drive more sales in the online market."},
+  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32", icon: icon, heading: "Lead Generation", text: "Convert your prospects into delighted clients solely meant for your agency."},
+  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32", icon: icon, heading: "Media Buying", text: "We use immense technologies to determine strategy, to compile content, execute content, & analyze results."},
   { icon: icon, heading: "Martech", text: "A strategic marketing approach to help your valuable content reach key audiences." },
   { icon: icon, heading: "Content Marketing", text: "We use immense technologies to determine strategy, to compile content, execute content, & analyze results." }
 ]

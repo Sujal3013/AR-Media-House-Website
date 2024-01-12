@@ -18,7 +18,7 @@ export default function Heading({
     "text-primary-500": !headingClassName,
     [headingClassName]: headingClassName,
   })
-  const middleLineClasses = classNames("font-bold text-6xl sm:text-7xl lg:text-8xl uppercase", {
+  const middleLineClasses = classNames("font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl uppercase", {
     [middleLineClassName]: middleLineClassName,
   });
   const subHeadingClasses = classNames("font-semibold text-3xl sm:text-4xl lg:text-5xl mt-[-2px]", {
