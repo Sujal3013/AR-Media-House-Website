@@ -267,7 +267,7 @@ export default function Home() {
       </RoundedCornersSection>
 
 
-      <ExploreBlog list={blogsList}/>
+      <ExploreBlog/>
 
       <Wonder />
       
@@ -405,24 +405,7 @@ const clients = [
 ];
 
 
-const blogsList = [
-  {
-    heading: "Some Heading",
-    text: "lorem ipsum hli eaofe oiveawr oiveawhvoie ievuawh ovwe ae veawda vdsd ea vewaad aewrew cewa onv njkvewa  cewa vinwe jknuh oinwe",
-  },{
-    heading: "Our Success Story",
-    text: "lorem ipsum hli eaofe oiveawr oiveawhvoie ievuawh ovwe ae veawda vdsd ea vewaad aewrew cewa onv njkvewa  cewa vinwe jknuh oinwe",
-  }, {
-    heading: "Say Hello to Our Team",
-    text: "lorem ipsum hli eaofe oiveawr oiveawhvoie ievuawh ovwe ae veawda vdsd ea vewaad aewrew cewa onv njkvewa  cewa vinwe jknuh oinwe",
-  }, {
-    heading: "Some Heading",
-    text: "lorem ipsum hli eaofe oiveawr oiveawhvoie ievuawh ovwe ae veawda vdsd ea vewaad aewrew cewa onv njkvewa  cewa vinwe jknuh oinwe",
-  }, {
-    heading: "AR Media House's Heading",
-    text: "lorem ipsum hli eaofe oiveawr oiveawhvoie ievuawh ovwe ae veawda vdsd ea vewaad aewrew cewa onv njkvewa  cewa vinwe jknuh oinwe",
-  }
-]
+
 
 const companies = [
   <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "fantasy"}}>denver</h1>,
