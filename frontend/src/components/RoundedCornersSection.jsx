@@ -1,8 +1,8 @@
 import classNames from "classnames"
 
 export default function RoundedCornersSection({children, className, behindBackground, bothRounded}) {
-  const classes = classNames("bg-secondary-500 rounded-br-[6rem]", {
-    "rounded-tl-[6rem]": bothRounded,
+  const classes = classNames("bg-secondary-500 md:rounded-br-[6rem]", {
+    "md:rounded-tl-[6rem]": bothRounded,
     [className]: className,
   })
   const behindBbClasses1 = classNames("h-32 w-32 absolute z-[-1] bottom-0 right-0", {
