@@ -77,8 +77,8 @@ export default function Home() {
         <Circle className="top-[30%] sm:top-[35%] md:top-[4%] right-[2%]" secondary/>
         <Circle className="top-[50%] left-[25%]" secondary/>
         <Triangle className="top-[-4%] left-[20%]" secondary/>
+        <Triangle className="bottom-[-8%] right-[10%]" secondary duration={10} />
       </HeroSectionWrapper>  
-      <Triangle className="top-[125%] right-[10%]" secondary duration={10} />
 
 
       <Section
