@@ -11,7 +11,8 @@ import {
   Section, 
   ServicesCards, 
   Triangle, 
-  Wonder, 
+  Wonder,
+  BlackSection, 
 } from "../components";
 
 const SECTION5_HEADING_CLASS = "!text-3xl sm:!text-4xl lg:!text-5xl text-secondary-500"
@@ -94,7 +95,7 @@ export default function Home() {
           </Button>
         }
         illustration={
-            <img src="/assets/What_makes_us.png" alt="" className="ImgResponsive h-auto w-[35vw]"/>
+          <img src="/assets/What_makes_us.png" alt="" className="ImgResponsive h-auto w-[35vw]"/>
         }
         direction={-1}
         Shapes={
@@ -128,13 +129,8 @@ export default function Home() {
         }
       />
 
-      <img
-        src="./assets/triple-wave-dark-up.svg"
-        alt="wave"
-        className="bg-secondary-500 w-full"
-      />
 
-      <div className="flex flex-col gap-4 bg-secondary-500 py-6 pt-0 px-screen-padding items-between relative">
+      <BlackSection className="flex flex-col gap-4 items-center relative">
         <Heading 
           heading="We have Got"
           subHeading="a lot to offer"
@@ -143,9 +139,8 @@ export default function Home() {
         />
 
         <Services />
-      </div>
+      </BlackSection>
 
-      <img className="w-full" src="./assets/triple-wave-dark-2.svg" alt="wave" />
 
       <Section
         backgroundClassName="py-8"
@@ -176,9 +171,11 @@ export default function Home() {
 
       <section className="bg-tertiary-500 pt-8 relative">
         <Heading
-          className="items-center pb-2"
+          className="w-full items-center pb-2"
           heading="3-easy step"
+          headingClassName="text-center"
           subHeading="our growth"
+          subHeadingClassName="text-center"
         />
 
         <img src="./assets/1-2-3-path.svg" alt="steps" className="hidden lg:block absolute z-10 mt-8 h-[200vh] left-[50%] translate-x-[-60%]"/>
@@ -251,7 +248,7 @@ export default function Home() {
           subHeading="loves us"
           headingClassName="text-primary-500"
           subHeadingClassName="text-tertiary-500 mt-[-4px]"
-          className="items-center py-8 pt-12"
+          className="w-full items-center py-8 pt-12"
         />
 
         <ul className="relative flex flex-col md:flex-row items-center gap-4 justify-between py-4 mb-6">
