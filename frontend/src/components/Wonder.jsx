@@ -1,4 +1,4 @@
-import { Heading,Button } from "./";
+import { Heading,Button, Circle } from "./";
 
 const Wonder = () => {
   const gradientStyle = {"backgroundImage": "linear-gradient(0deg, #080403 50%, #f4f4f4 50%)"}
@@ -18,6 +18,9 @@ const Wonder = () => {
         
         <div className="bg-tertiary-500 hidden md:block"><img src="/assets/wonders_image.png" alt="" className="md:h-56 lg:h-auto"/></div>
       </div>
+
+      {/* Shapes */}
+      <Circle className="top-[-8%] right-[4%]" />
     </div>
   );
 };

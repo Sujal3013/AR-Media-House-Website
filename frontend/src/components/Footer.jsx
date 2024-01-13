@@ -1,5 +1,6 @@
 import React from 'react'
 import DropDown from './DropDown'
+import { Circle, Triangle } from "./";
 
 const Footer = () => {
   return (
@@ -99,6 +100,9 @@ const Footer = () => {
         <p className='px-2 text-wrap sm:text-nowrap'>Copyrights @2023 are reserved with the ARMEDIAHOUSE.</p>
         <p className='px-2 text-wrap sm:text-nowrap'>For more details contact +91 XXXXXXXXXX or armediahouse@gmail.com</p>
       </div>
+
+      <Triangle className="top-[-30%] left-[5%]" secondary />
+      <Triangle className="bottom-[8%] right-[16%]" secondary />
     </footer>
   )
 }
