@@ -14,6 +14,7 @@ import {
   Wonder,
   BlackSection, 
 } from "../components";
+import { useWinSizeContext } from "../context/winSizeContext";
 
 const SECTION5_HEADING_CLASS = "!text-3xl sm:!text-4xl lg:!text-5xl text-secondary-500"
 const SECTION5_SUB_HEADING_CLASS = "!text-3xl sm:!text-4xl lg:!text-5xl pl-1 mt-[-8px] text-primary-500"
@@ -276,18 +277,9 @@ export default function Home() {
 }
 
 function Services(){
-  const [winWidth, setWinWidth] = useState(window.innerWidth)
-  useEffect(()=>{
-    const handler = ()=>{
-      setWinWidth(window.innerWidth)
-    }
-    window.addEventListener('resize', handler)
-    return ()=>{
-      window.removeEventListener('resize', handler)
-    }
-  },[])
+  const {winSize} = useWinSizeContext()
   let toReturn;
-  if(winWidth > 768){
+  if(winSize > 768){
     toReturn = <div className="flex flex-col items-center gap-8">
       <ul className="w-full flex justify-between gap-[3vw] lg:gap-[6vw] py-8 relative">
         {
@@ -307,7 +299,7 @@ function Services(){
       </ul>
     </div>
   }
-  else if(winWidth > 480){
+  else if(winSize > 480){
     toReturn = <div className="flex flex-col items-center gap-8">
       <ul className="w-full flex justify-evenly gap-[3vw] lg:gap-[6vw] py-8 relative">
         {

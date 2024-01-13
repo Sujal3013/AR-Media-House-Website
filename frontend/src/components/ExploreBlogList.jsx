@@ -13,7 +13,7 @@ export default function ExploreBlogList({blog, focus, className}) {
     "initial": {y: "20%", width: "25%", height: 0,},
     "animate": {x: "40%", y: "40%", width: "300%", height: "300%", transition:{duration:1}},
   };
-  const classes = classNames("w-[24vw] h-[64vh] text-secondary-500 flex flex-col items-start justify-evenly relative overflow-hidden gap-2 hover:cursor-pointer", {
+  const classes = classNames("min-w-[11.5rem] max-w-72 h-[64vh] text-secondary-500 flex flex-col items-start justify-evenly relative overflow-hidden gap-2 hover:cursor-pointer", {
     [className]: className,
   })
   return (
@@ -26,8 +26,8 @@ export default function ExploreBlogList({blog, focus, className}) {
       onMouseLeave={()=>{setHover(false)}}
     >
       <motion.img initial={{scale: 1}} animate={hover?{scale:1.05}:{}} src={blog.src} alt="blog-image" className='w-full h-[40vh]' />
-      <h1 className="font-semibold text-xl">{blog.heading}</h1>
-      <p className="text-xs ">{blog.text}</p>
+      <h1 className="font-medium sm:font-semibold text-base sm:text-lg md:text-xl">{blog.heading}</h1>
+      <p className="text-xs">{blog.text}</p>
       <div className='flex flex-col h-12 overflow-hidden'>
         <motion.div initial={{y:0}} animate={hover ? {y:"-100%"}: {}}><Button className="!pl-px" arrow >learn more</Button></motion.div>
         <motion.div initial={{y:0}} animate={hover ? {y:"-100%"}: {}}><Button className="!pl-px" arrow >learn more</Button></motion.div>
