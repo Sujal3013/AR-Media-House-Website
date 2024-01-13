@@ -99,7 +99,7 @@ export default function Home() {
         direction={-1}
         Shapes={
           <>
-            <Circle className="top-[4%] left-[-2%]" />
+            <Circle className="top-[4%] right-8 md:left-[-2%]" />
             <Circle className="top-[56%] right-[8%]" />
           </>
         }
@@ -124,7 +124,7 @@ export default function Home() {
             <img src="/assets/Growth_curve.svg" alt=""  className="ImgResponsive w-[30vw]"/>
         }
         Shapes={
-          <Triangle className="top-[70%] left-[25%]" />
+          <Triangle className="top-[26%] left-[69%] md:top-[70%] md:left-[25%]" />
         }
       />
 
@@ -164,7 +164,7 @@ export default function Home() {
             <img src="/assets/GO_image.svg" alt=""  className="ImgResponsive w-[40vw]"/>
         }
         Shapes={
-          <Circle className="top-[56%] left-[30%]" />
+          <Circle className="top-[20%] left-[69%] md:top-[56%] md:left-[30%]" />
         }
       />
 

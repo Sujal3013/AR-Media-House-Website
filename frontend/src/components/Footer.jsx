@@ -64,28 +64,28 @@ const Footer = () => {
           <div className='w-20 h-20 rounded bg-tertiary-500'></div>
         </div>
       </div>
-      <div className='flex flex-col'>
+      <div className='flex flex-col block md:hidden'>
         <DropDown 
-        className="block md:hidden !border-b-0" 
+        className="!border-b-0" 
         title="Services" 
         titleClass="text-xl lg:text-2xl py-2 px-4">
-          <ul className='flex flex-col gap-2 mt-2'>
+          <ul className='flex flex-col gap-2 mt-2 px-8'>
           {SERVICES_LIST.map((el,ind)=><li key={ind} className="text-sm lg:text-base">{el}</li>)}
           </ul>
         </DropDown>
         <DropDown 
-        className="block md:hidden !border-b-0" 
+        className="!border-b-0" 
         title="Site-map" 
         titleClass="text-xl lg:text-2xl py-2 px-4">
-          <ul className='flex flex-col gap-2 mt-2'>
+          <ul className='flex flex-col gap-2 mt-2 px-8'>
           {SITE_MAP_LIST.map((el,ind)=><li key={ind} className="text-sm lg:text-base">{el}</li>)}
           </ul>
         </DropDown>
         <DropDown 
-        className="block md:hidden" 
+        className="" 
         title="Insta-feed" 
         titleClass="text-xl lg:text-2xl py-2 px-4">
-          <div className='grid grid-cols-2 gap-8'>
+          <div className='grid grid-cols-2 gap-8 px-8'>
             <div className='w-20 h-20 rounded bg-tertiary-500'></div>
             <div className='w-20 h-20 rounded bg-tertiary-500'></div>
             <div className='w-20 h-20 rounded bg-tertiary-500'></div>
@@ -96,8 +96,8 @@ const Footer = () => {
       </div>
 
       <div className='mt-8 py-1 text-xs flex flex-wrap justify-center gap-1'>
-        <p className='text-nowrap'>Copyrights @2023 are reserved with the ARMEDIAHOUSE.</p>
-        <p className='text-nowrap'>For more details contact +91 XXXXXXXXXX or armediahouse@gmail.com</p>
+        <p className='px-2 text-wrap sm:text-nowrap'>Copyrights @2023 are reserved with the ARMEDIAHOUSE.</p>
+        <p className='px-2 text-wrap sm:text-nowrap'>For more details contact +91 XXXXXXXXXX or armediahouse@gmail.com</p>
       </div>
     </footer>
   )
