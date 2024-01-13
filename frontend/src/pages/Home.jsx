@@ -100,7 +100,7 @@ export default function Home() {
         direction={-1}
         Shapes={
           <>
-            <Circle className="top-[4%] left-[-2%]" />
+            <Circle className="top-[4%] right-8 md:left-[-2%]" />
             <Circle className="top-[56%] right-[8%]" />
           </>
         }
@@ -125,7 +125,7 @@ export default function Home() {
             <img src="/assets/Growth_curve.svg" alt=""  className="ImgResponsive w-[30vw]"/>
         }
         Shapes={
-          <Triangle className="top-[70%] left-[25%]" />
+          <Triangle className="top-[26%] left-[69%] md:top-[70%] md:left-[25%]" />
         }
       />
 
@@ -159,7 +159,7 @@ export default function Home() {
             <img src="/assets/GO_image.svg" alt=""  className="ImgResponsive w-[40vw]"/>
         }
         Shapes={
-          <Circle className="top-[56%] left-[30%]" />
+          <Circle className="top-[20%] left-[69%] md:top-[56%] md:left-[30%]" />
         }
       />
 
@@ -251,7 +251,7 @@ export default function Home() {
           className="w-full items-center py-8 pt-12"
         />
 
-        <ul className="flex gap-4 justify-between py-4 mb-6">
+        <ul className="relative flex flex-col md:flex-row items-center gap-4 justify-between py-4 mb-6">
           {
             clients.map((c, index)=>{
               return (
@@ -280,7 +280,6 @@ function Services(){
   useEffect(()=>{
     const handler = ()=>{
       setWinWidth(window.innerWidth)
-      console.log(winWidth)
     }
     window.addEventListener('resize', handler)
     return ()=>{
@@ -386,21 +385,21 @@ const clients = [
     heading: "James Wallace",
     subHeading: "Scorpion Media",
     text: "AR Media House's superior targeting technology, ease of implementation, and ability to deliver quality at scale is what has made us so successful in this field. Their experience from managing multiple verticals of lead generation and social media marketing has made them one of the most trusted organizations to partner with. Their constant expanding of horizons is worth appreciating. Their adaptable approach made the collaboration enriching for both the parties.",
-    className: "first:translate-y-16 last:translate-y-16",
+    className: "first:relative md:first:top-16 last:relative md:last:top-16",
   },
   {
     icon: icon2,
     heading: "Matt Crist",
     subHeading: "4AD",
     text: "I’ve experienced working directly with AR Media House Inc, in the marketing space for many years, and they have been very successful as a multiple channel advertiser — driving thousands of leads and sales to our offers over the years. Some of their most successful sources have been Native and social media (Facebook) marketing. It’s been great to see them build infrastructures and teams to successfully tackle multiple verticals using these media sources.",
-    className: "first:translate-y-16 last:translate-y-16",
+    className: "first:relative md:first:top-16 last:relative md:last:top-16",
   },
   {
     icon: icon2,
     heading: "Brooklyn Foster",
     subHeading: "Suited Connector",
     text: "I’ve worked with AR Media House, Inc. since 2018 from both the advertising and lead generation sides of the business. They are highly versatile marketers that are able to play at a high level in both the Media Buying and Lead generation space. Idea Clan brings a depth of experience, skills, and access to resources that instantly gives them an edge over other marketers — allowing them to bring enormously high revenue and ROIs for those who partner with him.",
-    className: "first:translate-y-16 last:translate-y-16",
+    className: "first:relative md:first:top-16 last:relative md:last:top-16",
   },
 ];
 
