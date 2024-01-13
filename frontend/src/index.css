@@ -20,6 +20,23 @@ h2, h3, h4, h5, h6 {
 }
 
 
+/* width and height for the scrollbar track */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* background of the scrollbar track */
+::-webkit-scrollbar-track {
+  @apply bg-secondary-500
+}
+
+/* color of the scrollbar handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-500 rounded-xl
+}
+
+
 .slick-slide>div{
   margin: 0px 10px;
 }
@@ -38,7 +55,7 @@ h2, h3, h4, h5, h6 {
 
 
 .navbar{
-  @apply bg-secondary-500 w-full py-3 px-screen-padding flex justify-between items-center h-20;
+  @apply bg-secondary-500 w-full py-3 px-screen-padding flex justify-between items-center;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -50,6 +67,10 @@ h2, h3, h4, h5, h6 {
 }
 .nav_bar:hover::after{
   @apply w-[100%]
+}
+
+.ImgResponsive{
+  @apply w-[80vw] sm:w-[65vw] md:w-[35vw]
 }
 
 @media (max-width: 639px) {

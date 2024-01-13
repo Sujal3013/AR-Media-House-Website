@@ -6,7 +6,7 @@ export default {
   ],
   theme: {
     screens: {
-      sm: '640px',
+      sm: '480px',
       md: '768px',
       lg: '1024px',
       xl: '1280px',
@@ -49,6 +49,7 @@ export default {
         },
         tertiary: {
           500: "#F4F4F4",
+          600: "#E4E4E4",
         },
         additional:{
           200:"#F7F7F7"
