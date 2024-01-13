@@ -4,7 +4,7 @@ import { Circle, Triangle } from "./";
 
 const Footer = () => {
   return (
-    <footer className='w-full bg-secondary-500 text-tertiary-500 pt-12 px-0 md:px-16 lg:px-24'>
+    <footer className='w-full bg-secondary-500 text-tertiary-500 pt-12 px-0 md:px-16 lg:px-24 relative'>
       <div className='flex flex-col gap-4 md:flex-row justify-between'>
 
       <div className='flex flex-col sm:flex-row md:flex-col justify-between md:justify-start px-4 md:px-0 gap-6'>
