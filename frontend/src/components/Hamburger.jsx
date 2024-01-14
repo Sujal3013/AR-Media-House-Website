@@ -18,9 +18,9 @@ export default function Hamburger({siteMapList}){
             <div className="block relative cursor-pointer w-[45px] h-[30px]">
                 <input className="appearance-none hidden" type="checkbox" />
 
-                <span className={"absolute w-[36px] h-[5px] bg-tertiary-500 rounded-2xl inline-block duration-300 ease-in  left-0 top-0" + (isOpen?" w-[48px] left-[5px] rotate-45 origin-top-left":"")} />
+                <span className={"absolute w-[36px] h-[5px] bg-tertiary-500 rounded-2xl inline-block duration-300 ease-in  left-0 top-0" + (isOpen?" w-[43px] left-[5px] rotate-45 origin-top-left":"")} />
                 <span className={"absolute w-[36px] h-[5px] bg-tertiary-500 rounded-2xl inline-block duration-300 ease-in  left-0 top-[12px]" + (isOpen?" opacity-0 translate-x-[-20px]":"")} />
-                <span className={"absolute w-[36px] h-[5px] bg-tertiary-500 rounded-2xl inline-block duration-300 ease-in  left-0 bottom-0" + (isOpen?" w-[48px] bottom-[-1px] -rotate-45 origin-top-left":"")} />
+                <span className={"absolute w-[36px] h-[5px] bg-tertiary-500 rounded-2xl inline-block duration-300 ease-in  left-0 bottom-0" + (isOpen?" w-[43px] bottom-[-5px] -rotate-45 origin-top-left":"")} />
             </div>
         </button>
         {
@@ -36,7 +36,7 @@ export default function Hamburger({siteMapList}){
                 {siteMapList.map((item,index)=>
                 <Link
                     onClick={togleIsOpen}
-                    className="!block w-full py-4 px-screen-padding text-xl sm:text-2xl hover:text-primary-500"
+                    className="!block w-full py-2 px-screen-padding text-base sm:text-xl hover:text-primary-500"
                     to={item.to}
                     key={index}
                 >
@@ -46,7 +46,7 @@ export default function Hamburger({siteMapList}){
                 ).concat(
                 [<Link
                     onClick={togleIsOpen}
-                    className="mt-4 !block border-tertiary-500 border-t-2 w-screen py-4 px-[7vw] text-xl sm:text-2xl hover:text-primary-500"
+                    className="mt-2 !block border-tertiary-500 border-t-2 w-screen py-3 px-[7vw] text-xl sm:text-2xl hover:text-primary-500"
                     to="/contact"
                     key={-1}
                 >
@@ -55,7 +55,7 @@ export default function Hamburger({siteMapList}){
                 </Link>,
                 <Link
                     onClick={togleIsOpen}
-                className="!block border-tertiary-500 border-t-2 border-b-2 w-screen py-4 px-[7vw] text-xl sm:text-2xl hover:text-primary-500"
+                className="!block border-tertiary-500 border-t-2 border-b-2 w-screen py-3 px-[7vw] text-base sm:text-xl hover:text-primary-500"
                 to="/contact"
                 key={-2}
                 >
