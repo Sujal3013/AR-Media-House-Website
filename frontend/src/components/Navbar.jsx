@@ -25,25 +25,8 @@ export default function Navbar() {
         </div>
 
         {/*Hamburger Menu*/}
-        <Hamburger list={list.map((item,index)=>
-            <Link 
-                className="!block w-full p-2 hover:text-primary-500"
-                to={item.to}
-                key={index}
-            >
-                {item.title}
-                {location===item.to}
-            </Link>
-        ).concat(
-            <Link 
-                className="!block w-full p-2 hover:text-primary-500"
-                to="/contact"
-                key={-1}
-            >
-                Contact
-                {location==="/contact"}
-            </Link>
-        )} />
+        <Hamburger siteMapList={list} />
+        
         <div className="hidden lg:flex items-center gap-[2vw]">
             {
                 list.map((item, index)=> {
@@ -74,20 +57,26 @@ export default function Navbar() {
 const list = [{
         title: "Home",
         to:"/",
+        imgSrc:"/assets/icons8-home.svg"
     }, {
         title: "Technology",
-        to: "/technologies"
+        to: "/technologies",
+        imgSrc:"/assets/icons8-technology.png"
     }, {
         title: "Case Study",
         to: "/case-studies",
+        imgSrc:"/assets/icons8-case-study.png"
     }, {
         title: "Services",
         to: "/services",
+        imgSrc:"/assets/icons8-services.png"
     }, {
         title: "About",
         to: "/about",
+        imgSrc:"/assets/icons8-about-us.svg"
     }, {
         title: "Careers",
         to: "/careers",
+        imgSrc:"/assets/icons8-career.png"
     }, 
 ]
