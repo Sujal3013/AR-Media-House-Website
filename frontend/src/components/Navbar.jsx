@@ -5,9 +5,11 @@ import "../index.css";
 
 export default function Navbar() {
   const location = useLocation().pathname;
-  const phoneNumber="+918770644753"
-  const handlePhoneClick = () => {
-    window.location.href = `tel:${phoneNumber}`;
+  const ownerNumber = '+9187706447543'; 
+
+  const handleWhatsappClick = () => {
+    const message = encodeURIComponent('Hello! I have a question.');
+    window.location.href = `https://wa.me/${ownerNumber}?text=${message}`;
   };
   return (
     <nav className="navbar">
@@ -64,7 +66,7 @@ export default function Navbar() {
             <Button to="/contact" primary className={`${location==="/contact"?"opacity-0 transition-opacity duration-500":"bg-primary-500 transition-opacity opacity-100 duration-500 text-secondary-500 text-sm"}`}>
                 Let's Connect
             </Button>
-            <img src="./assets/call-logo.svg" onClick={handlePhoneClick} alt="call" className="w-8 h-8" />
+            <img src="./assets/whatsapp-icon.png" onClick={handleWhatsappClick} alt="call" className="w-8 h-8 cursor-pointer" />
         </div>
     </nav>
   )
