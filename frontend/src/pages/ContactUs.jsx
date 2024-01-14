@@ -1,26 +1,17 @@
-import React, { useState } from "react";
 import Form from "../components/Form";
-import Button from "../components/Button";
-import Wonder from "../components/Wonder";
+import { Heading, Button, Wonder } from "../components";
 
 const ContactUs = () => {
   document.querySelector("title").innerHTML = "Contact - AR Media House";
 
   return (
     <>
-      <img className="absolute top-[30px] -z-10 right-10 max-w-sm:hidden" src="/assets/Sphere-orange.svg" alt="" />
-      <img className="absolute top-[10rem] rotate-12 left-[50rem] max-w-sm:hidden" src="/assets/Triangle-Orange.svg" alt="" />
       <div className="px-screen-padding py-10 relative">
         <div className="flex-col">
-          <div>
-            {/* heading */}
-            <h1 className="font-jost text-[64px]  text-[#FF9356] break-words leading-[64px] font-extrabold ">
-              LET'S CREATE
-            </h1>
-            <p className="font-playfair-display text-5xl font-extrabold  text-secondary-500 break-words">
-              Progress Together
-            </p>
-          </div>
+          <Heading
+            heading="Let's Create"
+            subHeading="Progress Together"
+          />
 
           <div className="my-4 flex gap-10 justify-between">
             {/* Form */}
@@ -100,8 +91,6 @@ const ContactUs = () => {
         </span>
       </div>
       <div className="h-[30vh] bg-slate-50">
-      <img className="relative top-[1rem] left-[80rem]" src="/assets/Sphere-orange.svg" alt="" />
-      <img className="relative top-[-2rem] left-[5rem] z-10" src="/assets/Sphere-orange.svg" alt="" />
       </div>
       <Wonder />
     </>

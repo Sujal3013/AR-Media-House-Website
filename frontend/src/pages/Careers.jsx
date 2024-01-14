@@ -1,7 +1,9 @@
+
+
 import React, { useEffect, useState } from "react";
 import Button from "../components/Button";
 import { Jobopeningcard } from "../components/Jobopeningcard";
-import { Wonder } from "../components";
+import { Heading, Wonder } from "../components";
 
 export default function Careers() {
   document.querySelector("title").innerHTML = "Careers - AR Media House";
@@ -13,36 +15,33 @@ export default function Careers() {
 
   return (
     <>
-    <div className="mb-10">
       {/* Hero Section */}
-      <div className="bg-[url('/assets/Careers-Hero.svg')] h-[95vh] bg-cover bg-center bg-no-repeat flex items-center justify-center text-white">
+      <div 
+        className="bg-[url('/assets/Careers-Hero-with-gradient.jpg')] h-[90vh] bg-cover bg-center bg-no-repeat 
+        flex flex-col items-center justify-center"
+      >
         {/* Replace 'your-image-url' with the actual URL of your hero image */}
-        <div className="text-center items-center">
-          <h1 className="text-7xl font-jost font-extrabold mb-4 text-primary-500 leading-3">
-            MORE THAN A TEAM
-          </h1>
-          <p className="text-[54px] font-bold font-playfair-display text-secondary-500">
-            We are a Family
-          </p>
-          <Button className="bg-primary-500 text-secondary-500 mx-auto mt-4">
+          <Heading
+            heading="More than a Team"
+            subHeading="we are a Family"
+            subHeadingClassName="text-tertiary-500"
+            className="w-full items-center"
+          />
+          <Button className="bg-primary-500 text-secondary-500 mx-auto mt-4" to="#openings">
             View open positions
           </Button>
-        </div>
       </div>
 
       {/* Careers Text */}
-      <div className="py-12 text-center">
-        <h2 className="text-6xl font-jost font-extrabold uppercase text-primary-500 leading-10">
-          Careers
-        </h2>
-        <p className="text-secondary-500 font-bold font-playfair-display text-5xl mt-2">
-          @AR Media House
-        </p>
-      </div>
+      <Heading
+        heading="Careers"
+        subHeading="@AR Media House"
+        className="w-full items-center my-10 mt-16"
+      />
 
       {/* Job Openings Cards */}
       <div
-        className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-4 px-screen-padding mx-10 py-8"
+        className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-8 px-screen-padding mx-10 py-8"
         id="openings"
       >
         {openings.map((opening) => (
@@ -55,8 +54,10 @@ export default function Careers() {
         ))}
       </div>
       
-    </div>
-    <Wonder/>
+      <Wonder
+          linearGradient = {{"backgroundImage": "linear-gradient(0deg, #080403 50%, white 50%)"}}
+          className="!bg-tertiary-500"
+      />
     </>
   );
 }

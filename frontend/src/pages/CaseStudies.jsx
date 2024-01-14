@@ -1,24 +1,32 @@
 import React from 'react'
-import { CaseStudyCarousel } from '../components/CaseStudyCarousel';
+import { ExploreBlog, Heading, Wonder } from '../components';
 
 
 export default function CaseStudies() {
   document.querySelector("title").innerHTML = "Case Studies - AR Media House";
   
-    
   return (
     <>
-    <div className='px-screen-padding py-20 bg-[url("/assets/wave1.svg")] bg-no-repeat bg-contain bg-bottom'>
-      <div className=''>
-            <p className='uppercase text-[64px] block text-center font-jost text-primary-500 font-extrabold leading-8'>Explore Our</p>
-            <p className='text-secondary-500 text-center font-semibold text-[48px] font-playfair-display'>groundbreaking case studies</p>
+      <div 
+        className='h-[80vh] bg-[url("/assets/Case-Study-HeroSection-Banner.jpg")] bg-no-repeat bg-cover relative mb-100' 
+        style={{
+          "clip-path" : "path('M 0 0 L 0 600 C 620 700 1240 600  L 1240 0 Z')", 
+        }}
+      >
+        {/* <div 
+          className='w-full h-full absolute'
+        ></div> */}
+        <Heading 
+          heading="Explore Our"
+          subHeading="groundbraking case studies"
+          subHeadingClassName="text-tertiary-500"
+          className="w-full h-[90%] justify-center items-center"
+        />
       </div>
-    </div>
-    <div className='bg-additional-200 px-screen-padding py-10'>
-      <CaseStudyCarousel/>
-    </div>
-    
-    
+      
+      <ExploreBlog className="!py-32" heading={false}/>
+
+      <Wonder />
     </>
   )
 }

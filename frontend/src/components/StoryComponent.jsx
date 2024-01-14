@@ -17,7 +17,7 @@ const StoryComponent = ({
   direction,
 }) => {
   const bgClasses = classNames(
-    "flex justify-between px-screen-padding py-20 items-center gap-6 relative",
+    "flex justify-between px-screen-padding py-16 items-center gap-6 relative",
     {
       [backgroundClassName]: backgroundClassName,
       "flex-row-reverse": direction && direction < 0,
@@ -30,7 +30,7 @@ const StoryComponent = ({
   const yearClasses=classNames("mx-6 text-center px-6 py-3 bg-primary-500 text-white rounded-3xl z-10",{
     [YearClassName]:YearClassName
   })
-  const textClasses = classNames("w-[30rem]", {
+  const textClasses = classNames("basis-1/2", {
     [textClassName]: textClassName,
     "text-secondary-500": !textClassName,
   });
@@ -50,9 +50,9 @@ const StoryComponent = ({
         </p>
       </div>
 
-      {
+      {/* {
         aboutPath && aboutPath
-      }
+      } */}
     </section>
     </>
   );

@@ -67,6 +67,8 @@ export default function About() {
 
 
       <section className="bg-tertiary-500 relative">
+        <img src="./assets/about-wave.svg" alt="path" className="absolute top-[2%] left-[22%] h-[2380px]" /> 
+        
         <StoryComponent 
           heading="The journey begins"
           text="In 2020, Harish Parihar embarked on a solo journey, offering digital
@@ -75,8 +77,8 @@ export default function About() {
           structures of digital marketing. As he navigated through projects, his
           clientele steadily grew, laying the groundwork for what was to come."
           Image={
-            <div className="rounded-full text-center w-[35vw] h-auto">
-              <img src="/assets/Story_pic.png" alt=""  className=""/>
+            <div className="rounded-full text-center basis-1/2 h-auto">
+              <img src="/assets/Story_pic.png" alt=""  className="w-full"/>
             </div>
           }
           direction={1}

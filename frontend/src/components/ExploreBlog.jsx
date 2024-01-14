@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useWinSizeContext } from "../context/winSizeContext";
 
-export default function ExploreBlog({ className }) {
+export default function ExploreBlog({ className , heading=true, }) {
   const sliderRef = useRef(null);
 
   const nextSlide = () => {
@@ -53,7 +53,7 @@ export default function ExploreBlog({ className }) {
 
   return (
     <section className={classes}>
-      <Heading heading="Explore Our" subHeading="Case Studies" className="items-center mb-12" />
+      { heading && <Heading heading="Explore Our" subHeading="Case Studies" className="items-center mb-12" />}
       <div className="w-full flex items-center justify-between">
         <img className="w-6 h-12 hover:cursor-pointer" src="./assets/LeftButtonHalfArrowBlack.svg" alt="arrow" onClick={prevSlide}/>
         
