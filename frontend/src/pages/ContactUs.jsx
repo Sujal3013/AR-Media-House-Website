@@ -1,13 +1,12 @@
 import Form from "../components/Form";
-import { Heading, Button, Wonder, BlackSection, ServicesCards, Section } from "../components";
+import { Heading, Button, Wonder, BlackSection, ServicesCards, Section, Circle, Triangle } from "../components";
 
 const ContactUs = () => {
   document.querySelector("title").innerHTML = "Contact - AR Media House";
 
   return (
     <>
-      <div className="px-screen-padding py-10 relative">
-        <div className="flex-col">
+      <div className="flex flex-col px-screen-padding py-10 relative">
           <Heading
             heading="Let's Create"
             subHeading="Progress Together"
@@ -21,7 +20,8 @@ const ContactUs = () => {
             <img src="/assets/ContactUs.svg" alt="" />
           </div>
 
-        </div>
+        {/* Shapes */}
+        <Circle className="top-[-2%] right-[40%]" />
       </div>
 
       <img 
@@ -85,9 +85,12 @@ const ContactUs = () => {
             />
           </>
         }
+        Shapes={
+          <Triangle className="top-[-10%] left-[25%]" />
+        }
       />
               
-      <Wonder />
+      <Wonder shapeClassName="!top-[-14%] !right-[86%]" />
     </>
   );
 };

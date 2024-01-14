@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import {Button} from "./";
-import { isBrowser, motion } from "framer-motion";
 
 const Form = () => {
   const [data, setData] = useState({
@@ -12,10 +11,10 @@ const Form = () => {
   });
   
   const [validator, setValidator] = useState({
-    isName: true,
-    isContact: true,
-    isEmail: true,
-    isOptions: true,
+    Name: true,
+    contact_number: true,
+    email: true,
+    field_of_interest: true,
   });
 
   const [selectedOptions, setSelectedOptions] = useState([]);
@@ -27,16 +26,15 @@ const Form = () => {
     } else {
       setSelectedOptions(selectedOptions.filter((item) => item !== value));
     }
-    setValidator({...validator,isOptions:selectedOptions.length>0?true:false})
+    setValidator({...validator,field_of_interest:selectedOptions.length>0?true:false})
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const regex = /^\d{2}\+\d{10}$/;
 
     if (data.name && data.email && data.message && data.contactNumber && selectedOptions.length > 0) {
-      const regex = /^\d{2}\+\d{10}$/;
-      const isValidContactNumber = regex.test(data.contactNumber);
-      if(isValidContactNumber) {
+      if(regex.test(data.contactNumber)) {
         // send message
 
         return;
@@ -45,17 +43,18 @@ const Form = () => {
     // show form validation-issues
     setValidator({
       ...validator,
-      isName: data.name !== "",
-      isContact: data.contactNumber !== "",
-      isEmail: data.email !== "",
-      isOptions: selectedOptions.length > 0,
+      Name: data.name !== "",
+      contact_number: data.contactNumber && regex.test(data.contactNumber),
+      email: data.email !== "",
+      field_of_interest: selectedOptions.length > 0,
     });
   
-    window.alert("Please Provide all field correctly")
-  
+    setShowError(true);
+    setTimeout(()=>setShowError(false), 3000);
   };
   return (
-      <div className="flex-col py-4 basis-1/2">
+      <div className="flex-col pt-8 basis-1/2">
+
         {/* Checkbox section */}
         <div className="flex flex-wrap gap-[15px]">
           {
@@ -73,6 +72,21 @@ const Form = () => {
             )
           }
         </div>
+
+        {
+          showError &&
+          <div className="bg-primary-400 rounded-lg p-3 mt-10 font-medium text-red-600">
+            Please Provide 
+            {
+              Object.keys(validator).map((key, index)=>{
+                if(!validator[key]) 
+                  return <span key={index} className="text-lg">{"  " + key + ","}</span>
+                else 
+                  return " ";
+              })
+            }
+          </div>
+        }
 
         {/* Input form */}
         <form onSubmit={handleSubmit} className="pt-10 flex flex-col gap-3">
