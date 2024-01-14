@@ -47,7 +47,7 @@ const ScrolltoTop = () => {
         ref={progressValueRef}
         className=" h-[calc(100%-5px)] w-[calc(100%-5px)] bg-primary-500 rounded-full grid place-items-center text-2xl text-black"
       >
-        &#x1F815;
+        <img src="/assets/icons8-double-up.png" className="w-[60%] hover:animate-scroll-up" alt="double up arrow" />
       </span>
     </div>
   );

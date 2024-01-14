@@ -19,7 +19,7 @@ import Triangle from "./Triangle";
 import Wonder from "./Wonder";
 import StoryComponent from "./StoryComponent";
 import ScrolltoTop from "./ScrolltoTop";
-
+import ServicesSec2 from "./ServicesSec2";
 
 export {
     AnimateNumber, 
@@ -42,5 +42,6 @@ export {
     ServicesCards,
     Triangle, 
     Wonder, 
-    StoryComponent
+    StoryComponent,
+    ServicesSec2,
 }

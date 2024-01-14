@@ -13,7 +13,7 @@ export default function ExploreBlogList({blog, focus, className}) {
     "initial": {y: "20%", width: "25%", height: 0,},
     "animate": {x: "40%", y: "40%", width: "300%", height: "300%", transition:{duration:1}},
   };
-  const classes = classNames("min-w-[11.5rem] max-w-72 h-[64vh] text-secondary-500 flex flex-col items-start justify-evenly relative overflow-hidden gap-2 hover:cursor-pointer", {
+  const classes = classNames("min-w-[11.5rem] max-w-72 h-[22rem] sm:h-[64vh] text-secondary-500 flex flex-col items-start justify-evenly relative overflow-hidden gap-2 hover:cursor-pointer", {
     [className]: className,
   })
   return (
