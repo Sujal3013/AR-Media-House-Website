@@ -1,140 +1,184 @@
 import React from "react";
-import { Button, RoundedCornersSection, Heading,StoryComponent,Section } from "../components";
+import { 
+  Button, 
+  RoundedCornersSection, 
+  Heading, 
+  StoryComponent, 
+  Section, 
+  Wonder, 
+  BlackSection,
+  HeroSectionWrapper,
+  Circle,
+  Triangle
+} from "../components";
 
 export default function About() {
   document.querySelector("title").innerHTML = "About - AR Media House";
   return (
-    <div className="mt-20">
-      <div className=" h-[85vh] flex items-center justify-center text-white">
-        <div className="text-center items-center">
-          <h1 className="text-7xl font-jost font-extrabold mb-4 text-primary-500 leading-3">
-            GET TO
-          </h1>
-          <p className="text-[54px] font-bold font-playfair-display text-secondary-500">
-            know us better
-          </p>
-          <Button
-            arrow
-            className="bg-primary-500 text-secondary-500 mx-auto mt-4"
-          >
-            Read our Story
-          </Button>
-          <img
-            className=" relative bottom-[-1rem] h-[25rem] mt-4"
-            src="/assets/About_banner.svg"
-            alt="Img"
-          />
-        </div>
-      </div>
-      <RoundedCornersSection
-        className="bg-secondary-500 relative flex justify-between items-center px-screen-padding py-20"
-        behindBackground="bg-tertiary-500"
-      >
-        <div className="flex-col justify-center items-start">
-          <Heading
-          className="my-6"
-            heading="A Bumpy Road"
-            subHeading="to success"
-            subHeadingClassName="text-white"
-          />
-          <p className="text-white w-[40rem]">
-            Starting from an idea that emerged into the minds of two young
-            friends, Rohit Ajmani and Sahil Walia while still in college
-            exchanged their thoughts on creating something on their own. From
-            successfully launching their first website, Newton007 to interacting
-            with some of the most leading marketing intellectuals, they have
-            come a long way and now have a better vision of enabling Idea Clan
-            to turn into a Unicorn – a Billion dollar vision.
-          </p>
-        </div>
-        <img src="./assets/Youtube_Video.svg" alt="" className="px-6"  />
-      </RoundedCornersSection>
-      <section className="bg-tertiary-500">
-      <StoryComponent 
-      heading="The journey begins"
-      text="In 2020, Harish Parihar embarked on a solo journey, offering digital
-      marketing services to local clients as a freelancer. This phase served
-      as his foundational period, providing valuable insights into the basic
-      structures of digital marketing. As he navigated through projects, his
-      clientele steadily grew, laying the groundwork for what was to come."
-      Image={<div className="rounded-full text-center w-[40vw] h-auto">
-      <img src="/assets/Story_pic.png" alt=""  className=""/>
-    </div>}
-    direction={1}
-    Year={2020}
-      ></StoryComponent>
-      <StoryComponent 
-      heading="The journey begins"
-      text="In 2020, Harish Parihar embarked on a solo journey, offering digital
-      marketing services to local clients as a freelancer. This phase served
-      as his foundational period, providing valuable insights into the basic
-      structures of digital marketing. As he navigated through projects, his
-      clientele steadily grew, laying the groundwork for what was to come."
-      Image={<div className="rounded-full text-center w-[40vw] h-auto">
-      <img src="/assets/Story_pic.png" alt=""  className=""/>
-    </div>}
-    direction={-1}
-    Year={2021}
-      />
-      <StoryComponent 
-      heading="The journey begins"
-      text="In 2020, Harish Parihar embarked on a solo journey, offering digital
-      marketing services to local clients as a freelancer. This phase served
-      as his foundational period, providing valuable insights into the basic
-      structures of digital marketing. As he navigated through projects, his
-      clientele steadily grew, laying the groundwork for what was to come."
-      Image={<div className="rounded-full text-center w-[40vw] h-auto">
-      <img src="/assets/Story_pic.png" alt=""  className=""/>
-    </div>}
-    direction={1}
-    Year={2022}
-      />
-      <StoryComponent 
-      heading="The journey begins"
-      text="In 2020, Harish Parihar embarked on a solo journey, offering digital
-      marketing services to local clients as a freelancer. This phase served
-      as his foundational period, providing valuable insights into the basic
-      structures of digital marketing. As he navigated through projects, his
-      clientele steadily grew, laying the groundwork for what was to come."
-      Image={<div className="rounded-full text-center w-[40vw] h-auto">
-      <img src="/assets/Story_pic.png" alt=""  className=""/>
-    </div>}
-    direction={-1}
-    Year={2023}
-      />
-      <StoryComponent 
-      heading="The journey begins"
-      text="In 2020, Harish Parihar embarked on a solo journey, offering digital
-      marketing services to local clients as a freelancer. This phase served
-      as his foundational period, providing valuable insights into the basic
-      structures of digital marketing. As he navigated through projects, his
-      clientele steadily grew, laying the groundwork for what was to come."
-      Image={<div className="rounded-full text-center w-[40vw] h-auto">
-      <img src="/assets/Story_pic.png" alt=""  className=""/>
-    </div>}
-    direction={1}
-    Year={2024}
-      />
-      <img src="./assets/Wave-white.svg" alt="" className="w-full" />
-      </section>
-      
+    <>
+      <HeroSectionWrapper className="!mb-0" whiteWaveBackground>
+        <Heading
+          heading="Get To Know"
+          subHeading="Us better"
+          subHeadingClassName="text-tertiary-500"
+          className="w-full mt-10 items-center"
+        />
+        <Button
+          arrow
+          className="bg-primary-500 text-secondary-500 mx-auto mt-4"
+        >
+          Read our Story
+        </Button>
+        <img
+          className="relative mt-4"
+          src="/assets/About_banner.svg"
+          alt="illustration"
+        />
+        {/* Shapes */}
+        <Circle secondary className="top-5 left-10" />
+        <Triangle secondary className="top-[24%] right-[5%]" />
+      </HeroSectionWrapper>
+
       <Section
-      heading="We are a team of"
-      subHeading="focused individuals"
-      text="We’ve established a people-focused workplace and their contributions
-      have had a great impact on the company’s overall mission."
-      backgroundClassName="py-16"
-      textClassName="w-[40vw] py-6"
-      illustration={<div className="rounded-full text-center w-[40vw] h-auto">
-      <img src="/assets/Individuals_About.svg" alt=""  className=""/>
-    </div>}
-    Button1={
-      <Button className="bg-primary-500 text-secondary-500 mt-6 mb-12" arrow>
-        Let's Connect
-      </Button>
-    }/>
+        heading="A Bumpy Road"
+        subHeading="to success"
+        text="Starting from an idea that emerged into the minds of two young
+        friends, Rohit Ajmani and Sahil Walia while still in college
+        exchanged their thoughts on creating something on their own. From
+        successfully launching their first website, Newton007 to interacting
+        with some of the most leading marketing intellectuals, they have
+        come a long way and now have a better vision of enabling Idea Clan
+        to turn into a Unicorn – a Billion dollar vision."
+        textClassName="py-10 "
+        illustration={ <img src="./assets/Youtube_Video.svg" alt="video" className="rounded-3xl"  />}
+        backgroundClassName="bg-white !py-12"
+        Shapes={
+          <>
+            <Circle className="top-[-24%] left-[50%]" />
+            <Triangle className="bottom-[-10%] left-[20%]" />
+          </>
+        }
+      />
+
+      <img 
+        src="./assets/triple-wave-white-1.svg"
+        alt="wave"
+      />
 
 
-    </div>
+      <section className="bg-tertiary-500 relative">
+        <StoryComponent 
+          heading="The journey begins"
+          text="In 2020, Harish Parihar embarked on a solo journey, offering digital
+          marketing services to local clients as a freelancer. This phase served
+          as his foundational period, providing valuable insights into the basic
+          structures of digital marketing. As he navigated through projects, his
+          clientele steadily grew, laying the groundwork for what was to come."
+          Image={
+            <div className="rounded-full text-center w-[35vw] h-auto">
+              <img src="/assets/Story_pic.png" alt=""  className=""/>
+            </div>
+          }
+          direction={1}
+          Year={2020}
+          aboutPath={<img src="./assets/about-wave-1.svg" alt="path" className="absolute top-12 left-[45%]" />}
+        />
+        
+        <StoryComponent 
+          heading="The journey begins"
+          text="In 2020, Harish Parihar embarked on a solo journey, offering digital
+          marketing services to local clients as a freelancer. This phase served
+          as his foundational period, providing valuable insights into the basic
+          structures of digital marketing. As he navigated through projects, his
+          clientele steadily grew, laying the groundwork for what was to come."
+          Image={
+            <div className="rounded-full text-center w-[45vw] h-auto">
+              <img src="/assets/Story_pic.png" alt=""  className=""/>
+            </div>
+          }
+          direction={-1}
+          Year={2021}
+          aboutPath={<img src="./assets/about-wave-2.svg" alt="path" className="absolute bottom-[-50%] left-[25%]" />}
+        />
+
+        <StoryComponent 
+          heading="The journey begins"
+          text="In 2020, Harish Parihar embarked on a solo journey, offering digital
+          marketing services to local clients as a freelancer. This phase served
+          as his foundational period, providing valuable insights into the basic
+          structures of digital marketing. As he navigated through projects, his
+          clientele steadily grew, laying the groundwork for what was to come."
+          Image={
+            <div className="rounded-full text-center w-[40vw] h-auto">
+              <img src="/assets/Story_pic.png" alt=""  className=""/>
+            </div>
+          }
+          direction={1}
+          Year={2022}
+          aboutPath={<img src="./assets/about-wave-3.svg" alt="path" className="absolute bottom-[-46%] left-[37%]" />}
+        />
+
+        <StoryComponent 
+          heading="The journey begins"
+          text="In 2020, Harish Parihar embarked on a solo journey, offering digital
+          marketing services to local clients as a freelancer. This phase served
+          as his foundational period, providing valuable insights into the basic
+          structures of digital marketing. As he navigated through projects, his
+          clientele steadily grew, laying the groundwork for what was to come."
+          Image={
+            <div className="rounded-full text-center w-[40vw] h-auto">
+              <img src="/assets/Story_pic.png" alt=""  className=""/>
+            </div>
+          }
+          direction={-1}
+          Year={2023}
+          aboutPath={<img src="./assets/about-wave-2.svg" alt="path" className="absolute bottom-[-50%] left-[25%]" />}
+        />
+
+        <StoryComponent 
+          heading="The journey begins"
+          text="In 2020, Harish Parihar embarked on a solo journey, offering digital
+          marketing services to local clients as a freelancer. This phase served
+          as his foundational period, providing valuable insights into the basic
+          structures of digital marketing. As he navigated through projects, his
+          clientele steadily grew, laying the groundwork for what was to come."
+          Image={
+            <div className="rounded-full text-center w-[40vw] h-auto">
+              <img src="/assets/Story_pic.png" alt=""  className=""/>
+            </div>
+          }
+          direction={1}
+          Year={2024}
+        />
+
+        <img src="./assets/triple-wave-white-1.svg" alt="" className="w-full bg-white rotate-180" />
+
+        <Circle className="top-[18%] left-[5%]" />
+        <Triangle className="top-[52%] right-[5%]" />
+        <Triangle className="bottom-[2%] right-[5%]" />
+        <Circle className="top-[58%] left-[5%]" />
+      </section>
+        
+      <Section
+        heading="We are a team of"
+        subHeading="focused individuals"
+        text="We’ve established a people-focused workplace and their contributions
+        have had a great impact on the company’s overall mission."
+        backgroundClassName="py-10"
+        textClassName="w-[40vw] py-6"
+        illustration={
+          <div className="rounded-full text-center w-[40vw] h-auto">
+            <img src="/assets/Individuals_About.svg" alt=""  className=""/>
+          </div>
+        }
+        Button1={
+          <Button className="bg-primary-500 text-secondary-500 mt-6 mb-12" arrow>
+            Let's Connect
+          </Button>
+        }
+      />
+
+      <Wonder className="!bg-tertiary-500" linearGradient={{"backgroundImage": "linear-gradient(0deg, #080403 50%, white 50%)"}}/>
+    </>
   );
 }
