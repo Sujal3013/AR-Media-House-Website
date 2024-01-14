@@ -1,3 +1,4 @@
+import AnimateNumber from "./AnimateNumber";
 import AnimateTextBackground from "./AnimateTextBackground";
 import BlackSection from "./BlackSection";
 import Button from "./Button";
@@ -10,6 +11,7 @@ import Navbar from "./Navbar";
 import Heading from "./Heading";
 import HeroSectionWrapper from "./HeroSectionWrapper";
 import CompaniesAnimate from "./CompaniesAnimate";
+import RotatingCards from "./RotatingCards";
 import RoundedCornersSection from "./RoundedCornersSection";
 import Section from "./Section";
 import ServicesCards from "./ServicesCards";
@@ -20,6 +22,7 @@ import ScrolltoTop from "./ScrolltoTop";
 
 
 export {
+    AnimateNumber, 
     AnimateTextBackground, 
     BlackSection, 
     Button,
@@ -33,6 +36,7 @@ export {
     HeroSectionWrapper,
     Navbar,
     ScrolltoTop,
+    RotatingCards, 
     RoundedCornersSection, 
     Section,
     ServicesCards,

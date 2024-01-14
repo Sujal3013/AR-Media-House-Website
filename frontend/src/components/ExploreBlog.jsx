@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import ExploreBlogList from "./ExploreBlogList";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useWinSizeContext } from "../context/winSizeContext";
 
 export default function ExploreBlog({ className }) {
   const sliderRef = useRef(null);
@@ -29,12 +30,17 @@ export default function ExploreBlog({ className }) {
   );
 
   const [currentSlide, setCurrentSlide] = useState(0);
+  const {winSize} = useWinSizeContext();
+  let noSlides = 3;
+  if(winSize > 768)noSlides = 3
+  else if(winSize > 480)noSlides = 2
+  else noSlides = 1
 
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: noSlides,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -48,16 +54,16 @@ export default function ExploreBlog({ className }) {
   return (
     <section className={classes}>
       <Heading heading="Explore Our" subHeading="Case Studies" className="items-center mb-12" />
-      <div className="w-full flex items-center ">
+      <div className="w-full flex items-center justify-between">
         <img className="w-6 h-12 hover:cursor-pointer" src="./assets/LeftButtonHalfArrowBlack.svg" alt="arrow" onClick={prevSlide}/>
         
-        <Slider {...settings} className="w-full h-full" ref={sliderRef}>
+        <Slider {...settings} className="w-[90%] h-full" ref={sliderRef}>
           {list.map((blog, index) => (
               <ExploreBlogList blog={blog} focus={index===currentSlide} className="slider-item" key={index} />
           ))}
         </Slider>
         
-        <img className="w-6 h-12 hover:cursor-pointer -translate-x-10" src="./assets/RightButtonHalfArrowBlack.svg" alt="arrow" onClick={()=>nextSlide()}/>
+        <img className="w-6 h-12 hover:cursor-pointer" src="./assets/RightButtonHalfArrowBlack.svg" alt="arrow" onClick={()=>nextSlide()}/>
       </div>
 
       {/* Shapes */}

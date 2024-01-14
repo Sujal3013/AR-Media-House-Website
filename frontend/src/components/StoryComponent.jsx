@@ -3,6 +3,7 @@ import React from "react";
 import { Button, Heading } from "../components";
 
 const StoryComponent = ({
+  aboutPath, 
   heading,
   headingClassName,
   Year,
@@ -16,7 +17,7 @@ const StoryComponent = ({
   direction,
 }) => {
   const bgClasses = classNames(
-    "flex justify-between px-screen-padding py-20 items-center gap-6",
+    "flex justify-between px-screen-padding py-20 items-center gap-6 relative",
     {
       [backgroundClassName]: backgroundClassName,
       "flex-row-reverse": direction && direction < 0,
@@ -26,21 +27,21 @@ const StoryComponent = ({
     [headingClassName]: headingClassName,
   });
 
-  const yearClasses=classNames("mx-6 text-center px-6 py-3 bg-primary-500 text-white rounded-3xl",{
+  const yearClasses=classNames("mx-6 text-center px-6 py-3 bg-primary-500 text-white rounded-3xl z-10",{
     [YearClassName]:YearClassName
   })
   const textClasses = classNames("w-[30rem]", {
     [textClassName]: textClassName,
     "text-secondary-500": !textClassName,
   });
-  const divClasses = classNames("flex flex-col justify-center basis-1/2 gap-10", {});
+  const divClasses = classNames("flex flex-col justify-center basis-1/2 gap-10 ", {});
 
   return (
     <>
     {children}
     <section className={bgClasses}>
         
-      <div>{Image && Image}</div>
+     {Image && Image}
       <div className={yearClasses}><p>{Year}</p></div>
       <div className={divClasses}>
         <h1 className={headingClasses}>{heading}</h1>
@@ -48,6 +49,10 @@ const StoryComponent = ({
           {text}
         </p>
       </div>
+
+      {
+        aboutPath && aboutPath
+      }
     </section>
     </>
   );

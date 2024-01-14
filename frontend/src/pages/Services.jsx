@@ -5,6 +5,9 @@ import {
   HeroSectionWrapper,
   Wonder,
   ExploreBlog,
+  Circle,
+  Triangle,
+  AnimateNumber,
 } from "../components";
 import classNames from "classnames";
 
@@ -20,7 +23,7 @@ function CardSection2({
     "flex flex-col items-center",
     "text-center",
     "min-h-60",
-    `bg-no-repeat bg-center bg-55% bg-top`
+    `bg-no-repeat bg-center bg-55% bg-top`,
   );
 
   const titleClass = classNames(
@@ -42,8 +45,10 @@ export default function Services() {
   document.querySelector("title").innerHTML = "Services - AR Media House";
   return (
     <>
-      <HeroSectionWrapper className="flex py-6 flex-col gap-4 items-center justify-between">
-        <div className="w-full flex justify-between items-center">
+      <HeroSectionWrapper 
+        className="flex py-6 gap-4 items-center justify-between !overflow-visible" 
+        whiteWaveBackground
+      >
           {/* text content right side */}
           <div className="w-[45vw] my-4">
             <Heading
@@ -52,7 +57,7 @@ export default function Services() {
               headingClassName="text-[64px] text-primary-500"
               subHeadingClassName="text-tertiary-500"
             />
-            <p className="text-sm my-12 w-[30vw]">
+            <p className="text-sm my-12 w-[75%]">
               Identification of ideal prospects through a potent advertising
               approach. Gathering highly qualified prospects to boost brand
               engagement. Turning prospects into high-quality leads and sales.
@@ -68,35 +73,41 @@ export default function Services() {
           <div className="w-auto h-auto rounded">
             <img src="/assets/Services.svg" alt="" />
           </div>
-        </div>
+
+          {/* Shapes */}
+          <Circle secondary className="top-[10%] right-[5%]" />
+          <Triangle secondary className="top-[-4%] left-[5%]" />
+          <Triangle secondary className="bottom-[0%] left-[45%]" />
       </HeroSectionWrapper>
 
-      <section>
-        <div className="flex justify-center text-center my-8">
-          <Heading heading="we've got tricks" subHeading="up our sleeves." />
-        </div>
-        <div className="flex justify-center">
+      <section className="relative">
+        <Heading heading="we've got tricks" subHeading="up our sleeves." className="w-full items-center my-6"/>
+        <div className="w-full flex justify-center">
           <CardSection2 {...section2CardList[0]} />
         </div>
-        <div className="flex justify-evenly items-center">
+        <div className="w-full px-screen-padding flex justify-between items-center">
           <CardSection2 {...section2CardList[1]} />
           <Button className="bg-primary-500">Get Started</Button>
           <CardSection2 {...section2CardList[2]} />
         </div>
-        <div className="flex justify-center mb-4">
+        <div className="w-full flex justify-center">
           <CardSection2 {...section2CardList[3]} />
         </div>
+
+        {/* Shapes */}
+        <Circle className="top-[20%] left-[5%]" />
+        <Triangle className="top-[2%] right-[5%]" />
       </section>
 
-      <img src="./assets/wave1.svg" alt="wave" />
+      <img src="./assets/triple-wave-white-1.svg" alt="wave" />
 
-      <section className="bg-tertiary-500 py-4 px-24">
+      <section className="bg-tertiary-500 py-4 px-24 relative">
         <Heading
           heading="YOUR BRAND"
           subHeading="our focus"
-          className="text-center my-4"
+          className="text-center my-6 w-full items-center"
         />
-        <div className="flex justify-between">
+        <div className="flex justify-between py-6">
           <CardSection2
             {...section3CardList[0]}
             textClassNames="max-w-80"
@@ -132,18 +143,21 @@ export default function Services() {
             subHeading="to help you"
             subHeadingClassName="text-[64px]"
           />
-          <div className="grid bg-slate-50 p-8 grid-cols-4 gap-16 justify-start">
+          <div className="grid bg-tertiary-500 p-8 grid-cols-4 gap-12 justify-start">
             {platforms.map((el) => (
               <img src={el.imgSrc} alt={el.alt} className="w-32" />
             ))}
           </div>
         </div>
+
+        {/* Shapes */}
+        <Circle className="top-[-5%] right-[5%]" />
       </section>
 
       <img
-        src="./assets/wave12.svg"
+        src="./assets/triple-wave-white-1.svg"
         alt="wave"
-        className="bg-tertiary-500 text-white w-full"
+        className="w-full rotate-180"
       />
 
       <section className=" flex items-center justify-between px-screen-padding py-12">
@@ -153,18 +167,26 @@ export default function Services() {
           subHeading="don't lie"
           subHeadingClassName="text-[64px]"
         />
-        <Heading heading="$33,981,171" headingClassName="py-2 text-[64px] text-secondary-500" subHeading="Ad Spend
-Last 12 months" subHeadingClassName="text-[24px] font-jost font-normal w-[15rem] mx-auto text-center" />
-        <Heading heading="5,747,646" headingClassName="text-[64px] py-2 text-secondary-500" subHeading="Lead Generated Last 12 months" subHeadingClassName="text-[24px] font-jost font-normal w-[12rem] mx-auto text-center" />
+        <div>
+        <div className="flex flex-col items-center justify-center w-fit text-secondary-500 font-bold">
+          <div className="text-5xl flex justify-center">$<AnimateNumber from={0} to={33981171} duration={2.5}/></div></div>
+          <h1 className="text-center font-bold text-xl">Ad Spend Last 12 months</h1>
+        </div>
+        <div className="flex flex-col items-center justify-center w-fit text-secondary-500 font-bold">
+          <div className="text-5xl flex justify-center"><AnimateNumber from={0} to={5747646} duration={2.5}/></div>
+          <h1 className="text-center font-bold text-xl">Lead Generated Last 12 months</h1>
+        </div>
       </section>
+
       <img
-        src="./assets/wave12.svg"
+        src="./assets/triple-wave-white-1.svg"
         alt="wave"
-        className="bg-tertiary-500 text-white w-full rotate-180"
+        className="bg-white w-full"
       />
-      <section className="bg-tertiary-500">
-        <ExploreBlog list={blogsList} />
-      </section>
+
+            
+      <ExploreBlog list={blogsList} />
+      
       <Wonder />
     </>
   );
@@ -250,31 +272,31 @@ const platforms = [
     alt: "Youtube",
   },
   {
-    imgSrc: "./assets/YouTube_Logo+text.svg",
-    alt: "Youtube",
+    imgSrc: "./assets/facebook-1.svg",
+    alt: "facebook",
   },
   {
-    imgSrc: "./assets/YouTube_Logo+text.svg",
-    alt: "Youtube",
+    imgSrc: "./assets/snapchat-1.svg",
+    alt: "Snapchat",
   },
   {
-    imgSrc: "./assets/YouTube_Logo+text.svg",
-    alt: "Youtube",
+    imgSrc: "./assets/tiktok.svg",
+    alt: "TikTok",
   },
   {
-    imgSrc: "./assets/YouTube_Logo+text.svg",
-    alt: "Youtube",
+    imgSrc: "./assets/instagram-1.svg",
+    alt: "Instagram",
   },
   {
-    imgSrc: "./assets/YouTube_Logo+text.svg",
-    alt: "Youtube",
+    imgSrc: "./assets/twitter-platform.svg",
+    alt: "twitter",
   },
   {
-    imgSrc: "./assets/YouTube_Logo+text.svg",
-    alt: "Youtube",
+    imgSrc: "./assets/google-ads.svg",
+    alt: "google ads",
   },
   {
-    imgSrc: "./assets/YouTube_Logo+text.svg",
-    alt: "Youtube",
+    imgSrc: "./assets/taboola.svg",
+    alt: "taboola",
   },
 ];
