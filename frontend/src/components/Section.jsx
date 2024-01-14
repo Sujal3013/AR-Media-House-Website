@@ -18,12 +18,14 @@ export default function Section({
     backgroundClassName,
     illustration,
     Shapes,
+    largeFlex
 }) {
 
   const bgClasses = classNames("flex justify-between px-screen-padding items-center lg:gap-16 gap-4 relative", {
     [backgroundClassName]: backgroundClassName,
-    "flex-col md:flex-row-reverse": direction && 1*direction<0,
-    "flex-col md:flex-row": !direction || 1*direction>0,
+    "flex-col lg:flex-row":largeFlex,
+    "flex-col md:flex-row-reverse": !largeFlex && direction && 1*direction<0,
+    "flex-col md:flex-row": !largeFlex && (!direction || 1*direction>0),
   })
   const headingClasses = classNames("", {
     [headingClassName]: headingClassName,

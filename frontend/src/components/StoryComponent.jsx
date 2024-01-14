@@ -17,18 +17,22 @@ const StoryComponent = ({
   direction,
 }) => {
   const bgClasses = classNames(
-    "flex justify-between px-screen-padding py-16 items-center gap-6 relative",
+    "px-screen-padding py-16 gap-6 relative",
+    "flex flex-col-reverse justify-center md:justify-between items-center",
     {
       [backgroundClassName]: backgroundClassName,
-      "flex-row-reverse": direction && direction < 0,
+      "md:flex-row-reverse": direction && direction < 0,
+      "md:flex-row": direction && direction > 0,
     }
   );
-  const headingClasses = classNames("font-playfair-display text-[48px] font-bold text-primary-500", {
+  const headingClasses = classNames("font-playfair-display text-3xl sm:text-4xl md:text-5xl leading-1.2 font-bold text-primary-500", {
     [headingClassName]: headingClassName,
   });
 
-  const yearClasses=classNames("mx-6 text-center px-6 py-3 bg-primary-500 text-white rounded-3xl z-10",{
-    [YearClassName]:YearClassName
+  const yearClasses=classNames("absolute lg:static mx-6 text-base sm:text-xl lg:text-base text-center px-3 sm:px-6 py-1 sm:py-3 bg-primary-500 text-white rounded-3xl z-10",{
+    [YearClassName]:YearClassName,
+    "top-5 right-5 md:right-auto md:left-5 ":direction*1 < 0,
+    "top-5 right-5 ":direction*1 > 0,
   })
   const textClasses = classNames("basis-1/2", {
     [textClassName]: textClassName,

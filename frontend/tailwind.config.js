@@ -62,17 +62,17 @@ export default {
             opacity: 1
           },
           "35%":{
-            transform: "translateY(-1rem)",
+            transform: "translateY(-0.5rem)",
             opacity: 0
           },
           "70%": {
-            transform: "translateY(1rem)",
+            transform: "translateY(0.5rem)",
             opacity: 0
           },
         },
       },
       animation: {
-        "scroll-up": 'scroll-up-icon 2s ease-in-out infinite',
+        "scroll-up": 'scroll-up-icon 1s ease-in-out infinite',
       },
       padding: {
         "screen-padding": "6vw",
