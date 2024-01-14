@@ -67,6 +67,7 @@ export default function About() {
 
 
       <section className="bg-tertiary-500 relative">
+        
         <StoryComponent 
           heading="The journey begins"
           text="In 2020, Harish Parihar embarked on a solo journey, offering digital
@@ -85,12 +86,8 @@ export default function About() {
         />
         
         <StoryComponent 
-          heading="The journey begins"
-          text="In 2020, Harish Parihar embarked on a solo journey, offering digital
-          marketing services to local clients as a freelancer. This phase served
-          as his foundational period, providing valuable insights into the basic
-          structures of digital marketing. As he navigated through projects, his
-          clientele steadily grew, laying the groundwork for what was to come."
+          heading="Expansion and Franchise Endeavours"
+          text="The year 2021 marked a pivotal moment as Harish's client base expanded significantly. Towards the year's end, he took a bold step, delving into a franchise model, forming a partnership with Amazon's Easy Store. This ambitious move involved selling franchises through the renowned platform, signalling a significant leap forward in his entrepreneurial journey."
           Image={
             <div className="rounded-full text-center w-[45vw] h-auto">
               <img src="/assets/Story_pic.png" alt=""  className=""/>
@@ -102,12 +99,8 @@ export default function About() {
         />
 
         <StoryComponent 
-          heading="The journey begins"
-          text="In 2020, Harish Parihar embarked on a solo journey, offering digital
-          marketing services to local clients as a freelancer. This phase served
-          as his foundational period, providing valuable insights into the basic
-          structures of digital marketing. As he navigated through projects, his
-          clientele steadily grew, laying the groundwork for what was to come."
+          heading="Adversity and Pivot"
+          text="Unfortunately, 2022 presented unexpected challenges when Amazon discontinued its operations, leading to the closure of the franchise model. Undeterred, Harish pivoted his approach, founding a full-stack digital marketing company, recognizing the need for a broader spectrum of services. The focus shifted towards data generation and expansion, signifying resilience in the face of adversity."
           Image={
             <div className="rounded-full text-center w-[40vw] h-auto">
               <img src="/assets/Story_pic.png" alt=""  className=""/>
@@ -119,12 +112,8 @@ export default function About() {
         />
 
         <StoryComponent 
-          heading="The journey begins"
-          text="In 2020, Harish Parihar embarked on a solo journey, offering digital
-          marketing services to local clients as a freelancer. This phase served
-          as his foundational period, providing valuable insights into the basic
-          structures of digital marketing. As he navigated through projects, his
-          clientele steadily grew, laying the groundwork for what was to come."
+          heading="Collaborative Innovations"
+          text="In 2023, fate brought Harish together with like-minded visionaries, Raj Maheshwari and Shelendra Mukati, during a summit. Engaging in spirited discussions, they explored innovative ideas, particularly around lead generation. Their synergy and shared aspirations led to the inception of Lead Bank—a revolutionary model empowered by an in-house software boasting unlimited data sources."
           Image={
             <div className="rounded-full text-center w-[40vw] h-auto">
               <img src="/assets/Story_pic.png" alt=""  className=""/>
@@ -136,12 +125,8 @@ export default function About() {
         />
 
         <StoryComponent 
-          heading="The journey begins"
-          text="In 2020, Harish Parihar embarked on a solo journey, offering digital
-          marketing services to local clients as a freelancer. This phase served
-          as his foundational period, providing valuable insights into the basic
-          structures of digital marketing. As he navigated through projects, his
-          clientele steadily grew, laying the groundwork for what was to come."
+          heading="Global Ventures and Sectoral Diversification"
+          text="The year 2024 heralded a transformative phase for Lead Bank. With a well-established model in place, they successfully onboarded foreign and domestic clients, amplifying their impact across diverse sectors—from Indian businesses to digital products, ecommerce ventures, and educational initiatives. Their collaborative efforts aimed at empowering entities to thrive in the ever-evolving landscape of the online realm."
           Image={
             <div className="rounded-full text-center w-[40vw] h-auto">
               <img src="/assets/Story_pic.png" alt=""  className=""/>

@@ -80,14 +80,14 @@ export default IndividualCaseStudy;
 const blogs = [
   {
     id: 5,
-    name: "Elevating Excellence: Idea Clan’s Networking Pursuit at PI Live Europe 2023",
+    name: "AR Trader Revolutionizes Lead Generation and Brand Awareness with AR Media House",
     domain: "Marketing",
     image: "/assets/Case-study.svg",
     description: [
       {
         heading: "",
         paragraph:
-          "The PI Live Europe conference, hosted in the illustrious city of London on October 24th and 25th, 2023, provided an esteemed platform for marketing experts to augment their performance industry knowledge.",
+          "Once upon a time, in the dynamic realm of financial education, AR Research House of Finance and Consultancy Services, affectionately known as AR Trader, embarked on a transformative journey. As a startup providing stock market education, they envisioned a future with both offline and online models. To materialise this vision, they sought the expertise of AR Media House, a distinguished digital marketing company.",
         images: [],
       },
       {
@@ -97,40 +97,110 @@ const blogs = [
         images: ["/assets/Case-study.svg", "/assets/Case-study.svg"],
       },
       {
-        heading: "Customer Growth And Lead Generation Strategies",
+        heading: "A Vision Unfolds",
         paragraph:
-          "One of the notable sessions at the conference was a fireside chat on customer growth and lead generation strategies. Esteemed panelists from renowned retailers shared their most effective marketing tactics to unlock customer growth and loyalty.",
+          "AR Trader, driven by a passion for empowering aspiring traders, aimed to create a dual educational model—offline and online. Their maiden venture would be into the realm of online education. With AR Media House as their guiding beacon, they set sail.AR Media House initiated the journey by focusing on the first objective—Leads Generation.",
         images: [],
       },
       {
-        heading: "Increasing Performance Through New Partner Channels",
+        heading: "Crafting the Digital Blueprint",
         paragraph:
-          "Another session focused on improving performance through new partner channels. As affiliate and partner marketing continue to evolve, the panel of experts discussed how they manage their programs and provided a glimpse into what the future holds for this diverse and dynamic channel.",
+          "The voyage began with the creation of an online model. The first step was understanding the intricate journey of potential students, their mindset, and the nuances of targeting. A strategic Facebook advertising campaign was launched at the national level in India. The goal? To filter and target specific demographics, ensuring precision in location targeting.Student journeys were meticulously mapped, laying the groundwork for an insightful strategy.",
         images: [],
       },
       {
-        heading: "Brand-to-Brand Partnerships",
+        heading: "The Rise of Automation",
         paragraph:
-          "Brand-to-brand partnerships also took center stage at the conference, giving attendees, including our founders, a chance to explore the potential and benefits of collaborating with other brands. This topic has gained momentum in the performance marketing industry, allowing marketers to think creatively and expand their horizons.",
+          "In a mere three months, a groundbreaking automation system emerged. Every step, from inquiry to student enrollment, danced to the rhythm of automation. AR Trader witnessed a sixfold increase in business, starting with three thriving batches. The conversion rate, initially at 3%, began its upward trajectory, marking the beginning of a successful automation era.Understanding products, working on execution, and achieving automation were the cornerstones of this monumental shift.",
         images: [],
       },
       {
-        heading: "Addressing Challenges Faced By Affiliate Managers",
+        heading: "A Symphony of Growth",
         paragraph:
-          "The conference provided valuable insights into the challenges encountered by affiliate managers in terms of budget allocation and influencing stakeholders. Esteemed speakers from prominent organizations shared their expertise on leveraging content to effectively secure budgets and influence key stakeholders within affiliate management roles.",
+          "As the business burgeoned, yearly schedules were meticulously crafted. The success reached a point where the schedule dictated the enrollment and booking details of each batch. The growth was so substantial that the once-aspiring startup transformed into a thriving educational ecosystem.",
         images: [],
       },
       {
         heading:
-          "Unlocking Connections: Explore Limitless Networking Opportunities",
+          "Painting the Digital Canvas",
         paragraph:
-          "Our founders not only acquired valuable knowledge during the event, but they also built strong relationships with other industry leaders. These connections have the potential to foster fruitful collaborations and partnerships in the future. In addition to attending informative sessions, they had the privilege of engaging in networking activities such as lunches, happy hours, and sessions dedicated solely to building connections. ",
+          "With the lead generation mechanism humming efficiently, it was time to paint the canvas of brand awareness.AR Media House delved into daily content creation, turning social media platforms into digital canvases.Instagram, YouTube, WhatsApp, and Telegram became the conduits through which AR Trader spoke, shared, and connected.",
+        images: ["/assets/Case-study.svg", "/assets/Case-study.svg"],
+      },
+      {
+        heading: "A Digital Triumph Unfolds",
+        paragraph:
+          "And so, AR Trader's digital saga continued to unfold. The collaboration with AR Media House not only generated leads and built brand awareness but also ushered in an era of automation that propelled AR Trader into unprecedented growth. Every click, like, and share became a note in the symphony of success, echoing the digital triumph that AR Trader had become.",
+        images: [],
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: "Real Estate Elevates Lead Generation with AR Media",
+    domain: "Marketing",
+    image: "/assets/Case-study.svg",
+    description: [
+      {
+        heading: "",
+        paragraph:
+          "Embark on the journey of a Real Estate company seeking to revolutionise its lead generation strategy with the expertise of AR Media. Discover how strategic planning and digital prowess led to remarkable results in the realm of real estate.",
+        images: [],
+      },
+      {
+        heading: "A Vision for Lead Generation Mastery",
+        paragraph:
+          "Real Estate, a prominent player in the real estate industry, sought the guidance of AR Media to enhance its lead generation strategy. The primary goal was to achieve unprecedented success in WhatsApp lead generation and implement an original professional format for generating leads.",
+        images: ["/assets/Case-study.svg", "/assets/Case-study.svg"],
+      },
+      {
+        heading: "Crafting the WhatsApp Lead Generation Symphony",
+        paragraph:
+          "AR Media orchestrated a strategic WhatsApp lead generation symphony. The conversion rates unveiled a tale of success:WhatsApp Conversion Rate: 0.25%,Suspect to Prospect Conversion: 8-9%,Prospect Conversion: 3-4%.This chapter unravels the intricacies of the WhatsApp lead generation approach, positioning Real Estate as a frontrunner in the digital realm.",
+        images: [],
+      },
+      {
+        heading: "The Art of Original Professional Lead Generation",
+        paragraph:
+          "AR Media introduced an original professional format for lead generation, setting a new standard. The cost per lead reduced to 120 Rs with a conversion rate of 0.75%. This chapter delves into the creative strategies employed to maximise lead generation efficiency.",
+        images: [],
+      },
+      {
+        heading: "The Profitable Plot Endeavour",
+        paragraph:
+          "In just six months, Real Estate witnessed a staggering profit from the sale of 10 plots. This unprecedented success was a direct result of the meticulously planned lead generation strategies. The chapter unfolds the journey from leads to lucrative transactions.",
+        images: [],
+      },
+      {
+        heading: "Epilogue: AR Media's Lead Generation Alchemy",
+        paragraph:
+          "As the case study concludes, Real Estate emerges as a lead generation maestro in the real estate landscape. AR Media's alchemy, combining innovative WhatsApp strategies and original professional formats, propelled Real Estate into a realm of profitability and success.",
+        images: [],
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "Insta Transfer's Digital Leap with AR Media House",
+    domain: "Marketing",
+    image: "/assets/Case-study.svg",
+    description: [
+      {
+        heading: "",
+        paragraph:
+          "In the bustling landscape of B2B services, Insta Transfer, a multifaceted company offering courier services, banking logistics, payments, and a revolutionary franchise model, embarked on a transformative journey with AR Media House. The challenge at hand was to generate leads and attract potential clients interested in the franchise and B2B model. AR Media House, armed with its expertise, crafted an immersive digital strategy.",
+        images: [],
+      },
+      {
+        heading: "",
+        paragraph:
+          "Ads strategically ran across diverse social media platforms, casting a wide net to capture the attention of businesses seeking innovative solutions. The result was an influx of leads expressing keen interest in purchasing the franchise and tapping into the dynamic B2B offerings. Insta Transfer emerged not just as a service provider but as a beacon for businesses seeking seamless digital solutions in the realm of logistics and beyond",
         images: ["/assets/Case-study.svg", "/assets/Case-study.svg"],
       },
       {
         heading: "",
         paragraph:
-          "Brand-to-brand partnerships also took center stage at the conference, giving attendees, including our founders, a chance to explore the potential and benefits of collaborating with other brands. This topic has gained momentum in the performance marketing industry, allowing marketers to think creatively and expand their horizons.",
+          "This case study exemplifies the prowess of AR Media House in transforming digital presence into tangible business opportunities for a B2B powerhouse like Insta Transfer.",
         images: [],
       },
     ],
