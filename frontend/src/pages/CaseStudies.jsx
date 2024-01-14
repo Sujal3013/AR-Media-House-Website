@@ -18,8 +18,9 @@ export default function CaseStudies() {
         ></div> */}
         <Heading 
           heading="Explore Our"
+          headingClassName="text-center text-primary-500"
           subHeading="groundbraking case studies"
-          subHeadingClassName="text-tertiary-500"
+          subHeadingClassName="text-tertiary-500 text-center"
           className="w-full h-[90%] justify-center items-center"
         />
       </div>
