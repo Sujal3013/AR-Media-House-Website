@@ -23,17 +23,17 @@ export default function ExploreBlog({ className , heading=true, }) {
   };
 
   const classes = classNames(
-    "bg-tertiary-500 px-screen-padding pt-12 pb-32 flex flex-col items-center relative",
+    "bg-tertiary-500 px-screen-padding pt-12 pb-20 sm:pb-32 flex flex-col items-center relative",
     {
       [className]: className,
     }
   );
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  const {winSize} = useWinSizeContext();
+  const {winSize, BR_1, BR_2, BR_3} = useWinSizeContext();
   let noSlides = 3;
-  if(winSize > 768)noSlides = 3
-  else if(winSize > 480)noSlides = 2
+  if(winSize > BR_2)noSlides = 3
+  else if(winSize > BR_1)noSlides = 2
   else noSlides = 1
 
   const settings = {

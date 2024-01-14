@@ -277,9 +277,9 @@ export default function Home() {
 }
 
 function Services(){
-  const {winSize} = useWinSizeContext()
+  const {winSize, BR_1, BR_2, BR_3} = useWinSizeContext()
   let toReturn;
-  if(winSize > 768){
+  if(winSize > BR_2){
     toReturn = <div className="flex flex-col items-center gap-8">
       <ul className="w-full flex justify-between gap-[3vw] lg:gap-[6vw] py-8 relative">
         {
@@ -299,7 +299,7 @@ function Services(){
       </ul>
     </div>
   }
-  else if(winSize > 480){
+  else if(winSize > BR_1){
     toReturn = <div className="flex flex-col items-center gap-8">
       <ul className="w-full flex justify-evenly gap-[3vw] lg:gap-[6vw] py-8 relative">
         {
