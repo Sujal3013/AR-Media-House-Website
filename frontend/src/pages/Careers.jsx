@@ -23,6 +23,7 @@ export default function Careers() {
         {/* Replace 'your-image-url' with the actual URL of your hero image */}
           <Heading
             heading="More than a Team"
+            headingClassName="text-center text-primary-500"
             subHeading="we are a Family"
             subHeadingClassName="text-tertiary-500"
             className="w-full items-center"

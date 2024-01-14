@@ -16,7 +16,7 @@ const Wonder = ({linearGradient, className, shapeClassName}) => {
     <div className="pt-4 flex justify-center relative" style={linearGradient}>
       <div className={classes}>
         <div className="h-1/2 absolute w-full top-0 shadow-xl" style={{boxShadow: "#DDDDDD 8px -8px 10px, #DDDDDD -8px -8px 10px"}}></div>
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center sm:pl-4">
         <Heading
           className="py-8"
           heading="We Can do"
