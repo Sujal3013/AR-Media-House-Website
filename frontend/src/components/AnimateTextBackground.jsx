@@ -8,8 +8,8 @@ export default function AnimateTextBackground({heading, text, className, focus})
   return (
     <div className={classes}>
         <motion.div className="absolute top-0 left-0 h-full bg-tertiary-600 z-[-1]" initial={{width: 0}} animate={focus ? {width: "100%", transition: {duration:5, ease: "linear"}} : {}}></motion.div>
-        {heading && <h1 className="text-xl font-semibold">{heading}</h1>}
-        {text && <p className="text-sm">{text}</p>}
+        {heading && <h1 className="text-base sm:text-xl font-semibold">{heading}</h1>}
+        {text && <p className="text-xs sm:text-sm">{text}</p>}
     </div>
   )
 }

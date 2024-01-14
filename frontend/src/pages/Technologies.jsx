@@ -36,34 +36,35 @@ export default function Technologies() {
           <div className="flex-col w-[60vw] my-[0vh]">
             <Heading
               heading="BINDING TECHNOLOGY"
-              headingClassName="text-[64px] text-primary-500"
               subHeading="with marketing"
               subHeadingClassName="text-tertiary-500 text-[48xl]"
             />
-            <p className="my-16 mb-24">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum porro qui fugit officia aliquam illo temporibus quasi quaerat suscipit mollitia dicta perspiciatis voluptatum incidunt alias similique minus, accusantium minima! Id.</p>
+            <p className="min-w-[172px] md:w-[38vw] md:min-w-0 text-sm my-16 mb-24">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum porro qui fugit officia aliquam illo temporibus quasi quaerat suscipit mollitia dicta perspiciatis voluptatum incidunt alias similique minus, accusantium minima! Id.</p>
             {/* Buttons */}
-            <Button arrow className="bg-white text-secondary-500">
+            <Button arrow className="bg-tertiary-500 text-secondary-500">
               Let's Work Together
             </Button>
           </div>
           {/* illustraion */}
-          <div  className="w-auto h-auto rounded pb-12">
+          <div  className="hidden w-[38vw] min-w-80 md:block h-auto rounded">
             <img src="/assets/Technology_banner.svg" alt="" />
           </div>
         </div>
+
+        {/* Technologies */}
         <div className="flex flex-col items-center justify-center ">
-          <h1 className="font-semibold text-2xl text-tertiary-500 tracking-wider my-8">Technologies we Use</h1>
+          <h1 className="text-md sm:text-xl lg:text-2xl text-center font-bold font-jost text-slate-200 tracking-wider my-8">Technologies we Use</h1>
           <div className="w-[98vw] h-28 mb-8 flex justify-center items-center relative overflow-hidden">
-          <CompaniesAnimate className="flex justify-start items-center gap-24" length={7}>
+          <CompaniesAnimate className="flex justify-center items-center gap-12 sm:gap-16 md:gap-20 lg:gap-24" length={7}>
             {
               <>
-                <li><img className="w-40 h-auto" src="/assets/AWS.png" alt="aws" /></li>
-                <li><img className="w-auto h-32" src="/assets/graphql.svg" alt="graph ql" /></li>
-                <li><img className="w-auto h-32" src="/assets/react.svg" alt="react" /></li>
-                <li><img className="w-48 h-12" src="/assets/kafka.png" alt="kafta" /></li>
-                <li><img className="w-44 h-auto" src="/assets/kubernetes.png" alt="kubernetes" /></li>
-                <li><img src="/assets/lookfinity.png" alt="lookfinity" /></li>
-                <li><img className="w-64 h-auto" src="/assets/clickHouse.png" alt="click house" /></li>
+                <li className="w-24 sm:w-28 md:w-36"><img className="w-full h-full" src="/assets/AWS.png" alt="aws" /></li>
+                <li className="h-20 sm:h-24 md:h-32"><img className="w-full h-full" src="/assets/graphql.svg" alt="graph ql" /></li>
+                <li className="h-16 sm:h-20 md:h-28"><img className="w-full h-full" src="/assets/react.svg" alt="react" /></li>
+                <li className="w-36 sm:w-40 md:w-48 md:h-12"><img className="w-full h-full" src="/assets/kafka.png" alt="kafta" /></li>
+                <li className="w-32 sm:w-36 md:w-44"><img className="w-full h-full" src="/assets/kubernetes.png" alt="kubernetes" /></li>
+                <li className="w-32 sm:w-36 md:w-44"><img className="w-full h-full" src="/assets/lookfinity.png" alt="lookfinity" /></li>
+                <li className="w-52 sm:w-56 md:w-64 md:h-auto"><img className="w-full h-full" src="/assets/clickHouse.png" alt="click house" /></li>
               </>
             }
           </CompaniesAnimate>
@@ -71,9 +72,9 @@ export default function Technologies() {
         </div>
 
         {/* Shapes */}
-        <Circle className="top-[10%] right-[48%]" secondary />
-        <Circle className="top-[50%] right-[35%]" secondary />
-        <Triangle className="top-[35%] left-[20%]" secondary />
+        <Circle className="top-[3%] right-[15%] md:top-[10%] md:right-[48%]" secondary />
+        <Circle className="top-[43%] left-[18%] md:top-[50%] md:right-[35%]" secondary />
+        <Triangle className="top-[28%] right-[20%] md:top-[35%] md:left-[20%]" secondary />
       </HeroSectionWrapper>
       {/* Tech-stack section */}
       {/* <div className="flex-col justify-evenly px-screen-padding py-20 bg-[url('/assets/wave1.svg')] bg-no-repeat bg-contain bg-bottom">
@@ -105,16 +106,14 @@ export default function Technologies() {
 
       {/* PROCESS SECTION */}
       <Section
-        backgroundClassName="bg-tertiary-500 px-32 py-1 pt-8"
+        backgroundClassName="bg-tertiary-500 py-10"
         heading="AUTOMATION MARKETING"
         subHeading="platform"
-        headingClassName="text-primary-500"
-        subHeadingClassName="text-secondary-500"
         text="Our in-house marketing platform is backed with Artificial Intelligence
         and uses data-driven benchmarks to assist our teams and clients while
         optimizing and scaling campaigns on multiple digital platforms
         including Facebook and Google."
-        textClassName="py-10 w-[35rem]"
+        textClassName="my-10"
         Button1={
           <Button
             arrow
@@ -125,28 +124,24 @@ export default function Technologies() {
           </Button>
         }
         illustration={
-          <div className="text-center w-[40vw] h-auto my-4">
-            <img src="/assets/What_makes_us.png" alt="" />
-          </div>
+          <img src="/assets/What_makes_us.png" alt="" className="ImgResponsive h-auto w-[35vw]"/>
         }
         direction={1}
         Shapes={
           <>
-            <Circle className="top-[-10%] right-[6%]" />
-            <Triangle className="bottom-0 left-[35%]" />
+            <Circle className="top-[12%] right-[12%] md:top-[-10%] md:right-[6%]" />
+            <Triangle className="bottom-4 left-[20%] md:bottom-0 md:left-[35%]" />
           </>
         }
       />
       <Section
-        backgroundClassName="bg-tertiary-500 px-0 !justify-evenly"
+        backgroundClassName="bg-tertiary-500 py-10"
         heading="DATA"
         subHeading="collection"
-        headingClassName="text-secondary-500 font-jost text-[64px] font-extrabold"
-        subHeadingClassName="text-primary-500 font-playfair-display font-bold text-[48px]"
         text="This technology is loaded with creative intelligence and owns the power
         of programmatic advertising to reach the right audience through correct
         placements, engaging adcopies, and focused targeting."
-        textClassName="py-10 w-[35rem]"
+        textClassName="py-10"
         Button1={
           <Button
             arrow
@@ -157,27 +152,23 @@ export default function Technologies() {
           </Button>
         }
         illustration={
-          <div className="rounded-full text-center w-[40vw] h-auto my-4">
-            <img src="/assets/What_makes_us.png" alt="image" />
-          </div>
+          <img src="/assets/What_makes_us.png" alt="image" />
         }
         direction={-1}
         Shapes={
-          <Triangle className="bottom-0 right-[10%]" />
+          <Triangle className="top-[32%] left-[18%] md:bottom-0 md:right-[10%]" />
         }
       />
       <Section
-        backgroundClassName="bg-tertiary-500"
+        backgroundClassName="bg-tertiary-500 py-10"
         heading="BIG DATA"
         subHeading="optimization"
-        headingClassName="text-secondary-500 font-jost text-[64px] font-extrabold"
-        subHeadingClassName="text-primary-500 font-playfair-display font-bold text-[48px]"
         text="The in-house algorithm analyzes the CPA of the ads running within the
         campaign and progresses accordingly. It possesses the capabilities to
         pause the campaigns that have been consistently witnessing a low
         performance and can even assign appropriate budgets to the
         best-performing ads within the campaign."
-        textClassName="py-10 w-[35rem]"
+        textClassName="my-10"
         Button1={
           <Button
             arrow
@@ -188,9 +179,7 @@ export default function Technologies() {
           </Button>
         }
         illustration={
-          <div className="rounded-full text-center w-[40vw] h-auto my-4">
-            <img src="/assets/What_makes_us.png" alt="" />
-          </div>
+          <img src="/assets/What_makes_us.png" alt="" />
         }
         direction={1}
         Shapes={
@@ -210,14 +199,14 @@ export default function Technologies() {
           allHeadingClassName="w-[80vw] mb-16"
           Button1={<Button className="bg-tertiary-500 text-secondary-500" arrow>Learn More</Button>}
           illustration={          
-            <div className="rounded-full text-center w-[36vw] h-auto ">
+            <div className="hidden md:block rounded-full text-center w-[36vw] h-auto ">
               <img src="/assets/What_makes_us.png" alt="" />
             </div>
           }
         />
         {/* Shapes */}
-        <Circle className="bottom-[10%] left-[20%]" secondary/>
-        <Triangle className="top-[10%] left-[48%]" secondary/>
+        <Circle className="top-0 left-[2%] md:bottom-[10%] md:left-[20%]" secondary/>
+        <Triangle className="hidden md:block top-[10%] left-[48%]" secondary/>
       </BlackSection>
 
       {/* ROCKET SECTION */}
@@ -228,7 +217,7 @@ export default function Technologies() {
             subHeading="on your revenue"
             headingClassName="mb-[-10px] text-primary-500"
           />
-          <p>Generate an impactful revenue with our company’s specific revenue objectives.</p>
+          <p className="text-sm sm:text-base">Generate an impactful revenue with our company’s specific revenue objectives.</p>
           <div className="flex flex-col">
             {
               pourRocketFuelPoints.map((item, index)=>{
@@ -245,15 +234,15 @@ export default function Technologies() {
             }
           </div>
         </div>
-        <div className="w-full relative">
+        <div className="hidden md:block w-full relative">
             {
               pourRocketFuelPoints.map((item, index)=> 
-                <FadeIn duration={1.5} when={index===currImage} className="absolute bottom-[-5%] right-0"> {item.illustration} </FadeIn>
+                <FadeIn key={index} duration={1.5} when={index===currImage} className="absolute bottom-[-5%] right-0"> {item.illustration} </FadeIn>
               )
             }
         </div>
         {/* Shapes */}
-        <Circle className="top-[-15%] right-[30%]" />
+        <Circle className="top-[15%] right-[28%] md:top-[-15%] md:right-[30%]" />
       </section>
 
       <img
