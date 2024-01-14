@@ -19,7 +19,7 @@ export default function ServicesCards({heading, headingClassName, icon, iconClas
 
   return (
     <FadeInUp className={fadeClasses}>
-      <li className={classes}>
+      <li className={classes + " !static"}>
         <h1 className={headingClasses}>{heading}</h1>
         {icon && icon}
         <p className={textClasses}>{text}</p>

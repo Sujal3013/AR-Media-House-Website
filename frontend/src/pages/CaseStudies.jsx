@@ -9,9 +9,6 @@ export default function CaseStudies() {
     <>
       <div 
         className='h-[80vh] bg-[url("/assets/Case-Study-HeroSection-Banner.jpg")] bg-no-repeat bg-cover relative mb-100' 
-        style={{
-          "clip-path" : "path('M 0 0 L 0 600 C 620 700 1240 600  L 1240 0 Z')", 
-        }}
       >
         {/* <div 
           className='w-full h-full absolute'
