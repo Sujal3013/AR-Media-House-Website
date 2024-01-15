@@ -11,6 +11,7 @@ import {
   Services,
   SharedLayout,
 } from "./pages";
+import { WinSizeProvider } from "./context/winSizeContext";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <WinSizeProvider>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
@@ -31,6 +33,7 @@ function App() {
         </Route>
         <Route path="*" element={<Page404 />} />
       </Routes>
+      </WinSizeProvider>
     </BrowserRouter>
 
   );
