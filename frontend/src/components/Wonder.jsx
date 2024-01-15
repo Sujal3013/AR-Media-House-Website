@@ -22,7 +22,7 @@ const Wonder = ({linearGradient, className}) => {
         <Button to="/contact" arrow className="bg-primary-500">Let's Work Together</Button>
         </div>
         
-        <div className="bg-tertiary-500 hidden md:block"><img src="/assets/wonders_image.png" alt="" className="md:h-56 lg:h-auto"/></div>
+        <div className="bg-tertiary-500 h-96 w-96 hidden md:block"><img src="/assets/wonders_image.gif" alt="" className="md:h-56 lg:h-auto"/></div>
       </div>
 
       {/* Shapes */}
