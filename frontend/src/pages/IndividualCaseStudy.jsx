@@ -235,8 +235,6 @@ const paragraph =
 const linesPerPart = [2, 3];
 
 const dividedParagraph = divideParagraph(paragraph, linesPerPart);
-console.log(dividedParagraph);
-
 [
   {
     id: 1,

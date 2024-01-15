@@ -228,7 +228,7 @@ export default function Home() {
           textClassName={SECTION5_TEXT_CLASS}
           illustration={
             <div className="rounded-full text-center w-auto h-auto">
-            <img src="/assets/BenchMarks.svg" alt=""  className=""/>
+            <img src="/assets/Benchmark.svg" alt=""  className=""/>
           </div>
           }
           direction={-1}
