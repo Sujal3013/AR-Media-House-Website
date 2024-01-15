@@ -278,7 +278,7 @@ function Services(){
   const {winSize, BR_1, BR_2, BR_3} = useWinSizeContext()
   let toReturn;
   if(winSize > BR_2){
-    toReturn = <div className="flex flex-col items-center gap-8">
+    toReturn = <div className="flex flex-col items-center gap-8 md:pb-24">
       <ul className="w-full flex justify-between gap-[3vw] lg:gap-[6vw] py-8 relative">
         {
           services.slice(0,4).map((s, index)=>(
@@ -317,7 +317,16 @@ function Services(){
       </ul>
       <ul className="w-full gap-[3vw] lg:gap-[6vw] flex justify-evenly relative mb-4">
         {
-          services.slice(4).map((s, index)=>{
+          services.slice(4,6).map((s, index)=>{
+            return (
+                <ServicesCards key={index}  {...s} />
+            )
+          })
+        }
+      </ul>
+      <ul className="w-full gap-[3vw] lg:gap-[6vw] flex justify-evenly relative mb-4">
+        {
+          services.slice(6).map((s, index)=>{
             return (
                 <ServicesCards key={index}  {...s} />
             )
