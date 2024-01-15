@@ -109,7 +109,7 @@ const Footer = () => {
 
 const SERVICES_LIST = ["Performance Marketing", "E-commerce","Media Buying","Lead Generation","Content Marketing","Martech"]
 const SITE_MAP_LIST = [
-  { title: "Home", to: "/home" },
+  { title: "Home", to: "/" },
   { title: "Technology", to: "/technologies" },
   { title: "Services", to: "/services" },
   { title: "Career", to: "/careers" },

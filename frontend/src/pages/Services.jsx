@@ -8,7 +8,8 @@ import {
   Circle,
   Triangle,
   AnimateNumber,
-  ServicesSec2
+  ServicesSec2,
+  FadeInUp
 } from "../components";
 import classNames from "classnames";
 
@@ -58,11 +59,11 @@ export default function Services() {
               subHeading="digital advertising experts"
               subHeadingClassName="text-tertiary-500"
             />
-            <p className="min-w-[172px] md:w-[35vw] md:min-w-0 text-sm my-12">
+            <FadeInUp downLength={10} className="min-w-[172px] md:w-[35vw] md:min-w-0 text-sm my-12">
               Identification of ideal prospects through a potent advertising
               approach. Gathering highly qualified prospects to boost brand
               engagement. Turning prospects into high-quality leads and sales.
-            </p>
+            </FadeInUp>
             {/* Buttons */}
             <div className="flex gap-6 py-10">
               <Button arrow className="bg-primary-500 text-secondary-500">

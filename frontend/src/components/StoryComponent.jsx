@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import React from "react";
-import { Button, Heading } from "../components";
+import { Button, FadeInUp, Heading } from "../components";
 
 const StoryComponent = ({
   aboutPath, 
@@ -45,13 +45,13 @@ const StoryComponent = ({
     {children}
     <section className={bgClasses}>
         
-     {Image && Image}
+      {Image && Image}
       <div className={yearClasses}><p>{Year}</p></div>
       <div className={divClasses}>
-        <h1 className={headingClasses}>{heading}</h1>
-        <p className={textClasses}>
+        <FadeInUp className={headingClasses}>{heading}</FadeInUp>
+        <FadeInUp className={textClasses}>
           {text}
-        </p>
+        </FadeInUp>
       </div>
 
       {/* {
