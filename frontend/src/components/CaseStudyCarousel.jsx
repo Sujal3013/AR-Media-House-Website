@@ -42,7 +42,7 @@ export const CaseStudyCarousel = () => {
 const blogs=[
   { 
     id:1,
-    name:"Elevating Excellence: Idea Clan’s Networking Pursuit at PI Live Europe 2023",
+    name:"AR Trader Revolutionizes Lead Generation and Brand Awareness with AR Media House",
     domain:"Marketing",
     image:"/assets/Case-study.svg",
     description:"The PI Live Europe conference, hosted in the illustrious city of London on October 24th and 25th, 2023, provided an esteemed platform for marketing experts to augment their performance industry…"
