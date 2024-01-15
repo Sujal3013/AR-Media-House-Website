@@ -152,7 +152,7 @@ export default function Technologies() {
           </Button>
         }
         illustration={
-          <img src="/assets/What_makes_us.png" alt="image" />
+          <img src="/assets/What_makes_us.png" alt="image" className="ImgResponsive h-auto"/>
         }
         direction={-1}
         Shapes={
@@ -179,7 +179,7 @@ export default function Technologies() {
           </Button>
         }
         illustration={
-          <img src="/assets/What_makes_us.png" alt="" />
+          <img src="/assets/What_makes_us.png" alt="" className="ImgResponsive h-auto" />
         }
         direction={1}
         Shapes={
