@@ -53,10 +53,10 @@ const Form = () => {
     setTimeout(()=>setShowError(false), 3000);
   };
   return (
-      <div className="flex-col pt-8 basis-1/2">
+      <div className="flex-col pt-4 md:pt-8 lg:w-[50%]">
 
         {/* Checkbox section */}
-        <div className="flex flex-wrap gap-[15px]">
+        <div className="flex flex-wrap gap-[8px] md:gap-[10px] lg:gap-[14px]">
           {
             dataTypes.map((data, index)=>
               <Button 
@@ -75,7 +75,7 @@ const Form = () => {
 
         {
           showError &&
-          <div className="bg-primary-400 rounded-lg p-3 mt-10 font-medium text-red-600">
+          <div className="p-3 mt-10 font-medium text-red-600">
             Please Provide 
             {
               Object.keys(validator).map((key, index)=>{
