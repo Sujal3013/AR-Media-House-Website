@@ -1,109 +1,97 @@
-import React, { useState } from "react";
 import Form from "../components/Form";
-import Button from "../components/Button";
-import Wonder from "../components/Wonder";
+import { Heading, Button, Wonder, BlackSection, ServicesCards, Section, Circle, Triangle } from "../components";
 
 const ContactUs = () => {
   document.querySelector("title").innerHTML = "Contact - AR Media House";
 
   return (
     <>
-      <img className="absolute top-[30px] -z-10 right-10 max-w-sm:hidden" src="/assets/Sphere-orange.svg" alt="" />
-      <img className="absolute top-[10rem] rotate-12 left-[50rem] max-w-sm:hidden" src="/assets/Triangle-Orange.svg" alt="" />
-      <div className="px-screen-padding py-10 relative">
-        <div className="flex-col">
-          <div>
-            {/* heading */}
-            <h1 className="font-jost text-[64px]  text-[#FF9356] break-words leading-[64px] font-extrabold ">
-              LET'S CREATE
-            </h1>
-            <p className="font-playfair-display text-5xl font-extrabold  text-secondary-500 break-words">
-              Progress Together
-            </p>
-          </div>
+      <div className="flex flex-col px-screen-padding py-10 relative">
+          <Heading
+            heading="Let's Create"
+            subHeading="Progress Together"
+          />
 
-          <div className="my-4 flex gap-10 justify-between">
+          <div className="my-4 flex gap-10 lg:gap-16 justify-between items-end">
             {/* Form */}
-            <span className="basis-[40rem]">
-              <Form />
-            </span>
+            <Form />
 
-            <div className="mx-5 my-auto">
-              <img src="/assets/ContactUs.svg" alt="" />
-            </div>
+            {/* illustartion */}
+            <img src="/assets/ContactUs.svg" alt="" className="mb-8 hidden md:w-[40vw] md:block"/>
           </div>
-        </div>
-        <img className="absolute bottom-[-5rem] -z-10 rotate-45 left-[40rem]" src="/assets/Triangle-Orange.svg" alt="" />
+
+        {/* Shapes */}
+        <Circle className="top-[-2%] right-[40%]" />
       </div>
-      <div className="bg-secondary-500 h-[55vh] rounded-bl-[125px]">
-        <span className="px-screen-padding flex justify-around items-center">
-          <span className="basis-[20rem] flex-col items-center text-center">
-            <h1 className="text-white block font-jost font-extrabold text-[64px] tracking-wide leading-8">
-              CONTACT
-            </h1>
-            <p className="text-[#FF9356]  font-playfair-display font-bold text-[48px] px-2">
-              Information
-            </p>
-          </span>
-          <span className="flex px-5 mt-4 gap-10">
-            <div className="bg-white py-5 px-20 relative top-14 shadow-md rounded-md">
-              <span className="">
-                <span className="flex-col text-center">
-                  <img
-                    src="/assets/location-logo.svg"
-                    className="relative top-[-48px] mx-auto"
-                    alt=""
-                  />
-                  <h1 className="font-bold py-2">UNITED STATES</h1>
-                  <p className="py-4">
-                    2035 Sunset Lake RD,STE B2, <br /> Newark – 19702 <br />
-                    Delaware, United States
-                  </p>
-                  <a className="mx-auto block text-[#FF9356]" href="mailto:">
-                    armediahouse@gmail.com
-                  </a>
-                </span>
-                <Button
-                  to=""
-                  className="bg-primary-500 relative top-12 mx-auto px-6 py-4 shadow-md rounded-[5px]"
-                >
-                  Get Directions
-                </Button>
-              </span>
-            </div>
-            <div className="bg-white py-5 px-20 relative top-14 shadow-md rounded-md z-10">
-              <span className="">
-                <span className="flex-col text-center">
-                  <img
-                    src="/assets/location-logo.svg"
-                    className="relative top-[-48px] mx-auto"
-                    alt=""
-                  />
-                  <h1 className="font-bold py-2">UNITED STATES</h1>
-                  <p className="py-4">
-                    2035 Sunset Lake RD,STE B2, <br /> Newark – 19702 <br />
-                    Delaware, United States
-                  </p>
-                  <a className="mx-auto block text-secondary-500" href="mailto:">
-                    armediahouse@gmail.com
-                  </a>
-                </span>
-                <Button
-                  to=""
-                  className="bg-primary-500 relative top-12 mx-auto px-6 py-4 shadow-md rounded-[5px]"
-                >
-                  Get Directions
-                </Button>
-              </span>
-            </div>
-          </span>
-        </span>
-      </div>
-      <div className="h-[30vh] bg-slate-50">
-      <img className="relative top-[1rem] left-[80rem]" src="/assets/Sphere-orange.svg" alt="" />
-      <img className="relative top-[-2rem] left-[5rem] z-10" src="/assets/Sphere-orange.svg" alt="" />
-      </div>
-      <Wonder />
+
+      <img 
+        src="./assets/triple-wave-white-1.svg"
+      />
+
+      <Section 
+        backgroundClassName="px-screen-padding !bg-tertiary-500 py-14 pb-20 md:py-28 md:pb-36 md:!flex-col md:gap-32 lg:!flex-row lg:gap-0"
+        heading="Your Problem Our Solution"
+        headingClassName="text-center lg:text-start text-primary-500"
+        subHeading="contact information"
+        allHeadingClassName="items-center lg:items-start"
+            
+        illustration={
+          <div className="w-full lg:w-auto flex flex-col md:flex-row items-center justify-evenly lg:justify-between md:gap-16">
+            <ServicesCards 
+              className="min-w-[85%] sm:min-w-[50vw] md:min-w-[35vw] lg:min-w-0 flex !justify-center relative md:!justify-end mt-12 md:mt-0"
+              heading="United States" 
+              headingClassName="mt-20 mb-4 !text-2xl"
+              text={
+                <>
+                  2035 Sunset Lake RD,STE B2, <br /> Newark – 19702 <br /> Delaware, United States
+                  <br/><br/>
+                  <p className="text-secondary-500">contact@armediahouse.com</p>
+                </>
+              }
+              textClassName="mb-8 sm:mb-12 sm:!text-lg md:!text-sm"
+              icon={
+                <img
+                  src="/assets/location-logo.svg"
+                  className="absolute top-[-8%] md:top-[-24%] mx-auto"
+                  alt=""
+                />
+              }
+              button={
+                <Button className="bg-primary-500 absolute bottom-[-5%]">Get Direction</Button>
+              }
+            />
+            
+            <ServicesCards 
+              className="min-w-[85%] sm:min-w-[50vw] md:min-w-[35vw] lg:min-w-0 flex !justify-center relative !justify-end  mt-20 md:mt-0"
+              heading="India" 
+              headingClassName="mt-20 mb-4 !text-2xl"
+              text={
+                <>
+                  2035 Sunset Lake RD,STE B2, <br /> Newark – 19702 <br /> Delaware, United States
+                  <br/><br/>
+                  <p className="text-secondary-500">contact@armediahouse.com</p>
+                </>
+              }
+              textClassName="mb-8 sm:mb-12 sm:!text-lg md:!text-sm"
+              icon={
+                <img
+                  src="/assets/location-logo.svg"
+                  className="absolute top-0 md:top-[-24%] mx-auto"
+                  alt=""
+                />
+              }
+              button={
+                <Button className="bg-primary-500 absolute bottom-[-5%]">Get Direction</Button>
+              }
+            />
+          </div>
+        }
+        Shapes={
+          <Triangle className="top-[-10%] left-[25%]" />
+        }
+      />
+              
+      <Wonder shapeClassName="!top-[-14%] !right-[86%]" />
     </>
   );
 };

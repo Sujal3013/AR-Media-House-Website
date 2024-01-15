@@ -275,10 +275,10 @@ export default function Home() {
 }
 
 function Services(){
-  const {winSize} = useWinSizeContext()
+  const {winSize, BR_1, BR_2, BR_3} = useWinSizeContext()
   let toReturn;
-  if(winSize > 768){
-    toReturn = <div className="flex flex-col items-center gap-8">
+  if(winSize > BR_2){
+    toReturn = <div className="flex flex-col items-center gap-8 md:pb-24">
       <ul className="w-full flex justify-between gap-[3vw] lg:gap-[6vw] py-8 relative">
         {
           services.slice(0,4).map((s, index)=>(
@@ -297,7 +297,7 @@ function Services(){
       </ul>
     </div>
   }
-  else if(winSize > 480){
+  else if(winSize > BR_1){
     toReturn = <div className="flex flex-col items-center gap-8">
       <ul className="w-full flex justify-evenly gap-[3vw] lg:gap-[6vw] py-8 relative">
         {
@@ -317,7 +317,16 @@ function Services(){
       </ul>
       <ul className="w-full gap-[3vw] lg:gap-[6vw] flex justify-evenly relative mb-4">
         {
-          services.slice(4).map((s, index)=>{
+          services.slice(4,6).map((s, index)=>{
+            return (
+                <ServicesCards key={index}  {...s} />
+            )
+          })
+        }
+      </ul>
+      <ul className="w-full gap-[3vw] lg:gap-[6vw] flex justify-evenly relative mb-4">
+        {
+          services.slice(6).map((s, index)=>{
             return (
                 <ServicesCards key={index}  {...s} />
             )
@@ -356,13 +365,13 @@ const images = [
   { src: "./assets/gamezy.jpg", alt: "gamezy",  }
 ];
 
-const logoicon1 = <div className="h-36 w-36 rounded-3xl"><img src="./assets/Ecommercelogo.png" alt="" /></div>
-const logoicon2 = <div className="h-36 w-36 rounded-3xl"><img src="./assets/Performancelogo.png" alt="" /></div>
-const logoicon3 = <div className="h-36 w-36 rounded-3xl"><img src="./assets/Leadgenerationlogo.png" alt="" /></div>
-const logoicon4 = <div className="h-36 w-36 rounded-3xl"><img src="./assets/MediaBuying.png" alt="" /></div>
-const logoicon5 = <div className="h-36 w-36 mx-auto rounded-3xl"><img src="./assets/Martechlogo.png" alt="" /></div>
-const logoicon6 = <div className="h-36 w-36 rounded-3xl"><img src="./assets/ContentMarketinglogo.png" alt="" /></div>
-const logoicon7 = <div className="h-36 w-36 rounded-3xl"><img src="./assets/Webdevelopmentlogo.png" alt="" /></div>
+const logoicon1 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Ecommercelogo.png" alt="" /></div>
+const logoicon2 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Performancelogo.png" alt="" /></div>
+const logoicon3 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Leadgenerationlogo.png" alt="" /></div>
+const logoicon4 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/MediaBuying.png" alt="" /></div>
+const logoicon5 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Martechlogo.png" alt="" /></div>
+const logoicon6 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/ContentMarketinglogo.png" alt="" /></div>
+const logoicon7 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Webdevelopmentlogo.png" alt="" /></div>
 
 const services = [
   { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32", icon: logoicon1, heading: "E-commerce", text: "Elevating your online store for greater success by innovative outbound strategies to drive more sales and traffic for your brand."},

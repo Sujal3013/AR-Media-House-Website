@@ -1,6 +1,6 @@
 import React from 'react'
 import DropDown from './DropDown'
-import { Circle, Triangle } from "./";
+import { Button, Circle, Triangle } from "./";
 
 const Footer = () => {
   return (
@@ -41,9 +41,9 @@ const Footer = () => {
 
 
       <div className='hidden md:block flex flex-col md:gap-6'>
-        <h1 className='text-xl lg:text-2xl'>Services</h1>
+        <h1 className='text-xl lg:text-2xl mb-4'>Services</h1>
         <ul className='flex flex-col gap-2'>
-          {SERVICES_LIST.map((el,ind)=><li key={ind} className="text-sm lg:text-base">{el}</li>)}
+          {SERVICES_LIST.map((el,ind)=><li key={ind} className="text-sm lg:text-base hover:cursor-pointer"><Button className="!py-px !px-0" to={el.to}>{el}</Button></li>)}
         </ul>
       </div>
       
@@ -51,7 +51,7 @@ const Footer = () => {
       <div className='hidden md:block flex flex-col gap-6'>
         <h1 className='text-xl lg:text-2xl'>Site-map</h1>
         <ul className='flex flex-col gap-2 mt-2'>
-          {SITE_MAP_LIST.map((el,ind)=><li key={ind} className="text-sm lg:text-base">{el}</li>)}
+          {SITE_MAP_LIST.map((el,ind)=><li key={ind} className="text-sm lg:text-base hover:cursor-pointer"><Button className="!py-px !px-0" to={el.to}>{el.title}</Button></li>)}
         </ul>
       </div>
 
@@ -108,6 +108,13 @@ const Footer = () => {
 }
 
 const SERVICES_LIST = ["Performance Marketing", "E-commerce","Media Buying","Lead Generation","Content Marketing","Martech"]
-const SITE_MAP_LIST = ["Home", "Technology","Services","Career","Blogs","About"]
+const SITE_MAP_LIST = [
+  { title: "Home", to: "/home" },
+  { title: "Technology", to: "/technologies" },
+  { title: "Services", to: "/services" },
+  { title: "Career", to: "/careers" },
+  { title: "Case Studies", to: "/case-studies" },
+  { title: "About", to: "/about" }
+];
 
 export default Footer

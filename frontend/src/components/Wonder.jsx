@@ -1,18 +1,22 @@
 import { Heading,Button, Circle } from "./";
 import classNames from "classnames";
 
-const Wonder = ({linearGradient, className}) => {
+const Wonder = ({linearGradient, className, shapeClassName}) => {
   if(linearGradient === undefined) 
     linearGradient = {"backgroundImage": "linear-gradient(0deg, #080403 50%, #f4f4f4 50%)"}
 
   const classes = classNames("z-4 flex justify-around items-center py-8 w-[80vw] h-56 sm:h-72 rounded-[2rem] md:rounded-[4rem] lg:rounded-[5rem] bg-white relative overflow-hidden", {
     [className]: className,
   })
+
+  const shapeClasses = classNames("top-[-8%] right-[4%]", {
+    [shapeClassName]: shapeClassName,
+  })
   return (
     <div className="pt-4 flex justify-center relative" style={linearGradient}>
       <div className={classes}>
         <div className="h-1/2 absolute w-full top-0 shadow-xl" style={{boxShadow: "#DDDDDD 8px -8px 10px, #DDDDDD -8px -8px 10px"}}></div>
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center sm:pl-4">
         <Heading
           className="py-8"
           heading="We Can do"
@@ -26,7 +30,7 @@ const Wonder = ({linearGradient, className}) => {
       </div>
 
       {/* Shapes */}
-      <Circle className="top-[-8%] right-[4%]" />
+      <Circle className={shapeClasses} />
     </div>
   );
 };

@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useWinSizeContext } from "../context/winSizeContext";
 
-export default function ExploreBlog({ className }) {
+export default function ExploreBlog({ className , heading=true, }) {
   const sliderRef = useRef(null);
 
   const nextSlide = () => {
@@ -23,17 +23,17 @@ export default function ExploreBlog({ className }) {
   };
 
   const classes = classNames(
-    "bg-tertiary-500 px-screen-padding pt-12 pb-32 flex flex-col items-center relative",
+    "bg-tertiary-500 px-screen-padding pt-12 pb-20 sm:pb-32 flex flex-col items-center relative",
     {
       [className]: className,
     }
   );
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  const {winSize} = useWinSizeContext();
+  const {winSize, BR_1, BR_2, BR_3} = useWinSizeContext();
   let noSlides = 3;
-  if(winSize > 768)noSlides = 3
-  else if(winSize > 480)noSlides = 2
+  if(winSize > BR_2)noSlides = 3
+  else if(winSize > BR_1)noSlides = 2
   else noSlides = 1
 
   const settings = {
@@ -53,7 +53,7 @@ export default function ExploreBlog({ className }) {
 
   return (
     <section className={classes}>
-      <Heading heading="Explore Our" subHeading="Case Studies" className="items-center mb-12" />
+      { heading && <Heading heading="Explore Our" subHeading="Case Studies" className="items-center mb-12" />}
       <div className="w-full flex items-center justify-between">
         <img className="w-6 h-12 hover:cursor-pointer" src="./assets/LeftButtonHalfArrowBlack.svg" alt="arrow" onClick={prevSlide}/>
         

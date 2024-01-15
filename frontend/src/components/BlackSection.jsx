@@ -11,7 +11,7 @@ export default function BlackSection({
   const classes = classNames("bg-secondary-500 py-6 pt-0 px-screen-padding relative", {
     [className]: className,
   })
-  const topWaveClasses = classNames("bg-secondary-500 w-full", {
+  const topWaveClasses = classNames("w-full bg-tertiary-500", {
     [topWaveClassName]: topWaveClassName,
   })
   const bottomWaveClasses = classNames("w-full", {

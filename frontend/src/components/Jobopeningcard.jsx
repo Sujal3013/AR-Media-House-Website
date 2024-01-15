@@ -1,24 +1,21 @@
-import React, { useEffect, useState } from "react";
 import Button from "../components/Button"
 
 export const Jobopeningcard = ({id=0,title, location, daysAgo }) => {
   return (
     <>
-      <div className={(id%2===0)?"bg-slate-100 job-card flex rounded-lg shadow-md justify-between p-10":"bg-white job-card flex rounded-lg shadow-md justify-between p-5"}>
-        <div className="w-[20rem]">
-        <p className="text-xl text-secondary-500 mb-2">
-          <b>{title}</b>
-          <br />{location}
-        </p>
+      <div className={"job-card flex flex-col md:flex-row justify-center md:justify-between items-center rounded-lg shadow-md shadow-secondary-200 p-6 md:p-10 odd:bg-white even:bg-tertiary-500 transition-transform transform hover:scale-[1.01] md:hover:scale-[1.03] hover:cursor-pointer"}>
+        <div className="text-center md:text-left text-lg sm:text-xl text-secondary-500 mb-4 md:mb-2">
+          <p className="font-semibold mb-2 leading-[1.2]">{title}</p>
+          {location}
         </div>
         <div>
-        <p className="text-gray-700 text-xl mb-2 pt-1">
-          <b>Posted</b> 
-          <br />{daysAgo} days ago{" "}
-        </p>
+        <div className="text-center md:text-left text-secondary-300 text-sm sm:text-base md:text-xl mb-2 pt-1">
+          <p className="ml-px inline md:block">Posted </p> 
+          {daysAgo} days ago{" "}
+        </div>
         </div>
         
-        <Button className="bg-primary-500 rounded-sm text-secondary-500 px-8 py-4 text-lg mr-8 h-14 my-auto">
+        <Button className="bg-primary-500 rounded-lg w-full md:w-auto" arrow>
           Apply Now
         </Button>
       </div>

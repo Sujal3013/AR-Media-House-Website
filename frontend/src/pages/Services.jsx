@@ -8,10 +8,11 @@ import {
   Circle,
   Triangle,
   AnimateNumber,
+  ServicesSec2
 } from "../components";
 import classNames from "classnames";
 
-function CardSection2({
+function Card({
   blobSrc,
   iconSrc,
   title,
@@ -23,14 +24,15 @@ function CardSection2({
     "flex flex-col items-center",
     "text-center",
     "min-h-60",
+    "max-w-64 lg:max-w-80",
     `bg-no-repeat bg-center bg-55% bg-top`,
   );
 
   const titleClass = classNames(
-    "text-2xl text-primary-500 font-black mb-3",
+    "text-xl sm:text-2xl text-primary-500 font-black mb-3",
     titleClassNames
   );
-  const textClass = classNames("max-w-96 mt-6 text-sm", textClassNames);
+  const textClass = classNames("max-w-96 mt-2 md:mt-6 text-xs sm:text-sm", textClassNames);
 
   return (
     <div className={wraperClass} style={{ backgroundImage: `url(${blobSrc})` }}>
@@ -50,14 +52,13 @@ export default function Services() {
         whiteWaveBackground
       >
           {/* text content right side */}
-          <div className="w-[45vw] my-4">
+          <div className="w-auto my-8">
             <Heading
               heading="Multi-Channel"
               subHeading="digital advertising experts"
-              headingClassName="text-[64px] text-primary-500"
               subHeadingClassName="text-tertiary-500"
             />
-            <p className="text-sm my-12 w-[75%]">
+            <p className="min-w-[172px] md:w-[35vw] md:min-w-0 text-sm my-12">
               Identification of ideal prospects through a potent advertising
               approach. Gathering highly qualified prospects to boost brand
               engagement. Turning prospects into high-quality leads and sales.
@@ -70,62 +71,42 @@ export default function Services() {
             </div>
           </div>
           {/* illustraion */}
-          <div className="w-auto h-auto rounded">
+          <div className="hidden w-[38vw] min-w-80 md:block h-auto rounded">
             <img src="/assets/Services.svg" alt="" />
           </div>
 
           {/* Shapes */}
-          <Circle secondary className="top-[10%] right-[5%]" />
-          <Triangle secondary className="top-[-4%] left-[5%]" />
-          <Triangle secondary className="bottom-[0%] left-[45%]" />
+          <Circle secondary className="top-[20%] sm:top-[10%] right-[5%]" />
+          <Triangle secondary className="top-[4%] sm:top-[-4%] left-[5%]" />
+          <Triangle secondary className="bottom-[8%] sm:bottom-[0%] left-[45%]" />
       </HeroSectionWrapper>
 
-      <section className="relative">
-        <Heading heading="we've got tricks" subHeading="up our sleeves." className="w-full items-center my-6"/>
-        <div className="w-full flex justify-center">
-          <CardSection2 {...section2CardList[0]} />
-        </div>
-        <div className="w-full px-screen-padding flex justify-between items-center">
-          <CardSection2 {...section2CardList[1]} />
-          <Button className="bg-primary-500">Get Started</Button>
-          <CardSection2 {...section2CardList[2]} />
-        </div>
-        <div className="w-full flex justify-center">
-          <CardSection2 {...section2CardList[3]} />
-        </div>
-
-        {/* Shapes */}
-        <Circle className="top-[20%] left-[5%]" />
-        <Triangle className="top-[2%] right-[5%]" />
-      </section>
+      <ServicesSec2 Card={Card} list={section2CardList}/>
 
       <img src="./assets/triple-wave-white-1.svg" alt="wave" />
 
-      <section className="bg-tertiary-500 py-4 px-24 relative">
+      <section className="bg-tertiary-500 py-4 px-screen-padding relative">
         <Heading
           heading="YOUR BRAND"
           subHeading="our focus"
           className="text-center my-6 w-full items-center"
         />
-        <div className="flex justify-between py-6">
-          <CardSection2
-            {...section3CardList[0]}
-            textClassNames="max-w-80"
-            titleClassNames="max-w-52 pt-16"
-          />
-          <CardSection2
-            {...section3CardList[1]}
-            textClassNames="max-w-80"
-            titleClassNames="max-w-52 pt-16"
-          />
-          <CardSection2
-            {...section3CardList[2]}
-            textClassNames="max-w-80"
-            titleClassNames="max-w-52 pt-16"
-          />
+        <div className="flex justify-center md:justify-between flex-wrap md:flex-nowrap gap-y-12 py-6">
+          {section3CardList.map((el,ind)=>(
+            <Card
+              {...el}
+              key = {ind}
+              textClassNames="max-w-80"
+              titleClassNames="max-w-52 pt-4 md:pt-16"
+            />
+          ))}
         </div>
+        {/* Shapes */}
+        <Circle className="top-[-5%] right-[5%]" />
+      </section>
 
-        <div className="rounded-[4rem] my-16 p-20 pb-16 bg-secondary-500">
+      <section className="bg-tertiary-500 py-4 sm:px-screen-padding relative">
+        <div className="sm:rounded-[3rem] md:rounded-[4rem] my-8 sm:my-12 md:my-16 py-12 md:py-16 px-screen-padding bg-secondary-500">
           <Heading
             heading="WE MAKE YOUR SALES GO"
             subHeading="through the roof"
@@ -135,23 +116,20 @@ export default function Services() {
             Learn More
           </Button>
         </div>
+      </section>
 
-        <div className="flex items-center justify-between py-8">
+      <section className="bg-tertiary-500 py-4 px-screen-padding relative">
+        <div className="flex flex-wrap md:flex-nowrap justify-center md:justify-between items-center pt-4 pb-8">
           <Heading
             heading="Platform"
-            headingClassName="text-[64px] text-primary-500"
             subHeading="to help you"
-            subHeadingClassName="text-[64px]"
           />
-          <div className="grid bg-tertiary-500 p-8 grid-cols-4 gap-12 justify-start">
-            {platforms.map((el) => (
-              <img src={el.imgSrc} alt={el.alt} className="w-32" />
+          <div className="grid bg-tertiary-500 p-8 grid-cols-2 sm:grid-cols-4 gap-8 md:gap-12 justify-start">
+            {platforms.map((el, ind) => (
+              <img key={ind} src={el.imgSrc} alt={el.alt} className="max-w-24 w-[145%] md:max-w-32"/>
             ))}
           </div>
         </div>
-
-        {/* Shapes */}
-        <Circle className="top-[-5%] right-[5%]" />
       </section>
 
       <img
@@ -160,21 +138,19 @@ export default function Services() {
         className="w-full rotate-180"
       />
 
-      <section className=" flex items-center justify-between px-screen-padding py-12">
+      <section className="flex flex-col md:flex-row justify-between items-center px-screen-padding py-12 gap-4">
         <Heading
           heading="Numbers"
-          headingClassName="text-[64px] text-primary-500"
           subHeading="don't lie"
-          subHeadingClassName="text-[64px]"
+          className="items-center"
         />
-        <div>
-        <div className="flex flex-col items-center justify-center w-fit text-secondary-500 font-bold">
-          <div className="text-5xl flex justify-center">$<AnimateNumber from={0} to={33981171} duration={2.5}/></div></div>
-          <h1 className="text-center font-bold text-xl">Ad Spend Last 12 months</h1>
+        <div className="text-center w-fit text-secondary-500 font-bold">
+          <div className="text-xl sm:text-3xl lg:text-5xl">$<AnimateNumber className="inline" from={0} to={33981171} duration={2.5}/></div>
+          <h1 className="text-center font-bold text-sm sm:text-base lg:text-xl">Ad Spend Last 12 months</h1>
         </div>
-        <div className="flex flex-col items-center justify-center w-fit text-secondary-500 font-bold">
-          <div className="text-5xl flex justify-center"><AnimateNumber from={0} to={5747646} duration={2.5}/></div>
-          <h1 className="text-center font-bold text-xl">Lead Generated Last 12 months</h1>
+        <div className="text-center w-fit text-secondary-500 font-bold">
+          <div className="text-xl sm:text-3xl lg:text-5xl"><AnimateNumber from={0} to={5747646} duration={2.5}/></div>
+          <h1 className="text-center font-bold text-sm sm:text-base lg:text-xl">Lead Generated Last 12 months</h1>
         </div>
       </section>
 
@@ -192,9 +168,6 @@ export default function Services() {
   );
 }
 
-function Section3() {
-  return;
-}
 
 const blogsList = [
   {
@@ -227,7 +200,7 @@ const section2CardList = [
     iconSrc: "./assets/services-icon-2-1.svg",
   },
   {
-    title: "Native Advertising",
+    title: "Native advertising",
     text: "Meet all the expectations of your audience and add valueto your brand by creating an influential connection with the advertiser.",
     blobSrc: "./assets/services-blob-1.svg",
     iconSrc: "./assets/services-icon-2-4.svg",

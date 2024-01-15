@@ -55,6 +55,25 @@ export default {
           200:"#F7F7F7"
         }
       },
+      keyframes:{
+        "scroll-up-icon":{
+          "0%, 100%": {
+            transform: "translateY(0rem)",
+            opacity: 1
+          },
+          "35%":{
+            transform: "translateY(-0.5rem)",
+            opacity: 0
+          },
+          "70%": {
+            transform: "translateY(0.5rem)",
+            opacity: 0
+          },
+        },
+      },
+      animation: {
+        "scroll-up": 'scroll-up-icon 1s ease-in-out infinite',
+      },
       padding: {
         "screen-padding": "6vw",
       },

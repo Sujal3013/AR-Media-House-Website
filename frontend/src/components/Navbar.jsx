@@ -49,7 +49,7 @@ export default function Navbar() {
             <Button to="/contact" primary className={`${location==="/contact"?"opacity-0 transition-opacity duration-500":"bg-primary-500 transition-opacity opacity-100 duration-500 text-secondary-500 text-sm"}`}>
                 Let's Connect
             </Button>
-            <img src="./assets/whatsapp-icon.png" onClick={handleWhatsappClick} alt="call" className="w-8 h-8 cursor-pointer" />
+            <img src="./assets/whatsapp-icon.svg" onClick={handleWhatsappClick} alt="call" className="w-8 h-8 cursor-pointer" />
         </div>
     </nav>
   )

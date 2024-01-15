@@ -5,11 +5,11 @@ import classNames from "classnames";
 const AnimateNumber = ({from=0, to=1000, duration=1000, className}) => {
   const [ref, inView] = useInView({triggerOnce: true});
   
-  const classes = ("", {
+  const classes = classNames("", {
     [className]: className
   })
   return (
-    <h1 ref={ref}>
+    <h1 ref={ref} className={classes}>
       {
         inView ? 
         <CountUp start={from} end={to} duration={duration} />
