@@ -228,7 +228,7 @@ export default function Home() {
           textClassName={SECTION5_TEXT_CLASS}
           illustration={
             <div className="rounded-full text-center w-auto h-auto">
-            <img src="/assets/BenchMarks.svg" alt=""  className=""/>
+            <img src="/assets/Benchmark.svg" alt=""  className=""/>
           </div>
           }
           direction={-1}
@@ -356,13 +356,13 @@ const images = [
   { src: "./assets/gamezy.jpg", alt: "gamezy",  }
 ];
 
-const logoicon1 = <div className="h-48 w-48 rounded-3xl"><img src="./assets/Ecommercelogo.png" alt="" /></div>
-const logoicon2 = <div className="h-48 w-48 rounded-3xl"><img src="./assets/Performancelogo.png" alt="" /></div>
-const logoicon3 = <div className="h-48 w-48 rounded-3xl"><img src="./assets/Leadgenerationlogo.png" alt="" /></div>
-const logoicon4 = <div className="h-48 w-48 rounded-3xl"><img src="./assets/MediaBuying.png" alt="" /></div>
-const logoicon5 = <div className="h-48 w-48 rounded-3xl"><img src="./assets/Martechlogo.png" alt="" /></div>
-const logoicon6 = <div className="h-48 w-48 rounded-3xl"><img src="./assets/ContentMarketinglogo.png" alt="" /></div>
-const logoicon7 = <div className="h-48 w-48 rounded-3xl"><img src="./assets/Webdevelopmentlogo.png" alt="" /></div>
+const logoicon1 = <div className="h-36 w-36 rounded-3xl"><img src="./assets/Ecommercelogo.png" alt="" /></div>
+const logoicon2 = <div className="h-36 w-36 rounded-3xl"><img src="./assets/Performancelogo.png" alt="" /></div>
+const logoicon3 = <div className="h-36 w-36 rounded-3xl"><img src="./assets/Leadgenerationlogo.png" alt="" /></div>
+const logoicon4 = <div className="h-36 w-36 rounded-3xl"><img src="./assets/MediaBuying.png" alt="" /></div>
+const logoicon5 = <div className="h-36 w-36 mx-auto rounded-3xl"><img src="./assets/Martechlogo.png" alt="" /></div>
+const logoicon6 = <div className="h-36 w-36 rounded-3xl"><img src="./assets/ContentMarketinglogo.png" alt="" /></div>
+const logoicon7 = <div className="h-36 w-36 rounded-3xl"><img src="./assets/Webdevelopmentlogo.png" alt="" /></div>
 
 const services = [
   { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32", icon: logoicon1, heading: "E-commerce", text: "Elevating your online store for greater success by innovative outbound strategies to drive more sales and traffic for your brand."},
