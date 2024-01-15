@@ -1,8 +1,8 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import {Button} from "./";
+import { useState } from "react";
+import emailjs from '@emailjs/browser';
+import { Button } from "./";
 
-const Form = () => {
+export default function Form() {
   const [data, setData] = useState({
     name: "",
     email: "",  
@@ -36,10 +36,29 @@ const Form = () => {
     if (data.name && data.email && data.message && data.contactNumber && selectedOptions.length > 0) {
       if(regex.test(data.contactNumber)) {
         // send message
+        emailjs.send('service_24z4gbt', 'template_wg3jr8c', {
+          name: data.name,
+          email: data.email,
+          from_name:"Website",
+          contact: data.contactNumber,
+          message: data.message,
+          Options: selectedOptions.join(', '),
+        }, "WJ8SiZlnj8QyzKCCU")
+          .then((response) => {
+            console.log('Email sent successfully:', response);
+            setName('');
+            setEmail('');
+            setContact('');
+            setMessage('');
+          })
+          .catch((error) => {
+            console.error('Error sending email:', error);
+          });
 
         return;
       }
     }
+
     // show form validation-issues
     setValidator({
       ...validator,
@@ -52,80 +71,76 @@ const Form = () => {
     setShowError(true);
     setTimeout(()=>setShowError(false), 3000);
   };
+
   return (
-      <div className="flex-col pt-4 md:pt-8 lg:w-[50%]">
+    <div className="flex-col pt-4 md:pt-8 lg:w-[50%]">
 
-        {/* Checkbox section */}
-        <div className="flex flex-wrap gap-[8px] md:gap-[10px] lg:gap-[14px]">
-          {
-            dataTypes.map((data, index)=>
-              <Button 
-                className={
-                  selectedOptions.includes(data) ? 
-                  "bg-primary-500 text-tertiary-500"
-                  :
-                  "border-2 border-primary-500 text-primary-500"
-                }
-                onClick={()=>handleCheckboxChange(data)}
-                key={index}
-              >{data}</Button>
-            )
-          }
-        </div>
-
+      {/* Checkbox section */}
+      <div className="flex flex-wrap gap-[8px] md:gap-[10px] lg:gap-[14px]">
         {
-          showError &&
-          <div className="p-3 mt-10 font-medium text-red-600">
-            Please Provide 
-            {
-              Object.keys(validator).map((key, index)=>{
-                if(!validator[key]) 
-                  return <span key={index} className="text-lg">{"  " + key + ","}</span>
-                else 
-                  return " ";
-              })
-            }
-          </div>
+          dataTypes.map((data, index)=>
+            <Button 
+              className={
+                selectedOptions.includes(data) ? 
+                "bg-primary-500 text-tertiary-500"
+                :
+                "border-2 border-primary-500 text-primary-500"
+              }
+              onClick={()=>handleCheckboxChange(data)}
+              key={index}
+            >{data}</Button>
+          )
+        }
+      </div>
+
+      {/* Input form */}
+      <form onSubmit={handleSubmit} className="pt-10 flex flex-col gap-3">
+        {
+          dataRequired.map((value, index) =>{
+            const inputClasses = "px-3 py-2 bg-tertiary-500 rounded-md outline-none"
+            if(!value.textArea) 
+              return (
+                <input
+                  name={value.title}
+                  placeholder={value.placeholder ? value.placeholder : value.title}
+                  className={inputClasses}
+                  onChange={(e)=>setData({...data, [value.title]: e.target.value})}
+                  {...value}
+                  key={index}
+                />
+              )
+            else 
+              return (
+                <textarea
+                  name={value.title}
+                  className={inputClasses}
+                  placeholder={value.placeholder ? value.placeholder : value.title}
+                  rows={5}
+                  onChange={(e)=>setData({...data, [value.title]: e.target.value})}
+                  key={index}
+                  {...value}
+                />
+              )
+          })
         }
 
-        {/* Input form */}
-        <form onSubmit={handleSubmit} className="pt-10 flex flex-col gap-3">
-          {
-            dataRequired.map((value, index) =>{
-              const inputClasses = "px-3 py-2 bg-tertiary-500 rounded-md outline-none"
-              if(!value.textArea) 
-                return (
-                  <input
-                    name={value.title}
-                    placeholder={value.placeholder ? value.placeholder : value.title}
-                    className={inputClasses}
-                    onChange={(e)=>setData({...data, [value.title]: e.target.value})}
-                    {...value}
-                    key={index}
-                  />
-                )
-              else 
-                return (
-                  <textarea
-                    name={value.title}
-                    className={inputClasses}
-                    placeholder={value.placeholder ? value.placeholder : value.title}
-                    rows={5}
-                    onChange={(e)=>setData({...data, [value.title]: e.target.value})}
-                    key={index}
-                    {...value}
-                  />
-                )
-            })
-          }
-          <Button
-            className="bg-primary-500 text-white"
-            type="submit"
-            onClick={handleSubmit}
-          >Send Message</Button> 
-        </form>
+        <span
+          className={`${
+            showError ? "block" : "hidden"
+          } text-red-400 mb-2 text-xl font-semibold`}
+        >
+          *PLease Fill all the required fields
+        </span>
 
-      </div>
+        <Button
+          className="bg-primary-500 text-white"
+          type="submit"
+          onClick={handleSubmit}
+        >Send Message</Button> 
+
+      </form>
+
+    </div>
   );
 };
 
@@ -138,10 +153,11 @@ const dataTypes = [
   "Careers",
   "Others",
 ];
+
 const dataRequired = [
-  {title: "name", textArea: false, placeholder: "Enter your Name", type: "text"}, 
-  {title: "email", textArea: false, placeholder: "Enter your Email", type: "email"}, 
-  {title: "contactNumber", textArea: false, placeholder: "91+xxxxxxxxxx", type: "tel", pattern:"[0-9]{2}+[0-9]{10}"}, 
-  {title: "message", textArea: true, placeholder: "Enter your message", type: "text"}, 
+  {title: "name", textArea: false, placeholder: "Enter your Name", type: "text", required: true}, 
+  {title: "email", textArea: false, placeholder: "Enter your Email", type: "email", required: true}, 
+  {title: "contactNumber", textArea: false, placeholder: "91+xxxxxxxxxx", type: "tel", pattern:"[0-9]{2}+[0-9]{10}", required: true}, 
+  {title: "message", textArea: true, placeholder: "Enter your message", type: "text", }, 
 ]
-export default Form;
+

@@ -86,9 +86,7 @@ export default function Home() {
         backgroundClassName="bg-tertiary-500 py-10"
         heading="What Make Us"
         subHeading="different"
-        text="AR Media House works with reputable global brands to deliver
-        data-driven lead generation, customer acquisition, and brand awareness
-        campaigns through various digital spaces."
+        text="We make digital stuff easy for you by finding the perfect solutions. Our goal is to go above and beyond what you expect and what's considered normal. At AR Media, we use online marketing to help Indian and international brands grow a lot. We want to bring that same success to you, showing you how it’s done."
         textClassName="my-10"
         Button1={
           <Button arrow primary className="mt-4 text-secondary-500 bg-primary-500">
@@ -131,7 +129,7 @@ export default function Home() {
       />
 
 
-      <BlackSection className="flex flex-col gap-4 items-center relative">
+      <BlackSection className="flex flex-col gap-4 py-4 items-center relative">
         <Heading 
           heading="We have Got"
           subHeading="a lot to offer"
@@ -358,15 +356,22 @@ const images = [
   { src: "./assets/gamezy.jpg", alt: "gamezy",  }
 ];
 
-const icon = <div className="h-32 w-32 rounded-3xl bg-primary-500"></div>
+const logoicon1 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Ecommercelogo.png" alt="" /></div>
+const logoicon2 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Performancelogo.png" alt="" /></div>
+const logoicon3 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Leadgenerationlogo.png" alt="" /></div>
+const logoicon4 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/MediaBuying.png" alt="" /></div>
+const logoicon5 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Martechlogo.png" alt="" /></div>
+const logoicon6 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/ContentMarketinglogo.png" alt="" /></div>
+const logoicon7 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Webdevelopmentlogo.png" alt="" /></div>
 
 const services = [
-  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32", icon: icon, heading: "E-commerce", text: "Innovative outbound strategies to drive more sales and traffic for your brand. Advertising and innovation that will help both retailers and affiliates grow their businesses in different ways."},
-  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32", icon: icon, heading: "Performance Marketing", text: "Place ads about your company, services, or products on websites that help drive more sales in the online market."},
-  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32", icon: icon, heading: "Lead Generation", text: "Convert your prospects into delighted clients solely meant for your agency."},
-  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32", icon: icon, heading: "Media Buying", text: "We use immense technologies to determine strategy, to compile content, execute content, & analyze results."},
-  { icon: icon, heading: "Martech", text: "A strategic marketing approach to help your valuable content reach key audiences." },
-  { icon: icon, heading: "Content Marketing", text: "We use immense technologies to determine strategy, to compile content, execute content, & analyze results." }
+  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32", icon: logoicon1, heading: "E-commerce", text: "Elevating your online store for greater success by innovative outbound strategies to drive more sales and traffic for your brand."},
+  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32", icon: logoicon2, heading: "Performance Marketing", text: "Experts in driving online results through strategic ads. We boost online outcomes with strategic ad tactics."},
+  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32", icon: logoicon3, heading: "Lead Generation", text: "Convert your prospects into delighted clients solely meant for your business."},
+  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32", icon: logoicon4, heading: "Media Buying", text: "Maximising visibility and impact through online ads."},
+  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32",icon: logoicon5, heading: "Martech", text: "Leveraging cutting-edge tech for marketing success. Using tech to drive marketing triumph." },
+  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32",icon: logoicon6, heading: "Content Marketing", text: "Crafting compelling content for your brand's story. We create engaging brand stories." },
+  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32",icon: logoicon7, heading: "Web Development", text: "Building platforms that captivate and convert. Creating captivating converting platforms." }
 ]
 
 const icon2 = <img src="./assets/person.png" alt="person" className="w-16 h-16"/>
