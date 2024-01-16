@@ -63,9 +63,9 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center ">
           <h1 className="text-md sm:text-xl lg:text-2xl text-center font-bold font-jost text-slate-200 tracking-wider my-8">Trusted by <span className="text-primary-500">thousands</span> of client worldwide</h1>
           <div className="w-[98vw] h-28 mb-8 flex justify-center items-center relative overflow-hidden">
-          <CompaniesAnimate className="flex justify-center items-center gap-12 sm:gap-16 md:gap-20 lg:gap-24" length={companies.length}>
+          <CompaniesAnimate className="flex justify-center items-center gap-12 sm:gap-16 md:gap-20 lg:gap-24" length={companiesLogos.length}>
             {
-              logos.map((c, index)=>{
+              companiesLogos.map((c, index)=>{
                 return (
                   <li key={index} className={c.className}>
                     <img src={c.src} alt="company-image" />
@@ -353,21 +353,6 @@ function Services(){
   return toReturn
 }
 
-const images = [
-  { src: "./assets/angelOne.png", alt: "angelOne",  },
-  { src: "./assets/denver.jpg", alt: "denver"},
-  { src: "./assets/maruti-suzuki-vector-logo.png", alt: "maruti-suzuki",  className:"h-24 w-28"},
-  { src: "./assets/WAHL.png", alt: "WAHL",  className: "h-14"},
-  { src: "./assets/nmims.png", alt: "NMIMS", className: "h-20"},
-  { src: "./assets/SILAII.webp", alt: "SILAII", },
-  { src: "./assets/sikshaWS.png", alt: "Siksha-W-S", className: "w-20 h-20"},
-  { src: "./assets/instaTransfer.png", alt: "Insta-Transfer",  },
-  { src: "./assets/manipalmedace.jpg", alt: "manipalmedace",  },
-  { src: "./assets/arunika.jpg", alt: "arunika",  },
-  { src: "./assets/company.png", alt: "company", className: "h-16"},
-  { src: "./assets/gamezy.jpg", alt: "gamezy",  }
-];
-
 const logoicon1 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Ecommercelogo.png" alt="" /></div>
 const logoicon2 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Performancelogo.png" alt="" /></div>
 const logoicon3 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Leadgenerationlogo.png" alt="" /></div>
@@ -412,24 +397,7 @@ const clients = [
   },
 ];
 
-
-
-
-const companies = [
-  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "fantasy"}}>denver</h1>,
-  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "system-ui"}}>Angle one</h1>,
-  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "inherit"}}>Maruti Suzuki</h1>,
-  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "fantasy"}}>gamezy</h1>,
-  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "system-ui"}}>WAHL</h1>,
-  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "inherit"}}>NMIMS</h1>,
-  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "system-ui"}}>medAce</h1>,
-  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "fantasy"}}>SILAII</h1>,
-  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "system-ui"}}>Arunika</h1>,
-  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "fantasy"}}>ClickHouse</h1>,
-  <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "system-ui"}}>INSTA Transfer</h1>,
-];
-
-const logos=[
+const companiesLogos=[
   { src:"./assets/denverwhite.png", alt:"DENVER", className:"md:w-28 h-auto sm:w-20 w-12", },
   { src:"./assets/angelOnewhite.png", alt:"DENVER", className:"md:w-36 h-auto sm:w-28 w-20", },
   { src:"./assets/arunika.png", alt:"DENVER", className:"md:w-36 h-auto sm:w-28 w-20", },
