@@ -2,7 +2,7 @@ import classNames from "classnames"
 import FadeInUp from './FadeInUp';
 
 export default function ServicesCards({heading, headingClassName, icon, iconClassName, text, textClassName, className, button}) {
-  const classes = classNames("min-w-40 w-[18vw] p-2 lg:p-4 max-h-[335px] h-[350px] sm:h-[390px] gap-0.5 lg:gap-2 flex flex-col items-center justify-between bg-white rounded", { 
+  const classes = classNames("min-w-52 md:min-w-40 w-[18vw] p-2 lg:p-4 max-h-[335px] h-[350px] sm:h-[390px] gap-0.5 lg:gap-2 flex flex-col items-center justify-evenly sm:justify-between bg-white rounded", { 
     [className]: className,
   });
   const fadeClasses = classNames("w-fit h-fit", {
