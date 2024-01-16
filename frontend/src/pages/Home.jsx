@@ -65,9 +65,9 @@ export default function Home() {
           <div className="w-[98vw] h-28 mb-8 flex justify-center items-center relative overflow-hidden">
           <CompaniesAnimate className="flex justify-center items-center gap-12 sm:gap-16 md:gap-20 lg:gap-24" length={companies.length}>
             {
-              companies.map((c, index)=>{
+              logos.map((c, index)=>{
                 return (
-                  <li key={index}>
+                  <li key={index} className="">
                     {c}
                   </li>
                 )
@@ -428,3 +428,18 @@ const companies = [
   <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "fantasy"}}>ClickHouse</h1>,
   <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "system-ui"}}>INSTA Transfer</h1>,
 ];
+
+const logos=[
+  <img src="./assets/denverwhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/angelOnewhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/arunika.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/gamezywhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/instaTransferwhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/marutisuzukiwhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/nmimswhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/silaiwhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/wahlwhite1.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/clickHouse.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/shikshawhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/manipalmedacewhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+]
