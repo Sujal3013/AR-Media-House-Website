@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
 import {
+  Button,
   Circle,
   CompaniesAnimate, 
+  ExploreBlog,
+  FadeIn,
+  FadeInUp,
   Heading,
-  Button,
   HeroSectionWrapper,
   Section,
-  ExploreBlog,
   Wonder,
   Triangle, 
   BlackSection,
   AnimateTextBackground,
-  FadeIn,
 } from "../components";
 
 export default function Technologies() {
@@ -39,7 +40,9 @@ export default function Technologies() {
               subHeading="with marketing"
               subHeadingClassName="text-tertiary-500 text-[48xl]"
             />
-            <p className="min-w-[172px] md:w-[38vw] md:min-w-0 text-sm my-16 mb-24">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum porro qui fugit officia aliquam illo temporibus quasi quaerat suscipit mollitia dicta perspiciatis voluptatum incidunt alias similique minus, accusantium minima! Id.</p>
+            <FadeInUp downLength={10}>
+              <p className="min-w-[172px] md:w-[38vw] md:min-w-0 text-sm my-16 mb-24">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum porro qui fugit officia aliquam illo temporibus quasi quaerat suscipit mollitia dicta perspiciatis voluptatum incidunt alias similique minus, accusantium minima! Id.</p>
+            </FadeInUp>
             {/* Buttons */}
             <Button arrow className="bg-tertiary-500 text-secondary-500">
               Let's Work Together
@@ -72,9 +75,9 @@ export default function Technologies() {
         </div>
 
         {/* Shapes */}
-        <Circle className="top-[3%] right-[15%] md:top-[10%] md:right-[48%]" secondary />
+        <Circle className="top-[3%] right-[15%] md:top-[0%] md:right-[48%]" secondary />
         <Circle className="top-[43%] left-[18%] md:top-[50%] md:right-[35%]" secondary />
-        <Triangle className="top-[28%] right-[20%] md:top-[35%] md:left-[20%]" secondary />
+        <Triangle className="top-[28%] right-[20%] md:top-[55%] md:left-[80%]" secondary />
       </HeroSectionWrapper>
       {/* Tech-stack section */}
       {/* <div className="flex-col justify-evenly px-screen-padding py-20 bg-[url('/assets/wave1.svg')] bg-no-repeat bg-contain bg-bottom">

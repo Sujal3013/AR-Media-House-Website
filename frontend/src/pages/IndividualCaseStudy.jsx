@@ -1,23 +1,27 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Button } from "../components";
+import { Button, Circle, Triangle } from "../components";
 
 const IndividualCaseStudy = () => {
-  const { name } = useParams();
-  document.querySelector("title").innerHTML = `Case Study - ${name}`;
-  const blog = blogs.find((blog) => blog.name === name);
+  const { id } = useParams();
+  document.querySelector("title").innerHTML = `Case Study - ${id}`;
+  
+  const blog = blogs.find((blog) => blog.id == id);
+  
+  setTimeout(()=>console.log(blog, id), 2000);
+
   return (
-    <div>
+    <div className="relative">
       {blog ? (
         <>
           <div
-            className={`h-[80vh] w-full bg-slate-200 bg-[url('/assets/Case-Study-Individual.png')] mb-4 bg-cover bg-no-repeat flex items-center justify-center`}
+            className={`h-[80vh] w-full bg-[url('/assets/Case-Study-Individual.png')] bg-cover bg-no-repeat relative mb-4`}
           >
-            <div className="text-center items-center text-white">
+            <div className="h-full w-full flex flex-col justify-center items-center text-white">
               <p className="mb-4 border border-solid border-white inline-block px-4 text-lg py-2">
                 Content Marketing
               </p>
-              <h1 className="w-[24rem] font-jost text-xl">{blog.name}</h1>
+              <h1 className="w-[60%] font-bold text-3xl text-center">{blog.name}</h1>
             </div>
           </div>
           <div className="px-[12rem] py-4">
@@ -34,12 +38,12 @@ const IndividualCaseStudy = () => {
                   </p>
                 )}
                 {content.images && (
-                  <div className="mt-3 p-4 flex gap-4 justify-between items-center">
+                  <div className="w-full mt-3 flex flex-wrap gap-4 justify-between items-center">
                     {content.images?.map((image) => (
                       <img
                         src={image}
-                        className="w-[27rem] h-[27rem] object-cover"
-                      ></img>
+                        className="w-[32vw] py-4 object-cover"
+                      />
                     ))}
                   </div>
                 )}
@@ -71,6 +75,10 @@ const IndividualCaseStudy = () => {
           </Button>
         </div>
       )}
+
+      <Circle secondary className="top-[10%] left-[10%]"/>
+      <Circle className="top-[50%] right-[10%]"/>
+      <Triangle className="bottom-[10%] left-[10%]"/>
     </div>
   );
 };

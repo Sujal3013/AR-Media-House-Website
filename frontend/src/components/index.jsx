@@ -6,10 +6,12 @@ import Circle from "./Circle";
 import ClientCards from "./ClientCards";
 import ExploreBlog from "./ExploreBlog";
 import FadeIn from "./FadeIn";
+import FadeInUp from "./FadeInUp";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Heading from "./Heading";
 import HeroSectionWrapper from "./HeroSectionWrapper";
+import HomePage3StepPath from "./HomePage3StepPath";
 import CompaniesAnimate from "./CompaniesAnimate";
 import RotatingCards from "./RotatingCards";
 import RoundedCornersSection from "./RoundedCornersSection";
@@ -31,9 +33,11 @@ export {
     CompaniesAnimate,
     ExploreBlog, 
     FadeIn, 
+    FadeInUp, 
     Footer,
     Heading,
     HeroSectionWrapper,
+    HomePage3StepPath, 
     Navbar,
     ScrolltoTop,
     RotatingCards, 

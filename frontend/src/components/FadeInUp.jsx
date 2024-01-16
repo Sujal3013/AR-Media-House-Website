@@ -1,12 +1,13 @@
-import { 
-  useState, 
-  // useEffect, 
-  // useCallback, 
-} from "react";
+// import { 
+//   useState, 
+//   // useEffect, 
+//   // useCallback, 
+// } from "react";
+
 import classNames from 'classnames'
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer"
-export default function FadeInUp({children, className, downLength}) {
+export default function FadeInUp({children, className, downLength, animate=true}) {
     // const [y, setY] = useState(0);
     // const [scrollDown, setScrollDown] = useState(false);
     // const handleNavigation = useCallback(e => {
@@ -46,7 +47,7 @@ export default function FadeInUp({children, className, downLength}) {
       ref={ref}
       variants={animationVariants}
       initial="hidden"
-      animate={inView ? "animate" : "hidden"}
+      animate={inView && animate ? "animate" : "hidden"}
     >
         {children}
     </motion.div>

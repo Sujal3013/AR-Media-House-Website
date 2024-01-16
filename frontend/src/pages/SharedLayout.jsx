@@ -1,5 +1,5 @@
-import { Outlet,useLocation } from "react-router-dom";
-import {Navbar, Footer,ScrolltoTop} from "../components";
+import { Outlet, useLocation } from "react-router-dom";
+import { Navbar, Footer, ScrolltoTop } from "../components";
 import { useEffect } from "react";
 
 export default function SharedLayout() {
@@ -11,7 +11,7 @@ export default function SharedLayout() {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="overflow-hidden">
         <Outlet />
       </main>
       
