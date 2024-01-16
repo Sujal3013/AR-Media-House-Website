@@ -67,8 +67,8 @@ export default function Home() {
             {
               logos.map((c, index)=>{
                 return (
-                  <li key={index} className="">
-                    {c}
+                  <li key={index} className={c.className}>
+                    <img src={c.src} alt="company-image" />
                   </li>
                 )
               })
@@ -430,16 +430,16 @@ const companies = [
 ];
 
 const logos=[
-  <img src="./assets/denverwhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
-  <img src="./assets/angelOnewhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
-  <img src="./assets/arunika.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
-  <img src="./assets/gamezywhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
-  <img src="./assets/instaTransferwhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
-  <img src="./assets/marutisuzukiwhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
-  <img src="./assets/nmimswhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
-  <img src="./assets/silaiwhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
-  <img src="./assets/wahlwhite1.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
-  <img src="./assets/clickHouse.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
-  <img src="./assets/shikshawhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
-  <img src="./assets/manipalmedacewhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  { src:"./assets/denverwhite.png", alt:"DENVER", className:"md:w-28 h-auto sm:w-20 w-12", },
+  { src:"./assets/angelOnewhite.png", alt:"DENVER", className:"md:w-36 h-auto sm:w-28 w-20", },
+  { src:"./assets/arunika.png", alt:"DENVER", className:"md:w-36 h-auto sm:w-28 w-20", },
+  { src:"./assets/gamezywhite.png", alt:"DENVER", className:"md:w-32 h-auto sm:w-24 w-16", },
+  { src:"./assets/instaTransferwhite.png", alt:"DENVER", className:"md:w-32 h-auto sm:w-24 w-16", },
+  { src:"./assets/marutisuzukiwhite.png", alt:"DENVER", className:"md:w-44 h-auto sm:w-36 w-28", },
+  { src:"./assets/nmimswhite.png", alt:"DENVER", className:"md:w-24 h-auto sm:w-16 w-10", },
+  { src:"./assets/silaiwhite.png", alt:"DENVER", className:"md:w-28 h-auto sm:w-20 w-12", },
+  { src:"./assets/wahlwhite1.png", alt:"DENVER", className:"md:w-28 h-auto sm:w-20 w-12", },
+  { src:"./assets/clickHouse.png", alt:"DENVER", className:"md:w-32 h-auto sm:w-24 w-16", },
+  { src:"./assets/shikshawhite.png", alt:"DENVER", className:"md:w-24 h-auto sm:w-16 w-10", },
+  { src:"./assets/manipalmedacewhite.png", alt:"DENVER", className:"md:w-32 h-auto sm:w-24 w-16", },
 ]
