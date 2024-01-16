@@ -14,20 +14,11 @@ import {
   BlackSection,
   AnimateTextBackground,
 } from "../components";
+import AnimateIllustrationSection from "../components/AnimateIllustrationSection";
 
 export default function Technologies() {
   document.querySelector("title").innerHTML = "Technologies - AR Media House";
   
-  const [currImage, setCurrImage] = useState(0);
-  useEffect(()=>{
-    const id = setTimeout(()=>{
-      setCurrImage((currImage + 1) % pourRocketFuelPoints.length)
-    }, 5000)
-
-    return ()=>{
-      clearTimeout(id)
-    }
-  }, [currImage]);
 
   return (
     <>
@@ -186,7 +177,7 @@ export default function Technologies() {
       </BlackSection>
 
       {/* ROCKET SECTION */}
-      <section className="flex py-10 px-screen-padding relative">
+      {/* <section className="flex py-10 px-screen-padding relative">
         <div className="flex flex-col basis-[120%] gap-4">
           <Heading
             heading="Pour Rocket fuel"
@@ -209,18 +200,26 @@ export default function Technologies() {
               })
             }
           </div>
-        </div>
+        </div> */}
+{/* 
         <div className="hidden md:block w-full relative">
             {
               pourRocketFuelPoints.map((item, index)=> 
-                <FadeIn key={index} duration={1.5} when={index===currImage} className="absolute bottom-[-5%] right-0"> {item.illustration} </FadeIn>
+              <FadeIn key={index} duration={1.5} when={index===currImage} className="absolute bottom-[-5%] right-0"> {item.illustration} </FadeIn>
               )
             }
         </div>
-        {/* Shapes */}
         <Circle className="top-[15%] right-[28%] md:top-[-15%] md:right-[30%]" />
-      </section>
+      </section> */}
 
+      <AnimateIllustrationSection
+        heading="Pour Rocket fuel"
+        subHeading="on your revenue"
+        headingClassName="mb-[-10px] text-primary-500"
+        text={"Generate an impactful revenue with our company’s specific revenue objectives."}
+        list={pourRocketFuelPoints}
+      />
+      
       <img
         src="./assets/triple-wave-white-1.svg"
         alt="wave"

@@ -78,3 +78,10 @@ h2, h3, h4, h5, h6 {
     @apply max-w-sm;
   }
 }
+
+@layer utilities {
+  .border-gradient {
+    border-image: linear-gradient(to bottom, #ff9356, #ffffff);
+    border-image-slice: 1;
+  }
+}
