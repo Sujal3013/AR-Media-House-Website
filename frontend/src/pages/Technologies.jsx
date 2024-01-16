@@ -76,33 +76,6 @@ export default function Technologies() {
         <Circle className="top-[43%] left-[18%] md:top-[50%] md:right-[35%]" secondary />
         <Triangle className="top-[28%] right-[20%] md:top-[35%] md:left-[20%]" secondary />
       </HeroSectionWrapper>
-      {/* Tech-stack section */}
-      {/* <div className="flex-col justify-evenly px-screen-padding py-20 bg-[url('/assets/wave1.svg')] bg-no-repeat bg-contain bg-bottom">
-        <div className="flex justify-between items-start my-5">
-          <div className="text-start py-4">
-            <h1 className="text-primary-500 text-[64px] font-extrabold leading-10">
-              TECHNOLOGIES <br />
-              <span className="text-secondary-500 text-[52px] font-playfair-display font-bold">
-                we use
-              </span>
-            </h1>
-          </div>
-          <div>
-            <img src="/assets/lookfinity.png" alt="" />
-          </div>
-        </div>
-        <motion.div 
-
-          className="flex justify-between my-6"
-        >
-          <img src="/assets/AWS.png" alt="" />
-          <img src="/assets/graphql.png" alt="" />
-          <img src="/assets/react.png" alt="" />
-          <img src="/assets/kafka.png" alt="" />
-          <img src="/assets/kubernetes.png" alt="" />
-          <img src="/assets/clickHouse.png" alt="" />
-        </motion.div>
-      </div> */}
 
       {/* PROCESS SECTION */}
       <Section
@@ -124,7 +97,7 @@ export default function Technologies() {
           </Button>
         }
         illustration={
-          <img src="/assets/What_makes_us.png" alt="" className="ImgResponsive h-auto w-[35vw]"/>
+          <img src="/assets/AutomateMarketing.png" alt="" className="ImgResponsive h-auto w-[35vw]"/>
         }
         direction={1}
         Shapes={
@@ -152,7 +125,7 @@ export default function Technologies() {
           </Button>
         }
         illustration={
-          <img src="/assets/What_makes_us.png" alt="image" className="ImgResponsive h-auto"/>
+          <img src="/assets/Data.png" alt="image" className="ImgResponsive h-auto"/>
         }
         direction={-1}
         Shapes={
@@ -179,7 +152,7 @@ export default function Technologies() {
           </Button>
         }
         illustration={
-          <img src="/assets/What_makes_us.png" alt="" className="ImgResponsive h-auto" />
+          <img src="/assets/BigData.png" alt="" className="ImgResponsive h-auto" />
         }
         direction={1}
         Shapes={
@@ -200,7 +173,7 @@ export default function Technologies() {
           Button1={<Button className="bg-tertiary-500 text-secondary-500" arrow>Learn More</Button>}
           illustration={          
             <div className="hidden md:block rounded-full text-center w-[36vw] h-auto ">
-              <img src="/assets/What_makes_us.png" alt="" />
+              <img src="/assets/Excel.png" alt="" />
             </div>
           }
         />
@@ -296,6 +269,6 @@ const pourRocketFuelPoints = [
   {
     heading: "Future Proof",
     text: "Connect with your audience in the best way possibleirrespective of the changes that occur in the marketplace.",
-    illustration: <img src="./assets/Growth_curve.svg" alt="img" />, 
+    illustration: <img src="./assets/FutureProof.png" alt="img" />, 
   },
 ]
