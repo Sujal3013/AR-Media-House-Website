@@ -1,6 +1,7 @@
 import React from 'react'
 import DropDown from './DropDown'
 import { Button, Circle, Triangle } from "./";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -16,11 +17,11 @@ const Footer = () => {
           </div>
           {/* Social Media Icons */}
           <div className='flex gap-1'>
-            <img className='w-8 lg:w-10' src='./assets/Instagram-Logo.svg' alt="instagram" />
-            <img className='w-8 lg:w-10' src='./assets/facebook.svg' alt="facebook" />
-            <img className='w-8 lg:w-10' src='./assets/linkedin.svg' alt="linkedin" />
-            <img className='w-8 lg:w-10' src="./assets/twitter.svg" alt="twitter" />
-            <img className='w-8 lg:w-10' src="./assets/mail.svg" alt="mail" />
+            <img className='w-7 lg:w-10' src='./assets/Instagram-Logo.svg' alt="instagram" />
+            <img className='w-7 lg:w-10' src='./assets/facebook.svg' alt="facebook" />
+            <img className='w-7 lg:w-10' src='./assets/linkedin.svg' alt="linkedin" />
+            <img className='w-7 lg:w-10' src="./assets/twitter.svg" alt="twitter" />
+            <img className='w-7 lg:w-10' src="./assets/mail.svg" alt="mail" />
           </div>
         </div>
         <div className="flex gap-8 md:block">
@@ -43,7 +44,7 @@ const Footer = () => {
       <div className='hidden md:block flex flex-col md:gap-6'>
         <h1 className='text-xl lg:text-2xl mb-4'>Services</h1>
         <ul className='flex flex-col gap-2'>
-          {SERVICES_LIST.map((el,ind)=><li key={ind} className="text-sm lg:text-base hover:cursor-pointer"><Button className="!py-px !px-0" to={el.to}>{el}</Button></li>)}
+          {SERVICES_LIST.map((el,ind)=><Link key={ind} className="text-sm lg:text-base hover:cursor-pointer" to={el.to}>{el}</Link>)}
         </ul>
       </div>
       
@@ -51,7 +52,7 @@ const Footer = () => {
       <div className='hidden md:block flex flex-col gap-6'>
         <h1 className='text-xl lg:text-2xl'>Site-map</h1>
         <ul className='flex flex-col gap-2 mt-2'>
-          {SITE_MAP_LIST.map((el,ind)=><li key={ind} className="text-sm lg:text-base hover:cursor-pointer"><Button className="!py-px !px-0" to={el.to}>{el.title}</Button></li>)}
+          {SITE_MAP_LIST.map((el,ind)=><Link key={ind} className="text-sm lg:text-base hover:cursor-pointer" to={el.to}>{el.title}</Link>)}
         </ul>
       </div>
 
@@ -71,7 +72,7 @@ const Footer = () => {
         title="Services" 
         titleClass="text-xl lg:text-2xl py-2 px-4">
           <ul className='flex flex-col gap-2 mt-2 px-8'>
-          {SERVICES_LIST.map((el,ind)=><li key={ind} className="text-sm lg:text-base">{el}</li>)}
+          {SERVICES_LIST.map((el,ind)=><Link key={ind} className="text-sm lg:text-base" to={el.to}>{el}</Link>)}
           </ul>
         </DropDown>
         <DropDown 
@@ -79,7 +80,9 @@ const Footer = () => {
         title="Site-map" 
         titleClass="text-xl lg:text-2xl py-2 px-4">
           <ul className='flex flex-col gap-2 mt-2 px-8'>
-          {SITE_MAP_LIST.map((el,ind)=><li key={ind} className="text-sm lg:text-base">{el}</li>)}
+          {SITE_MAP_LIST.map((el,ind)=>
+            <Link key={ind} className="text-sm lg:text-base" to={el.to}>{el.title}</Link>
+          )}
           </ul>
         </DropDown>
         <DropDown 
