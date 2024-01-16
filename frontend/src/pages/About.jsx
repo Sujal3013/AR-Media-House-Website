@@ -97,7 +97,7 @@ export default function About() {
 
 
       <section className="bg-tertiary-500 relative">
-        <img src="./assets/about-wave.svg" alt="path" className="hidden lg:block absolute top-[2%] left-[22%] h-[2380px]" /> 
+        <img src="./assets/about-wave.png" alt="path" className="hidden lg:block absolute top-[1.5%] left-[19%] h-[85%] w-[78%]" /> 
         
         <StoryComponent 
           heading="The journey begins"
