@@ -24,7 +24,7 @@ const ContactUs = () => {
         <Circle className="top-[-2%] right-[40%]" />
       </div>
 
-      <img 
+      <img  className="w-full"
         src="./assets/triple-wave-white-1.svg"
       />
 

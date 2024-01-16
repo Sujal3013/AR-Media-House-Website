@@ -65,9 +65,9 @@ export default function Home() {
           <div className="w-[98vw] h-28 mb-8 flex justify-center items-center relative overflow-hidden">
           <CompaniesAnimate className="flex justify-center items-center gap-12 sm:gap-16 md:gap-20 lg:gap-24" length={companies.length}>
             {
-              companies.map((c, index)=>{
+              logos.map((c, index)=>{
                 return (
-                  <li key={index}>
+                  <li key={index} className="">
                     {c}
                   </li>
                 )
@@ -176,7 +176,7 @@ export default function Home() {
         <Heading
           className="w-full items-center pb-2"
           heading="3-easy step"
-          headingClassName="text-center"
+          headingClassName="text-center text-primary-500"
           subHeading="our growth"
           subHeadingClassName="text-center"
         />
@@ -215,7 +215,7 @@ export default function Home() {
           textClassName={SECTION5_TEXT_CLASS}
           illustration={
             <div className="rounded-full text-center w-auto h-auto">
-            <img src="/assets/Foundations.svg" alt=""  className=""/>
+            <img src="/assets/digitalFoundations.svg" alt=""  className=""/>
           </div>
           }
         />
@@ -232,7 +232,7 @@ export default function Home() {
           and profit."
           textClassName={SECTION5_TEXT_CLASS}
           illustration={
-            <img src="/assets/Benchmark.svg" alt="benchmark-image"  className="ml-[-6vw]"/>
+            <img src="/assets/VerifyBenchmark.svg" alt="benchmark-image"  className="ml-[-6vw]"/>
           }
           direction={-1}
         />
@@ -374,7 +374,7 @@ const logoicon3 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Lead
 const logoicon4 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/MediaBuying.png" alt="" /></div>
 const logoicon5 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Martechlogo.png" alt="" /></div>
 const logoicon6 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/ContentMarketinglogo.png" alt="" /></div>
-const logoicon7 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Webdevelopmentlogo.png" alt="" /></div>
+const logoicon7 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/webdevlogo.svg" alt="" /></div>
 
 const services = [
   { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32", icon: logoicon1, heading: "E-commerce", text: "Elevating your online store for greater success by innovative outbound strategies to drive more sales and traffic for your brand."},
@@ -428,3 +428,18 @@ const companies = [
   <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "fantasy"}}>ClickHouse</h1>,
   <h1 className="text-xl sm:text-3xl lg:text-4xl text-white text-center leading-8" style={{"fontFamily": "system-ui"}}>INSTA Transfer</h1>,
 ];
+
+const logos=[
+  <img src="./assets/denverwhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/angelOnewhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/arunika.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/gamezywhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/instaTransferwhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/marutisuzukiwhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/nmimswhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/silaiwhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/wahlwhite1.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/clickHouse.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/shikshawhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+  <img src="./assets/manipalmedacewhite.png" alt="DENVER" className="max-w-[5rem] h-auto"></img>,
+]

@@ -54,7 +54,7 @@ export default function About() {
           Read our Story
         </Button>
         <img
-          className="hidden md:block relative mt-4"
+          className="hidden md:block mx-auto relative mt-4"
           src="/assets/About_banner.svg"
           alt="illustration"
         />
