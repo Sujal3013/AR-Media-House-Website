@@ -12,7 +12,9 @@ import {
   ServicesCards, 
   Triangle, 
   Wonder,
-  BlackSection, 
+  BlackSection,
+  FadeInUp,
+  HomePage3StepPath, 
 } from "../components";
 import { useWinSizeContext } from "../context/winSizeContext";
 
@@ -34,11 +36,13 @@ export default function Home() {
               subHeading="that drives result"
               subHeadingClassName="text-tertiary-500"
             />
-            <p className="min-w-[172px] md:w-[35vw] md:min-w-0 text-sm my-12">
-              AR Media House works with reputable global brands to deliver data-driven lead
-              generation, customer acquisition, and brand awareness campaigns through 
-              various digital spaces.
-            </p>
+            <FadeInUp downLength={10}>
+              <p className="min-w-[172px] md:w-[35vw] md:min-w-0 text-sm my-12">
+                AR Media House works with reputable global brands to deliver data-driven lead
+                generation, customer acquisition, and brand awareness campaigns through 
+                various digital spaces.
+              </p>
+            </FadeInUp>
             {/* Buttons */}
             <div className="flex gap-6 py-10">
               <Button arrow className="bg-primary-500 text-secondary-500">
@@ -178,6 +182,7 @@ export default function Home() {
         />
 
         <img src="./assets/1-2-3-path.svg" alt="steps" className="hidden lg:block absolute z-10 mt-8 h-[200vh] left-[50%] translate-x-[-60%]"/>
+        {/* <HomePage3StepPath className="hidden lg:block absolute z-10 mt-8 h-[200vh] left-[50%] translate-x-[-60%]" /> */}
 
         <Section
           backgroundClassName="bg-tertiary-500 py-4"
@@ -227,9 +232,7 @@ export default function Home() {
           and profit."
           textClassName={SECTION5_TEXT_CLASS}
           illustration={
-            <div className="rounded-full text-center w-auto h-auto">
-            <img src="/assets/VerifyBenchmark.svg" alt=""  className=""/>
-          </div>
+            <img src="/assets/VerifyBenchmark.svg" alt="benchmark-image"  className="ml-[-6vw]"/>
           }
           direction={-1}
         />

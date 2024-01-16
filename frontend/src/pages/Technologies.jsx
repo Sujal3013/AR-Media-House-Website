@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
 import {
+  Button,
   Circle,
   CompaniesAnimate, 
+  ExploreBlog,
+  FadeIn,
+  FadeInUp,
   Heading,
-  Button,
   HeroSectionWrapper,
   Section,
-  ExploreBlog,
   Wonder,
   Triangle, 
   BlackSection,
   AnimateTextBackground,
-  FadeIn,
 } from "../components";
 
 export default function Technologies() {
@@ -39,7 +40,9 @@ export default function Technologies() {
               subHeading="with marketing"
               subHeadingClassName="text-tertiary-500 text-[48xl]"
             />
-            <p className="min-w-[172px] md:w-[38vw] md:min-w-0 text-sm my-16 mb-24">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum porro qui fugit officia aliquam illo temporibus quasi quaerat suscipit mollitia dicta perspiciatis voluptatum incidunt alias similique minus, accusantium minima! Id.</p>
+            <FadeInUp downLength={10}>
+              <p className="min-w-[172px] md:w-[38vw] md:min-w-0 text-sm my-16 mb-24">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum porro qui fugit officia aliquam illo temporibus quasi quaerat suscipit mollitia dicta perspiciatis voluptatum incidunt alias similique minus, accusantium minima! Id.</p>
+            </FadeInUp>
             {/* Buttons */}
             <Button arrow className="bg-tertiary-500 text-secondary-500">
               Let's Work Together
@@ -55,16 +58,16 @@ export default function Technologies() {
         <div className="flex flex-col items-center justify-center ">
           <h1 className="text-md sm:text-xl lg:text-2xl text-center font-bold font-jost text-slate-200 tracking-wider my-8">Technologies we Use</h1>
           <div className="w-[98vw] h-28 mb-8 flex justify-center items-center relative overflow-hidden">
-          <CompaniesAnimate className="flex justify-center items-center gap-12 sm:gap-16 md:gap-20 lg:gap-24" length={7}>
+          <CompaniesAnimate className="flex justify-center items-center gap-8 sm:gap-16 md:gap-20 lg:gap-24" length={7}>
             {
               <>
-                <li className="w-24 sm:w-28 md:w-36"><img className="w-full h-full" src="/assets/AWS.png" alt="aws" /></li>
-                <li className="h-20 sm:h-24 md:h-32"><img className="w-full h-full" src="/assets/graphql.svg" alt="graph ql" /></li>
-                <li className="h-16 sm:h-20 md:h-28"><img className="w-full h-full" src="/assets/react.svg" alt="react" /></li>
-                <li className="w-36 sm:w-40 md:w-48 md:h-12"><img className="w-full h-full" src="/assets/kafka.png" alt="kafta" /></li>
-                <li className="w-32 sm:w-36 md:w-44"><img className="w-full h-full" src="/assets/kubernetes.png" alt="kubernetes" /></li>
-                <li className="w-32 sm:w-36 md:w-44"><img className="w-full h-full" src="/assets/lookfinity.png" alt="lookfinity" /></li>
-                <li className="w-52 sm:w-56 md:w-64 md:h-auto"><img className="w-full h-full" src="/assets/clickHouse.png" alt="click house" /></li>
+                <li className="w-14 sm:w-28 md:w-36"><img className="w-full h-full" src="/assets/AWS.png" alt="aws" /></li>
+                <li className="h-12 sm:h-24 md:h-32"><img className="w-full h-full" src="/assets/graphql.svg" alt="graph ql" /></li>
+                <li className="h-12 sm:h-20 md:h-28"><img className="w-full h-full" src="/assets/react.svg" alt="react" /></li>
+                <li className="w-24 sm:w-40 md:w-48 md:h-12"><img className="w-full h-full" src="/assets/kafka.png" alt="kafta" /></li>
+                <li className="w-20 sm:w-36 md:w-44"><img className="w-full h-full" src="/assets/kubernetes.png" alt="kubernetes" /></li>
+                <li className="w-20 sm:w-36 md:w-44"><img className="w-full h-full" src="/assets/lookfinity.png" alt="lookfinity" /></li>
+                <li className="w-28 sm:w-56 md:w-64 md:h-auto"><img className="w-full h-full" src="/assets/clickHouse.png" alt="click house" /></li>
               </>
             }
           </CompaniesAnimate>
@@ -72,9 +75,9 @@ export default function Technologies() {
         </div>
 
         {/* Shapes */}
-        <Circle className="top-[3%] right-[15%] md:top-[10%] md:right-[48%]" secondary />
+        <Circle className="top-[3%] right-[15%] md:top-[0%] md:right-[48%]" secondary />
         <Circle className="top-[43%] left-[18%] md:top-[50%] md:right-[35%]" secondary />
-        <Triangle className="top-[28%] right-[20%] md:top-[35%] md:left-[20%]" secondary />
+        <Triangle className="top-[28%] right-[20%] md:top-[55%] md:left-[80%]" secondary />
       </HeroSectionWrapper>
 
       {/* PROCESS SECTION */}

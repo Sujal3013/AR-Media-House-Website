@@ -9,6 +9,7 @@ import {
   Triangle,
   AnimateNumber,
   ServicesSec2,
+  FadeInUp
 } from "../components";
 import classNames from "classnames";
 
@@ -54,29 +55,29 @@ export default function Services() {
         className="flex py-6 gap-4 items-center justify-between !overflow-visible"
         whiteWaveBackground
       >
-        {/* text content right side */}
-        <div className="w-auto my-8">
-          <Heading
-            heading="Multi-Channel"
-            subHeading="digital advertising experts"
-            subHeadingClassName="text-tertiary-500"
-          />
-          <p className="min-w-[172px] md:w-[35vw] md:min-w-0 text-sm my-12">
-            Identification of ideal prospects through a potent advertising
-            approach. Gathering highly qualified prospects to boost brand
-            engagement. Turning prospects into high-quality leads and sales.
-          </p>
-          {/* Buttons */}
-          <div className="flex gap-6 py-10">
-            <Button arrow className="bg-primary-500 text-secondary-500">
-              Let's Connect
-            </Button>
+          {/* text content right side */}
+          <div className="w-auto my-8">
+            <Heading
+              heading="Multi-Channel"
+              subHeading="digital advertising experts"
+              subHeadingClassName="text-tertiary-500"
+            />
+            <FadeInUp downLength={10} className="min-w-[172px] md:w-[35vw] md:min-w-0 text-sm my-12">
+              Identification of ideal prospects through a potent advertising
+              approach. Gathering highly qualified prospects to boost brand
+              engagement. Turning prospects into high-quality leads and sales.
+            </FadeInUp>
+            {/* Buttons */}
+            <div className="flex gap-6 py-10">
+              <Button arrow className="bg-primary-500 text-secondary-500">
+                Let's Connect
+              </Button>
+            </div>
           </div>
-        </div>
-        {/* illustraion */}
-        <div className="hidden w-[38vw] min-w-80 md:block h-auto rounded">
-          <img src="/assets/Services.svg" alt="" />
-        </div>
+          {/* illustraion */}
+          <div className="hidden w-[38vw] min-w-80 md:block h-auto rounded">
+            <img src="/assets/Services.svg" alt="" />
+          </div>
 
         {/* Shapes */}
         <Circle secondary className="top-[20%] sm:top-[10%] right-[5%]" />

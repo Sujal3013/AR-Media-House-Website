@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Heading } from "./";
+import { FadeIn, FadeInUp, Heading } from "./";
 
 
 export default function Section({
@@ -58,9 +58,9 @@ export default function Section({
 
         {
           text && 
-          <p className={textClasses}>
+          <FadeInUp downLength={10} className={textClasses}>
             {text}
-          </p>
+          </FadeInUp>
         }
 
         {

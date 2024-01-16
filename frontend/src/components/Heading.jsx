@@ -1,5 +1,5 @@
 import classNames from "classnames"
-
+import { FadeInUp } from "./"
 export default function Heading({
   heading, 
   middleLine, 
@@ -8,6 +8,7 @@ export default function Heading({
   middleLineClassName, 
   subHeadingClassName, 
   className, 
+  animate=true, 
   ...other
 }) {
 
@@ -27,7 +28,7 @@ export default function Heading({
   })
 
   return (
-    <div className={classes} {...other}>
+    <FadeInUp className={classes} animate={animate} {...other} downLength={20}>
       <h1 className={headingClasses}>
         {heading}
       </h1>
@@ -40,6 +41,6 @@ export default function Heading({
       <h2 className={subHeadingClasses}>
         {subHeading}
       </h2>
-    </div>
+    </FadeInUp>
   )
 }
