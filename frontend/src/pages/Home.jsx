@@ -135,6 +135,7 @@ export default function Home() {
       <BlackSection className="flex flex-col gap-4 py-4 items-center relative">
         <Heading 
           heading="We have Got"
+          headingClassName="text-primary-500 text-center"
           subHeading="a lot to offer"
           subHeadingClassName="text-tertiary-500"
           className="items-center"
@@ -145,20 +146,20 @@ export default function Home() {
 
 
       <Section
-        backgroundClassName="py-8"
+        backgroundClassName="py-8 !items-start"
         heading="We Make Your Sales"
-        headingClassName="text-black w-[70vw]"
+        headingClassName="text-black !w-[60vw]"
         middleLine="GO"
         middleLineClassName="text-primary-500 my-[-4px]"
         subHeading="through the roof"
-        allHeadingClassName="mb-6 sm:mb-12 w-[40vw] overflow-visible"
+        allHeadingClassName="mb-6 sm:mb-12 !w-[40vw] !overflow-visible"
         Button1={
           <Button className="bg-primary-500 text-secondary-500 mt-3 md:mt-6 mb-6 sm:mb-8 md:mb-12" arrow>
             Let's Connect
           </Button>
         }
         illustration={
-            <img src="/assets/GO_image.svg" alt=""  className="!w-[45vw]"/>
+            <img src="/assets/GO_image.svg" alt=""  className="!w-[80vw] md:!w-[45vw]"/>
         }
         Shapes={
           <Circle className="top-[20%] left-[69%] md:top-[56%] md:left-[30%]" />
