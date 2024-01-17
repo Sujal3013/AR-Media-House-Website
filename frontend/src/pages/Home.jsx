@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { 
   Button, 
   Circle, 
@@ -148,18 +147,18 @@ export default function Home() {
       <Section
         backgroundClassName="py-8"
         heading="We Make Your Sales"
-        headingClassName="text-black"
+        headingClassName="text-black w-[70vw]"
         middleLine="GO"
         middleLineClassName="text-primary-500 my-[-4px]"
         subHeading="through the roof"
-        allHeadingClassName="mb-6 sm:mb-12"
+        allHeadingClassName="mb-6 sm:mb-12 w-[40vw] overflow-visible border-2"
         Button1={
           <Button className="bg-primary-500 text-secondary-500 mt-3 md:mt-6 mb-6 sm:mb-8 md:mb-12" arrow>
             Let's Connect
           </Button>
         }
         illustration={
-            <img src="/assets/GO_image.svg" alt=""  className=""/>
+            <img src="/assets/GO_image.svg" alt=""  className="!w-[45vw]"/>
         }
         Shapes={
           <Circle className="top-[20%] left-[69%] md:top-[56%] md:left-[30%]" />
