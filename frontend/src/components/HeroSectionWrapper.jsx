@@ -2,7 +2,7 @@ import classNames from "classnames"
 
 export default function HeroSectionWrapper({children, className, behindBackground, whiteWaveBackground, waveClassName, ...other}) {
   
-  const classes = classNames("px-screen-padding bg-secondary-500 text-tertiary-500 relative overflow-hidden", {
+  const classes = classNames("px-screen-padding bg-secondary-500 text-tertiary-500 relative", {
     [className]: className,
   });
   const waveClasses = classNames("w-full", {

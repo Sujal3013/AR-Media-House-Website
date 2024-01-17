@@ -61,7 +61,9 @@ export default function AnimateIllustrationSection({
         <div className="hidden md:block w-full relative">
             {
               list.map((item, index)=> 
-                <FadeIn key={index} duration={1.5} when={index===currImage} className="absolute bottom-[-5%] right-0"> {item.illustration} </FadeIn>
+                <FadeIn key={index} duration={1.5} when={index===currImage} className="absolute bottom-[-5%] right-0 w-fit h-fit"> 
+                  {item.illustration} 
+                </FadeIn>
               )
             }
         </div>

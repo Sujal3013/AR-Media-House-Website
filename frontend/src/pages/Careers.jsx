@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from "react";
 import Button from "../components/Button";
 import { Jobopeningcard } from "../components/Jobopeningcard";
@@ -16,9 +14,9 @@ export default function Careers() {
   return (
     <>
       {/* Hero Section */}
-      <div 
-        className="bg-[url('/assets/Careers-Hero-with-gradient.jpg')] h-[90vh] bg-cover bg-center bg-no-repeat 
-        flex flex-col items-center justify-center"
+      <section 
+        className="bg-[url('/assets/Careers-Hero-with-gradient.jpg')] h-[95vh] bg-cover bg-center bg-no-repeat 
+        flex flex-col items-center justify-center relative"
       >
         {/* Replace 'your-image-url' with the actual URL of your hero image */}
           <Heading
@@ -31,33 +29,36 @@ export default function Careers() {
           <Button className="bg-primary-500 text-secondary-500 mx-auto mt-4" to="#openings">
             View open positions
           </Button>
-      </div>
+
+      </section>
+
 
       {/* Careers Text */}
-      <Heading
-        heading="Careers"
-        subHeading="@AR Media House"
-        className="w-full items-center my-10 mt-16"
-      />
+      <section className="bg-tertiary-500 pt-16 ">
+        <Heading
+          heading="Careers"
+          subHeading="@AR Media House"
+          className="w-full items-center"
+        />
 
-      {/* Job Openings Cards */}
-      <div
-        className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-8 px-screen-padding mx-10 py-8"
-        id="openings"
-      >
-        {openings.map((opening) => (
-          <Jobopeningcard
-          
-            title={opening.title}
-            location={opening.location}
-            daysAgo={opening.daysAgo}
-          />
-        ))}
-      </div>
-      
+        {/* Job Openings Cards */}
+        <div
+          className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-8 px-screen-padding mx-10 py-8"
+          id="openings"
+        >
+          {openings.map((opening) => (
+            <Jobopeningcard
+
+              title={opening.title}
+              location={opening.location}
+              daysAgo={opening.daysAgo}
+            />
+          ))}
+        </div>
+      </section>
       <Wonder
-          linearGradient = {{"backgroundImage": "linear-gradient(0deg, #080403 50%, white 50%)"}}
-          className="!bg-tertiary-500"
+          // linearGradient = {{"backgroundImage": "linear-gradient(0deg, #080403 50%, white 50%)"}}
+          // className="!bg-tertiary-500"
       />
     </>
   );
