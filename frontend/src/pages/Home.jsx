@@ -151,7 +151,7 @@ export default function Home() {
         middleLine="GO"
         middleLineClassName="text-primary-500 my-[-4px]"
         subHeading="through the roof"
-        allHeadingClassName="mb-6 sm:mb-12 w-[40vw] overflow-visible border-2"
+        allHeadingClassName="mb-6 sm:mb-12 w-[40vw] overflow-visible"
         Button1={
           <Button className="bg-primary-500 text-secondary-500 mt-3 md:mt-6 mb-6 sm:mb-8 md:mb-12" arrow>
             Let's Connect
