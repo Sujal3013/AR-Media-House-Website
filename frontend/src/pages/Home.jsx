@@ -159,7 +159,7 @@ export default function Home() {
           </Button>
         }
         illustration={
-            <img src="/assets/GO_image.svg" alt=""  className="ImgResponsive w-[40vw]"/>
+            <img src="/assets/GO_image.svg" alt=""  className=""/>
         }
         Shapes={
           <Circle className="top-[20%] left-[69%] md:top-[56%] md:left-[30%]" />

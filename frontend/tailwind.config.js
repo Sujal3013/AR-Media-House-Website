@@ -50,6 +50,8 @@ export default {
         tertiary: {
           500: "#F4F4F4",
           600: "#E4E4E4",
+          800: "#BBBBBB",
+
         },
         additional:{
           200:"#F7F7F7"

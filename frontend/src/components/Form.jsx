@@ -91,15 +91,15 @@ export default function Form() {
   };
 
   return (
-    <div className="flex-col pt-4 md:pt-8 lg:w-[50%]">
+    <div className="flex-col lg:w-[50%]">
       {/* Checkbox section */}
       <div className="flex flex-wrap gap-[8px] md:gap-[10px] lg:gap-[14px]">
         {dataTypes.map((data, index) => (
           <Button
             className={
               selectedOptions.includes(data)
-                ? "bg-primary-500 text-tertiary-500"
-                : "border-2 border-primary-500 text-primary-500"
+                ? "bg-primary-500 text-tertiary-500 md:!px-2 md:!py-1 lg:!px-4 lg:!py-3"
+                : "border-2 border-primary-500 text-primary-500 md:!px-3 md:!py-2 lg:!px-4 lg:!py-3"
             }
             onClick={() => handleCheckboxChange(data)}
             key={index}

@@ -12,7 +12,7 @@ const ContactUs = () => {
             subHeading="Progress Together"
           />
 
-          <div className="my-4 flex gap-10 lg:gap-16 justify-between items-end">
+          <div className="mt-12 flex gap-10 lg:gap-16 justify-between items-center lg:items-start">
             {/* Form */}
             <Form />
 

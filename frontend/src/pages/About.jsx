@@ -221,7 +221,7 @@ export default function About() {
           focusedIndividual.map((item, index)=>{
             const el = cardList[index];
             return (
-              {...item, illustration: <div style={{"backgroundImage": `url('${el.blobSrc}')`}}><img src={el.iconSrc} /></div>}
+              {...item, illustration: <img src={el.iconSrc} alt={`image-${index}`} className="w-[35vw]"/>}
             )
           })
         }
@@ -232,7 +232,7 @@ export default function About() {
         headingClassName="text-primary-500"
         subHeading="traffic and conversion to your website"
         subHeadingClassName="text-secondary !w-[36vw] sm:!w-[40vw] md:!w-[42vw]"
-        className="bg-tertiary-500 py-12 px-8 md:py-20 md:px-12 flex justify-between items-center"
+        className="bg-tertiary-500 py-12 px-8 mt-10 md:py-20 md:px-12 flex justify-between items-center"
         illustration={
           <Button arrow className="bg-primary-500 mx-auto">
             Learn More
@@ -262,24 +262,24 @@ export default function About() {
   
             />
             <Heading
-              className="w-[70%] bg-primary-500 !p-10 my-4 items-center"
+              className="!w-[70%] bg-primary-500 !p-10 my-4 items-center"
               heading="170+"
               headingClassName="text-secondary-500 text-center"
               subHeading="team member"
-              subHeadingClassName="text-tertiary-500 text-center"
+              subHeadingClassName="text-tertiary-500 text-center !leading-7"
             />
           </div>
           
           <div className="w-full my-16 flex flex-col items-center justify-between">
             <Carousel
-            sliderClassName="!w-[62vw] md:!w-[30vw] flex justify-center"
+              sliderClassName="!w-[62vw] md:!w-[30vw] flex justify-center"
               itemsList={
                 teamBlogs2.map((item)=><img {...item} />)
               }
   
             />
             <Heading
-              className="w-[70%] bg-tertiary-500 !p-10 my-4 items-center"
+              className="!w-[70%] bg-tertiary-500 !p-10 my-4 items-center"
               heading="Our"
               subHeading="Workstation"
             />
@@ -301,10 +301,10 @@ export default function About() {
         subHeading="portfolio"
         subHeadingClassName="text-secondary"
         allHeadingClassName="items-center md:items-start mb-10 md:mb-0"
-        className="bg-white rounded-[5rem] py-10 px-10 md:py-12 md:px-12 lg:py-20 lg:px-20 flex flex-col md:flex-row justify-between items-center"
+        className="bg-white rounded-[5rem] py-10 px-10 md:py-12 md:px-12 lg:py-20 lg:px-16 flex flex-col md:flex-row md:gap-4 justify-between items-center"
         illustration={
-          <div className="flex flex-col md:flex-row gap-8 md:gap-0 justify-between items-center">
-            <div className="border-l-4 border-gradient px-4">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-4 lg:gap-8 justify-between items-center">
+            <div className="border-l-4 border-gradient h-full md:max-w-[25vw]">
               <p className="text-secondary-500 px-2">
                 We excel in what we do in that we know what it takes for a brand
                 to grow, we focus on delivering quality results rather than
@@ -312,7 +312,7 @@ export default function About() {
                 companies.
               </p>
             </div>
-            <div className="border-l-4 border-gradient px-4 md:px-0">
+            <div className="border-l-4 border-gradient md:max-w-[20vw]">
               <p className="text-secondary-500 px-2">
                 We develop a robust relationship with our clients, keep up
                 commitments, and work together to build a strong outcome.
@@ -385,18 +385,18 @@ export default function About() {
 const cardList = [
   {
     title: "Focus on client's success",
-    blobSrc: "./assets/About-blob-big.svg",
-    iconSrc: "/assets/Individuals_About.svg",
+    // blobSrc: "./assets/About-blob-big.svg",
+    iconSrc: "/assets/focus-on-client-success.svg",
   },
   {
     title: "Elevate one another",
-    blobSrc: "./assets/About-blob-big.svg",
-    iconSrc: "/assets/Individuals_About.svg",
+    // blobSrc: "./assets/About-blob-big.svg",
+    iconSrc: "/assets/elevate-one-another.svg",
   },
   {
     title: "Possess the will to win.",
-    blobSrc: "./assets/About-blob-big.svg",
-    iconSrc: "/assets/Individuals_About.svg",
+    // blobSrc: "./assets/About-blob-big.svg",
+    iconSrc: "/assets/will-to-win.svg",
   },
 ];
 
@@ -434,10 +434,13 @@ const teamBlogs2 = [
 const focusedIndividual = [
   {
     heading: "Focus On Client Success",
+    text: "Ensuring that their goals and satisfaction remain at the forefront of our priorities.",
   }, {
     heading: "Elevate One Another",
+    text: "Fostering a culture where mutual support and encouragement create a foundation for individual and collective growth.", 
   }, {
     heading: "Possess the will to win",
+    text: "With an indomitable will to win, we approach challenges with determination and resilience",
   }, 
 ]
 
