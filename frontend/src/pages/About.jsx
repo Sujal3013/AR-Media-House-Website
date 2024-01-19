@@ -45,13 +45,13 @@ export default function About() {
 
   return (
     <>
-      <HeroSectionWrapper className="!mb-0" whiteWaveBackground>
+      <HeroSectionWrapper className="!mb-0 pt-10" whiteWaveBackground>
         <Heading
           heading="Get To Know"
           headingClassName="text-center text-primary-500"
           subHeading="Us better"
           subHeadingClassName="text-tertiary-500"
-          className="w-full mt-10 items-center"
+          className="w-full items-center"
         />
         <Button
           arrow
