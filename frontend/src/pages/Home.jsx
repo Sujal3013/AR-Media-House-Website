@@ -172,7 +172,7 @@ export default function Home() {
         className="w-full"
       />
 
-      <section className="bg-tertiary-500 pt-8 relative">
+      <section className="bg-tertiary-500 py-8 relative">
         <Heading
           className="w-full items-center pb-2"
           heading="3-easy step"
@@ -232,7 +232,7 @@ export default function Home() {
           and profit."
           textClassName={SECTION5_TEXT_CLASS}
           illustration={
-            <img src="/assets/VerifyBenchmark.svg" alt="benchmark-image"  className="ml-[-6vw]"/>
+            <img src="/assets/Benchmark.svg" alt="benchmark-image"  className=""/>
           }
           direction={-1}
         />
