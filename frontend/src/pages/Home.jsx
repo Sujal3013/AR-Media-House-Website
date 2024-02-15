@@ -182,7 +182,7 @@ export default function Home() {
         />
 
         {/* <img src="./assets/1-2-3-path.svg" alt="steps" className="hidden lg:block absolute z-10 mt-8 h-[200vh] left-[50%] translate-x-[-60%]"/> */}
-        <HomePage3StepPath className="hidden lg:block absolute top-[-4%] z-10 mt-8 h-[280vh] left-[50%] translate-x-[-60%]" />
+        <HomePage3StepPath className="hidden lg:block absolute top-[-6%] z-10 h-[320vh] left-[49%] translate-x-[-60%]" />
 
         <Section
           backgroundClassName="bg-tertiary-500 py-4"
