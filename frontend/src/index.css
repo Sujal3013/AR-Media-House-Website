@@ -73,6 +73,13 @@ h2, h3, h4, h5, h6 {
   @apply w-[80vw] sm:w-[65vw] md:w-[35vw]
 }
 
+.logo-image {
+  width: 100px;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  mix-blend-mode: color-burn;
+}
+
 @media (max-width: 639px) {
   .max-w-sm-responsive {
     @apply max-w-sm;
