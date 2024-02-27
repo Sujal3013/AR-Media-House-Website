@@ -80,6 +80,21 @@ h2, h3, h4, h5, h6 {
   mix-blend-mode: color-burn;
 }
 
+.ceo-socials path {
+  fill: gray;
+}
+.ceo-image {
+  transition: scale 0.5s ease;
+}
+.ceo-container path {
+  transition: fill 0.5s ease;
+}
+.ceo-container:hover path {
+  fill: black;
+}
+.ceo-container:hover .ceo-image {
+  scale: 1.05;
+}
 @media (max-width: 639px) {
   .max-w-sm-responsive {
     @apply max-w-sm;
