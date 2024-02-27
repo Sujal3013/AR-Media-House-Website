@@ -229,25 +229,25 @@ export default function About() {
         
       <img className="rotate-180 h-[90%]" src="./assets/triple-wave-dark-2.svg" alt="wave" />
 
-      <section className="w-full px-screen-padding py-20 bg-secondary-500 flex flex-col items-center justify-center relative">
+      <section className="w-full px-screen-padding py-10 md:py-20 bg-secondary-500 flex flex-col items-center justify-center relative">
         <Heading
           heading="WE BRING MORE"
           headingClassName="text-primary-500 text-center"
           subHeading="to the table"
           subHeadingClassName="text-tertiary-500 text-center"
-          className="items-center my-4 mb-8"
+          className="items-center mt-2 md:mt-4 mb-6 md:mb-8"
         />
 
-        <div className="w-full pb-10 flex justify-between">
-          <div className="w-[20%] min-h-16 p-4 flex flex-col items-center rounded-lg bg-primary-500">
+        <div className="w-full pb-10 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="w-[90%] md:w-[20%] min-h-16 p-4 flex flex-col items-center rounded-lg bg-primary-500">
             <h1 className="text-5xl font-bold">170+</h1>
             <p className="text-xl text-center font-semibold">Team Members</p>
           </div>
-          <div className="w-[20%] min-h-16 p-4 flex flex-col items-center rounded-lg bg-tertiary-500">
+          <div className="w-[90%] md:w-[20%] min-h-16 p-4 flex flex-col items-center rounded-lg bg-tertiary-500">
             <h1 className="text-5xl font-bold">5+</h1>
             <p className="text-xl text-center font-semibold">Workstations</p>
           </div>
-          <div className="w-[20%] min-h-16 p-4 flex flex-col items-center rounded-lg bg-primary-500">
+          <div className="w-[90%] md:w-[20%] min-h-16 p-4 flex flex-col items-center rounded-lg bg-primary-500">
             <h1 className="text-5xl font-bold">3000+</h1>
             <p className="text-xl text-center font-semibold">Happy Clients</p>
           </div>
@@ -260,18 +260,18 @@ export default function About() {
             subHeadingClassName="text-tertiary-500 text-center"
           />
 
-          <div className="w-full flex justify-between mt-12">
-            <div className="w-[28%] min-h-28 p-4 flex items-center rounded-lg bg-primary-500">
+          <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 mt-6 md:mt-12 text-sm md:text-base leading-[1rem] md:leading-[1.4rem] lg:leading-[1.6rem] lg:font-medium">
+            <div className="w-[90%] md:w-[28%] min-h-24 md:min-h-60 lg:min-h-40 p-4 flex items-center rounded-lg bg-primary-500">
               <p className="text-center">
                 We excel in what we do in that we know what it takes for a brand to grow, we focus on delivering quality results rather than quick results and this is what makes us stand out from our rival companies.
               </p>
             </div>
-            <div className="w-[28%] min-h-28 p-4 flex items-center rounded-lg bg-tertiary-500">
+            <div className="w-[90%] md:w-[28%] min-h-24 md:min-h-60 lg:min-h-40 p-4 flex items-center rounded-lg bg-tertiary-500">
               <p className="text-center">
-              Incorporate details about your brand’s approach and build a robust marketing portfolio.
+                Incorporate details about your brand’s approach and build a robust marketing portfolio.
               </p>
             </div>
-            <div className="w-[28%] min-h-28 p-4 flex items-center rounded-lg bg-primary-500">
+            <div className="w-[90%] md:w-[28%] min-h-24 md:min-h-60 lg:min-h-40 p-4 flex items-center rounded-lg bg-primary-500">
               <p className="text-center">
                 We develop a robust relationship with our clients, keep up commitments, and work together to build a strong outcome.
               </p>
@@ -282,7 +282,7 @@ export default function About() {
 
       <img className="h-[90%]" src="./assets/triple-wave-dark-1.svg" alt="wave" />
 
-      <section className="w-full px-screen-padding py-20 bg-tertiary-500 flex flex-col items-center justify-center relative">
+      <section className="w-full px-screen-padding py-12 md:py-16 bg-tertiary-500 flex flex-col items-center justify-center relative">
         <Heading
           heading="Meet The One"
           headingClassName="text-primary-500 text-center"
@@ -291,16 +291,20 @@ export default function About() {
           className="items-center"
         />
 
-        <div className="w-full px-[2.5vw] py-10 flex flex-col sm:flex-row justify-between gap-12 sm:gap-16 md:gap-20 lg:gap-24">
-          <div className="w-[40%] shadow-lg hover:cursor-pointer rounded-2xl overflow-hidden ceo-container">
+        <div className="w-full px-[2.5vw] py-10 flex flex-col md:flex-row items-center justify-between gap-12 sm:gap-16 md:gap-20 lg:gap-24">
+          <div className="w-[90%] md:w-[40%] shadow-lg hover:cursor-pointer rounded-2xl overflow-hidden ceo-container">
             <img src="/assets/ceo.png" alt="ceo-1" className="ceo-image"/>
+
             <div className="flex justify-between items-center">
               <div>
-                <div className="w-fit min-w-[50%] pl-2 md:pl-3 pr-4 md:pr-6 py-1 mt-1.5 rounded-r-full bg-primary-500 text-2xl font-semibold">
+                <div className="w-fit min-w-[50%] pl-2 md:pl-3 pr-4 md:pr-6 py-1 mt-1.5 rounded-r-full bg-primary-500 text-lg sm:text-2xl font-semibold">
                   Sahil Walia
                 </div>
-                <h2 className="px-2 md:px-3 font-semibold text-gray-500 text-base">Ceo</h2>
+                <h2 className="px-2 md:px-3 font-semibold text-gray-500 text-sm sm:text-base">
+                  Ceo
+                </h2>
               </div>
+
               <div className="basis-[30%] flex justify-between gap-2 pr-3 ceo-socials">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z"></path>
@@ -313,21 +317,26 @@ export default function About() {
                 </svg>
               </div>
             </div>
+
             <div className="p-3 pt-0">
-              <p className="my-3 text-xs md:text-sm">
+              <p className="my-3 text-xs sm:text-sm">
                 Sahil Walia has transformed Idea Clan into a martech company by amalgamating his marketing skills with his technical expertise. As the Director, Sahil has taken the responsibility of setting the vision and technology strategy in addition to driving the data science agenda across the company’s entire portfolio. He is the innovative mind behind the path breaking programming on which Idea Clan floats. Today, he’s driving the company’s strategy to unleash the power of technology over an established empire of online marketing.
               </p>
             </div>
           </div> 
 
-          <div className="w-[40%] shadow-lg hover:cursor-pointer rounded-2xl overflow-hidden ceo-container">
+
+          <div className="w-[90%] md:w-[40%] shadow-lg hover:cursor-pointer rounded-2xl overflow-hidden ceo-container">
             <img src="/assets/ceo.png" alt="ceo-1" className="ceo-image"/>
+
             <div className="flex justify-between items-center">
               <div>
-                <div className="w-fit min-w-[50%] pl-2 md:pl-3 pr-4 md:pr-6 py-1 mt-1.5 rounded-r-full bg-secondary-500 text-tertiary-500 text-2xl font-semibold">
+                <div className="w-fit min-w-[50%] pl-2 md:pl-3 pr-4 md:pr-6 py-1 mt-1.5 rounded-r-full bg-secondary-500 text-tertiary-500 text-lg sm:text-2xl font-semibold">
                   Rohit Ajmani
                 </div>
-                <h2 className="px-2 md:px-3 font-semibold text-gray-500 text-base">Ceo and Co-Founder</h2>
+                <h2 className="px-2 md:px-3 font-semibold text-gray-500 text-sm sm:text-base">
+                  Ceo and Co-Founder
+                </h2>
               </div>
               <div className="basis-[30%] flex justify-between gap-2 pr-3 ceo-socials">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -341,8 +350,9 @@ export default function About() {
                 </svg>
               </div>
             </div>
+
             <div className="p-3 pt-0">
-              <p className="my-3 text-xs md:text-sm">
+              <p className="my-3 text-xs sm:text-sm">
                 Sahil Walia has transformed Idea Clan into a martech company by amalgamating his marketing skills with his technical expertise. As the Director, Sahil has taken the responsibility of setting the vision and technology strategy in addition to driving the data science agenda across the company’s entire portfolio. He is the innovative mind behind the path breaking programming on which Idea Clan floats. Today, he’s driving the company’s strategy to unleash the power of technology over an established empire of online marketing.
               </p>
             </div>
