@@ -16,26 +16,19 @@ const Footer = () => {
             <h1 className='text-sm lg:text-base'>AR MEDIA HOUSE</h1>
           </div>
           {/* Social Media Icons */}
-          <div className='flex gap-1'>
-            <img className='w-7 lg:w-10' src='./assets/Instagram-Logo.svg' alt="instagram" />
-            <img className='w-7 lg:w-10' src='./assets/facebook.svg' alt="facebook" />
-            <img className='w-7 lg:w-10' src='./assets/linkedin.svg' alt="linkedin" />
-            <img className='w-7 lg:w-10' src="./assets/twitter.svg" alt="twitter" />
-            <img className='w-7 lg:w-10' src="./assets/mail.svg" alt="mail" />
+          <div className='flex gap-2'>
+            <a href="https://www.instagram.com/ar_media_house.ai/"><img className='w-7 lg:w-10' src='./assets/Instagram-Logo.svg' alt="instagram" /></a>
+            <a href="https://www.facebook.com/"><img className='w-7 lg:w-10' src='./assets/facebook.svg' alt="facebook" /></a>
+            <a href=""><img className='w-7 lg:w-10' src='./assets/linkedin.svg' alt="linkedin" /></a>
+            <a href="mailto:pariharharish723@gmail.com"><img className='w-7 lg:w-10' src="./assets/mail.svg" alt="mail" /></a>
           </div>
         </div>
         <div className="flex gap-8 md:block">
           {/* Addresses Line 1 */}
           <div>
-            <h1 className="text-sm lg:text-base">Address Line 1</h1>
-            <p className="text-sm lg:text-base">--------------------------------------------</p>
-            <p className="text-sm lg:text-base">------------------</p>
-          </div>
-          {/* Address Line 2 */}
-          <div>
-            <h1 className="text-sm lg:text-base">Address Line 2</h1>
-            <p className="text-sm lg:text-base">--------------------------------------------</p>
-            <p className="text-sm lg:text-base">--------</p>
+            <h1 className="text-sm lg:text-base">402,Kuber House</h1>
+            <p className="text-sm lg:text-base">162,Kanchan Bagh,Indore</p>
+            <p className="text-sm lg:text-base">Madhya Pradesh - 452001</p>
           </div>
         </div>
       </div>
@@ -101,8 +94,13 @@ const Footer = () => {
 
       <div className='mt-8 py-1 text-xs flex flex-wrap justify-center gap-1'>
         <p className='px-2 text-wrap sm:text-nowrap'>Copyrights @2023 are reserved with the ARMEDIAHOUSE.</p>
-        <p className='px-2 text-wrap sm:text-nowrap'>For more details contact +91 XXXXXXXXXX or armediahouse@gmail.com</p>
+        
       </div>
+      <div className='text-[10px] flex flex-wrap justify-center gap-1'>
+      <p className='px-2 text-wrap sm:text-nowrap'>For more details contact +91 7470515476 or pariharharish723@gmail.com</p>
+        
+      </div>
+      
 
       <Triangle className="top-[-30%] left-[5%]" secondary />
       <Triangle className="bottom-[8%] right-[16%]" secondary />

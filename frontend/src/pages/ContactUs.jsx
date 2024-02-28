@@ -30,13 +30,13 @@ const ContactUs = () => {
 
       <Section 
         backgroundClassName="px-screen-padding !bg-tertiary-500 py-14 pb-20 md:py-28 md:pb-36 md:!flex-col md:gap-32 lg:!flex-row lg:gap-0"
-        heading="Your Problem Our Solution"
+        heading="Contact"
         headingClassName="text-center lg:text-start text-primary-500"
-        subHeading="contact information"
+        subHeading="Information"
         allHeadingClassName="items-center lg:items-start"
             
         illustration={
-          <div className="w-full lg:w-auto flex flex-col md:flex-row items-center justify-evenly lg:justify-between md:gap-16">
+          <div className="w-full lg:w-auto flex flex-col md:flex-row items-center justify-evenly lg:justify-between lg:items-start md:gap-16">
             <ServicesCards 
               className="min-w-[85%] sm:min-w-[50vw] md:!min-w-[35vw] lg:!min-w-0 flex !justify-center relative md:!justify-end mt-12 md:mt-0"
               heading="United States" 
@@ -57,9 +57,11 @@ const ContactUs = () => {
                 />
               }
               button={
-                <a href="https://maps.app.goo.gl/44zPJFBY2Po67QRr5"><Button className="bg-primary-500 absolute bottom-[-5%]">Get Direction</Button></a>
+                <Button to="https://maps.app.goo.gl/44zPJFBY2Po67QRr5" className="bg-primary-500 absolute bottom-[-5%]">Get Direction</Button>
               }
             />
+            
+           
           </div>
         }
         Shapes={
