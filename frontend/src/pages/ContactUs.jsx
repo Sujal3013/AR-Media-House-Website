@@ -16,7 +16,7 @@ const ContactUs = () => {
             {/* Form */}
             <Form />
 
-            {/* illustartion */}
+            {/* Illustartion */}
             <img src="/assets/ContactUs.svg" alt="" className="mb-8 hidden md:w-[40vw] md:block"/>
           </div>
 
@@ -43,9 +43,9 @@ const ContactUs = () => {
               headingClassName="mt-20 mb-4 !text-2xl"
               text={
                 <>
-                  2035 Sunset Lake RD,STE B2, <br /> Newark – 19702 <br /> Delaware, United States
+                  402,Kuber House <br /> 162,Kanchan Bagh,Indore <br /> Madhya Pradesh - 452001
                   <br/><br/>
-                  <p className="text-secondary-500">contact@armediahouse.com</p>
+                  <p className="text-secondary-500">pariharharish723@gmail.com</p>
                 </>
               }
               textClassName="mb-8 sm:mb-12 sm:!text-lg md:!text-sm"
@@ -57,31 +57,7 @@ const ContactUs = () => {
                 />
               }
               button={
-                <Button className="bg-primary-500 absolute bottom-[-5%]">Get Direction</Button>
-              }
-            />
-            
-            <ServicesCards 
-              className="min-w-[85%] sm:min-w-[50vw] md:!min-w-[35vw] lg:!min-w-0 flex !justify-center relative !justify-end  mt-20 md:mt-0"
-              heading="India" 
-              headingClassName="mt-20 mb-4 !text-2xl"
-              text={
-                <>
-                  2035 Sunset Lake RD,STE B2, <br /> Newark – 19702 <br /> Delaware, United States
-                  <br/><br/>
-                  <p className="text-secondary-500">contact@armediahouse.com</p>
-                </>
-              }
-              textClassName="mb-8 sm:mb-12 sm:!text-lg md:!text-sm"
-              icon={
-                <img
-                  src="/assets/location-logo.svg"
-                  className="absolute top-0 md:top-[-24%] mx-auto"
-                  alt=""
-                />
-              }
-              button={
-                <Button className="bg-primary-500 absolute bottom-[-5%]">Get Direction</Button>
+                <a href="https://maps.app.goo.gl/44zPJFBY2Po67QRr5"><Button className="bg-primary-500 absolute bottom-[-5%]">Get Direction</Button></a>
               }
             />
           </div>

@@ -5,7 +5,7 @@ import "../index.css";
 
 export default function Navbar() {
   const location = useLocation().pathname;
-  const ownerNumber = '+9187706447543'; 
+  const ownerNumber = '+917470515476'; 
 
   const handleWhatsappClick = () => {
     const message = encodeURIComponent('Hello! I have a question.');
