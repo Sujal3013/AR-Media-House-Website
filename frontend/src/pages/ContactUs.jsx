@@ -39,7 +39,7 @@ const ContactUs = () => {
           <div className="w-full lg:w-auto flex flex-col md:flex-row items-center justify-evenly lg:justify-between lg:items-start md:gap-16">
             <ServicesCards 
               className="min-w-[85%] sm:min-w-[50vw] md:!min-w-[35vw] lg:!min-w-0 flex !justify-center relative md:!justify-end mt-12 md:mt-0"
-              heading="United States" 
+              heading="India" 
               headingClassName="mt-20 mb-4 !text-2xl"
               text={
                 <>

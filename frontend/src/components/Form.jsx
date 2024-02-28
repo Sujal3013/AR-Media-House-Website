@@ -34,7 +34,7 @@ export default function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const regex = /^\d{2}\+\d{10}$/;
+    // const regex = /^\d{2}\+\d{10}$/;
 
     if (
       data.name &&
@@ -43,7 +43,7 @@ export default function Form() {
       data.contactNumber &&
       selectedOptions.length > 0
     ) {
-      if (regex.test(data.contactNumber)) {
+      if (/*regex.test(data.contactNumber)*/true ){
         // send message
         emailjs
           .send(
@@ -81,7 +81,7 @@ export default function Form() {
     setValidator({
       ...validator,
       Name: data.name !== "",
-      contact_number: data.contactNumber && regex.test(data.contactNumber),
+      contact_number: data.contactNumber ,/*&& regex.test(data.contactNumber),*/
       email: data.email !== "",
       field_of_interest: selectedOptions.length > 0,
     });
@@ -197,7 +197,7 @@ const dataRequired = [
     textArea: false,
     placeholder: "+91xxxxxxxxxx",
     type: "tel",
-    pattern: "[0-9]{2}\+[0-9]{10}",
+    // pattern: "[0-9]{2}\+[0-9]{10}",
     required: true,
   },
   {
