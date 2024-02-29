@@ -228,7 +228,11 @@ export default function About() {
         }
       />
         
-      <img className="rotate-180 h-[90%]" src="./assets/triple-wave-dark-2.svg" alt="wave" />
+      <img 
+        className="rotate-180 h-[90%] w-full translate-y-1" 
+        src="./assets/triple-wave-dark-2.svg" 
+        alt="wave" 
+      />
 
       <section className="w-full px-screen-padding py-10 md:py-20 bg-secondary-500 flex flex-col items-center justify-center relative">
         <Heading
@@ -305,7 +309,7 @@ export default function About() {
         </div>  
       </section>
 
-      <img className="h-[90%]" src="./assets/triple-wave-dark-1.svg" alt="wave" />
+      <img className="h-[90%] w-full" src="./assets/triple-wave-dark-1.svg" alt="wave" />
 
       <section className="w-full px-screen-padding py-12 md:py-16 bg-tertiary-500 flex flex-col items-center justify-center relative">
         <Heading

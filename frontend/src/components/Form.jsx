@@ -11,14 +11,15 @@ export default function Form() {
   });
 
   const [validator, setValidator] = useState({
-    Name: true,
-    contact_number: true,
-    email: true,
-    field_of_interest: true,
+    name: false,
+    contact_number: false,
+    email: false,
+    field_of_interest: false,
   });
 
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [showError, setShowError] = useState(false);
+  const [error, setError] = useState("");
 
   const handleCheckboxChange = (value) => {
     if (!selectedOptions.includes(value)) {
@@ -34,7 +35,8 @@ export default function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // const regex = /^\d{2}\+\d{10}$/;
+    const regexPhNo = /^\d{2}\+\d{10}$/;
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (
       data.name &&
@@ -43,7 +45,7 @@ export default function Form() {
       data.contactNumber &&
       selectedOptions.length > 0
     ) {
-      if (/*regex.test(data.contactNumber)*/true ){
+      if (regexPhNo.test(data.contactNumber) && regexEmail.test(data.email)){
         // send message
         emailjs
           .send(
@@ -63,14 +65,14 @@ export default function Form() {
             console.log("Email sent successfully:", response);
             setData({ name: "", email: "", contactNumber: "", message: "" });
             setValidator({
-              Name: true,
+              name: true,
               contact_number: true,
               email: true,
               field_of_interest: true,
             });
           })
           .catch((error) => {
-            console.error("Error sending email:", error);
+            // console.error("Error sending email:", error);
           });
 
         return;
@@ -80,9 +82,9 @@ export default function Form() {
     // show form validation-issues
     setValidator({
       ...validator,
-      Name: data.name !== "",
-      contact_number: data.contactNumber ,/*&& regex.test(data.contactNumber),*/
-      email: data.email !== "",
+      name: data.name !== "",
+      contact_number: data.contactNumber && regexPhNo.test(data.contactNumber),
+      email: data.email !== "" && regexEmail.test(data.email),
       field_of_interest: selectedOptions.length > 0,
     });
 
@@ -122,9 +124,9 @@ export default function Form() {
                   value.placeholder ? value.placeholder : value.title
                 }
                 className={inputClasses}
-                onChange={(e) =>
+                onChange={(e) =>{
                   setData({ ...data, [value.title]: e.target.value })
-                }
+                }}
                 {...value}
                 key={index}
               />
@@ -152,7 +154,20 @@ export default function Form() {
             showError ? "block" : "hidden"
           } text-red-400 mb-2 text-xl font-semibold`}
         >
-          *Please Fill all the required fields
+          {
+            error !== "" ? 
+              error
+            : 
+              Object.keys(validator).map((key, indx)=>{
+                if(validator[key]) return;
+                return (
+                  <span key={indx}>
+                    {key==="field_of_interest"?"interest":key}{", "}
+                  </span>
+                );
+              })
+          }
+          {error === "" && `${Object.keys(validator)?.filter(key=>!validator[key])?.length === 1 ? "is" : "are"} missing or not in correct format.`}
         </span>
 
         <Button
@@ -195,7 +210,7 @@ const dataRequired = [
   {
     title: "contactNumber",
     textArea: false,
-    placeholder: "+91xxxxxxxxxx",
+    placeholder: "91+xxxxxxxxxx",
     type: "tel",
     // pattern: "[0-9]{2}\+[0-9]{10}",
     required: true,
