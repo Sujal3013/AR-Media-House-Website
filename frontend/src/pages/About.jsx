@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import {
+  AnimateNumber, 
   Button,
   Heading,
   StoryComponent,
@@ -29,7 +30,7 @@ const OPTS = {
 };
 
 const ILLUSTRATION_CLASS =
-  "max-w-[465px] rounded-full text-center basis-1/2 h-auto";
+  "rounded-full text-center basis-[40%] h-auto";
 
 export default function About() {
   document.querySelector("title").innerHTML = "About - AR Media House";
@@ -117,7 +118,7 @@ export default function About() {
           clientele steadily grew, laying the groundwork for what was to come."
           Image={
             <div className={ILLUSTRATION_CLASS}>
-              <img src="/assets/Story_pic.png" alt="" className="w-full" />
+              <img src="/assets/Story_pic.png" alt="pic" className="" />
             </div>
           }
           direction={1}
@@ -240,15 +241,39 @@ export default function About() {
 
         <div className="w-full pb-10 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="w-[90%] md:w-[20%] min-h-16 p-4 flex flex-col items-center rounded-lg bg-primary-500">
-            <h1 className="text-5xl font-bold">170+</h1>
+            <h1 className="text-5xl font-bold">
+              <AnimateNumber
+                className="inline"
+                from={0}
+                to={170}
+                duration={2.5}
+              />  
+              +
+            </h1>
             <p className="text-xl text-center font-semibold">Team Members</p>
           </div>
           <div className="w-[90%] md:w-[20%] min-h-16 p-4 flex flex-col items-center rounded-lg bg-tertiary-500">
-            <h1 className="text-5xl font-bold">5+</h1>
+            <h1 className="text-5xl font-bold">
+              <AnimateNumber
+                className="inline"
+                from={0}
+                to={5}
+                duration={2.5}
+              />
+              +
+            </h1>
             <p className="text-xl text-center font-semibold">Workstations</p>
           </div>
           <div className="w-[90%] md:w-[20%] min-h-16 p-4 flex flex-col items-center rounded-lg bg-primary-500">
-            <h1 className="text-5xl font-bold">3000+</h1>
+            <h1 className="text-5xl font-bold">
+              <AnimateNumber
+                className="inline"
+                from={0}
+                to={3000}
+                duration={2.5}
+              />
+              +
+            </h1>
             <p className="text-xl text-center font-semibold">Happy Clients</p>
           </div>
         </div>
