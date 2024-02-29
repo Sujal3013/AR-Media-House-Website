@@ -25,7 +25,7 @@ const StoryComponent = ({
       "md:flex-row": direction && direction > 0,
     }
   );
-  const headingClasses = classNames("font-playfair-display text-3xl sm:text-4xl md:text-5xl leading-1.2 font-bold text-primary-500", {
+  const headingClasses = classNames("font-playfair-display text-3xl sm:text-4xl md:text-5xl font-bold text-primary-500 !leading-[2.6rem]", {
     [headingClassName]: headingClassName,
   });
 
@@ -38,7 +38,7 @@ const StoryComponent = ({
     [textClassName]: textClassName,
     "text-secondary-500": !textClassName,
   });
-  const divClasses = classNames("flex flex-col justify-center basis-1/2 gap-10 ", {});
+  const divClasses = classNames("flex flex-col justify-center basis-[40%] gap-6 ", {});
 
   return (
     <>
