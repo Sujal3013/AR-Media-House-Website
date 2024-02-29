@@ -3,14 +3,13 @@ import { motion, useScroll } from "framer-motion";
 import classNames from 'classnames';
 
 export default function HomePage3StepPath({className}) {
-  const classes = classNames("py-[30vh]", {
+  const classes = classNames("", {
     [className]: className,
   });
-
   const pathRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: pathRef,
-    offset: ["start start", "end start"],
+    offset: ["start 0.5", "end 0.4"],
   });
 
   return (
@@ -19,7 +18,7 @@ export default function HomePage3StepPath({className}) {
         <motion.path 
           d="M139.817 50.1423V465.684H229.52V805.478H130V1048.19" 
           stroke="#080403" 
-          strokeWidth={1.5}
+          strokeWidth={1.8}
           style={{pathLength: scrollYProgress}}
         />
         <path d="M112.136 1060.43C132.094 1067.91 153.958 1056.71 160.971 1035.42C167.984 1014.13 157.49 990.803 137.533 983.321C117.575 975.839 95.7113 987.034 88.6982 1008.33C81.6852 1029.62 92.1787 1052.94 112.136 1060.43Z" fill="#FF9356"/>

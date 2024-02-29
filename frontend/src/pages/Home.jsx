@@ -181,8 +181,8 @@ export default function Home() {
           subHeadingClassName="text-center"
         />
 
-        {/* <img src="./assets/1-2-3-path.svg" alt="steps" className="hidden lg:block absolute z-10 mt-8 h-[200vh] left-[50%] translate-x-[-60%]"/> */}
-        <HomePage3StepPath className="hidden lg:block absolute top-[-6%] z-10 h-[320vh] left-[49%] translate-x-[-60%]" />
+        <div className="relative"> {/*  1-2-3-path wrapper */}
+        <HomePage3StepPath className="hidden lg:block absolute z-10 top-24 xl:top-36 left-[49%] translate-x-[-60%]" />
 
         <Section
           backgroundClassName="bg-tertiary-500 py-4"
@@ -236,6 +236,7 @@ export default function Home() {
           }
           direction={-1}
         />
+        </div>
       </section>
 
 
@@ -278,10 +279,9 @@ export default function Home() {
 }
 
 function Services(){
-  const {winSize, BR_1, BR_2, BR_3} = useWinSizeContext()
-  let toReturn;
-  if(winSize > BR_2){
-    toReturn = <div className="flex flex-col items-center gap-8 md:pb-24">
+    return <div>
+    {/*for large screen*/}
+    <div className="hidden md:block flex flex-col items-center gap-8 md:pb-24">
       <ul className="w-full flex justify-between gap-[3vw] lg:gap-[6vw] py-8 relative">
         {
           services.slice(0,4).map((s, index)=>(
@@ -299,9 +299,9 @@ function Services(){
         }
       </ul>
     </div>
-  }
-  else if(winSize > BR_1){
-    toReturn = <div className="flex flex-col items-center gap-8">
+    
+    {/*For middium screens*/}
+    <div className="hidden sm:block md:hidden flex flex-col items-center gap-8">
       <ul className="w-full flex justify-evenly gap-[3vw] lg:gap-[6vw] py-8 relative">
         {
           services.slice(0,2).map((s, index)=>(
@@ -337,9 +337,9 @@ function Services(){
         }
       </ul>
     </div>
-  }
-  else{
-    toReturn = <div className="flex flex-col items-center gap-8">
+
+    {/*For small screens*/}
+    <div className="sm:hidden flex flex-col items-center gap-8">
       <ul className="w-full flex flex-col gap-[3vw] py-8 items-center">
         {
           services.map((s, index)=>(
@@ -348,9 +348,7 @@ function Services(){
         }
       </ul>
     </div>
-  }
-
-  return toReturn
+  </div>
 }
 
 const logoicon1 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Ecommercelogo.png" alt="" /></div>
