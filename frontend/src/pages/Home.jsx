@@ -279,10 +279,9 @@ export default function Home() {
 }
 
 function Services(){
-  const {winSize, BR_1, BR_2, BR_3} = useWinSizeContext()
-  let toReturn;
-  if(winSize > BR_2){
-    toReturn = <div className="flex flex-col items-center gap-8 md:pb-24">
+    return <div>
+    {/*for large screen*/}
+    <div className="hidden md:block flex flex-col items-center gap-8 md:pb-24">
       <ul className="w-full flex justify-between gap-[3vw] lg:gap-[6vw] py-8 relative">
         {
           services.slice(0,4).map((s, index)=>(
@@ -300,9 +299,9 @@ function Services(){
         }
       </ul>
     </div>
-  }
-  else if(winSize > BR_1){
-    toReturn = <div className="flex flex-col items-center gap-8">
+    
+    {/*For middium screens*/}
+    <div className="hidden sm:block md:hidden flex flex-col items-center gap-8">
       <ul className="w-full flex justify-evenly gap-[3vw] lg:gap-[6vw] py-8 relative">
         {
           services.slice(0,2).map((s, index)=>(
@@ -338,9 +337,9 @@ function Services(){
         }
       </ul>
     </div>
-  }
-  else{
-    toReturn = <div className="flex flex-col items-center gap-8">
+
+    {/*For small screens*/}
+    <div className="sm:hidden flex flex-col items-center gap-8">
       <ul className="w-full flex flex-col gap-[3vw] py-8 items-center">
         {
           services.map((s, index)=>(
@@ -349,9 +348,7 @@ function Services(){
         }
       </ul>
     </div>
-  }
-
-  return toReturn
+  </div>
 }
 
 const logoicon1 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Ecommercelogo.png" alt="" /></div>
