@@ -44,34 +44,20 @@ const blogs=[
     id:1,
     name:"AR Trader Revolutionizes Lead Generation and Brand Awareness with AR Media House",
     domain:"Marketing",
-    image:"/assets/Case-study.svg",
-    description:"The PI Live Europe conference, hosted in the illustrious city of London on October 24th and 25th, 2023, provided an esteemed platform for marketing experts to augment their performance industry…"
+    image:"/assets/Case-study.jpg",
+    description:"Once upon a time, in the dynamic realm of financial education, AR Research House of Finance and Consultancy Services, affectionately known as AR Trader, embarked on a transformative journey…"
   },
   {
     id:2,
-    name:"Elevating Excellence: Idea Clan’s Networking Pursuit at PI Live Europe 2023",
+    name:"Real Estate Elevates Lead Generation with AR Media",
     domain:"Marketing",
-    image:"/assets/Case-study.svg",
-    description:"The PI Live Europe conference, hosted in the illustrious city of London on October 24th and 25th, 2023, provided an esteemed platform for marketing experts to augment their performance industry…"
+    image:"/assets/Case-study.jpg",
+    description:"Embark on the journey of a Real Estate company seeking to revolutionise its lead generation strategy with the expertise of AR Media. Discover how strategic planning…"
   },
   { id:3,
-    name:"Elevating Excellence: Idea Clan’s Networking Pursuit at PI Live Europe 2023",
+    name:" Insta Transfer's Digital Leap with AR Media House",
     domain:"Marketing",
-    image:"/assets/Case-study.svg",
-    description:"The PI Live Europe conference, hosted in the illustrious city of London on October 24th and 25th, 2023, provided an esteemed platform for marketing experts to augment their performance industry…"
-  },
-  {
-    id:4,
-    name:"Elevating Excellence: Idea Clan’s Networking Pursuit at PI Live Europe 2023",
-    domain:"Marketing",
-    image:"/assets/Case-study.svg",
-    description:"The PI Live Europe conference, hosted in the illustrious city of London on October 24th and 25th, 2023, provided an esteemed platform for marketing experts to augment their performance industry…"
-  },
-  {
-    id:5,
-    name:"Elevating Excellence: Idea Clan’s Networking Pursuit at PI Live Europe 2023",
-    domain:"Marketing",
-    image:"/assets/Case-study.svg",
-    description:"The PI Live Europe conference, hosted in the illustrious city of London on October 24th and 25th, 2023, provided an esteemed platform for marketing experts to augment their performance industry…"
+    image:"/assets/Case-study.jpg",
+    description:"In the bustling landscape of B2B services, Insta Transfer, a multifaceted company offering courier services, banking logistics, payments, and a revolutionary franchise model…"
   }
 ]

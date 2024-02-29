@@ -15,7 +15,7 @@ const IndividualCaseStudy = () => {
       {blog ? (
         <>
           <div
-            className={`h-[80vh] w-full bg-[url('/assets/Case-Study-Individual.png')] bg-cover bg-no-repeat relative mb-4`}
+            className={`h-[80vh] w-full bg-[url('/assets/Case-study.jpg')] bg-contain bg-no-repeat relative mb-4`}
           >
             <div className="h-full w-full flex flex-col justify-center items-center text-white">
               <p className="mb-4 border border-solid border-white inline-block px-4 text-lg py-2">
@@ -87,10 +87,10 @@ export default IndividualCaseStudy;
 
 const blogs = [
   {
-    id: 5,
+    id: 1,
     name: "AR Trader Revolutionizes Lead Generation and Brand Awareness with AR Media House",
     domain: "Marketing",
-    image: "/assets/Case-study.svg",
+    image: "/assets/Case-study.jpg",
     description: [
       {
         heading: "",
@@ -144,7 +144,7 @@ const blogs = [
     ],
   },
   {
-    id: 4,
+    id: 2,
     name: "Real Estate Elevates Lead Generation with AR Media",
     domain: "Marketing",
     image: "/assets/Case-study.svg",
