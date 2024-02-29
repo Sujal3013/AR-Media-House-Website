@@ -137,7 +137,7 @@ export default function Services() {
                     <img src={p.imgSrc} alt={p.alt} className={p.className} />
                     { 
                       p.alt && 
-                      <p className="whitespace-nowrap font-bold text-3xl">
+                      <p className="whitespace-nowrap font-bold text-xl md:text-3xl">
                         {p.alt}
                       </p>
                     }
@@ -287,7 +287,7 @@ const platforms = [
   {
     imgSrc: "./assets/tiktok-black.svg",
     alt: "tiktok",
-    className: "logo-image",
+    className: "logo-image w-16 h-16",
   },
   {
     imgSrc: "./assets/instagram-black.svg",
@@ -297,7 +297,7 @@ const platforms = [
   {
     imgSrc: "./assets/twitter-black.svg",
     alt: "twitter",
-    className: "logo-image",
+    className: "logo-image w-16 h-16 md:w-20 md:h-20",
   },
   {
     imgSrc: "./assets/google-ads-black.svg",
