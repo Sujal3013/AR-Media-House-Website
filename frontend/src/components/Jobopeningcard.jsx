@@ -15,7 +15,7 @@ export const Jobopeningcard = ({id=0,title, location, daysAgo }) => {
         </div>
         </div>
         
-        <Button className="bg-primary-500 text-secondary-500 rounded-lg w-full md:w-auto" arrow>
+        <Button className="bg-primary-500 text-secondary-500 rounded-lg w-full md:w-auto" to="https://forms.gle/VTeHbsMJ7RK4hhSx5" arrow>
           Apply Now
         </Button>
       </div>
