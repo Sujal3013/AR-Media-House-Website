@@ -22,7 +22,7 @@ export default function Technologies() {
 
   return (
     <>
-      <HeroSectionWrapper className="flex flex-col gap-12 py-10 justify-between">
+      <HeroSectionWrapper className="flex flex-col gap-12 py-10 pb-2 md:pb-8 justify-between">
         <div className="flex">
           {/* text content right side */}
           <div className="flex-col w-[60vw] my-[0vh]">
@@ -48,7 +48,7 @@ export default function Technologies() {
         {/* Technologies */}
         <div className="flex flex-col items-center justify-center ">
           <h1 className="text-md sm:text-xl lg:text-2xl text-center font-bold font-jost text-slate-200 tracking-wider my-8">Technologies we Use</h1>
-          <div className="w-[98vw] h-28 mb-8 flex justify-center items-center relative overflow-hidden">
+          <div className="w-[98vw] h-28 mb-2 md:mb-8 flex justify-center items-center relative overflow-hidden">
           <CompaniesAnimate className="flex justify-center items-center gap-8 sm:gap-16 md:gap-20 lg:gap-24" length={7}>
             {
               <>
@@ -157,7 +157,7 @@ export default function Technologies() {
       />
 
       {/* HELP CARD */}
-      <BlackSection>
+      <BlackSection className="!pt-6">
         <Section
           backgroundClassName="!px-0"
           heading="We'll Help you"

@@ -62,7 +62,7 @@ export default function Form() {
             "WJ8SiZlnj8QyzKCCU"
           )
           .then((response) => {
-            console.log("Email sent successfully:", response);
+            console.log("Email sent successfully:");
             setData({ name: "", email: "", contactNumber: "", message: "" });
             setValidator({
               name: true,
@@ -72,7 +72,7 @@ export default function Form() {
             });
           })
           .catch((error) => {
-            // console.error("Error sending email:", error);
+            setError("Something went Wrong!");
           });
 
         return;
@@ -133,7 +133,7 @@ export default function Form() {
             );
           else
             return (
-              <textarea
+              <textArea
                 name={value.title}
                 className={inputClasses}
                 placeholder={
