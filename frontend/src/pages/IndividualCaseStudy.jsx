@@ -15,7 +15,7 @@ const IndividualCaseStudy = () => {
       {blog ? (
         <>
           <div
-            className={`h-[80vh] w-full bg-[url('/assets/Case-study.jpg')] bg-cover bg-no-repeat relative mb-4`}
+            className={`h-[80vh] w-full bg-[url('/assets/Case-study.jpg')] bg-contain bg-no-repeat relative mb-4`}
           >
             <div className="h-full w-full flex flex-col justify-center items-center text-white">
               <p className="mb-4 border border-solid border-white inline-block px-4 text-lg py-2">
