@@ -18,8 +18,8 @@ const Footer = () => {
           {/* Social Media Icons */}
           <div className='flex gap-2'>
             <a href="https://www.instagram.com/ar_media_house.ai/"><img className='w-7 lg:w-10' src='./assets/Instagram-Logo.svg' alt="instagram" /></a>
-            <a href="https://www.facebook.com/"><img className='w-7 lg:w-10' src='./assets/facebook.svg' alt="facebook" /></a>
-            <a href=""><img className='w-7 lg:w-10' src='./assets/linkedin.svg' alt="linkedin" /></a>
+            <a href="https://www.facebook.com/profile.php?id=61556593812264"><img className='w-7 lg:w-10' src='./assets/facebook.svg' alt="facebook" /></a>
+            <a href="https://www.linkedin.com/in/ar-media-house-4855732a5/"><img className='w-7 lg:w-10' src='./assets/linkedin.svg' alt="linkedin" /></a>
             <a href="mailto:pariharharish723@gmail.com"><img className='w-7 lg:w-10' src="./assets/mail.svg" alt="mail" /></a>
           </div>
         </div>

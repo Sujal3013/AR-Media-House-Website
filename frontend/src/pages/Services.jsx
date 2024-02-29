@@ -70,7 +70,7 @@ export default function Services() {
             </FadeInUp>
             {/* Buttons */}
             <div className="flex gap-6 py-10">
-              <Button arrow className="bg-primary-500 text-secondary-500">
+              <Button to="/contact" arrow className="bg-primary-500 text-secondary-500">
                 Let's Connect
               </Button>
             </div>
@@ -118,7 +118,7 @@ export default function Services() {
               subHeading="through the roof"
               subHeadingClassName="text-tertiary-500"
             />
-            <Button className="bg-primary-500 mt-14" arrow>
+            <Button tp="/about" className="bg-primary-500 mt-14" arrow>
               Learn More
             </Button>
           </div>
@@ -163,7 +163,7 @@ export default function Services() {
         />
         <div className="text-center w-fit text-secondary-500 font-bold">
           <div className="text-xl sm:text-3xl lg:text-5xl">
-            $
+            Rs.
             <AnimateNumber
               className="inline"
               from={0}

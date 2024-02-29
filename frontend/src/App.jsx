@@ -21,15 +21,15 @@ function App() {
     <BrowserRouter>
       <WinSizeProvider>
       <Routes>
-        <Route path="/" element={<SharedLayout />}>
+        <Route exact path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
-          <Route path="services" element={<Services />} />
-          <Route path="technologies" element={<Technologies />} />
-          <Route path="about" element={<About />} />
-          <Route path="case-studies" element={<CaseStudies />} />
-          <Route path="case-studies/:id" element={<IndividualCaseStudy />} />
-          <Route path="contact" element={<ContactUs />} />
-          <Route path="careers" element={<Careers />} />
+          <Route exact path="services" element={<Services />} />
+          <Route exact path="technologies" element={<Technologies />} />
+          <Route exact path="about" element={<About />} />
+          <Route exact path="case-studies" element={<CaseStudies />} />
+          <Route exact path="case-studies/:id" element={<IndividualCaseStudy />} />
+          <Route exact path="contact" element={<ContactUs />} />
+          <Route exact path="careers" element={<Careers />} />
         </Route>
         <Route path="*" element={<Page404 />} />
       </Routes>

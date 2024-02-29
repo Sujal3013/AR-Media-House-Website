@@ -30,9 +30,9 @@ const ContactUs = () => {
 
       <Section 
         backgroundClassName="px-screen-padding !bg-tertiary-500 py-14 pb-20 md:py-28 md:pb-36 md:!flex-col md:gap-32 lg:!flex-row lg:gap-0"
-        heading="Contact"
+        heading="Contact Information"
         headingClassName="text-center lg:text-start text-primary-500"
-        subHeading="Information"
+        subHeading="Let's Collaborate !"
         allHeadingClassName="items-center lg:items-start"
             
         illustration={
