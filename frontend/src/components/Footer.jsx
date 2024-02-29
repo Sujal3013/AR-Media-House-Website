@@ -22,11 +22,15 @@ const Footer = () => {
             <a href="https://www.linkedin.com/in/ar-media-house-4855732a5/"><img className='w-7 lg:w-10' src='./assets/linkedin.svg' alt="linkedin" /></a>
             <a href="mailto:pariharharish723@gmail.com"><img className='w-7 lg:w-10' src="./assets/mail.svg" alt="mail" /></a>
           </div>
+          <div>
+          <h1 className="text-sm lg:text-base mt-2"><strong>E-mail - business@armediahouse.in</strong></h1>
+          </div>
         </div>
         <div className="flex gap-8 md:block">
-          {/* Addresses Line 1 */}
+          
           <div>
-            <h1 className="text-sm lg:text-base">402,Kuber House</h1>
+            <img src="/assets/location.png" className='inline w-6 h-6' alt="" />
+            <h1 className="text-sm inline lg:text-base"> 402,Kuber House</h1>
             <p className="text-sm lg:text-base">162,Kanchan Bagh,Indore</p>
             <p className="text-sm lg:text-base">Madhya Pradesh - 452001</p>
           </div>
@@ -97,7 +101,7 @@ const Footer = () => {
         
       </div>
       <div className='text-[10px] flex flex-wrap justify-center gap-1'>
-      <p className='px-2 text-wrap sm:text-nowrap'>For more details contact +91 7470515476 or pariharharish723@gmail.com</p>
+      <p className='px-2 text-wrap sm:text-nowrap'>For more details contact +91 7470515476 or business@armediahouse.in</p>
         
       </div>
       
