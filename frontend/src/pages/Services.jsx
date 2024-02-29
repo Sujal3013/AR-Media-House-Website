@@ -1,6 +1,7 @@
 import {} from "react";
 import {
   Button,
+  CompaniesAnimate, 
   Heading,
   HeroSectionWrapper,
   Wonder,
@@ -123,19 +124,28 @@ export default function Services() {
           </div>
       </section>
 
-      <section className="bg-tertiary-500 py-4 px-screen-padding relative">
-        <div className="flex flex-wrap md:flex-nowrap justify-center md:justify-between items-center pt-4 pb-8">
-          <Heading heading="Platform" subHeading="to help you" />
-          <div className="grid bg-tertiary-500 p-8 grid-cols-2 sm:grid-cols-4 gap-8 md:gap-12 justify-start">
-            {platforms.map((el, ind) => (
-              <img
-                key={ind}
-                src={el.imgSrc}
-                alt={el.alt}
-                className="max-w-24 w-[145%] md:max-w-32"
-              />
-            ))}
-          </div>
+      <section className="bg-tertiary-500 py-4 px-screen-padding flex flex-col flex-wrap md:flex-nowrap md:flex-col justify-center md:justify-between items-center pt-4 pb-8">
+        <Heading heading="Platform" subHeading="to help you" className="w-full items-center" />
+        
+        <div className="mt-12 w-full h-[120px] relative">
+          <CompaniesAnimate className="flex justify-center items-center gap-12 sm:gap-16 md:gap-20 lg:gap-24" length={platforms.length}>
+            {
+              platforms.map((p, index)=>{
+                let listClassName = "h-full flex flex-col items-center justify-between"
+                return (
+                  <li key={index} className={listClassName}>
+                    <img src={p.imgSrc} alt={p.alt} className={p.className} />
+                    { 
+                      p.alt && 
+                      <p className="whitespace-nowrap font-bold text-3xl">
+                        {p.alt}
+                      </p>
+                    }
+                  </li>
+                )
+              })
+            }
+          </CompaniesAnimate>
         </div>
       </section>
 
@@ -260,35 +270,43 @@ const section3CardList = [
 
 const platforms = [
   {
-    imgSrc: "./assets/YouTube_Logo+text.svg",
+    imgSrc: "./assets/youtube-black.svg",
     alt: "Youtube",
+    className: "logo-image",
   },
   {
-    imgSrc: "./assets/facebook-1.svg",
+    imgSrc: "./assets/facebook-black.svg",
     alt: "facebook",
+    className: "logo-image",
   },
   {
-    imgSrc: "./assets/snapchat-1.svg",
+    imgSrc: "./assets/snapchat-black.svg",
     alt: "Snapchat",
+    className: "logo-image",
   },
   {
-    imgSrc: "./assets/tiktok.svg",
-    alt: "TikTok",
+    imgSrc: "./assets/tiktok-black.svg",
+    alt: "tiktok",
+    className: "logo-image",
   },
   {
-    imgSrc: "./assets/instagram-1.svg",
+    imgSrc: "./assets/instagram-black.svg",
     alt: "Instagram",
+    className: "logo-image",
   },
   {
-    imgSrc: "./assets/twitter-platform.svg",
+    imgSrc: "./assets/twitter-black.svg",
     alt: "twitter",
+    className: "logo-image",
   },
   {
-    imgSrc: "./assets/google-ads.svg",
+    imgSrc: "./assets/google-ads-black.svg",
     alt: "google ads",
+    className: "logo-image",
   },
   {
-    imgSrc: "./assets/taboola.svg",
+    imgSrc: "./assets/taboola-black.svg",
     alt: "taboola",
+    className: "logo-image",
   },
 ];

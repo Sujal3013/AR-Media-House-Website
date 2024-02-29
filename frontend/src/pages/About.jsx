@@ -226,106 +226,63 @@ export default function About() {
           })
         }
       />
+        
+      <img className="rotate-180 h-[90%]" src="./assets/triple-wave-dark-2.svg" alt="wave" />
 
-      <RoundedFullCard 
-        heading="WE BRING MORE"
-        headingClassName="text-primary-500"
-        subHeading="traffic and conversion to your website"
-        subHeadingClassName="text-secondary !w-[36vw] sm:!w-[40vw] md:!w-[42vw]"
-        className="bg-tertiary-500 py-12 px-8 mt-10 md:py-20 md:px-12 flex justify-between items-center"
-        illustration={
-          <Button arrow className="bg-primary-500 mx-auto">
-            Learn More
-          </Button>
-        }
-        linearGradient={{
-          backgroundImage: "linear-gradient(0deg, #080403 50%, white 50%)",
-        }}
-      />
-
-      <section className="w-full px-screen-padding py-20 bg-secondary-500 flex flex-col items-center justify-center relative">
+      <section className="w-full px-screen-padding py-10 md:py-20 bg-secondary-500 flex flex-col items-center justify-center relative">
         <Heading
-          heading="We Bring a lot"
+          heading="WE BRING MORE"
           headingClassName="text-primary-500 text-center"
           subHeading="to the table"
           subHeadingClassName="text-tertiary-500 text-center"
-          className="items-center"
+          className="items-center mt-2 md:mt-4 mb-6 md:mb-8"
         />
-        <div className="w-full px-[2.5vw] flex flex-col md:flex-row   justify-between">
 
-          <div className="w-full my-16 flex flex-col items-center justify-between">
-            <Carousel
-            sliderClassName="!w-[62vw] md:!w-[30vw] flex justify-center"
-              itemsList={
-                teamBlogs1.map((item)=><img className="w-full" {...item} />)
-              }
-  
-            />
-            <Heading
-              className="!w-[70%] bg-primary-500 !p-10 my-4 items-center"
-              heading="170+"
-              headingClassName="text-secondary-500 text-center"
-              subHeading="team member"
-              subHeadingClassName="text-tertiary-500 text-center !leading-7"
-            />
+        <div className="w-full pb-10 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="w-[90%] md:w-[20%] min-h-16 p-4 flex flex-col items-center rounded-lg bg-primary-500">
+            <h1 className="text-5xl font-bold">170+</h1>
+            <p className="text-xl text-center font-semibold">Team Members</p>
           </div>
-          
-          <div className="w-full my-16 flex flex-col items-center justify-between">
-            <Carousel
-              sliderClassName="!w-[62vw] md:!w-[30vw] flex justify-center"
-              itemsList={
-                teamBlogs2.map((item)=><img {...item} />)
-              }
-  
-            />
-            <Heading
-              className="!w-[70%] bg-tertiary-500 !p-10 my-4 items-center"
-              heading="Our"
-              subHeading="Workstation"
-            />
+          <div className="w-[90%] md:w-[20%] min-h-16 p-4 flex flex-col items-center rounded-lg bg-tertiary-500">
+            <h1 className="text-5xl font-bold">5+</h1>
+            <p className="text-xl text-center font-semibold">Workstations</p>
           </div>
-            
+          <div className="w-[90%] md:w-[20%] min-h-16 p-4 flex flex-col items-center rounded-lg bg-primary-500">
+            <h1 className="text-5xl font-bold">3000+</h1>
+            <p className="text-xl text-center font-semibold">Happy Clients</p>
+          </div>
         </div>
 
-        <Heading
-          heading="3000+"
-          headingClassName="text-tertiary-500"
-          subHeading="Happy Clients"
-          subHeadingClassName="text-primary-500 text-center"
-          className="w-full items-center"
-        />
-      </section>
+        <div className="w-full py-8 flex flex-col items-center">
+          <Heading
+            className="items-center"
+            subHeading="Strong Protfolio"
+            subHeadingClassName="text-tertiary-500 text-center"
+          />
 
-      <RoundedFullCard 
-        heading="STRONG"
-        subHeading="portfolio"
-        subHeadingClassName="text-secondary"
-        allHeadingClassName="items-center md:items-start mb-10 md:mb-0"
-        className="bg-white rounded-[5rem] py-10 px-10 md:py-12 md:px-12 lg:py-20 lg:px-16 flex flex-col md:flex-row md:gap-4 justify-between items-center"
-        illustration={
-          <div className="flex flex-col md:flex-row gap-8 md:gap-4 lg:gap-8 justify-between items-center">
-            <div className="border-l-4 border-gradient h-full md:max-w-[25vw]">
-              <p className="text-secondary-500 px-2">
-                We excel in what we do in that we know what it takes for a brand
-                to grow, we focus on delivering quality results rather than
-                quick results and this is what makes us stand out from our rival
-                companies.
+          <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 mt-6 md:mt-12 text-sm md:text-base leading-[1rem] md:leading-[1.4rem] lg:leading-[1.6rem] lg:font-medium">
+            <div className="w-[90%] md:w-[28%] min-h-24 md:min-h-60 lg:min-h-40 p-4 flex items-center rounded-lg bg-primary-500">
+              <p className="text-center">
+                We excel in what we do in that we know what it takes for a brand to grow, we focus on delivering quality results rather than quick results and this is what makes us stand out from our rival companies.
               </p>
             </div>
-            <div className="border-l-4 border-gradient md:max-w-[20vw]">
-              <p className="text-secondary-500 px-2">
-                We develop a robust relationship with our clients, keep up
-                commitments, and work together to build a strong outcome.
+            <div className="w-[90%] md:w-[28%] min-h-24 md:min-h-60 lg:min-h-40 p-4 flex items-center rounded-lg bg-tertiary-500">
+              <p className="text-center">
+                Incorporate details about your brand’s approach and build a robust marketing portfolio.
+              </p>
+            </div>
+            <div className="w-[90%] md:w-[28%] min-h-24 md:min-h-60 lg:min-h-40 p-4 flex items-center rounded-lg bg-primary-500">
+              <p className="text-center">
+                We develop a robust relationship with our clients, keep up commitments, and work together to build a strong outcome.
               </p>
             </div>
           </div>
-        }
-        linearGradient={{
-          backgroundImage: "linear-gradient(180deg, #080403 50%, #f4f4f4 50%)",
-        }}
-      />
+        </div>  
+      </section>
 
-      <section className="w-full px-screen-padding py-20 bg-tertiary-500 flex flex-col items-center justify-center relative">
+      <img className="h-[90%]" src="./assets/triple-wave-dark-1.svg" alt="wave" />
+
+      <section className="w-full px-screen-padding py-12 md:py-16 bg-tertiary-500 flex flex-col items-center justify-center relative">
         <Heading
           heading="Meet The One"
           headingClassName="text-primary-500 text-center"
@@ -333,48 +290,74 @@ export default function About() {
           subHeadingClassName="text-secondary-500 text-center"
           className="items-center"
         />
-        <div className="w-full px-[2.5vw] py-10 flex flex-col sm:flex-row justify-between gap-12 sm:gap-16 md:gap-20 lg:gap-24">
-          <div>
-            <img src="./assets/ceo.png" alt="ceo-1" />
-            <div className="flex flex-col justify-between">
-              <div className="w-full flex flex-col items-start justify-center">
-                <h1 className="text-primary-500 text-xl font-semibold">Sahil Walia</h1>
-                <h1>Ceo Details</h1>
-              </div>
-              <hr className="border my-1 border-secondary-500"/>
-              <p className="my-3 text-sm md:text-base">
-                Sahil Walia has transformed Idea Clan into a martech company by amalgamating his marketing skills with his technical expertise. As the Director, Sahil has taken the responsibility of setting the vision and technology strategy in addition to driving the data science agenda across the company’s entire portfolio. He is the innovative mind behind the path breaking programming on which Idea Clan floats. Today, he’s driving the company’s strategy to unleash the power of technology over an established empire of online marketing.
-                <br />
-                <br />
-                Equipped with solutions for data analytics, content and commerce, Sahil is powering the digital growth of Idea Clan across the globe. His prime focus is on leading initiatives to re-imagine the company’s processes using cutting-edge technologies. Sahil is a master of driving innovation and his Bachelor of Technology certainly has a role to play in it.
-                <br />
-                <br />
-                As a problem solver by nature, Sahil quenches his thirst by employing technology to bring a new dimension to marketing solutions. His in depth involvement in every process and stage of marketing with constant brainstorming makes him a true participant instead of a spectator.
-              </p>
-            </div>
-          </div>   
 
-          <div>
-            <img src="./assets/ceo.png" alt="ceo-1" />
-            <div className="flex flex-col justify-between">
-              <div className="w-full flex flex-col items-start justify-center">
-                <h1 className="text-primary-500 text-xl font-semibold">Sahil Walia</h1>
-                <h1>Ceo Details</h1>
+        <div className="w-full px-[2.5vw] py-10 flex flex-col md:flex-row items-center justify-between gap-12 sm:gap-16 md:gap-20 lg:gap-24">
+          <div className="w-[90%] md:w-[40%] shadow-lg hover:cursor-pointer rounded-2xl overflow-hidden ceo-container">
+            <img src="/assets/ceo.png" alt="ceo-1" className="ceo-image"/>
+
+            <div className="flex justify-between items-center">
+              <div>
+                <div className="w-fit min-w-[50%] pl-2 md:pl-3 pr-4 md:pr-6 py-1 mt-1.5 rounded-r-full bg-primary-500 text-lg sm:text-2xl font-semibold">
+                  Sahil Walia
+                </div>
+                <h2 className="px-2 md:px-3 font-semibold text-gray-500 text-sm sm:text-base">
+                  Ceo
+                </h2>
               </div>
-              <hr className="border my-1 border-secondary-500"/>
-              <p className="my-3 text-sm md:text-base">
+
+              <div className="basis-[30%] flex justify-between gap-2 pr-3 ceo-socials">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z"></path>
+                </svg>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z"></path>
+                </svg>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div className="p-3 pt-0">
+              <p className="my-3 text-xs sm:text-sm">
                 Sahil Walia has transformed Idea Clan into a martech company by amalgamating his marketing skills with his technical expertise. As the Director, Sahil has taken the responsibility of setting the vision and technology strategy in addition to driving the data science agenda across the company’s entire portfolio. He is the innovative mind behind the path breaking programming on which Idea Clan floats. Today, he’s driving the company’s strategy to unleash the power of technology over an established empire of online marketing.
-                <br />
-                <br />
-                Equipped with solutions for data analytics, content and commerce, Sahil is powering the digital growth of Idea Clan across the globe. His prime focus is on leading initiatives to re-imagine the company’s processes using cutting-edge technologies. Sahil is a master of driving innovation and his Bachelor of Technology certainly has a role to play in it.
-                <br />
-                <br />
-                As a problem solver by nature, Sahil quenches his thirst by employing technology to bring a new dimension to marketing solutions. His in depth involvement in every process and stage of marketing with constant brainstorming makes him a true participant instead of a spectator.
               </p>
             </div>
-          </div>         
+          </div> 
+
+
+          <div className="w-[90%] md:w-[40%] shadow-lg hover:cursor-pointer rounded-2xl overflow-hidden ceo-container">
+            <img src="/assets/ceo.png" alt="ceo-1" className="ceo-image"/>
+
+            <div className="flex justify-between items-center">
+              <div>
+                <div className="w-fit min-w-[50%] pl-2 md:pl-3 pr-4 md:pr-6 py-1 mt-1.5 rounded-r-full bg-secondary-500 text-tertiary-500 text-lg sm:text-2xl font-semibold">
+                  Rohit Ajmani
+                </div>
+                <h2 className="px-2 md:px-3 font-semibold text-gray-500 text-sm sm:text-base">
+                  Ceo and Co-Founder
+                </h2>
+              </div>
+              <div className="basis-[30%] flex justify-between gap-2 pr-3 ceo-socials">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z"></path>
+                </svg>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z"></path>
+                </svg>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div className="p-3 pt-0">
+              <p className="my-3 text-xs sm:text-sm">
+                Sahil Walia has transformed Idea Clan into a martech company by amalgamating his marketing skills with his technical expertise. As the Director, Sahil has taken the responsibility of setting the vision and technology strategy in addition to driving the data science agenda across the company’s entire portfolio. He is the innovative mind behind the path breaking programming on which Idea Clan floats. Today, he’s driving the company’s strategy to unleash the power of technology over an established empire of online marketing.
+              </p>
+            </div>
+          </div> 
         </div>
-
       </section>
 
       <Wonder />

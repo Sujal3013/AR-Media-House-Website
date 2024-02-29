@@ -172,7 +172,7 @@ export default function Home() {
         className="w-full"
       />
 
-      <section className="bg-tertiary-500 pt-8 relative">
+      <section className="bg-tertiary-500 py-8 relative">
         <Heading
           className="w-full items-center pb-2"
           heading="3-easy step"
@@ -182,7 +182,7 @@ export default function Home() {
         />
 
         {/* <img src="./assets/1-2-3-path.svg" alt="steps" className="hidden lg:block absolute z-10 mt-8 h-[200vh] left-[50%] translate-x-[-60%]"/> */}
-        <HomePage3StepPath className="hidden lg:block absolute top-[-4%] z-10 mt-8 h-[280vh] left-[50%] translate-x-[-60%]" />
+        <HomePage3StepPath className="hidden lg:block absolute top-[-6%] z-10 h-[320vh] left-[49%] translate-x-[-60%]" />
 
         <Section
           backgroundClassName="bg-tertiary-500 py-4"
@@ -232,7 +232,7 @@ export default function Home() {
           and profit."
           textClassName={SECTION5_TEXT_CLASS}
           illustration={
-            <img src="/assets/VerifyBenchmark.svg" alt="benchmark-image"  className="ml-[-6vw]"/>
+            <img src="/assets/Benchmark.svg" alt="benchmark-image"  className=""/>
           }
           direction={-1}
         />

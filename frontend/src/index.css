@@ -73,6 +73,28 @@ h2, h3, h4, h5, h6 {
   @apply w-[80vw] sm:w-[65vw] md:w-[35vw]
 }
 
+.logo-image {
+  width: 100px;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  mix-blend-mode: color-burn;
+}
+
+.ceo-socials path {
+  fill: gray;
+}
+.ceo-image {
+  transition: scale 0.5s ease;
+}
+.ceo-container path {
+  transition: fill 0.5s ease;
+}
+.ceo-container:hover path {
+  fill: black;
+}
+.ceo-container:hover .ceo-image {
+  scale: 1.05;
+}
 @media (max-width: 639px) {
   .max-w-sm-responsive {
     @apply max-w-sm;
