@@ -45,7 +45,7 @@ const ContactUs = () => {
                 <>
                   402,Kuber House <br /> 162,Kanchan Bagh,Indore <br /> Madhya Pradesh - 452001
                   <br/><br/>
-                  <p className="text-secondary-500">pariharharish723@gmail.com</p>
+                  <p className="text-secondary-500">business@armediahouse.in</p>
                 </>
               }
               textClassName="mb-8 sm:mb-12 sm:!text-lg md:!text-sm"
