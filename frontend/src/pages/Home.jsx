@@ -44,10 +44,10 @@ export default function Home() {
             </FadeInUp>
             {/* Buttons */}
             <div className="flex gap-6 py-10">
-              <Button arrow className="bg-primary-500 text-secondary-500">
+              <Button arrow className="bg-primary-500 text-secondary-500" to="/contact">
                 Let's Connect
               </Button>
-              <Button className="bg-transparent border-2 border-primary-500 text-primary-500">
+              <Button to="/about" className="bg-transparent border-2 border-primary-500 text-primary-500">
                 About Us
               </Button>
             </div>
@@ -92,7 +92,7 @@ export default function Home() {
         text="We make digital stuff easy for you by finding the perfect solutions. Our goal is to go above and beyond what you expect and what's considered normal. At AR Media, we use online marketing to help Indian and international brands grow a lot. We want to bring that same success to you, showing you how it’s done."
         textClassName="my-10"
         Button1={
-          <Button arrow primary className="mt-4 text-secondary-500 bg-primary-500">
+          <Button arrow to="/services" primary className="mt-4 text-secondary-500 bg-primary-500">
             Learn More
           </Button>
         }
@@ -119,7 +119,7 @@ export default function Home() {
         help brands grow from one stage to the next."
         textClassName="py-10"
         Button1={
-          <Button arrow primary className="mt-4 text-secondary-500 bg-primary-500">
+          <Button to="/services" arrow primary className="mt-4 text-secondary-500 bg-primary-500">
             Learn More
           </Button>
         }
@@ -154,7 +154,7 @@ export default function Home() {
         subHeading="through the roof"
         allHeadingClassName="mb-6 sm:mb-12 !w-[40vw] !overflow-visible"
         Button1={
-          <Button className="bg-primary-500 text-secondary-500 mt-3 md:mt-6 mb-6 sm:mb-8 md:mb-12" arrow>
+          <Button to="/contact" className="bg-primary-500 text-secondary-500 mt-3 md:mt-6 mb-6 sm:mb-8 md:mb-12" arrow>
             Let's Connect
           </Button>
         }

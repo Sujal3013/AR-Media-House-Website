@@ -68,31 +68,31 @@ const openings = [
   {
     id: 1,
     title: "Social Media Manager",
-    location: "Chandigarh,India",
+    location: "Indore,India",
     daysAgo: 3,
   },
   {
     id: 1,
     title: "Software Engineering Intern",
-    location: "Chandigarh,India",
+    location: "Indore,India",
     daysAgo: 5,
   },
   {
     id: 1,
     title: "Digital Marketing Strategist",
-    location: "Chandigarh,India",
+    location: "Indore,India",
     daysAgo: 2,
   },
   {
     id: 1,
     title: "Human Resource Manager",
-    location: "Chandigarh,India",
+    location: "Indore,India",
     daysAgo: 10,
   },
   {
     id: 1,
     title: "Social Media Manager",
-    location: "Chandigarh,India",
+    location: "Indore,India",
     daysAgo: 20,
   },
 ];

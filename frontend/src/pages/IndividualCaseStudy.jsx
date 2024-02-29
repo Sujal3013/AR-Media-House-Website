@@ -24,7 +24,7 @@ const IndividualCaseStudy = () => {
               <h1 className="w-[60%] font-bold text-3xl text-center">{blog.name}</h1>
             </div>
           </div>
-          <div className="px-[12rem] py-4">
+          <div className="px-[2rem] sm:px-[6rem] md:px-[12rem] py-4">
             {blog.description.map((content) => (
               <div className="mb-2">
                 {content.heading && (

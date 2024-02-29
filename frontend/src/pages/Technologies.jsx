@@ -35,7 +35,7 @@ export default function Technologies() {
               <p className="min-w-[172px] md:w-[38vw] md:min-w-0 text-sm my-16 mb-24">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum porro qui fugit officia aliquam illo temporibus quasi quaerat suscipit mollitia dicta perspiciatis voluptatum incidunt alias similique minus, accusantium minima! Id.</p>
             </FadeInUp>
             {/* Buttons */}
-            <Button arrow className="bg-tertiary-500 text-secondary-500">
+            <Button to="/contact" arrow className="bg-tertiary-500 text-secondary-500">
               Let's Work Together
             </Button>
           </div>
@@ -57,7 +57,7 @@ export default function Technologies() {
                 <li className="h-12 sm:h-20 md:h-28"><img className="w-full h-full" src="/assets/react.svg" alt="react" /></li>
                 <li className="w-24 sm:w-40 md:w-48 md:h-12"><img className="w-full h-full" src="/assets/kafka.png" alt="kafta" /></li>
                 <li className="w-20 sm:w-36 md:w-44"><img className="w-full h-full" src="/assets/kubernetes.png" alt="kubernetes" /></li>
-                <li className="w-20 sm:w-36 md:w-44"><img className="w-full h-full" src="/assets/lookfinity.png" alt="lookfinity" /></li>
+                <li className="w-20 sm:w-36 md:w-44"><img className="w-full h-full" src="/assets/lookfinitywhite.png" alt="lookfinity" /></li>
                 <li className="w-28 sm:w-56 md:w-64 md:h-auto"><img className="w-full h-full" src="/assets/clickHouse.png" alt="click house" /></li>
               </>
             }
@@ -82,7 +82,7 @@ export default function Technologies() {
         including Facebook and Google."
         textClassName="my-10"
         Button1={
-          <Button
+          <Button to="/services"
             arrow
             primary
             className="mt-4 text-secondary-500 bg-primary-500"
@@ -111,6 +111,7 @@ export default function Technologies() {
         textClassName="py-10"
         Button1={
           <Button
+          to="/services"
             arrow
             primary
             className="mt-4 text-secondary-500 bg-primary-500"
@@ -138,6 +139,7 @@ export default function Technologies() {
         textClassName="my-10"
         Button1={
           <Button
+          to="/services"
             arrow
             primary
             className="mt-4 text-secondary-500 bg-primary-500"
@@ -164,7 +166,7 @@ export default function Technologies() {
           subHeading="with our technologies"
           subHeadingClassName="text-tertiary-500"
           allHeadingClassName="w-[80vw] mb-16"
-          Button1={<Button className="bg-tertiary-500 text-secondary-500" arrow>Learn More</Button>}
+          Button1={<Button to="/services" className="bg-tertiary-500 text-secondary-500" arrow>Learn More</Button>}
           illustration={          
             <div className="hidden md:block rounded-full text-center w-[36vw] h-auto ">
               <img src="/assets/Excel.png" alt="" />
