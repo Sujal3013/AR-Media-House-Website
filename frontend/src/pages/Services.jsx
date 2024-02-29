@@ -167,7 +167,7 @@ export default function Services() {
             <AnimateNumber
               className="inline"
               from={0}
-              to={33981171}
+              to={1500000}
               duration={2.5}
             />
           </div>
@@ -177,7 +177,7 @@ export default function Services() {
         </div>
         <div className="text-center w-fit text-secondary-500 font-bold">
           <div className="text-xl sm:text-3xl lg:text-5xl">
-            <AnimateNumber from={0} to={5747646} duration={2.5} />
+            <AnimateNumber from={0} to={189781} duration={2.5} />
           </div>
           <h1 className="text-center font-bold text-sm sm:text-base lg:text-xl">
             Lead Generated Last 12 months

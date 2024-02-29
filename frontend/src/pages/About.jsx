@@ -249,7 +249,7 @@ export default function About() {
               <AnimateNumber
                 className="inline"
                 from={0}
-                to={170}
+                to={30}
                 duration={2.5}
               />  
               +
@@ -273,7 +273,7 @@ export default function About() {
               <AnimateNumber
                 className="inline"
                 from={0}
-                to={3000}
+                to={300}
                 duration={2.5}
               />
               +
