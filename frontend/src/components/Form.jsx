@@ -34,7 +34,7 @@ export default function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const regex = /^\d{2}\+\d{10}$/;
+    // const regex = /^\d{2}\+\d{10}$/;
 
     if (
       data.name &&
@@ -43,7 +43,7 @@ export default function Form() {
       data.contactNumber &&
       selectedOptions.length > 0
     ) {
-      if (regex.test(data.contactNumber)) {
+      if (/*regex.test(data.contactNumber)*/true ){
         // send message
         emailjs
           .send(
@@ -81,7 +81,7 @@ export default function Form() {
     setValidator({
       ...validator,
       Name: data.name !== "",
-      contact_number: data.contactNumber && regex.test(data.contactNumber),
+      contact_number: data.contactNumber ,/*&& regex.test(data.contactNumber),*/
       email: data.email !== "",
       field_of_interest: selectedOptions.length > 0,
     });
@@ -98,7 +98,7 @@ export default function Form() {
           <Button
             className={
               selectedOptions.includes(data)
-                ? "bg-primary-500 text-tertiary-500 md:!px-2 md:!py-1 lg:!px-4 lg:!py-3"
+                ? "bg-primary-500 text-tertiary-500 md:!px-3 md:!py-2 lg:!px-4 lg:!py-3"
                 : "border-2 border-primary-500 text-primary-500 md:!px-3 md:!py-2 lg:!px-4 lg:!py-3"
             }
             onClick={() => handleCheckboxChange(data)}
@@ -152,7 +152,7 @@ export default function Form() {
             showError ? "block" : "hidden"
           } text-red-400 mb-2 text-xl font-semibold`}
         >
-          *PLease Fill all the required fields
+          *Please Fill all the required fields
         </span>
 
         <Button
@@ -195,9 +195,9 @@ const dataRequired = [
   {
     title: "contactNumber",
     textArea: false,
-    placeholder: "91+xxxxxxxxxx",
+    placeholder: "+91xxxxxxxxxx",
     type: "tel",
-    pattern: "[0-9]{2}+[0-9]{10}",
+    // pattern: "[0-9]{2}\+[0-9]{10}",
     required: true,
   },
   {
