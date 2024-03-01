@@ -163,7 +163,7 @@ export default function Services() {
         />
         <div className="text-center w-fit text-secondary-500 font-bold">
           <div className="text-xl sm:text-3xl lg:text-5xl">
-            Rs.
+            $
             <AnimateNumber
               className="inline"
               from={0}
