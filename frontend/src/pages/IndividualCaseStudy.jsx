@@ -29,13 +29,13 @@ const IndividualCaseStudy = () => {
                   {
                     content.heading 
                     && 
-                    <h1 className="font-bold font-jost text-2xl my-2">
+                    <h2 className="font-semibold font-jost text-2xl my-2">
                       {content.heading}
-                    </h1>
+                    </h2>
                   }
                   {
                     content.paragraph && (
-                      <p className=" font-playfair-display text-xl">
+                      <p className=" font-playfair-display text-lg">
                         {content.paragraph}
                       </p>
                     )
@@ -51,7 +51,9 @@ const IndividualCaseStudy = () => {
                       ))}
                     </div>
                   )}
+                  <hr className=" border-t-2 border-dotted border-tertiary-500" />
                 </div>
+
               ))
             }
           </div>
@@ -103,26 +105,22 @@ const blogs = [
           "Once upon a time, in the dynamic realm of financial education, AR Research House of Finance and Consultancy Services, affectionately known as AR Trader, embarked on a transformative journey. As a startup providing stock market education, they envisioned a future with both offline and online models. To materialise this vision, they sought the expertise of AR Media House, a distinguished digital marketing company.",
         images: [],
       },
+      
       {
-        heading: "",
+        heading: "Chapter 1 : A Vision Unfolds",
         paragraph:
-          "Our founders, Rohit Ajmani and Sahil Walia, seized this opportunity to enrich their understanding of the ever-evolving industry and plug into its latest trends and innovations. This conference served as a valuable platform for us to stay at the forefront of industry advancements and further propel our growth and success.",
-        images: ["/assets/Case-study.svg", "/assets/Case-study.svg"],
-      },
-      {
-        heading: "A Vision Unfolds",
-        paragraph:
-          "AR Trader, driven by a passion for empowering aspiring traders, aimed to create a dual educational model—offline and online. Their maiden venture would be into the realm of online education. With AR Media House as their guiding beacon, they set sail.AR Media House initiated the journey by focusing on the first objective—Leads Generation.",
+          "AR Trader, driven by a passion for empowering aspiring traders, aimed to create a dual educational model—offline and online. Their maiden venture would be into the realm of online education. With AR Media House as their guiding beacon, they set sail.AR Media House initiated the journey by focusing on the first objective—Leads Generation. Objectives were clear",
+        
         images: [],
       },
       {
-        heading: "Crafting the Digital Blueprint",
+        heading: "Chapter 2 : Crafting the Digital Blueprint",
         paragraph:
           "The voyage began with the creation of an online model. The first step was understanding the intricate journey of potential students, their mindset, and the nuances of targeting. A strategic Facebook advertising campaign was launched at the national level in India. The goal? To filter and target specific demographics, ensuring precision in location targeting.Student journeys were meticulously mapped, laying the groundwork for an insightful strategy.",
         images: [],
       },
       {
-        heading: "The Rise of Automation",
+        heading: " Chapter 3 : The Rise of Automation",
         paragraph:
           "In a mere three months, a groundbreaking automation system emerged. Every step, from inquiry to student enrollment, danced to the rhythm of automation. AR Trader witnessed a sixfold increase in business, starting with three thriving batches. The conversion rate, initially at 3%, began its upward trajectory, marking the beginning of a successful automation era.Understanding products, working on execution, and achieving automation were the cornerstones of this monumental shift.",
         images: [],

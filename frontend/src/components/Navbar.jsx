@@ -19,7 +19,7 @@ export default function Navbar() {
             >
                 A
             </h1> */}
-            <img src="/assets/Navlogo.png" alt="" className="w-8 h-8" />
+            <img src="/assets/logoAR.png" alt="" className="w-10 h-10" />
             {/* <h1 
                 className="inline text-tertiary-500 text-sm"
             >
