@@ -20,7 +20,7 @@ import Carousel from "../components/Carousel";
 import RoundedFullCard from "../components/RoundedFullCard";
 import AnimateIllustrationSection from "../components/AnimateIllustrationSection";
 
-const VIDEO_ID = "_qh5PXngdNY";
+const VIDEO_ID = "cBA-itmpR84";
 const OPTS = {
   height: "350",
   width: "575",
@@ -75,11 +75,11 @@ export default function About() {
         heading="A Bumpy Road"
         subHeading="to success"
         text="Starting from an idea that emerged into the minds of two young
-        friends, Rohit Ajmani and Sahil Walia while still in college
+        friends, Harish Parihar and Raj Maheshwari
         exchanged their thoughts on creating something on their own. From
         successfully launching their first website, Newton007 to interacting
         with some of the most leading marketing intellectuals, they have
-        come a long way and now have a better vision of enabling Idea Clan
+        come a long way and now have a better vision of enabling AR Media House
         to turn into a Unicorn – a Billion dollar vision."
         textClassName="py-10 "
         illustration={
@@ -328,10 +328,10 @@ export default function About() {
             <div className="flex justify-between items-center">
               <div>
                 <div className="w-fit min-w-[50%] pl-2 md:pl-3 pr-4 md:pr-6 py-1 mt-1.5 rounded-r-full bg-primary-500 text-lg sm:text-2xl font-semibold">
-                  Sahil Walia
+                  Raj Maheshwari
                 </div>
                 <h2 className="px-2 md:px-3 font-semibold text-gray-500 text-sm sm:text-base">
-                  Ceo
+                  Co-founder
                 </h2>
               </div>
 
@@ -350,7 +350,9 @@ export default function About() {
 
             <div className="p-3 pt-0">
               <p className="my-3 text-xs sm:text-sm">
-                Sahil Walia has transformed Idea Clan into a martech company by amalgamating his marketing skills with his technical expertise. As the Director, Sahil has taken the responsibility of setting the vision and technology strategy in addition to driving the data science agenda across the company’s entire portfolio. He is the innovative mind behind the path breaking programming on which Idea Clan floats. Today, he’s driving the company’s strategy to unleash the power of technology over an established empire of online marketing.
+              Raj Maheshwari is a digital market specialist, portfolio manager, trainer, and stock market trader. In 2018, he founded the AR group and launched his first business, AR Financial Research & Consultancy Services, where he served as a mentor to help others succeed in the worlds of finance and investment.<br/> 
+Later on, he discovered that the lack of digitalization is causing issues for a lot of businesses. Subsequently, he devised the concept to establish an additional enterprise, AR Media House, offering digital solutions that facilitate corporate expansion. <br />
+His goal is to enable people and companies to prosper in the digital and financial spheres. Whether your goal is to become an expert in stock market trading or to increase your web presence, I can help you every step of the way.
               </p>
             </div>
           </div> 
@@ -362,10 +364,10 @@ export default function About() {
             <div className="flex justify-between items-center">
               <div>
                 <div className="w-fit min-w-[50%] pl-2 md:pl-3 pr-4 md:pr-6 py-1 mt-1.5 rounded-r-full bg-secondary-500 text-tertiary-500 text-lg sm:text-2xl font-semibold">
-                  Rohit Ajmani
+                Shailendra Mukati
                 </div>
                 <h2 className="px-2 md:px-3 font-semibold text-gray-500 text-sm sm:text-base">
-                  Ceo and Co-Founder
+                  Co-Founder
                 </h2>
               </div>
               <div className="basis-[30%] flex justify-between gap-2 pr-3 ceo-socials">
@@ -383,7 +385,9 @@ export default function About() {
 
             <div className="p-3 pt-0">
               <p className="my-3 text-xs sm:text-sm">
-                Sahil Walia has transformed Idea Clan into a martech company by amalgamating his marketing skills with his technical expertise. As the Director, Sahil has taken the responsibility of setting the vision and technology strategy in addition to driving the data science agenda across the company’s entire portfolio. He is the innovative mind behind the path breaking programming on which Idea Clan floats. Today, he’s driving the company’s strategy to unleash the power of technology over an established empire of online marketing.
+              Another AR group cofounder is Shailendra Mukati. His area of expertise is computer engineering (CS), and he has developed technical talents that solve technical issues for businesses. <br />
+It was there that he began applying his managerial and marketing talents to deal with clients. His goal was to help as many businesses as possible go from having low sales to experiencing 10x growth. <br />
+Shailendra, a true leader, is the driving force behind a group of remarkable people that collaborate relentlessly to achieve the shared objective of revolutionising internet marketing. As the leader of AR Media House, Shailendra is leading the company into its next phase of leadership in the market.Under Shailendra's guidance, AR Media House is poised to set new standards and pave the way for innovative approaches in internet marketing.
               </p>
             </div>
           </div> 
@@ -396,10 +400,10 @@ export default function About() {
             <div className="flex justify-between items-center">
               <div>
                 <div className="w-fit min-w-[50%] pl-2 md:pl-3 pr-4 md:pr-6 py-1 mt-1.5 rounded-r-full bg-primary-500 text-lg sm:text-2xl font-semibold">
-                  Sahil Walia
+                  Harish Parihar
                 </div>
                 <h2 className="px-2 md:px-3 font-semibold text-gray-500 text-sm sm:text-base">
-                  Ceo
+                  Co-founder
                 </h2>
               </div>
 

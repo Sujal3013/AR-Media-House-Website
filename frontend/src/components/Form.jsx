@@ -10,6 +10,9 @@ export default function Form() {
     message: "",
   });
 
+  const [submitted, setSubmitted] = useState(false);
+  const [disabled, setDisabled] = useState(false);
+
   const [validator, setValidator] = useState({
     name: false,
     contact_number: false,
@@ -34,6 +37,7 @@ export default function Form() {
   };
 
   const handleSubmit = (e) => {
+    if (disabled) return;
     e.preventDefault();
     const regexPhNo = /^\d{2}\+\d{10}$/;
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -45,7 +49,7 @@ export default function Form() {
       data.contactNumber &&
       selectedOptions.length > 0
     ) {
-      if (regexPhNo.test(data.contactNumber) && regexEmail.test(data.email)){
+      if (regexPhNo.test(data.contactNumber) && regexEmail.test(data.email)) {
         // send message
         emailjs
           .send(
@@ -63,6 +67,8 @@ export default function Form() {
           )
           .then((response) => {
             console.log("Email sent successfully:");
+            setSubmitted(true);
+            setDisabled(true);
             setData({ name: "", email: "", contactNumber: "", message: "" });
             setValidator({
               name: true,
@@ -70,6 +76,10 @@ export default function Form() {
               email: true,
               field_of_interest: true,
             });
+            setTimeout(() => {
+              setDisabled(false);
+              setSubmitted(false);
+            }, 10000);
           })
           .catch((error) => {
             setError("Something went Wrong!");
@@ -124,8 +134,8 @@ export default function Form() {
                   value.placeholder ? value.placeholder : value.title
                 }
                 className={inputClasses}
-                onChange={(e) =>{
-                  setData({ ...data, [value.title]: e.target.value })
+                onChange={(e) => {
+                  setData({ ...data, [value.title]: e.target.value });
                 }}
                 {...value}
                 key={index}
@@ -154,28 +164,32 @@ export default function Form() {
             showError ? "block" : "hidden"
           } text-red-400 mb-2 text-xl font-semibold`}
         >
-          {
-            error !== "" ? 
-              error
-            : 
-              Object.keys(validator).map((key, indx)=>{
-                if(validator[key]) return;
+          {error !== ""
+            ? error
+            : Object.keys(validator).map((key, indx) => {
+                if (validator[key]) return;
                 return (
                   <span key={indx}>
-                    {key==="field_of_interest"?"interest":key}{", "}
+                    {key === "field_of_interest" ? "interest" : key}
+                    {", "}
                   </span>
                 );
-              })
-          }
-          {error === "" && `${Object.keys(validator)?.filter(key=>!validator[key])?.length === 1 ? "is" : "are"} missing or not in correct format.`}
+              })}
+          {error === "" &&
+            `${
+              Object.keys(validator)?.filter((key) => !validator[key])
+                ?.length === 1
+                ? "is"
+                : "are"
+            } missing or not in correct format.`}
         </span>
 
         <Button
-          className="bg-primary-500 text-white"
+          className={submitted?"submitted bg-primary-200 text-white":"bg-primary-500 text-white"}
           type="submit"
           onClick={handleSubmit}
         >
-          Send Message
+          {submitted ? "Message sent !" : "Send Message"}
         </Button>
       </form>
     </div>
