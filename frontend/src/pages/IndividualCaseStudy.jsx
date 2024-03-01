@@ -34,11 +34,13 @@ const IndividualCaseStudy = () => {
                     </h2>
                   }
                   {
-                    content.paragraph && (
-                      <p className=" font-playfair-display text-lg">
-                        {content.paragraph}
-                      </p>
-                    )
+                    // content.paragraph && (
+                    //   <p className=" font-playfair-display text-lg">
+                    //     {content.paragraph}
+                    //   </p>
+                    // )
+                    
+                    
                   }
                   {content.images && (
                     <div className="w-full mt-3 flex flex-wrap gap-4 justify-between items-center">

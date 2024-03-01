@@ -323,7 +323,7 @@ export default function About() {
 
         <div className="w-full px-[2.5vw] py-10 flex flex-col md:flex-row items-center justify-between gap-12 sm:gap-16 md:gap-20 lg:gap-24">
           <div className="w-[90%] md:w-[40%] shadow-lg hover:cursor-pointer rounded-2xl overflow-hidden ceo-container">
-            <img src="/assets/ceo.png" alt="ceo-1" className="ceo-image"/>
+            <img src="/assets/founder2.jpg" alt="ceo-1" className="ceo-image"/>
 
             <div className="flex justify-between items-center">
               <div>
@@ -359,7 +359,7 @@ His goal is to enable people and companies to prosper in the digital and financi
 
 
           <div className="w-[90%] md:w-[40%] shadow-lg hover:cursor-pointer rounded-2xl overflow-hidden ceo-container">
-            <img src="/assets/ceo.png" alt="ceo-1" className="ceo-image"/>
+            <img src="/assets/founder1.jpeg" alt="ceo-1" className="ceo-image"/>
 
             <div className="flex justify-between items-center">
               <div>
@@ -395,7 +395,7 @@ Shailendra, a true leader, is the driving force behind a group of remarkable peo
         </div>
         <div className="w-full px-[2.5vw] py-10 flex flex-col md:flex-row items-center gap-12 sm:gap-16 md:gap-20 lg:gap-24">
           <div className="w-[90%] md:w-[40%] shadow-lg hover:cursor-pointer mx-auto rounded-2xl overflow-hidden ceo-container">
-            <img src="/assets/ceo.png" alt="ceo-1" className="ceo-image"/>
+            <img src="/assets/founder3.JPG" alt="ceo-1" className="ceo-image"/>
 
             <div className="flex justify-between items-center">
               <div>
