@@ -19,7 +19,7 @@ export default function Form() {
 
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [showError, setShowError] = useState(false);
-  const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleCheckboxChange = (value) => {
     if (!selectedOptions.includes(value)) {
@@ -35,7 +35,7 @@ export default function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const regexPhNo = /^\d{2}\+\d{10}$/;
+    const regexPhNo = /\d{2,3}?\+?[0-9,-]{10,14}|\+?\d{2,3}?[0-9,-]{10,14}|[0-9,-]{10,16}/;
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (
@@ -62,7 +62,9 @@ export default function Form() {
             "WJ8SiZlnj8QyzKCCU"
           )
           .then((response) => {
-            console.log("Email sent successfully:");
+            // console.log("Email sent successfully:");
+            setMessage("Email is sent successfully!");
+            setTimeout(()=>setMessage(""), 4000);
             setData({ name: "", email: "", contactNumber: "", message: "" });
             setValidator({
               name: true,
@@ -70,9 +72,15 @@ export default function Form() {
               email: true,
               field_of_interest: true,
             });
+            setSelectedOptions([]);
           })
           .catch((error) => {
-            setError("Something went Wrong!");
+            setShowError(true);
+            setMessage("Something went Wrong!");
+            setTimeout(()=>{
+              setShowError(false);
+              setMessage("");
+            }, 4000);
           });
 
         return;
@@ -89,7 +97,7 @@ export default function Form() {
     });
 
     setShowError(true);
-    setTimeout(() => setShowError(false), 3000);
+    setTimeout(() => setShowError(false), 4000);
   };
 
   return (
@@ -113,50 +121,52 @@ export default function Form() {
 
       {/* Input form */}
       <form onSubmit={handleSubmit} className="pt-10 flex flex-col gap-3">
-        {dataRequired.map((value, index) => {
-          const inputClasses =
-            "px-3 py-2 bg-tertiary-500 rounded-md outline-none";
-          if (!value.textArea)
-            return (
-              <input
-                name={value.title}
-                placeholder={
-                  value.placeholder ? value.placeholder : value.title
-                }
-                className={inputClasses}
-                onChange={(e) =>{
-                  setData({ ...data, [value.title]: e.target.value })
-                }}
-                {...value}
-                key={index}
-              />
-            );
-          else
-            return (
-              <textArea
-                name={value.title}
-                className={inputClasses}
-                placeholder={
-                  value.placeholder ? value.placeholder : value.title
-                }
-                rows={5}
-                onChange={(e) =>
-                  setData({ ...data, [value.title]: e.target.value })
-                }
-                key={index}
-                {...value}
-              />
-            );
-        })}
+        <input 
+          type="text"
+          name="name"
+          value={data.name}
+          onChange={(e)=>setData({...data, "name": e.target.value})}
+          className="px-3 py-2 bg-tertiary-500 rounded-md outline-none"
+          placeholder="Enter your name"
+        />
+
+        <input 
+          type="email"
+          name="email"
+          value={data.email}
+          onChange={(e)=>setData({...data, "email": e.target.value})}
+          className="px-3 py-2 bg-tertiary-500 rounded-md outline-none"
+          placeholder="Enter your email"
+        />
+
+        <input 
+          type="number"
+          name="contactNumber"
+          value={data.contactNumber}
+          onChange={(e)=>setData({...data, "contactNumber": e.target.value})}
+          className="px-3 py-2 bg-tertiary-500 rounded-md outline-none"
+          placeholder="Enter your contact number"
+        />
+
+        <textarea 
+          type="text"
+          name="message"
+          value={data.message}
+          onChange={(e)=>setData({...data, "message": e.target.value})}
+          rows={5}
+          className="px-3 py-2 bg-tertiary-500 rounded-md outline-none"
+          placeholder="Enter your message"
+        />
 
         <span
+          name="error"
           className={`${
-            showError ? "block" : "hidden"
-          } text-red-400 mb-2 text-xl font-semibold`}
+            showError || message!=="" ? "block" : "hidden"
+          } ${showError ? "text-red-400" : "text-green-400"} mb-2 text-xl font-semibold`}
         >
           {
-            error !== "" ? 
-              error
+            message !== "" ? 
+              message
             : 
               Object.keys(validator).map((key, indx)=>{
                 if(validator[key]) return;
@@ -167,7 +177,7 @@ export default function Form() {
                 );
               })
           }
-          {error === "" && `${Object.keys(validator)?.filter(key=>!validator[key])?.length === 1 ? "is" : "are"} missing or not in correct format.`}
+          {message === "" && `${Object.keys(validator)?.filter(key=>!validator[key])?.length === 1 ? "is" : "are"} missing or not in correct format.`}
         </span>
 
         <Button
@@ -192,33 +202,33 @@ const dataTypes = [
   "Others",
 ];
 
-const dataRequired = [
-  {
-    title: "name",
-    textArea: false,
-    placeholder: "Enter your Name",
-    type: "text",
-    required: true,
-  },
-  {
-    title: "email",
-    textArea: false,
-    placeholder: "Enter your Email",
-    type: "email",
-    required: true,
-  },
-  {
-    title: "contactNumber",
-    textArea: false,
-    placeholder: "91+xxxxxxxxxx",
-    type: "tel",
-    // pattern: "[0-9]{2}\+[0-9]{10}",
-    required: true,
-  },
-  {
-    title: "message",
-    textArea: true,
-    placeholder: "Enter your message",
-    type: "text",
-  },
-];
+// const dataRequired = [
+//   {
+//     title: "name",
+//     textArea: false,
+//     placeholder: "Enter your Name",
+//     type: "text",
+//     required: true,
+//   },
+//   {
+//     title: "email",
+//     textArea: false,
+//     placeholder: "Enter your Email",
+//     type: "email",
+//     required: true,
+//   },
+//   {
+//     title: "contactNumber",
+//     textArea: false,
+//     placeholder: "91+xxxxxxxxxx",
+//     type: "tel",
+//     // pattern: "[0-9]{2}\+[0-9]{10}",
+//     required: true,
+//   },
+//   {
+//     title: "message",
+//     textArea: true,
+//     placeholder: "Enter your message",
+//     type: "text",
+//   },
+// ];
