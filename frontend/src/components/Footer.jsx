@@ -12,7 +12,7 @@ const Footer = () => {
         <div>
           {/* AR MEDIA HOUSE's Logo and Name */}
           <div className='flex gap-2 items-center mb-4'>
-            <h2 className='py-1 px-3 rounded-full bg-primary-500 inline text-secondary-500 text-3xl lg:text-5xl'>A</h2>
+          <img src="/assets/logoAR.png" alt="" className="w-12 h-12" />
             <h1 className='text-sm lg:text-base'>AR MEDIA HOUSE</h1>
           </div>
           {/* Social Media Icons */}
