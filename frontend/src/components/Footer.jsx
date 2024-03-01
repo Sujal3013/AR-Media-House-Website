@@ -57,10 +57,11 @@ const Footer = () => {
       <div className='hidden md:block flex flex-col gap-6'>
         <h1 className='text-xl lg:text-2xl'>Insta-feed</h1>
         <div className='grid grid-cols-2 gap-8'>
-          <a href="https://www.instagram.com/ar_media_house.ai/"><div className='w-20 h-20 rounded bg-[url("/assets/Instagram.jpg")] bg-cover bg-no-repeat'></div></a>
-          <div className='w-20 h-20 rounded bg-[url("/assets/Careers-Hero-with-gradient.jpg")]'></div>
-          <div className='w-20 h-20 rounded bg-[url("/assets/Careers-Hero-with-gradient.jpg")]'></div>
-          <div className='w-20 h-20 rounded bg-[url("/assets/Careers-Hero-with-gradient.jpg")]'></div>
+          <a href="https://www.instagram.com/ar_media_house.ai/"><div className='w-20 h-20 rounded bg-[url("/assets/Feed1.jpg")] bg-cover bg-no-repeat'></div></a>
+          <a href="https://www.instagram.com/ar_media_house.ai/"><div className='w-20 h-20 rounded bg-[url("/assets/Feed2.jpg")] bg-cover bg-no-repeat'></div></a>
+          <a href="https://www.instagram.com/ar_media_house.ai/"><div className='w-20 h-20 rounded bg-[url("/assets/Feed3.jpg")] bg-cover bg-no-repeat'></div></a>
+          <a href="https://www.instagram.com/ar_media_house.ai/"><div className='w-20 h-20 rounded bg-[url("/assets/Feed4.jpg")] bg-cover bg-no-repeat'></div></a>
+
           
           
         </div>
