@@ -4,7 +4,7 @@ export default function Page404() {
   document.querySelector("title").innerHTML = "404 - AR Media House";
   return (
     <>
-<Navbar/>
+{/* <Navbar/> */}
     <div className="flex items-center justify-center h-screen bg-gray-100">
     <div className="text-center">
       <h1 className="text-6xl font-bold text-secondary-500">404</h1>

@@ -1,7 +1,12 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Button } from "./";
+
 import axios from "axios";
+=======
+import {GoogleSpreadsheet} from "google-spreadsheet"
+
+
 
 export default function Form() {
   const [data, setData] = useState({
@@ -67,55 +72,59 @@ export default function Form() {
       .catch((error) => {
         console.log(error);
       });
-    // if (
-    //   data.name &&
-    //   data.email &&
-    //   data.message &&
-    //   data.contactNumber &&
-    //   selectedOptions.length > 0
-    // ) {
-    //   if (regexPhNo.test(data.contactNumber) && regexEmail.test(data.email)) {
-    //     // send message
-    //     emailjs
-    //       .send(
-    //         "service_24z4gbt",
-    //         "template_wg3jr8c",
-    //         {
-    //           name: data.name,
-    //           email: data.email,
-    //           from_name: "Website",
-    //           contact: data.contactNumber,
-    //           message: data.message,
-    //           Options: selectedOptions.join(", "),
-    //         },
-    //         "WJ8SiZlnj8QyzKCCU"
-    //       )
-    //       .then((response) => {
-    //         setMessage("Email is sent successfully!");
-    //         setSubmitted(true);
-    //         setDisabled(true);
-    //         setTimeout(() => {
-    //           setDisabled(false);
-    //           setSubmitted(false);
-    //         }, 5000);
-    //         setTimeout(()=>setMessage(""), 5000);
-    //         setData({ name: "", email: "", contactNumber: "", message: "" });
-    //         setValidator({
-    //           name: true,
-    //           contact_number: true,
-    //           email: true,
-    //           field_of_interest: true,
-    //         });
-    //         setSelectedOptions([]);
-    //       })
-    //       .catch((error) => {
-    //         setShowError(true);
-    //         setMessage("Something went Wrong!");
-    //         setTimeout(()=>{
-    //           setShowError(false);
-    //           setMessage("");
-    //         }, 5000);
-    //       });
+
+
+   
+    if (
+      data.name &&
+      data.email &&
+      data.message &&
+      data.contactNumber &&
+      selectedOptions.length > 0
+    ) {
+      if (regexPhNo.test(data.contactNumber) && regexEmail.test(data.email)) {
+        // send message
+        emailjs
+          .send(
+            "service_l7j9tuk",
+            "template_3no9vj8",
+            {
+              name: data.name,
+              email: data.email,
+              from_name: "Website",
+              contact: data.contactNumber,
+              message: data.message,
+              Options: selectedOptions.join(", "),
+            },
+            "3kGkPXcGhEj9lPsa0"
+          )
+          .then((response) => {
+            setMessage("Email is sent successfully!");
+            setSubmitted(true);
+            setDisabled(true);
+            setTimeout(() => {
+              setDisabled(false);
+              setSubmitted(false);
+            }, 5000);
+            setTimeout(()=>setMessage(""), 5000);
+            setData({ name: "", email: "", contactNumber: "", message: "" });
+            setValidator({
+              name: true,
+              contact_number: true,
+              email: true,
+              field_of_interest: true,
+            });
+            setSelectedOptions([]);
+          })
+          .catch((error) => {
+            console.log(error)
+            setShowError(true);
+            setMessage("Something went Wrong!");
+            setTimeout(()=>{
+              setShowError(false);
+              setMessage("");
+            }, 5000);
+          });
 
     //     return;
     //   }
@@ -154,7 +163,7 @@ export default function Form() {
       </div>
 
       {/* Input form */}
-      <form onSubmit={handleSubmit} className="pt-10 flex flex-col gap-3">
+      <form id="contactForm" onSubmit={handleSubmit} className="pt-10 flex flex-col gap-3">
         <input 
           type="text"
           name="name"
