@@ -7,18 +7,13 @@ import {
   StoryComponent,
   Section,
   Wonder,
-  BlackSection,
   HeroSectionWrapper,
   Circle,
   Triangle,
-  ExploreBlog,
-  RoundedCornersSection,
   FounderCard,
 } from "../components";
 import Youtube from "react-youtube";
 import { useWinSizeContext } from "../context/winSizeContext";
-import Carousel from "../components/Carousel";
-import RoundedFullCard from "../components/RoundedFullCard";
 import AnimateIllustrationSection from "../components/AnimateIllustrationSection";
 
 const VIDEO_ID = "cBA-itmpR84";
@@ -112,7 +107,7 @@ export default function About() {
         <img
           src="./assets/about-wave.png"
           alt="path"
-          className="hidden lg:block absolute top-[1.5%] left-[19%] h-[85%] w-[78%]"
+          className="hidden lg:block absolute top-[1.8%] left-[19%] h-[85%] w-[78%]"
         />
         
         <StoryComponent
@@ -124,7 +119,7 @@ export default function About() {
           clientele steadily grew, laying the groundwork for what was to come."
           Image={
             <div className={ILLUSTRATION_CLASS}>
-              <img src="/assets/Story_pic.png" alt="pic" className="" />
+              <img src="/assets/story-1.png" alt="pic" className="" />
             </div>
           }
           direction={1}
@@ -143,7 +138,7 @@ export default function About() {
           text="The year 2021 marked a pivotal moment as Harish's client base expanded significantly. Towards the year's end, he took a bold step, delving into a franchise model, forming a partnership with Amazon's Easy Store. This ambitious move involved selling franchises through the renowned platform, signalling a significant leap forward in his entrepreneurial journey."
           Image={
             <div className={ILLUSTRATION_CLASS}>
-              <img src="/assets/Story_pic.png" alt="" className="" />
+              <img src="/assets/story-2.png" alt="" className="" />
             </div>
           }
           direction={-1}
@@ -162,7 +157,7 @@ export default function About() {
           text="Unfortunately, 2022 presented unexpected challenges when Amazon discontinued its operations, leading to the closure of the franchise model. Undeterred, Harish pivoted his approach, founding a full-stack digital marketing company, recognizing the need for a broader spectrum of services. The focus shifted towards data generation and expansion, signifying resilience in the face of adversity."
           Image={
             <div className={ILLUSTRATION_CLASS}>
-              <img src="/assets/Story_pic.png" alt="" className="" />
+              <img src="/assets/story-3.png" alt="" className="" />
             </div>
           }
           direction={1}
@@ -181,7 +176,7 @@ export default function About() {
           text="In 2023, fate brought Harish together with like-minded visionaries, Raj Maheshwari and Shelendra Mukati, during a summit. Engaging in spirited discussions, they explored innovative ideas, particularly around lead generation. Their synergy and shared aspirations led to the inception of Lead Bank—a revolutionary model empowered by an in-house software boasting unlimited data sources."
           Image={
             <div className={ILLUSTRATION_CLASS}>
-              <img src="/assets/Story_pic.png" alt="" className="" />
+              <img src="/assets/story-4.png" alt="" className="" />
             </div>
           }
           direction={-1}
@@ -200,7 +195,7 @@ export default function About() {
           text="The year 2024 heralded a transformative phase for Lead Bank. With a well-established model in place, they successfully onboarded foreign and domestic clients, amplifying their impact across diverse sectors—from Indian businesses to digital products, ecommerce ventures, and educational initiatives. Their collaborative efforts aimed at empowering entities to thrive in the ever-evolving landscape of the online realm."
           Image={
             <div className={ILLUSTRATION_CLASS}>
-              <img src="/assets/Story_pic.png" alt="" className="" />
+              <img src="/assets/story-5.png" alt="" className="" />
             </div>
           }
           direction={1}
