@@ -18,9 +18,9 @@ export default function Hamburger({siteMapList}){
             <div className="block relative cursor-pointer w-[45px] h-[22px] sm:h-[30px]">
                 <input className="appearance-none hidden" type="checkbox" />
 
-                <span className={"absolute w-[32px] sm:w-[36px] h-[3px] sm:h-[5px] bg-tertiary-500 rounded-2xl inline-block duration-300 ease-in  left-0 top-0" + (isOpen?" w-[43px] left-[3px] rotate-45 origin-top-left":"")} />
+                <span className={"absolute w-[32px] sm:w-[36px] h-[3px] sm:h-[5px] bg-tertiary-500 rounded-2xl inline-block duration-300 ease-in  left-0 top-0" + (isOpen?" !w-[32px] sm:!w-[42px] left-[3px] rotate-45 origin-top-left":"")} />
                 <span className={"absolute w-[32px] sm:w-[36px] h-[3px] sm:h-[5px] bg-tertiary-500 rounded-2xl inline-block duration-300 ease-in  left-0 top-[9px] sm:top-[12px]" + (isOpen?" opacity-0 translate-x-[-20px]":"")} />
-                <span className={"absolute w-[32px] sm:w-[36px] h-[3px] sm:h-[5px] bg-tertiary-500 rounded-2xl inline-block duration-300 ease-in  left-0 bottom-0" + (isOpen?" w-[43px] bottom-[-3px] -rotate-45 origin-top-left":"")} />
+                <span className={"absolute w-[32px] sm:w-[36px] h-[3px] sm:h-[5px] bg-tertiary-500 rounded-2xl inline-block duration-300 ease-in  left-0 bottom-0" + (isOpen?" !w-[32px] sm:!w-[42px] bottom-[-3px] -rotate-45 origin-top-left":"")} />
             </div>
         </button>
         {
