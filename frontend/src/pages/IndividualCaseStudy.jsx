@@ -34,13 +34,15 @@ const IndividualCaseStudy = () => {
                     </h2>
                   }
                   {
-                    // content.paragraph && (
-                    //   <p className=" font-playfair-display text-lg">
-                    //     {content.paragraph}
-                    //   </p>
-                    // )
-                    
-                    
+                    content.paragraph && (
+                      <p className=" font-playfair-display text-lg italic">
+                        {content.paragraph}
+                      </p>
+                    ) 
+                  }<div>{content.points && (content.points.map((point,idx)=>(<ul className="list-disc mx-auto" key={idx}><p className=" font-playfair-display text-lg italic">{`${point}`}</p></ul>)))}</div>
+                  
+                  {
+                    content.centerpara && (content.centerpara.map((point,idx)=>(<p className=" font-semibold text-lg font-playfair-display" key={idx}>{point}</p>)))
                   }
                   {content.images && (
                     <div className="w-full mt-3 flex flex-wrap gap-4 justify-between items-center">
@@ -116,15 +118,40 @@ const blogs = [
         images: [],
       },
       {
+        heading: "",
+        paragraph:
+          "Objectives were clear :",
+          points:["Leads Generation (Specific Location-wise)","Brand Awareness"],
+        images: [],
+      },
+      {
+        heading: "",
+        paragraph:
+          "AR Media House initiated the journey by focusing on the first objective—Leads Generation.",
+        images: [],
+      },
+      {
         heading: "Chapter 2 : Crafting the Digital Blueprint",
         paragraph:
           "The voyage began with the creation of an online model. The first step was understanding the intricate journey of potential students, their mindset, and the nuances of targeting. A strategic Facebook advertising campaign was launched at the national level in India. The goal? To filter and target specific demographics, ensuring precision in location targeting.Student journeys were meticulously mapped, laying the groundwork for an insightful strategy.",
         images: [],
       },
       {
+        heading: "",
+        paragraph:
+          "Student journeys were meticulously mapped, laying the groundwork for an insightful strategy.",
+        images: [],
+      },
+      {
         heading: " Chapter 3 : The Rise of Automation",
         paragraph:
           "In a mere three months, a groundbreaking automation system emerged. Every step, from inquiry to student enrollment, danced to the rhythm of automation. AR Trader witnessed a sixfold increase in business, starting with three thriving batches. The conversion rate, initially at 3%, began its upward trajectory, marking the beginning of a successful automation era.Understanding products, working on execution, and achieving automation were the cornerstones of this monumental shift.",
+        images: [],
+      },
+      {
+        heading: "",
+        paragraph:
+          "Understanding products, working on execution, and achieving automation were the cornerstones of this monumental shift.",
         images: [],
       },
       {
@@ -137,7 +164,13 @@ const blogs = [
         heading:
           "Painting the Digital Canvas",
         paragraph:
-          "With the lead generation mechanism humming efficiently, it was time to paint the canvas of brand awareness.AR Media House delved into daily content creation, turning social media platforms into digital canvases.Instagram, YouTube, WhatsApp, and Telegram became the conduits through which AR Trader spoke, shared, and connected.",
+          "With the lead generation mechanism humming efficiently, it was time to paint the canvas of brand awareness.",
+        images: [],
+      },
+      {
+        heading: "",
+        paragraph:
+          "AR Media House delved into daily content creation, turning social media platforms into digital canvases.Instagram, YouTube, WhatsApp, and Telegram became the conduits through which AR Trader spoke, shared, and connected.",
         images: ["/assets/Case-study.svg", "/assets/Case-study.svg"],
       },
       {
@@ -170,6 +203,13 @@ const blogs = [
         heading: "Crafting the WhatsApp Lead Generation Symphony",
         paragraph:
           "AR Media orchestrated a strategic WhatsApp lead generation symphony. The conversion rates unveiled a tale of success:WhatsApp Conversion Rate: 0.25%,Suspect to Prospect Conversion: 8-9%,Prospect Conversion: 3-4%.This chapter unravels the intricacies of the WhatsApp lead generation approach, positioning Real Estate as a frontrunner in the digital realm.",
+          centerpara:["WhatsApp Conversion Rate: 0.25%","Suspect to Prospect Conversion: 8-9%","Prospect to Conversion: 3-4%"],
+        images: [],
+      },
+      {
+        heading: "",
+        paragraph:
+          "This chapter unravels the intricacies of the WhatsApp lead generation approach, positioning Real Estate as a frontrunner in the digital realm.",
         images: [],
       },
       {
