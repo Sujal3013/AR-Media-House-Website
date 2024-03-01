@@ -1,6 +1,7 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Button } from "./";
+import axios from "axios";
 
 export default function Form() {
   const [data, setData] = useState({
@@ -41,97 +42,96 @@ export default function Form() {
     e.preventDefault();
     const regexPhNo = /\d{2,3}?\+?[0-9,-]{10,14}|\+?\d{2,3}?[0-9,-]{10,14}|[0-9,-]{10,16}/;
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    // const formData={
-    //   name: data.name,
-    //   email: data.email,
-    //   contact: data.contactNumber,
-    //   message: data.message,
-    //   Options: selectedOptions.join(", "),
-    // };
-    // console.log(formData);
-    // fetch(
-    //   "https://script.google.com/macros/s/AKfycbynn5Ga07xCY81tr9xR8fFaSBYpe80GN28aWGUgsgh4aQsXi5ztEjGbNF1sP9-YDitC/exec",
-    //   {
-    //     redirect: "follow",
-    //     method: "POST",
-    //     body: JSON.stringify(formData),
-    //     headers: {
-    //       'Content-Type': 'application/json' // Set appropriate content type header
-    //     }
+    const formData = {
+      name: data.name,
+      email: data.email,
+      contact: data.contactNumber,
+      message: data.message,
+      options: selectedOptions.join(", "),
+    };
+    console.log(formData);
+    fetch(
+      "https://script.google.com/macros/s/AKfycbyVrImVYYKqWmPh7AcTKF23AmpZHMWGL26VZzgif7EUO2r1HgqNdILD-c7E6bMnRtNr/exec", 
+      {
+        redirect: "follow",
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8",
+        },
+      })
+      .then((data) => {
+        console.log("data sent successfully!!!")
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    // if (
+    //   data.name &&
+    //   data.email &&
+    //   data.message &&
+    //   data.contactNumber &&
+    //   selectedOptions.length > 0
+    // ) {
+    //   if (regexPhNo.test(data.contactNumber) && regexEmail.test(data.email)) {
+    //     // send message
+    //     emailjs
+    //       .send(
+    //         "service_24z4gbt",
+    //         "template_wg3jr8c",
+    //         {
+    //           name: data.name,
+    //           email: data.email,
+    //           from_name: "Website",
+    //           contact: data.contactNumber,
+    //           message: data.message,
+    //           Options: selectedOptions.join(", "),
+    //         },
+    //         "WJ8SiZlnj8QyzKCCU"
+    //       )
+    //       .then((response) => {
+    //         setMessage("Email is sent successfully!");
+    //         setSubmitted(true);
+    //         setDisabled(true);
+    //         setTimeout(() => {
+    //           setDisabled(false);
+    //           setSubmitted(false);
+    //         }, 5000);
+    //         setTimeout(()=>setMessage(""), 5000);
+    //         setData({ name: "", email: "", contactNumber: "", message: "" });
+    //         setValidator({
+    //           name: true,
+    //           contact_number: true,
+    //           email: true,
+    //           field_of_interest: true,
+    //         });
+    //         setSelectedOptions([]);
+    //       })
+    //       .catch((error) => {
+    //         setShowError(true);
+    //         setMessage("Something went Wrong!");
+    //         setTimeout(()=>{
+    //           setShowError(false);
+    //           setMessage("");
+    //         }, 5000);
+    //       });
+
+    //     return;
     //   }
-    // )
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     console.log(data);
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
-    if (
-      data.name &&
-      data.email &&
-      data.message &&
-      data.contactNumber &&
-      selectedOptions.length > 0
-    ) {
-      if (regexPhNo.test(data.contactNumber) && regexEmail.test(data.email)) {
-        // send message
-        emailjs
-          .send(
-            "service_24z4gbt",
-            "template_wg3jr8c",
-            {
-              name: data.name,
-              email: data.email,
-              from_name: "Website",
-              contact: data.contactNumber,
-              message: data.message,
-              Options: selectedOptions.join(", "),
-            },
-            "WJ8SiZlnj8QyzKCCU"
-          )
-          .then((response) => {
-            setMessage("Email is sent successfully!");
-            setSubmitted(true);
-            setDisabled(true);
-            setTimeout(() => {
-              setDisabled(false);
-              setSubmitted(false);
-            }, 5000);
-            setTimeout(()=>setMessage(""), 5000);
-            setData({ name: "", email: "", contactNumber: "", message: "" });
-            setValidator({
-              name: true,
-              contact_number: true,
-              email: true,
-              field_of_interest: true,
-            });
-            setSelectedOptions([]);
-          })
-          .catch((error) => {
-            setShowError(true);
-            setMessage("Something went Wrong!");
-            setTimeout(()=>{
-              setShowError(false);
-              setMessage("");
-            }, 5000);
-          });
+    // }
 
-        return;
-      }
-    }
+    // // show form validation-issues
+    // setValidator({
+    //   ...validator,
+    //   name: data.name !== "",
+    //   contact_number: data.contactNumber && regexPhNo.test(data.contactNumber),
+    //   email: data.email !== "" && regexEmail.test(data.email),
+    //   field_of_interest: selectedOptions.length > 0,
+    // });
 
-    // show form validation-issues
-    setValidator({
-      ...validator,
-      name: data.name !== "",
-      contact_number: data.contactNumber && regexPhNo.test(data.contactNumber),
-      email: data.email !== "" && regexEmail.test(data.email),
-      field_of_interest: selectedOptions.length > 0,
-    });
-
-    setShowError(true);
-    setTimeout(() => setShowError(false), 5000);
+    // setShowError(true);
+    // setTimeout(() => setShowError(false), 5000);
   };
 
   return (
