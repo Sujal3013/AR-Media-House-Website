@@ -16,7 +16,6 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "classnames": "^2.5.1",
     "framer-motion": "^10.17.2",
-    "google-spreadsheet": "^4.1.1",
     "react": "^18.2.0",
     "react-countup": "^6.5.0",
     "react-dom": "^18.2.0",
