@@ -1,6 +1,8 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Button } from "./";
+import {GoogleSpreadsheet} from "google-spreadsheet"
+
 
 export default function Form() {
   const [data, setData] = useState({
@@ -41,6 +43,7 @@ export default function Form() {
     e.preventDefault();
     const regexPhNo = /\d{2,3}?\+?[0-9,-]{10,14}|\+?\d{2,3}?[0-9,-]{10,14}|[0-9,-]{10,16}/;
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     // const formData={
     //   name: data.name,
     //   email: data.email,
@@ -52,7 +55,8 @@ export default function Form() {
     // fetch(
     //   "https://script.google.com/macros/s/AKfycbynn5Ga07xCY81tr9xR8fFaSBYpe80GN28aWGUgsgh4aQsXi5ztEjGbNF1sP9-YDitC/exec",
     //   {
-    //     redirect: "follow",
+    //     // redirect: "follow",
+    //     mode:"no-cors",
     //     method: "POST",
     //     body: JSON.stringify(formData),
     //     headers: {
@@ -78,8 +82,8 @@ export default function Form() {
         // send message
         emailjs
           .send(
-            "service_24z4gbt",
-            "template_wg3jr8c",
+            "service_l7j9tuk",
+            "template_3no9vj8",
             {
               name: data.name,
               email: data.email,
@@ -88,7 +92,7 @@ export default function Form() {
               message: data.message,
               Options: selectedOptions.join(", "),
             },
-            "WJ8SiZlnj8QyzKCCU"
+            "3kGkPXcGhEj9lPsa0"
           )
           .then((response) => {
             setMessage("Email is sent successfully!");
@@ -109,6 +113,7 @@ export default function Form() {
             setSelectedOptions([]);
           })
           .catch((error) => {
+            console.log(error)
             setShowError(true);
             setMessage("Something went Wrong!");
             setTimeout(()=>{
@@ -154,7 +159,7 @@ export default function Form() {
       </div>
 
       {/* Input form */}
-      <form onSubmit={handleSubmit} className="pt-10 flex flex-col gap-3">
+      <form id="contactForm" onSubmit={handleSubmit} className="pt-10 flex flex-col gap-3">
         <input 
           type="text"
           name="name"
