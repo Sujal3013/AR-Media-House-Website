@@ -1,11 +1,7 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Button } from "./";
-
-import axios from "axios";
-import {GoogleSpreadsheet} from "google-spreadsheet"
-
-
+import { testData, sendDataToGoogleSheet, displayErrorMessage } from "../utils/FormUtils";
 
 export default function Form() {
   const [data, setData] = useState({
@@ -15,7 +11,6 @@ export default function Form() {
     message: "",
   });
 
-  const [submitted, setSubmitted] = useState(false);
   const [disabled, setDisabled] = useState(false);
 
   const [validator, setValidator] = useState({
@@ -41,103 +36,58 @@ export default function Form() {
     });
   };
 
-  const handleSubmit = (e) => {
-    if (disabled) return;
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const regexPhNo = /\d{2,3}?\+?[0-9,-]{10,14}|\+?\d{2,3}?[0-9,-]{10,14}|[0-9,-]{10,16}/;
-    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const formData = {
-      name: data.name,
-      email: data.email,
-      contact: data.contactNumber,
-      message: data.message,
-      options: selectedOptions.join(", "),
-    };
-    console.log(formData);
-    fetch(
-      "https://script.google.com/macros/s/AKfycbyVrImVYYKqWmPh7AcTKF23AmpZHMWGL26VZzgif7EUO2r1HgqNdILD-c7E6bMnRtNr/exec", 
-      {
-        redirect: "follow",
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: {
-          "Content-Type": "text/plain;charset=utf-8",
+    if (disabled) return;
+    setDisabled(true);
+    
+    if (testData(data, selectedOptions, validator, setValidator)) {
+      // send message
+      try {
+        await sendDataToGoogleSheet(data, selectedOptions);
+      } catch(err) {
+        displayErrorMessage(setShowError, setMessage);
+        setDisabled(false);
+        return;
+      }
+
+      await emailjs.send(
+        "service_l7j9tuk",
+        "template_3no9vj8",
+        {
+          name: data.name,
+          email: data.email,
+          from_name: "Website",
+          contact: data.contactNumber,
+          message: data.message,
+          Options: selectedOptions.join(", "),
         },
-      })
-      .then((data) => {
-        console.log("data sent successfully!!!")
-        console.log(data);
+        "3kGkPXcGhEj9lPsa0"
+      )
+      .then((response) => {
+        setMessage("Message is sent successfully!");
+        setTimeout(()=>setMessage(""), 5000);
+        setData({ name: "", email: "", contactNumber: "", message: "" });
+        setValidator({
+          name: false,
+          contact_number: false,
+          email: false,
+          field_of_interest: false,
+        });
+        setSelectedOptions([]);
       })
       .catch((error) => {
-        console.log(error);
+        displayErrorMessage(setShowError, setMessage);
       });
-    if (
-      data.name &&
-      data.email &&
-      data.message &&
-      data.contactNumber &&
-      selectedOptions.length > 0
-    ) {
-      if (regexPhNo.test(data.contactNumber) && regexEmail.test(data.email)) {
-        // send message
-        emailjs
-          .send(
-            "service_l7j9tuk",
-            "template_3no9vj8",
-            {
-              name: data.name,
-              email: data.email,
-              from_name: "Website",
-              contact: data.contactNumber,
-              message: data.message,
-              Options: selectedOptions.join(", "),
-            },
-            "3kGkPXcGhEj9lPsa0"
-          )
-          .then((response) => {
-            setMessage("Email is sent successfully!");
-            setSubmitted(true);
-            setDisabled(true);
-            setTimeout(() => {
-              setDisabled(false);
-              setSubmitted(false);
-            }, 5000);
-            setTimeout(()=>setMessage(""), 5000);
-            setData({ name: "", email: "", contactNumber: "", message: "" });
-            setValidator({
-              name: true,
-              contact_number: true,
-              email: true,
-              field_of_interest: true,
-            });
-            setSelectedOptions([]);
-          })
-          .catch((error) => {
-            console.log(error)
-            setShowError(true);
-            setMessage("Something went Wrong!");
-            setTimeout(()=>{
-              setShowError(false);
-              setMessage("");
-            }, 5000);
-          });
 
-    //     return;
-    //   }
-    // }
-
-    // // show form validation-issues
-    // setValidator({
-    //   ...validator,
-    //   name: data.name !== "",
-    //   contact_number: data.contactNumber && regexPhNo.test(data.contactNumber),
-    //   email: data.email !== "" && regexEmail.test(data.email),
-    //   field_of_interest: selectedOptions.length > 0,
-    // });
-
-    // setShowError(true);
-    // setTimeout(() => setShowError(false), 5000);
-  }}}
+    } else {
+      // show form validation-issues
+      setShowError(true);
+      setTimeout(() => setShowError(false), 5000);
+    }
+    
+    setDisabled(false);
+  };
 
   return (
     <div className="flex-col lg:w-[50%]">
@@ -221,11 +171,14 @@ export default function Form() {
         </span>
 
         <Button
-          className={submitted?"submitted bg-primary-200 text-white":"bg-primary-500 text-white"}
+          className="bg-primary-500 text-white"
+          disabled={disabled}
           type="submit"
           onClick={handleSubmit}
         >
-          {submitted ? "Message sent !" : "Send Message"}
+          {
+            disabled ? "Sending..." : "Send Message"
+          }
         </Button>
       </form>
     </div>

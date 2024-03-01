@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import classNames from 'classnames';
 
 export default function ({primary, secondary, arrow, arrowWhite, to, children, className, ...other}) {
-  if(!to || to==="") to = useLocation().pathname;
 
   const [isHover, setIsHover] = useState(false);
   const classes = classNames("w-fit cursor-pointer py-2 md:py-2.5 flex justify-center items-center",{
@@ -25,6 +24,7 @@ export default function ({primary, secondary, arrow, arrowWhite, to, children, c
     >
     <Link
       className='text-sm sm:text-base w-full flex justify-center items-center gap-2 text-center leading-4'
+      style={{pointerEvents: other?.disabled || !to || to==="" ? 'none' : ''}}
       to={to}
     >
         {children}
