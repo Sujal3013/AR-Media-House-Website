@@ -8,49 +8,54 @@ const IndividualCaseStudy = () => {
   
   const blog = blogs.find((blog) => blog.id == id);
   
-  setTimeout(()=>console.log(blog, id), 2000);
+  // setTimeout(()=>console.log(blog, id), 2000);
 
   return (
     <div className="relative">
       {blog ? (
         <>
-          <div
-            className={`h-[80vh] w-full bg-[url('/assets/Case-study.jpg')] bg-contain bg-no-repeat relative mb-4`}
-          >
-            <div className="h-full w-full flex flex-col justify-center items-center text-white">
+          <div className="h-[80vh] w-full bg-[url('/assets/Case-study.jpg')] bg-cover bg-top bg-no-repeat relative mb-4">
+            <div className="h-full w-full flex flex-col justify-center items-center text-tertiary-500 bg-black bg-opacity-50">
               <p className="mb-4 border border-solid border-white inline-block px-4 text-lg py-2">
                 Content Marketing
               </p>
               <h1 className="w-[60%] font-bold text-3xl text-center">{blog.name}</h1>
             </div>
           </div>
-          <div className="px-[2rem] sm:px-[6rem] md:px-[12rem] py-4">
-            {blog.description.map((content) => (
-              <div className="mb-2">
-                {content.heading && (
-                  <h1 className="font-bold font-jost text-2xl my-2">
-                    {content.heading}
-                  </h1>
-                )}
-                {content.paragraph && (
-                  <p className=" font-playfair-display text-xl">
-                    {content.paragraph}
-                  </p>
-                )}
-                {content.images && (
-                  <div className="w-full mt-3 flex flex-wrap gap-4 justify-between items-center">
-                    {content.images?.map((image) => (
-                      <img
-                        src={image}
-                        className="w-[32vw] py-4 object-cover"
-                      />
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
+          <div className="px-[2rem] sm:px-[4rem] lg:px-[12rem] py-4">
+            {
+              blog.description.map((content, indx) => (
+                <div className="mb-2" key={indx}>
+                  {
+                    content.heading 
+                    && 
+                    <h1 className="font-bold font-jost text-2xl my-2">
+                      {content.heading}
+                    </h1>
+                  }
+                  {
+                    content.paragraph && (
+                      <p className=" font-playfair-display text-xl">
+                        {content.paragraph}
+                      </p>
+                    )
+                  }
+                  {content.images && (
+                    <div className="w-full mt-3 flex flex-wrap gap-4 justify-between items-center">
+                      {content.images?.map((image, indx) => (
+                        <img
+                          src={image}
+                          className="w-[32vw] py-4 object-cover"
+                          key={indx}
+                        />
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))
+            }
           </div>
-          <div className="px-[12rem] mb-6">
+          <div className="px-[2rem] sm:px-[4rem] lg:px-[12rem] mb-6">
             <div className="flex gap-2 items-center">
               <h2 className="py-1 px-3 rounded-full text-primary-500 inline bg-secondary-500 text-6xl">
                 A

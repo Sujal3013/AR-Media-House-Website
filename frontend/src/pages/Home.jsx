@@ -26,7 +26,7 @@ export default function Home() {
   document.querySelector("title").innerHTML = "AR Media House";
   return (
     <>
-      <HeroSectionWrapper className="flex py-6 flex-col gap-4 items-center justify-between relative">
+      <HeroSectionWrapper className="flex py-2 md:py-6 flex-col gap-4 items-center justify-between relative">
         <div className="w-full flex justify-between items-center">
           {/* text content right side */}
           <div className="w-auto my-8">
