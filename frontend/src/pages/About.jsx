@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState ,useRef} from "react";
 import classNames from "classnames";
 import {
   AnimateNumber, 
@@ -39,6 +39,10 @@ export default function About() {
     OPTS.height *= 0.9;
     OPTS.width *= 0.9;
   }
+  const ref=useRef(null);
+  const handleClick = () => {
+    ref.current?.scrollIntoView({behavior: 'smooth'});
+  };
 
   return (
     <>
@@ -51,8 +55,8 @@ export default function About() {
           className="w-full items-center"
         />
         <Button
-          arrow
-      
+        arrow
+          onClick={handleClick}
           className="bg-primary-500 text-secondary-500 mx-auto mt-8 md:mt-4 mb-16 md:mb-0"
         >
           Read our Story
@@ -99,7 +103,7 @@ export default function About() {
         className="w-full"
       />
 
-      <section id="story" className="bg-tertiary-500 relative">
+      <section ref={ref} id="story" className="bg-tertiary-500 relative">
         <img
           src="./assets/about-wave.png"
           alt="path"

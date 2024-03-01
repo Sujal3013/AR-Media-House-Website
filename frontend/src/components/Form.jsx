@@ -109,7 +109,7 @@ export default function Form() {
       </div>
 
       {/* Input form */}
-      <form onSubmit={handleSubmit} className="pt-10 flex flex-col gap-3">
+      <form id="contactForm" onSubmit={handleSubmit} className="pt-10 flex flex-col gap-3">
         <input 
           type="text"
           name="name"

@@ -1,15 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "../components/Button";
 import { Jobopeningcard } from "../components/Jobopeningcard";
 import { Heading, Wonder } from "../components";
 
 export default function Careers() {
+  const ref=useRef(null);
   document.querySelector("title").innerHTML = "Careers - AR Media House";
   const [blog, setBlog] = useState({});
   useEffect(() => {
     // backend API to fetch blogs
   }, []);
   const count=0;
+  const handleClick = () => {
+    ref.current?.scrollIntoView({behavior: 'smooth'});
+  };
 
   return (
     <>
@@ -26,7 +30,7 @@ export default function Careers() {
             subHeadingClassName="text-tertiary-500"
             className="w-full items-center"
           />
-          <Button className="bg-primary-500 text-secondary-500 mx-auto mt-4" to="#openings">
+          <Button className="bg-primary-500 text-secondary-500 mx-auto mt-4" onClick={handleClick}>
             View open positions
           </Button>
 
@@ -42,7 +46,7 @@ export default function Careers() {
         />
 
         {/* Job Openings Cards */}
-        <div
+        <div ref={ref}
           className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-8 px-screen-padding mx-10 py-8"
           id="openings"
         >

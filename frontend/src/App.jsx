@@ -30,8 +30,9 @@ function App() {
           <Route exact path="case-studies/:id" element={<IndividualCaseStudy />} />
           <Route exact path="contact" element={<ContactUs />} />
           <Route exact path="careers" element={<Careers />} />
+          <Route path="*" element={<Page404 />} />
         </Route>
-        <Route path="*" element={<Page404 />} />
+        {/* <Route path="*" element={<Page404 />} /> */}
       </Routes>
       </WinSizeProvider>
     </BrowserRouter>
