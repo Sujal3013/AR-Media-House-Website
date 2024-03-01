@@ -13,6 +13,7 @@ import {
   Triangle,
   ExploreBlog,
   RoundedCornersSection,
+  FounderCard,
 } from "../components";
 import Youtube from "react-youtube";
 import { useWinSizeContext } from "../context/winSizeContext";
@@ -46,7 +47,7 @@ export default function About() {
 
   return (
     <>
-      <HeroSectionWrapper className="!mb-0 pt-10" whiteWaveBackground>
+      <HeroSectionWrapper className="!mb-0 py-10 md:pb-0" whiteWaveBackground>
         <Heading
           heading="Get To Know"
           headingClassName="text-center text-primary-500"
@@ -84,7 +85,7 @@ export default function About() {
         textClassName="py-10 "
         illustration={
           <div className="rounded-3xl">
-            <Youtube videoId={VIDEO_ID} opts={OPTS} />
+            <Youtube videoId={VIDEO_ID} opts={OPTS} width="90%" />
           </div>
         }
         largeFlex
@@ -223,7 +224,7 @@ export default function About() {
           focusedIndividual.map((item, index)=>{
             const el = cardList[index];
             return (
-              {...item, illustration: <img src={el.iconSrc} alt={`image-${index}`} className="w-[35vw]"/>}
+              {...item, key: index, illustration: <img src={el.iconSrc} alt={`image-${index}`} className={`w-[35vw] ${index===1 && "-translate-y-16"}`}/>}
             )
           })
         }
@@ -321,112 +322,14 @@ export default function About() {
           className="items-center"
         />
 
-        <div className="w-full px-[2.5vw] py-10 flex flex-col md:flex-row items-center justify-between gap-12 sm:gap-16 md:gap-20 lg:gap-24">
-          <div className="w-[90%] md:w-[40%] shadow-lg hover:cursor-pointer rounded-2xl overflow-hidden ceo-container">
-            <img src="/assets/founder2.jpg" alt="ceo-1" className="ceo-image"/>
-
-            <div className="flex justify-between items-center">
-              <div>
-                <div className="w-fit min-w-[50%] pl-2 md:pl-3 pr-4 md:pr-6 py-1 mt-1.5 rounded-r-full bg-primary-500 text-lg sm:text-2xl font-semibold">
-                  Raj Maheshwari
-                </div>
-                <h2 className="px-2 md:px-3 font-semibold text-gray-500 text-sm sm:text-base">
-                  Co-founder
-                </h2>
-              </div>
-
-              <div className="basis-[30%] flex justify-between gap-2 pr-3 ceo-socials">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z"></path>
-                </svg>
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z"></path>
-                </svg>
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z"></path>
-                </svg>
-              </div>
-            </div>
-
-            <div className="p-3 pt-0">
-              <p className="my-3 text-xs sm:text-sm">
-              Raj Maheshwari is a digital market specialist, portfolio manager, trainer, and stock market trader. In 2018, he founded the AR group and launched his first business, AR Financial Research & Consultancy Services, where he served as a mentor to help others succeed in the worlds of finance and investment.<br/> 
-Later on, he discovered that the lack of digitalization is causing issues for a lot of businesses. Subsequently, he devised the concept to establish an additional enterprise, AR Media House, offering digital solutions that facilitate corporate expansion. <br />
-His goal is to enable people and companies to prosper in the digital and financial spheres. Whether your goal is to become an expert in stock market trading or to increase your web presence, I can help you every step of the way.
-              </p>
-            </div>
-          </div> 
-
-
-          <div className="w-[90%] md:w-[40%] shadow-lg hover:cursor-pointer rounded-2xl overflow-hidden ceo-container">
-            <img src="/assets/founder1.jpeg" alt="ceo-1" className="ceo-image"/>
-
-            <div className="flex justify-between items-center">
-              <div>
-                <div className="w-fit min-w-[50%] pl-2 md:pl-3 pr-4 md:pr-6 py-1 mt-1.5 rounded-r-full bg-secondary-500 text-tertiary-500 text-lg sm:text-2xl font-semibold">
-                Shailendra Mukati
-                </div>
-                <h2 className="px-2 md:px-3 font-semibold text-gray-500 text-sm sm:text-base">
-                  Co-Founder
-                </h2>
-              </div>
-              <div className="basis-[30%] flex justify-between gap-2 pr-3 ceo-socials">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z"></path>
-                </svg>
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z"></path>
-                </svg>
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z"></path>
-                </svg>
-              </div>
-            </div>
-
-            <div className="p-3 pt-0">
-              <p className="my-3 text-xs sm:text-sm">
-              Another AR group cofounder is Shailendra Mukati. His area of expertise is computer engineering (CS), and he has developed technical talents that solve technical issues for businesses. <br />
-It was there that he began applying his managerial and marketing talents to deal with clients. His goal was to help as many businesses as possible go from having low sales to experiencing 10x growth. <br />
-Shailendra, a true leader, is the driving force behind a group of remarkable people that collaborate relentlessly to achieve the shared objective of revolutionising internet marketing. As the leader of AR Media House, Shailendra is leading the company into its next phase of leadership in the market.Under Shailendra's guidance, AR Media House is poised to set new standards and pave the way for innovative approaches in internet marketing.
-              </p>
-            </div>
-          </div> 
-         
-        </div>
-        <div className="w-full px-[2.5vw] py-10 flex flex-col md:flex-row items-center gap-12 sm:gap-16 md:gap-20 lg:gap-24">
-          <div className="w-[90%] md:w-[40%] shadow-lg hover:cursor-pointer mx-auto rounded-2xl overflow-hidden ceo-container">
-            <img src="/assets/founder3.JPG" alt="ceo-1" className="ceo-image"/>
-
-            <div className="flex justify-between items-center">
-              <div>
-                <div className="w-fit min-w-[50%] pl-2 md:pl-3 pr-4 md:pr-6 py-1 mt-1.5 rounded-r-full bg-primary-500 text-lg sm:text-2xl font-semibold">
-                  Harish Parihar
-                </div>
-                <h2 className="px-2 md:px-3 font-semibold text-gray-500 text-sm sm:text-base">
-                  Co-founder
-                </h2>
-              </div>
-
-              <div className="basis-[30%] flex justify-between gap-2 pr-3 ceo-socials">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z"></path>
-                </svg>
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z"></path>
-                </svg>
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z"></path>
-                </svg>
-              </div>
-            </div>
-
-            <div className="p-3 pt-0">
-              <p className="my-3 text-xs sm:text-sm">
-                Sahil Walia has transformed Idea Clan into a martech company by amalgamating his marketing skills with his technical expertise. As the Director, Sahil has taken the responsibility of setting the vision and technology strategy in addition to driving the data science agenda across the company’s entire portfolio. He is the innovative mind behind the path breaking programming on which Idea Clan floats. Today, he’s driving the company’s strategy to unleash the power of technology over an established empire of online marketing.
-              </p>
-            </div>
-          </div> 
-         
+        <div className="w-full py-10 flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap items-center md:items-start justify-center lg:justify-between gap-12 sm:gap-8 md:gap-12 xl:gap-16">
+          {
+            founders.map((founder, indx)=>{
+              return (
+                <FounderCard {...founder} key={indx} index={indx}/>
+              )
+            })
+          }         
         </div>
       </section>
 
@@ -519,3 +422,39 @@ function Card({ blobSrc, iconSrc, title, titleClassNames }) {
     </div>
   );
 }
+
+const founders = [
+  {
+    founderName: "Raj Maheshwari",
+    imageSrc: "/assets/founder2.jpg", 
+    position: "Co-Founder",
+    description: `Raj Maheshwari is a digital market specialist, portfolio manager, trainer, and stock market trader. In 2018, he founded the AR group and launched his first business, AR Financial Research & Consultancy Services, where he served as a mentor to help others succeed in the worlds of finance and investment.\n
+    Later on, he discovered that the lack of digitalization is causing issues for a lot of businesses. Subsequently, he devised the concept to establish an additional enterprise, AR Media House, offering digital solutions that facilitate corporate expansion.\n
+    His goal is to enable people and companies to prosper in the digital and financial spheres. Whether your goal is to become an expert in stock market trading or to increase your web presence, I can help you every step of the way.`,
+    facebookLink: "", 
+    twitterLink: "", 
+    linkedinLink: "", 
+  }, 
+  {
+    founderName: "Shailendra Mukati",
+    imageSrc: "/assets/founder1.jpeg", 
+    position: "Co-Founder",
+    description: `Another AR group cofounder is Shailendra Mukati. His area of expertise is computer engineering (CS), and he has developed technical talents that solve technical issues for businesses. 
+    \nIt was there that he began applying his managerial and marketing talents to deal with clients. His goal was to help as many businesses as possible go from having low sales to experiencing 10x growth. 
+    \nShailendra, a true leader, is the driving force behind a group of remarkable people that collaborate relentlessly to achieve the shared objective of revolutionising internet marketing. As the leader of AR Media House, Shailendra is leading the company into its next phase of leadership in the market.Under Shailendra's guidance, AR Media House is poised to set new standards and pave the way for innovative approaches in internet marketing.`,
+    facebookLink: "", 
+    twitterLink: "", 
+    linkedinLink: "", 
+  }, 
+  {
+    founderName: "Harish Parihar", 
+    imageSrc: "/assets/founder3.JPG", 
+    position: "Co-Founder",
+    description: `Another AR group cofounder is Shailendra Mukati. His area of expertise is computer engineering (CS), and he has developed technical talents that solve technical issues for businesses. 
+    \nIt was there that he began applying his managerial and marketing talents to deal with clients. His goal was to help as many businesses as possible go from having low sales to experiencing 10x growth. 
+    \nShailendra, a true leader, is the driving force behind a group of remarkable people that collaborate relentlessly to achieve the shared objective of revolutionising internet marketing. As the leader of AR Media House, Shailendra is leading the company into its next phase of leadership in the market.Under Shailendra's guidance, AR Media House is poised to set new standards and pave the way for innovative approaches in internet marketing.`,
+    facebookLink: "", 
+    twitterLink: "", 
+    linkedinLink: "", 
+  }, 
+]

@@ -8,6 +8,7 @@ import ExploreBlog from "./ExploreBlog";
 import FadeIn from "./FadeIn";
 import FadeInUp from "./FadeInUp";
 import Footer from "./Footer";
+import FounderCard from "./FounderCard";
 import Navbar from "./Navbar";
 import Heading from "./Heading";
 import HeroSectionWrapper from "./HeroSectionWrapper";
@@ -34,7 +35,8 @@ export {
     ExploreBlog, 
     FadeIn, 
     FadeInUp, 
-    Footer,
+    Footer, 
+    FounderCard, 
     Heading,
     HeroSectionWrapper,
     HomePage3StepPath, 
