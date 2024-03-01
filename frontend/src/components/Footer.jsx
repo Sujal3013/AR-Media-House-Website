@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="flex gap-8 md:block">
           
           <div>
-            <img src="/assets/location.png" className='inline w-6 h-6' alt="" />
+            <a href="https://maps.app.goo.gl/44zPJFBY2Po67QRr5"><img src="/assets/location.png" className='inline w-6 h-6' alt="" /></a>
             <h1 className="text-sm inline lg:text-base"> 402,Kuber House</h1>
             <p className="text-sm lg:text-base">162,Kanchan Bagh,Indore</p>
             <p className="text-sm lg:text-base">Madhya Pradesh - 452001</p>
@@ -57,10 +57,12 @@ const Footer = () => {
       <div className='hidden md:block flex flex-col gap-6'>
         <h1 className='text-xl lg:text-2xl'>Insta-feed</h1>
         <div className='grid grid-cols-2 gap-8'>
-          <div className='w-20 h-20 rounded bg-tertiary-500'></div>
-          <div className='w-20 h-20 rounded bg-tertiary-500'></div>
-          <div className='w-20 h-20 rounded bg-tertiary-500'></div>
-          <div className='w-20 h-20 rounded bg-tertiary-500'></div>
+          <a href="https://www.instagram.com/ar_media_house.ai/"><div className='w-20 h-20 rounded bg-[url("/assets/Instagram.jpg")] bg-cover bg-no-repeat'></div></a>
+          <div className='w-20 h-20 rounded bg-[url("/assets/Careers-Hero-with-gradient.jpg")]'></div>
+          <div className='w-20 h-20 rounded bg-[url("/assets/Careers-Hero-with-gradient.jpg")]'></div>
+          <div className='w-20 h-20 rounded bg-[url("/assets/Careers-Hero-with-gradient.jpg")]'></div>
+          
+          
         </div>
       </div>
       <div className='flex flex-col block md:hidden'>
@@ -87,8 +89,12 @@ const Footer = () => {
         title="Insta-feed" 
         titleClass="text-xl lg:text-2xl py-2 px-4">
           <div className='grid grid-cols-2 gap-8 px-8'>
+            {/* <div className='w-20 h-20 rounded '><img src="frontend\public\assets\Instagram.jpg" alt="" /></div>
+            <div className='w-20 h-20 rounded '><img src="frontend\public\assets\Instagram.jpg" alt="" /></div>
+            <div className='w-20 h-20 rounded '><img src="frontend\public\assets\Instagram.jpg" alt="" /></div>
+            <div className='w-20 h-20 rounded '><img src="frontend\public\assets\Instagram.jpg" alt="" /></div> */}
             <div className='w-20 h-20 rounded bg-tertiary-500'></div>
-            <div className='w-20 h-20 rounded bg-tertiary-500'></div>
+            <div className='w-10 h-20 rounded bg-tertiary-500'></div>
             <div className='w-20 h-20 rounded bg-tertiary-500'></div>
             <div className='w-20 h-20 rounded bg-tertiary-500'></div>
           </div>

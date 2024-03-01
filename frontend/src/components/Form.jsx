@@ -10,6 +10,9 @@ export default function Form() {
     message: "",
   });
 
+  const [submitted, setSubmitted] = useState(false);
+  const [disabled, setDisabled] = useState(false);
+
   const [validator, setValidator] = useState({
     name: false,
     contact_number: false,
@@ -34,6 +37,7 @@ export default function Form() {
   };
 
   const handleSubmit = (e) => {
+    if (disabled) return;
     e.preventDefault();
     const regexPhNo = /\d{2,3}?\+?[0-9,-]{10,14}|\+?\d{2,3}?[0-9,-]{10,14}|[0-9,-]{10,16}/;
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -45,7 +49,7 @@ export default function Form() {
       data.contactNumber &&
       selectedOptions.length > 0
     ) {
-      if (regexPhNo.test(data.contactNumber) && regexEmail.test(data.email)){
+      if (regexPhNo.test(data.contactNumber) && regexEmail.test(data.email)) {
         // send message
         emailjs
           .send(
@@ -172,7 +176,8 @@ export default function Form() {
                 if(validator[key]) return;
                 return (
                   <span key={indx}>
-                    {key==="field_of_interest"?"interest":key}{", "}
+                    {key === "field_of_interest" ? "interest" : key}
+                    {", "}
                   </span>
                 );
               })
@@ -181,11 +186,11 @@ export default function Form() {
         </span>
 
         <Button
-          className="bg-primary-500 text-white"
+          className={submitted?"submitted bg-primary-200 text-white":"bg-primary-500 text-white"}
           type="submit"
           onClick={handleSubmit}
         >
-          Send Message
+          {submitted ? "Message sent !" : "Send Message"}
         </Button>
       </form>
     </div>

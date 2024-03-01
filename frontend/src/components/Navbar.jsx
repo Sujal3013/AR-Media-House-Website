@@ -14,16 +14,17 @@ export default function Navbar() {
   return (
     <nav className="navbar">
         <div className="flex justify-center items-center gap-1">
-            <h1
+            {/* <h1
                 className="p-0 px-2 bg-primary-500 text-2xl text-secondary-500 rounded-full"
             >
                 A
-            </h1>
-            <h1 
+            </h1> */}
+            <img src="/assets/Navlogo.png" alt="" className="w-8 h-8" />
+            {/* <h1 
                 className="inline text-tertiary-500 text-sm"
             >
                 AR MEDIA HOUSE
-            </h1>
+            </h1> */}
         </div>
 
         {/*Hamburger Menu*/}

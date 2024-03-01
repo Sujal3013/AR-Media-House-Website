@@ -57,7 +57,7 @@ export default function Technologies() {
                 <li className="h-12 sm:h-20 md:h-28"><img className="w-full h-full" src="/assets/react.svg" alt="react" /></li>
                 <li className="w-24 sm:w-40 md:w-48 md:h-12"><img className="w-full h-full" src="/assets/kafka.png" alt="kafta" /></li>
                 <li className="w-20 sm:w-36 md:w-44"><img className="w-full h-full" src="/assets/kubernetes.png" alt="kubernetes" /></li>
-                <li className="w-20 sm:w-36 md:w-44"><img className="w-full h-full" src="/assets/lookfinitywhite.png" alt="lookfinity" /></li>
+                <li className="w-20 sm:w-36 md:w-44"><img className="w-full h-full" src="/assets/wordpress.png" alt="wordpress" /></li>
                 <li className="w-28 sm:w-56 md:w-64 md:h-auto"><img className="w-full h-full" src="/assets/clickHouse.png" alt="click house" /></li>
               </>
             }
