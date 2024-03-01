@@ -3,7 +3,6 @@ import emailjs from "@emailjs/browser";
 import { Button } from "./";
 
 import axios from "axios";
-=======
 import {GoogleSpreadsheet} from "google-spreadsheet"
 
 
@@ -72,9 +71,6 @@ export default function Form() {
       .catch((error) => {
         console.log(error);
       });
-
-
-   
     if (
       data.name &&
       data.email &&
@@ -141,7 +137,7 @@ export default function Form() {
 
     // setShowError(true);
     // setTimeout(() => setShowError(false), 5000);
-  };
+  }}}
 
   return (
     <div className="flex-col lg:w-[50%]">
@@ -245,34 +241,3 @@ const dataTypes = [
   "Careers",
   "Others",
 ];
-
-// const dataRequired = [
-//   {
-//     title: "name",
-//     textArea: false,
-//     placeholder: "Enter your Name",
-//     type: "text",
-//     required: true,
-//   },
-//   {
-//     title: "email",
-//     textArea: false,
-//     placeholder: "Enter your Email",
-//     type: "email",
-//     required: true,
-//   },
-//   {
-//     title: "contactNumber",
-//     textArea: false,
-//     placeholder: "91+xxxxxxxxxx",
-//     type: "tel",
-//     // pattern: "[0-9]{2}\+[0-9]{10}",
-//     required: true,
-//   },
-//   {
-//     title: "message",
-//     textArea: true,
-//     placeholder: "Enter your message",
-//     type: "text",
-//   },
-// ];
