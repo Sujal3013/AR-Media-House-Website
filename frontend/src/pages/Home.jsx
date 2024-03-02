@@ -260,6 +260,7 @@ export default function Home() {
               return (
                 <ClientCards
                   key={index}
+                  index={index}
                   {...c}
                 />
               )
@@ -373,21 +374,21 @@ const icon2 = <img src="./assets/person.png" alt="person" className="w-16 h-16"/
 
 const clients = [
   {
-    icon: <img src="./assets/Client1.jpeg" alt="person" className="w-16 h-16"/>,
+    icon: "/assets/Client1.jpeg",
     heading: "Rohit",
     subHeading: "Insta Transfer",
     text: "Partnering with AR Media House proved to be a game-changer for our brand, propelling us to unprecedented success with their innovative strategies and expert team, resulting in a remarkable 10-12X increase in sales and an impressive 50% ROI. We wholeheartedly recommend them for their exceptional track record of delivering transformative results that exceed expectations.",
     className: "first:relative md:first:top-16 last:relative md:last:top-16",
   },
   {
-    icon: <img src="./assets/client3.jpg" alt="person" className="w-16 h-16"/>,
+    icon: "/assets/client3.jpg", 
     heading: "Lokendra",
     subHeading: "Lokmain Technologies",
     text: "I’ve experienced working directly with AR Media House Inc, in the marketing space for many years, and they have been very successful as a multiple channel advertiser — driving thousands of leads and sales to our offers over the years. Some of their most successful sources have been Native and social media (Facebook) marketing. It’s been great to see them build infrastructures and teams to successfully tackle multiple verticals using these media sources.",
     className: "first:relative md:first:top-16 last:relative md:last:top-16",
   },
   {
-    icon: <img src="./assets/client2.jpeg" alt="person" className="w-16 h-16"/>,
+    icon: "/assets/client2.jpeg", 
     heading: "Billy",
     subHeading: "EdTech & Ecommerce Brand",
     text: "Discovering AR Media House was a serendipitous breakthrough! Within a mere 5-6 months, their extraordinary efforts have ingeniously constructed our Direct-to-Consumer (D2C) brand from the very foundation. Presently, we flourish expansively, both in the digital realm and offline, with an astonishing 70% of our online operations streamlined and automated. The unparalleled prowess and expertise exhibited by their team are truly unmatched.",

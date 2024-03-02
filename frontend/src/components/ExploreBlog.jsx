@@ -12,17 +12,17 @@ const list = [
     id:1,
     heading: "AR Trader Revolutionizes Lead Generation",
     text: "Once upon a time, in the dynamic realm of financial education, AR Research House of Finance and Consultancy Services, affectionately known as AR Trader, embarked on a transformative journey...",
-    src: "./assets/blog1.webp",
+    src: "/assets/revolutionizes-lead-generation.gif",
   },{
     id:2,
     heading: "Real Estate Elevates Lead Generation with AR Media",
     text: "Embark on the journey of a Real Estate company seeking to revolutionise its lead generation strategy with the expertise of AR Media.Discover how strategic planning and digital prowess...",
-    src: "./assets/blog2.webp",
+    src: "/assets/revolutionizes-lead-generation-2.png",
   },{
     id:3,
     heading: "Insta Transfer's Digital Leap with AR Media House",
     text: "In the bustling landscape of B2B services, Insta Transfer, a multifaceted company offering courier services, banking logistics, payments, and a revolutionary franchise model...",
-    src: "./assets/blog3.webp",
+    src: "/assets/digital-marketing.gif",
   }
 ]
 

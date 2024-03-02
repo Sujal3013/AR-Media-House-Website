@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "./";
 import { motion } from "framer-motion";
 import classNames from "classnames";
-import { Link } from "react-router-dom";
 
 export default function ExploreBlogList({
   blog,
@@ -27,7 +26,7 @@ export default function ExploreBlogList({
     },
   };
   const classes = classNames(
-    "min-w-[11.5rem] max-w-72 h-[22rem] sm:max-h-[450px] sm:h-[64vh] text-secondary-500 flex flex-col items-start justify-evenly relative overflow-hidden gap-2 hover:cursor-pointer",
+    "min-w-[11.5rem] max-w-72 h-[22rem] sm:max-h-[475px] h-[445px] sm:h-[66vh] text-secondary-500 flex flex-col items-start justify-evenly relative overflow-hidden gap-2 hover:cursor-pointer",
     {
       [className]: className,
     }
