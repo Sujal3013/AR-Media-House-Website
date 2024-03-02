@@ -41,7 +41,7 @@ export default function ServicesSec2({Card, list}){
         <Card {...list[1]} />
       </div>
       <div className="w-full flex justify-center mb-8">
-        <Button className="bg-primary-500">Get Started</Button>
+        <Button className="bg-primary-500" to="/contact">Get Started</Button>
       </div>
       <div className="w-full px-screen-padding flex justify-between sm:gap-4 mb-8">
         <Card {...list[2]} />
@@ -64,7 +64,7 @@ export default function ServicesSec2({Card, list}){
         {list.map((el,ind)=>(
           <Card {...el} key={ind}/>
         ))}
-        <Button className="bg-primary-500 my-8">Get Started</Button>
+        <Button className="bg-primary-500 my-8" to={"/contact"}>Get Started</Button>
       </div>
 
       {/* Shapes */}

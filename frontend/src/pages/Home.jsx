@@ -373,24 +373,24 @@ const icon2 = <img src="./assets/person.png" alt="person" className="w-16 h-16"/
 
 const clients = [
   {
-    icon: icon2,
-    heading: "James Wallace",
-    subHeading: "Scorpion Media",
-    text: "AR Media House's superior targeting technology, ease of implementation, and ability to deliver quality at scale is what has made us so successful in this field. Their experience from managing multiple verticals of lead generation and social media marketing has made them one of the most trusted organizations to partner with. Their constant expanding of horizons is worth appreciating. Their adaptable approach made the collaboration enriching for both the parties.",
+    icon: <img src="./assets/Client1.jpeg" alt="person" className="w-16 h-16"/>,
+    heading: "Rohit",
+    subHeading: "Insta Transfer",
+    text: "Partnering with AR Media House proved to be a game-changer for our brand, propelling us to unprecedented success with their innovative strategies and expert team, resulting in a remarkable 10-12X increase in sales and an impressive 50% ROI. We wholeheartedly recommend them for their exceptional track record of delivering transformative results that exceed expectations.",
     className: "first:relative md:first:top-16 last:relative md:last:top-16",
   },
   {
-    icon: icon2,
+    icon: <img src="./assets/person.png" alt="person" className="w-16 h-16"/>,
     heading: "Matt Crist",
-    subHeading: "4AD",
+    subHeading: "Maruti Suzuki",
     text: "I’ve experienced working directly with AR Media House Inc, in the marketing space for many years, and they have been very successful as a multiple channel advertiser — driving thousands of leads and sales to our offers over the years. Some of their most successful sources have been Native and social media (Facebook) marketing. It’s been great to see them build infrastructures and teams to successfully tackle multiple verticals using these media sources.",
     className: "first:relative md:first:top-16 last:relative md:last:top-16",
   },
   {
-    icon: icon2,
-    heading: "Brooklyn Foster",
-    subHeading: "Suited Connector",
-    text: "I’ve worked with AR Media House, Inc. since 2018 from both the advertising and lead generation sides of the business. They are highly versatile marketers that are able to play at a high level in both the Media Buying and Lead generation space. Idea Clan brings a depth of experience, skills, and access to resources that instantly gives them an edge over other marketers — allowing them to bring enormously high revenue and ROIs for those who partner with him.",
+    icon: <img src="./assets/client2.jpeg" alt="person" className="w-16 h-16"/>,
+    heading: "Billy",
+    subHeading: "(EdTech & Ecommerce Brand )",
+    text: "Discovering AR Media House was a serendipitous breakthrough! Within a mere 5-6 months, their extraordinary efforts have ingeniously constructed our Direct-to-Consumer (D2C) brand from the very foundation. Presently, we flourish expansively, both in the digital realm and offline, with an astonishing 70% of our online operations streamlined and automated. The unparalleled prowess and expertise exhibited by their team are truly unmatched.",
     className: "first:relative md:first:top-16 last:relative md:last:top-16",
   },
 ];
