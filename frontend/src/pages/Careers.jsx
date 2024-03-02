@@ -50,9 +50,9 @@ export default function Careers() {
           className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-8 px-screen-padding mx-10 py-8"
           id="openings"
         >
-          {openings.map((opening) => (
+          {openings.map((opening,idx) => (
             <Jobopeningcard
-
+              key={idx}
               title={opening.title}
               location={opening.location}
               daysAgo={opening.daysAgo}
