@@ -168,3 +168,51 @@ h2, h3, h4, h5, h6 {
   cursor: pointer;
   z-index: 999;
 }
+
+
+.myCard {
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.innerCard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.myCard:hover .innerCard {
+  transform: rotateY(180deg);
+}
+
+.frontSide,
+.backSide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  color: white;
+}
+
+.backSide {
+  transform: rotateY(180deg);
+}
+
+@keyframes cardFlip {
+  0% {
+    opacity: 0.3;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
