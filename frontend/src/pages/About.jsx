@@ -157,7 +157,7 @@ export default function About() {
           text="Unfortunately, 2022 presented unexpected challenges when Amazon discontinued its operations, leading to the closure of the franchise model. Undeterred, Harish pivoted his approach, founding a full-stack digital marketing company, recognizing the need for a broader spectrum of services. The focus shifted towards data generation and expansion, signifying resilience in the face of adversity."
           Image={
             <div className={ILLUSTRATION_CLASS}>
-              <img src="/assets/story-2.png" alt="" className="" />
+              <img src="/assets/story-3.png" alt="" className="" />
             </div>
           }
           direction={1}
@@ -176,7 +176,7 @@ export default function About() {
           text="In 2023, fate brought Harish together with like-minded visionaries, Raj Maheshwari and Shelendra Mukati, during a summit. Engaging in spirited discussions, they explored innovative ideas, particularly around lead generation. Their synergy and shared aspirations led to the inception of Lead Bank—a revolutionary model empowered by an in-house software boasting unlimited data sources."
           Image={
             <div className={ILLUSTRATION_CLASS}>
-              <img src="/assets/story-3.png" alt="" className="" />
+              <img src="/assets/story-7.png" alt="" className="" />
             </div>
           }
           direction={-1}
@@ -195,7 +195,7 @@ export default function About() {
           text="The year 2024 heralded a transformative phase for Lead Bank. With a well-established model in place, they successfully onboarded foreign and domestic clients, amplifying their impact across diverse sectors—from Indian businesses to digital products, ecommerce ventures, and educational initiatives. Their collaborative efforts aimed at empowering entities to thrive in the ever-evolving landscape of the online realm."
           Image={
             <div className={ILLUSTRATION_CLASS}>
-              <img src="/assets/story-5.png" alt="" className="" />
+              <img src="/assets/story-8.png" alt="" className="" />
             </div>
           }
           direction={1}
@@ -426,7 +426,7 @@ const founders = [
   {
     founderName: "Raj Maheshwari",
     imageSrc: "/assets/founder2.jpg", 
-    position: "Co-Founder",
+    position: "Founder",
     description: `Raj Maheshwari is a digital market specialist, portfolio manager, trainer, and stock market trader. In 2018, he founded the AR group and launched his first business, AR Financial Research & Consultancy Services, where he served as a mentor to help others succeed in the worlds of finance and investment.\n
     Later on, he discovered that the lack of digitalization is causing issues for a lot of businesses. Subsequently, he devised the concept to establish an additional enterprise, AR Media House, offering digital solutions that facilitate corporate expansion.\n
     His goal is to enable people and companies to prosper in the digital and financial spheres. Whether your goal is to become an expert in stock market trading or to increase your web presence, I can help you every step of the way.`,
@@ -437,21 +437,19 @@ const founders = [
   {
     founderName: "Harish Parihar", 
     imageSrc: "/assets/founder3.JPG", 
-    position: "Co-Founder",
-    description: `Another AR group cofounder is Shailendra Mukati. His area of expertise is computer engineering (CS), and he has developed technical talents that solve technical issues for businesses. 
-    \nIt was there that he began applying his managerial and marketing talents to deal with clients. His goal was to help as many businesses as possible go from having low sales to experiencing 10x growth. 
-    \nShailendra, a true leader, is the driving force behind a group of remarkable people that collaborate relentlessly to achieve the shared objective of revolutionising internet marketing. As the leader of AR Media House, Shailendra is leading the company into its next phase of leadership in the market.Under Shailendra's guidance, AR Media House is poised to set new standards and pave the way for innovative approaches in internet marketing.`,
-    facebookLink: "", 
-    twitterLink: "", 
-    linkedinLink: "", 
+    position: "CEO & CTO",
+    description: `Welcome to AR Media House, where innovation intersects with lead generation excellence. I'm Harish Parihar, serving as both CEO and CTO, leveraging extensive expertise in Performance Marketing, Digital Marketing, and Brand Strategy. With a track record managing $250k+ in ad spend and generating over 100k leads via finely-tuned funnels and targeted Facebook Ads, I specialize in elevating businesses across various sectors.At AR Media House, we don't just promise results; we guarantee them. Through strategic planning, data-driven insights, and continuous optimization, we ensure your brand outshines digital clutter and captivates your audience. Whether you're a startup carving your niche or an established enterprise pursuing exponential growth, our customized solutions exceed expectations.`,
+    facebookLink: "https://www.facebook.com/harish.parihar.96592/", 
+    twitterLink: "https://www.instagram.com/harishparihar.ai/", 
+    linkedinLink: "https://www.linkedin.com/in/harish-parihar-ab5086153/", 
   }, 
   {
     founderName: "Shailendra Mukati",
-    imageSrc: "/assets/founder1.jpg", 
+    imageSrc: "/assets/founder1.jpeg", 
     position: "Co-Founder",
     description: `Another AR group cofounder is Shailendra Mukati. His area of expertise is computer engineering (CS), and he has developed technical talents that solve technical issues for businesses. 
-    \nIt was there that he began applying his managerial and marketing talents to deal with clients. His goal was to help as many businesses as possible go from having low sales to experiencing 10x growth. 
-    \nShailendra, a true leader, is the driving force behind a group of remarkable people that collaborate relentlessly to achieve the shared objective of revolutionising internet marketing. As the leader of AR Media House, Shailendra is leading the company into its next phase of leadership in the market.Under Shailendra's guidance, AR Media House is poised to set new standards and pave the way for innovative approaches in internet marketing.`,
+    It was there that he began applying his managerial and marketing talents to deal with clients. His goal was to help as many businesses as possible go from having low sales to experiencing 10x growth. 
+    Shailendra, a true leader, is the driving force behind a group of remarkable people that collaborate relentlessly to achieve the shared objective of revolutionising internet marketing. As the leader of AR Media House, Shailendra is leading the company into its next phase of leadership in the market.Under Shailendra's guidance, AR Media House is poised to set new standards and pave the way for innovative approaches in internet marketing.`,
     facebookLink: "", 
     twitterLink: "", 
     linkedinLink: "", 

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Button, Circle, Triangle } from "../components";
+import { useState } from "react";
 
 const IndividualCaseStudy = () => {
   const { id } = useParams();
@@ -9,11 +10,20 @@ const IndividualCaseStudy = () => {
   const blog = blogs.find((blog) => blog.id == id);
   document.querySelector("title").innerHTML = `Case Study - ${blog.name}`;
   // setTimeout(()=>console.log(blog, id), 2000);
-
+  const [model,setModel]=useState(false);
+  const [tempimgScr,setTempImgScr]=useState('');
+  const getImage=(image)=>{
+    setTempImgScr(image);
+    setModel(true);
+  }
   return (
     <div className="relative">
       {blog ? (
         <>
+        <div className={model?"model open":"model"}>
+          <img src={tempimgScr} alt={`${tempimgScr}`} />
+          <svg onClick={()=>setModel(false)} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="Close"><path d="M38 12.83 35.17 10 24 21.17 12.83 10 10 12.83 21.17 24 10 35.17 12.83 38 24 26.83 35.17 38 38 35.17 26.83 24z" fill="#ff9356" class="color000000 svgShape"></path><path fill="none" d="M0 0h48v48H0z"></path></svg>
+        </div>
           <div className="h-[80vh] w-full bg-[url('/assets/Case-study.jpg')] bg-cover bg-top bg-no-repeat relative mb-4">
             <div className="h-full w-full flex flex-col justify-center items-center text-tertiary-500 bg-black bg-opacity-50">
               <p className="mb-4 border border-solid border-white inline-block px-4 text-lg py-2">
@@ -47,11 +57,13 @@ const IndividualCaseStudy = () => {
                   {content.images && (
                     <div className="w-full mt-3 flex flex-wrap gap-4 justify-between items-center">
                       {content.images?.map((image, indx) => (
+                        <div onClick={()=>getImage(image)}>
                         <img
                           src={image}
-                          className="w-[36vw] h-auto py-4 object-cover"
+                          className="w-[36vw] h-auto py-4 object-cover hover:opacity-80 cursor-zoom-in"
                           key={indx}
                         />
+                        </div>
                       ))}
                     </div>
                   )}
