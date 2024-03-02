@@ -41,7 +41,13 @@ const Footer = () => {
       <div className='hidden md:block flex flex-col md:gap-6'>
         <h1 className='text-xl lg:text-2xl mb-4'>Services</h1>
         <ul className='flex flex-col gap-2'>
-          {SERVICES_LIST.map((el,ind)=><Link key={ind} className="text-sm lg:text-base hover:cursor-pointer" to={el.to}>{el}</Link>)}
+          {
+            SERVICES_LIST.map((el,ind)=>
+              <Link key={ind} className="text-sm lg:text-base hover:cursor-pointer" to="/services">
+                {el}
+              </Link>
+            )
+          }
         </ul>
       </div>
       
@@ -72,7 +78,13 @@ const Footer = () => {
         title="Services" 
         titleClass="text-xl lg:text-2xl py-2 px-4">
           <ul className='flex flex-col gap-2 mt-2 px-8'>
-          {SERVICES_LIST.map((el,ind)=><Link key={ind} className="text-sm lg:text-base" to={el.to}>{el}</Link>)}
+            {
+              SERVICES_LIST.map((el,ind)=>
+                <Link key={ind} className="text-sm lg:text-base" to="/services">
+                  {el}
+                </Link>
+              )
+            }
           </ul>
         </DropDown>
         <DropDown 
