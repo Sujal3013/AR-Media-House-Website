@@ -1,6 +1,5 @@
-import React from 'react'
 import DropDown from './DropDown'
-import { Button, Circle, Triangle } from "./";
+import { Triangle } from "./";
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -102,14 +101,10 @@ const Footer = () => {
         title="Insta-feed" 
         titleClass="text-xl lg:text-2xl py-2 px-4">
           <div className='grid grid-cols-2 gap-8 px-8'>
-            {/* <div className='w-20 h-20 rounded '><img src="frontend\public\assets\Instagram.jpg" alt="" /></div>
-            <div className='w-20 h-20 rounded '><img src="frontend\public\assets\Instagram.jpg" alt="" /></div>
-            <div className='w-20 h-20 rounded '><img src="frontend\public\assets\Instagram.jpg" alt="" /></div>
-            <div className='w-20 h-20 rounded '><img src="frontend\public\assets\Instagram.jpg" alt="" /></div> */}
-            <div className='w-20 h-20 rounded bg-tertiary-500'></div>
-            <div className='w-10 h-20 rounded bg-tertiary-500'></div>
-            <div className='w-20 h-20 rounded bg-tertiary-500'></div>
-            <div className='w-20 h-20 rounded bg-tertiary-500'></div>
+          <a href="https://www.instagram.com/ar_media_house.ai/"><div className='w-20 h-20 rounded bg-[url("/assets/Feed1.jpg")] bg-cover bg-no-repeat'></div></a>
+          <a href="https://www.instagram.com/ar_media_house.ai/"><div className='w-20 h-20 rounded bg-[url("/assets/Feed2.jpg")] bg-cover bg-no-repeat'></div></a>
+          <a href="https://www.instagram.com/ar_media_house.ai/"><div className='w-20 h-20 rounded bg-[url("/assets/Feed3.jpg")] bg-cover bg-no-repeat'></div></a>
+          <a href="https://www.instagram.com/ar_media_house.ai/"><div className='w-20 h-20 rounded bg-[url("/assets/Feed4.jpg")] bg-cover bg-no-repeat'></div></a>
           </div>
         </DropDown>
       </div>

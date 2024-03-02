@@ -7,7 +7,7 @@ const IndividualCaseStudy = () => {
   document.querySelector("title").innerHTML = `Case Study - ${id}`;
   
   const blog = blogs.find((blog) => blog.id == id);
-  
+  document.querySelector("title").innerHTML = `Case Study - ${blog.name}`;
   // setTimeout(()=>console.log(blog, id), 2000);
 
   return (
@@ -39,17 +39,17 @@ const IndividualCaseStudy = () => {
                         {content.paragraph}
                       </p>
                     ) 
-                  }<div>{content.points && (content.points.map((point,idx)=>(<ul className="list-disc mx-auto" key={idx}><p className=" font-playfair-display text-lg italic">{`${point}`}</p></ul>)))}</div>
+                  }<div className="block mx-auto">{content.points && (content.points.map((point,idx)=>(<ul className="list-disc mx-auto" key={idx}><p className=" font-playfair-display text-lg italic">{`${point}`}</p></ul>)))}</div>
                   
                   {
-                    content.centerpara && (content.centerpara.map((point,idx)=>(<p className=" font-semibold text-lg font-playfair-display" key={idx}>{point}</p>)))
+                    content.centerpara && (content.centerpara.map((point,idx)=>(<p className=" font-semibold text-lg font-playfair-display block mx-auto" key={idx}>{point}</p>)))
                   }
                   {content.images && (
                     <div className="w-full mt-3 flex flex-wrap gap-4 justify-between items-center">
                       {content.images?.map((image, indx) => (
                         <img
                           src={image}
-                          className="w-[32vw] py-4 object-cover"
+                          className="w-[36vw] h-auto py-4 object-cover"
                           key={indx}
                         />
                       ))}
@@ -171,7 +171,7 @@ const blogs = [
         heading: "",
         paragraph:
           "AR Media House delved into daily content creation, turning social media platforms into digital canvases.Instagram, YouTube, WhatsApp, and Telegram became the conduits through which AR Trader spoke, shared, and connected.",
-        images: ["/assets/Case-study.svg", "/assets/Case-study.svg"],
+        images: ["/assets/CS2.png", "/assets/CS5.png"],
       },
       {
         heading: "A Digital Triumph Unfolds",
@@ -197,7 +197,7 @@ const blogs = [
         heading: "A Vision for Lead Generation Mastery",
         paragraph:
           "Real Estate, a prominent player in the real estate industry, sought the guidance of AR Media to enhance its lead generation strategy. The primary goal was to achieve unprecedented success in WhatsApp lead generation and implement an original professional format for generating leads.",
-        images: ["/assets/Case-study.svg", "/assets/Case-study.svg"],
+        images: ["/assets/CS1.png", "/assets/CS4.png"],
       },
       {
         heading: "Crafting the WhatsApp Lead Generation Symphony",
@@ -248,7 +248,7 @@ const blogs = [
         heading: "",
         paragraph:
           "Ads strategically ran across diverse social media platforms, casting a wide net to capture the attention of businesses seeking innovative solutions. The result was an influx of leads expressing keen interest in purchasing the franchise and tapping into the dynamic B2B offerings. Insta Transfer emerged not just as a service provider but as a beacon for businesses seeking seamless digital solutions in the realm of logistics and beyond",
-        images: ["/assets/Case-study.svg", "/assets/Case-study.svg"],
+        images: ["/assets/CS7.png", "/assets/CS3.png"],
       },
       {
         heading: "",
