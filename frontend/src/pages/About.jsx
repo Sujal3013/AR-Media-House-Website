@@ -119,7 +119,7 @@ export default function About() {
           clientele steadily grew, laying the groundwork for what was to come."
           Image={
             <div className={ILLUSTRATION_CLASS}>
-              <img src="/assets/story-1.png" alt="pic" className="" />
+              <img src="/assets/story-4.png" alt="pic" className="" />
             </div>
           }
           direction={1}
@@ -138,7 +138,7 @@ export default function About() {
           text="The year 2021 marked a pivotal moment as Harish's client base expanded significantly. Towards the year's end, he took a bold step, delving into a franchise model, forming a partnership with Amazon's Easy Store. This ambitious move involved selling franchises through the renowned platform, signalling a significant leap forward in his entrepreneurial journey."
           Image={
             <div className={ILLUSTRATION_CLASS}>
-              <img src="/assets/story-2.png" alt="" className="" />
+              <img src="/assets/story-1.png" alt="" className="" />
             </div>
           }
           direction={-1}
@@ -157,7 +157,7 @@ export default function About() {
           text="Unfortunately, 2022 presented unexpected challenges when Amazon discontinued its operations, leading to the closure of the franchise model. Undeterred, Harish pivoted his approach, founding a full-stack digital marketing company, recognizing the need for a broader spectrum of services. The focus shifted towards data generation and expansion, signifying resilience in the face of adversity."
           Image={
             <div className={ILLUSTRATION_CLASS}>
-              <img src="/assets/story-3.png" alt="" className="" />
+              <img src="/assets/story-2.png" alt="" className="" />
             </div>
           }
           direction={1}
@@ -176,7 +176,7 @@ export default function About() {
           text="In 2023, fate brought Harish together with like-minded visionaries, Raj Maheshwari and Shelendra Mukati, during a summit. Engaging in spirited discussions, they explored innovative ideas, particularly around lead generation. Their synergy and shared aspirations led to the inception of Lead Bank—a revolutionary model empowered by an in-house software boasting unlimited data sources."
           Image={
             <div className={ILLUSTRATION_CLASS}>
-              <img src="/assets/story-4.png" alt="" className="" />
+              <img src="/assets/story-3.png" alt="" className="" />
             </div>
           }
           direction={-1}
@@ -435,17 +435,6 @@ const founders = [
     linkedinLink: "", 
   }, 
   {
-    founderName: "Shailendra Mukati",
-    imageSrc: "/assets/founder1.jpeg", 
-    position: "Co-Founder",
-    description: `Another AR group cofounder is Shailendra Mukati. His area of expertise is computer engineering (CS), and he has developed technical talents that solve technical issues for businesses. 
-    \nIt was there that he began applying his managerial and marketing talents to deal with clients. His goal was to help as many businesses as possible go from having low sales to experiencing 10x growth. 
-    \nShailendra, a true leader, is the driving force behind a group of remarkable people that collaborate relentlessly to achieve the shared objective of revolutionising internet marketing. As the leader of AR Media House, Shailendra is leading the company into its next phase of leadership in the market.Under Shailendra's guidance, AR Media House is poised to set new standards and pave the way for innovative approaches in internet marketing.`,
-    facebookLink: "", 
-    twitterLink: "", 
-    linkedinLink: "", 
-  }, 
-  {
     founderName: "Harish Parihar", 
     imageSrc: "/assets/founder3.JPG", 
     position: "Co-Founder",
@@ -456,4 +445,15 @@ const founders = [
     twitterLink: "", 
     linkedinLink: "", 
   }, 
+  {
+    founderName: "Shailendra Mukati",
+    imageSrc: "/assets/founder1.jpg", 
+    position: "Co-Founder",
+    description: `Another AR group cofounder is Shailendra Mukati. His area of expertise is computer engineering (CS), and he has developed technical talents that solve technical issues for businesses. 
+    \nIt was there that he began applying his managerial and marketing talents to deal with clients. His goal was to help as many businesses as possible go from having low sales to experiencing 10x growth. 
+    \nShailendra, a true leader, is the driving force behind a group of remarkable people that collaborate relentlessly to achieve the shared objective of revolutionising internet marketing. As the leader of AR Media House, Shailendra is leading the company into its next phase of leadership in the market.Under Shailendra's guidance, AR Media House is poised to set new standards and pave the way for innovative approaches in internet marketing.`,
+    facebookLink: "", 
+    twitterLink: "", 
+    linkedinLink: "", 
+  },
 ]

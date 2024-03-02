@@ -41,7 +41,7 @@ const Footer = () => {
       <div className='hidden md:block flex flex-col md:gap-6'>
         <h1 className='text-xl lg:text-2xl mb-4'>Services</h1>
         <ul className='flex flex-col gap-2'>
-          {SERVICES_LIST.map((el,ind)=><Link key={ind} className="text-sm lg:text-base hover:cursor-pointer" to={el.to}>{el}</Link>)}
+          {SERVICES_LIST.map((el,ind)=><Link key={ind} className="text-sm lg:text-base hover:cursor-pointer" to={"/services"}>{el}</Link>)}
         </ul>
       </div>
       
@@ -72,7 +72,7 @@ const Footer = () => {
         title="Services" 
         titleClass="text-xl lg:text-2xl py-2 px-4">
           <ul className='flex flex-col gap-2 mt-2 px-8'>
-          {SERVICES_LIST.map((el,ind)=><Link key={ind} className="text-sm lg:text-base" to={el.to}>{el}</Link>)}
+          {SERVICES_LIST.map((el,ind)=><Link key={ind} className="text-sm lg:text-base" to={'/services'}>{el}</Link>)}
           </ul>
         </DropDown>
         <DropDown 
@@ -90,14 +90,10 @@ const Footer = () => {
         title="Insta-feed" 
         titleClass="text-xl lg:text-2xl py-2 px-4">
           <div className='grid grid-cols-2 gap-8 px-8'>
-            {/* <div className='w-20 h-20 rounded '><img src="frontend\public\assets\Instagram.jpg" alt="" /></div>
-            <div className='w-20 h-20 rounded '><img src="frontend\public\assets\Instagram.jpg" alt="" /></div>
-            <div className='w-20 h-20 rounded '><img src="frontend\public\assets\Instagram.jpg" alt="" /></div>
-            <div className='w-20 h-20 rounded '><img src="frontend\public\assets\Instagram.jpg" alt="" /></div> */}
-            <div className='w-20 h-20 rounded bg-tertiary-500'></div>
-            <div className='w-10 h-20 rounded bg-tertiary-500'></div>
-            <div className='w-20 h-20 rounded bg-tertiary-500'></div>
-            <div className='w-20 h-20 rounded bg-tertiary-500'></div>
+          <a href="https://www.instagram.com/ar_media_house.ai/"><div className='w-20 h-20 rounded bg-[url("/assets/Feed1.jpg")] bg-cover bg-no-repeat'></div></a>
+          <a href="https://www.instagram.com/ar_media_house.ai/"><div className='w-20 h-20 rounded bg-[url("/assets/Feed2.jpg")] bg-cover bg-no-repeat'></div></a>
+          <a href="https://www.instagram.com/ar_media_house.ai/"><div className='w-20 h-20 rounded bg-[url("/assets/Feed3.jpg")] bg-cover bg-no-repeat'></div></a>
+          <a href="https://www.instagram.com/ar_media_house.ai/"><div className='w-20 h-20 rounded bg-[url("/assets/Feed4.jpg")] bg-cover bg-no-repeat'></div></a>
           </div>
         </DropDown>
       </div>
