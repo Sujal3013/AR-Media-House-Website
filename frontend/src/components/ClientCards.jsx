@@ -29,7 +29,7 @@ export default function ClientCards({heading, subHeading, icon, text, className,
           className="frontSide bg-cover bg-center relative"
           style={{backgroundImage: `url('${icon}')`}}
         >
-          {index!==1 && <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>}
+          <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
           <div className="absolute bottom-4 right-4 text-end">
             <h1 className="text-3xl md:text-5xl">{heading}</h1>
             <h3 className="text-md md:text-xl">{subHeading}</h3>

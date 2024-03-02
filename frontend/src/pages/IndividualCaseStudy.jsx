@@ -49,7 +49,7 @@ const IndividualCaseStudy = () => {
                         {content.paragraph}
                       </p>
                     ) 
-                  }<div className="block mx-auto">{content.points && (content.points.map((point,idx)=>(<ul className="list-disc mx-auto" key={idx}><p className=" font-playfair-display text-lg italic">{`${point}`}</p></ul>)))}</div>
+                  }<div className="">{content.points && (content.points.map((point,idx)=>(<ul className="list-disc block mx-auto" key={idx}><p className=" font-playfair-display text-lg italic">{`${point}`}</p></ul>)))}</div>
                   
                   {
                     content.centerpara && (content.centerpara.map((point,idx)=>(<p className=" font-semibold text-lg font-playfair-display block mx-auto" key={idx}>{point}</p>)))
@@ -60,7 +60,7 @@ const IndividualCaseStudy = () => {
                         <div onClick={()=>getImage(image)}>
                         <img
                           src={image}
-                          className="w-[36vw] h-auto py-4 object-cover hover:opacity-80 cursor-zoom-in"
+                          className="w-[36vw] h-auto py-4 object-cover hover:opacity-80 cursor-zoom-in shadow-md rounded-md"
                           key={indx}
                         />
                         </div>

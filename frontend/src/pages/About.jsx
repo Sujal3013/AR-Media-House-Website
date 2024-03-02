@@ -16,7 +16,7 @@ import Youtube from "react-youtube";
 import { useWinSizeContext } from "../context/winSizeContext";
 import AnimateIllustrationSection from "../components/AnimateIllustrationSection";
 
-const VIDEO_ID = "cBA-itmpR84";
+const VIDEO_ID = "VIHa3lcp2wY";
 const OPTS = {
   height: "350",
   width: "575",
@@ -430,9 +430,9 @@ const founders = [
     description: `Raj Maheshwari is a digital market specialist, portfolio manager, trainer, and stock market trader. In 2018, he founded the AR group and launched his first business, AR Financial Research & Consultancy Services, where he served as a mentor to help others succeed in the worlds of finance and investment.\n
     Later on, he discovered that the lack of digitalization is causing issues for a lot of businesses. Subsequently, he devised the concept to establish an additional enterprise, AR Media House, offering digital solutions that facilitate corporate expansion.\n
     His goal is to enable people and companies to prosper in the digital and financial spheres. Whether your goal is to become an expert in stock market trading or to increase your web presence, I can help you every step of the way.`,
-    facebookLink: "", 
-    twitterLink: "", 
-    linkedinLink: "", 
+    facebookLink: "https://www.facebook.com/raj.maheshwari.1238/", 
+    twitterLink: "https://www.instagram.com/rajmaheshwari.ai/?hl=en", 
+    linkedinLink: "https://www.linkedin.com/in/raj-maheshwari-895778149/", 
   }, 
   {
     founderName: "Harish Parihar", 
