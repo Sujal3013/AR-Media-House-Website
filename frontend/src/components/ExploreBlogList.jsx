@@ -26,7 +26,7 @@ export default function ExploreBlogList({
     },
   };
   const classes = classNames(
-    "min-w-[11.5rem] max-w-72 h-[22rem] sm:max-h-[475px] h-[450px] sm:h-[66vh] text-secondary-500 flex flex-col items-start justify-evenly relative overflow-hidden gap-2 hover:cursor-pointer",
+    "min-w-[11.5rem] max-w-72 h-[22rem] sm:max-h-[475px] h-[450px] lg:h-[460px] text-secondary-500 flex flex-col items-start justify-evenly relative overflow-hidden gap-2 hover:cursor-pointer",
     {
       [className]: className,
     }
