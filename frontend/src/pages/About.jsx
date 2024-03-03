@@ -107,7 +107,7 @@ export default function About() {
         <img
           src="./assets/about-wave.png"
           alt="path"
-          className="hidden lg:block absolute top-[1.8%] left-[19%] h-[85%] w-[78%]"
+          className="hidden lg:block absolute top-[1.2%] left-[19%] h-[85%] w-[78%]"
         />
         
         <StoryComponent
