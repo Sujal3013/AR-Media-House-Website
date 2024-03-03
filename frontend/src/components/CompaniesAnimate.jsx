@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import classNames from "classnames";
 import { useWinSizeContext } from "../context/winSizeContext";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function CompaniesAnimate({children, className, direction=1, length, ...other}) {
   const classes = classNames("absolute left-0", {
@@ -13,10 +13,23 @@ export default function CompaniesAnimate({children, className, direction=1, leng
 
   const {
     winSize,
-    BR_1,
+    BR_1, 
+    BR_3, 
+    BR_4, 
   } = useWinSizeContext()
-
-  const gap = winSize <= BR_1 ? "4rem" : "7rem";
+  
+  // const [state, setState] = useState({gap:"", start:"", middle:0, end:""});
+  // useEffect(()=>{
+  //   const gap = winSize <= BR_1 ? "4rem" : (winSize <= BR3 ? "7rem" : "8rem");
+  //   setState({
+  //     gap,
+  //     start: `calc(0px - 100% - ${gap})`,
+  //     middle: 0,
+  //     end: `calc(100% - 0px + ${gap})`,
+  //   })
+  // }, [winSize]);
+  const gap = winSize <= BR_1 ? "4rem" : (winSize <= BR_3 ? "7rem" : (winSize <= 1440 ? "8.5rem" : "9.9rem"));
+  console.log(gap);
   const start = `calc(0px - 100% - ${gap})`;
   const middle = 0;
   const end = `calc(100% - 0px + ${gap})`;
