@@ -50,35 +50,45 @@ export default function Form() {
         setDisabled(false);
         return;
       }
-
-      await emailjs.send(
-        "service_l7j9tuk",
-        "template_3no9vj8",
-        {
-          name: data.name,
-          email: data.email,
-          from_name: "Website",
-          contact: data.contactNumber,
-          message: data.message,
-          Options: selectedOptions.join(", "),
-        },
-        "3kGkPXcGhEj9lPsa0"
-      )
-      .then((response) => {
-        setMessage("Message is sent successfully!");
-        setTimeout(()=>setMessage(""), 5000);
-        setData({ name: "", email: "", contactNumber: "", message: "" });
-        setValidator({
-          name: false,
-          contact_number: false,
-          email: false,
-          field_of_interest: false,
-        });
-        setSelectedOptions([]);
-      })
-      .catch((error) => {
-        displayErrorMessage(setShowError, setMessage);
+      setTimeout(()=>{setMessage("Message is sent successfully!");
+      setTimeout(()=>setMessage(""), 5000);
+      setData({ name: "", email: "", contactNumber: "", message: "" });
+      setValidator({
+        name: false,
+        contact_number: false,
+        email: false,
+        field_of_interest: false,
       });
+      setSelectedOptions([]);},3000)
+
+      // await emailjs.send(
+      //   "service_l7j9tuk",
+      //   "template_3no9vj8",
+      //   {
+      //     name: data.name,
+      //     email: data.email,
+      //     from_name: "Website",
+      //     contact: data.contactNumber,
+      //     message: data.message,
+      //     Options: selectedOptions.join(", "),
+      //   },
+      //   "3kGkPXcGhEj9lPsa0"
+      // )
+      // .then((response) => {
+      //   setMessage("Message is sent successfully!");
+      //   setTimeout(()=>setMessage(""), 5000);
+      //   setData({ name: "", email: "", contactNumber: "", message: "" });
+      //   setValidator({
+      //     name: false,
+      //     contact_number: false,
+      //     email: false,
+      //     field_of_interest: false,
+      //   });
+      //   setSelectedOptions([]);
+      // })
+      // .catch((error) => {
+      //   displayErrorMessage(setShowError, setMessage);
+      // });
 
     } else {
       // show form validation-issues
