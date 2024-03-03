@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import {
   Home,
   ContactUs,
@@ -18,7 +18,7 @@ function App() {
   
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <WinSizeProvider>
       <Routes>
         <Route exact path="/" element={<SharedLayout />}>
@@ -35,7 +35,7 @@ function App() {
         {/* <Route path="*" element={<Page404 />} /> */}
       </Routes>
       </WinSizeProvider>
-    </BrowserRouter>
+    </HashRouter>
 
   );
 }
