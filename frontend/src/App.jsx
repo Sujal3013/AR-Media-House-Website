@@ -25,7 +25,8 @@ function App() {
           <Route index element={<Home />} />
           <Route exact path="services" element={<Services />} />
           <Route exact path="technologies" element={<Technologies />} />
-          <Route exact path="about" element={<About />} />
+          {/* CHANGE FOR RESUME */}
+          {/* <Route exact path="about" element={<About />} /> */}
           <Route exact path="case-studies" element={<CaseStudies />} />
           <Route exact path="case-studies/:id" element={<IndividualCaseStudy />} />
           <Route exact path="contact" element={<ContactUs />} />

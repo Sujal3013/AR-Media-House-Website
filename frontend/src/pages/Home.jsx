@@ -47,9 +47,10 @@ export default function Home() {
               <Button arrow className="bg-primary-500 text-secondary-500" to="/contact">
                 Let's Connect
               </Button>
-              <Button to="/about" className="bg-transparent border-2 border-primary-500 text-primary-500">
+              {/* CHANGE FOR RESUME */}
+              {/* <Button to="/about" className="bg-transparent border-2 border-primary-500 text-primary-500">
                 About Us
-              </Button>
+              </Button> */}
             </div>
           </div>
           {/* illustraion */}

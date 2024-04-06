@@ -5,7 +5,8 @@ import "../index.css";
 
 export default function Navbar() {
   const location = useLocation().pathname;
-  const ownerNumber = '+917470515476'; 
+//   CHANGE FOR RESUME
+  const ownerNumber = '+919644408803'; 
 
   const handleWhatsappClick = () => {
     const message = encodeURIComponent('Hello! I have a question.');
@@ -71,11 +72,13 @@ const list = [{
         title: "Services",
         to: "/services",
         imgSrc:"/assets/icons8-services.png"
-    }, {
+    }, 
+    // CHANGE FOR RESUME
+    /*{
         title: "About",
         to: "/about",
         imgSrc:"/assets/icons8-about-us.svg"
-    }, {
+    }, */{
         title: "Careers",
         to: "/careers",
         imgSrc:"/assets/icons8-career.png"
