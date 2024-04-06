@@ -115,7 +115,8 @@ const Footer = () => {
         
       </div>
       <div className='text-[10px] flex flex-wrap justify-center gap-1'>
-      <p className='px-2 text-wrap sm:text-nowrap'>For more details contact +91 7470515476 or business@armediahouse.in</p>
+        {/* CHANGE FOR RESUME */}
+      <p className='px-2 text-wrap sm:text-nowrap'>For more details contact +91 9644408803 or business@armediahouse.in</p>
         
       </div>
       
@@ -133,7 +134,8 @@ const SITE_MAP_LIST = [
   { title: "Services", to: "/services" },
   { title: "Career", to: "/careers" },
   { title: "Case Studies", to: "/case-studies" },
-  { title: "About", to: "/about" }
+  // CHANGE FOR RESUME
+  // { title: "About", to: "/about" }
 ];
 
 export default Footer
