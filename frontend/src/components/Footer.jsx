@@ -16,10 +16,10 @@ const Footer = () => {
           </div>
           {/* Social Media Icons */}
           <div className='flex gap-2'>
-            <a href="https://www.instagram.com/ar_media_house.ai/"><img className='w-7 lg:w-10' src='./assets/Instagram-Logo.svg' alt="instagram" /></a>
+            {/* <a href="https://www.instagram.com/ar_media_house.ai/"><img className='w-7 lg:w-10' src='./assets/Instagram-Logo.svg' alt="instagram" /></a> */}
             <a href="https://www.facebook.com/profile.php?id=61556593812264"><img className='w-7 lg:w-10' src='./assets/facebook.svg' alt="facebook" /></a>
-            <a href="https://www.linkedin.com/in/ar-media-house-4855732a5/"><img className='w-7 lg:w-10' src='./assets/linkedin.svg' alt="linkedin" /></a>
-            <a href="mailto:pariharharish723@gmail.com"><img className='w-7 lg:w-10' src="./assets/mail.svg" alt="mail" /></a>
+            <a href="https://www.linkedin.com/company/armediahouse/posts/?feedView=all"><img className='w-7 lg:w-10' src='./assets/linkedin.svg' alt="linkedin" /></a>
+            {/* <a href="mailto:pariharharish723@gmail.com"><img className='w-7 lg:w-10' src="./assets/mail.svg" alt="mail" /></a> */}
           </div>
           <div>
           <h1 className="text-sm lg:text-base mt-2"><strong>E-mail - business@armediahouse.in</strong></h1>
@@ -111,12 +111,19 @@ const Footer = () => {
       </div>
 
       <div className='mt-8 py-1 text-xs flex flex-wrap justify-center gap-1'>
-        <p className='px-2 text-wrap sm:text-nowrap'>Copyrights @2023 are reserved with the ARMEDIAHOUSE.</p>
+        <p className='px-2 text-wrap sm:text-nowrap'>Copyrights @2018 are reserved with the ARMEDIAHOUSE.</p>
         
       </div>
       <div className='text-[10px] flex flex-wrap justify-center gap-1'>
         {/* CHANGE FOR RESUME */}
       <p className='px-2 text-wrap sm:text-nowrap'>For more details contact +91 9644408803 or business@armediahouse.in</p>
+      
+        
+      </div>
+      <div className='text-[10px] flex flex-wrap justify-center gap-1'>
+        {/* CHANGE FOR RESUME */}
+      <p className='px-2 text-wrap sm:text-nowrap'>careers@armediahouse.in</p>
+      
         
       </div>
       
