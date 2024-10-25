@@ -1,7 +1,7 @@
-import React, { useEffect, useState ,useRef} from "react";
+import React, { useRef } from "react";
 import classNames from "classnames";
 import {
-  AnimateNumber, 
+  AnimateNumber,
   Button,
   Heading,
   StoryComponent,
@@ -25,8 +25,7 @@ const OPTS = {
   },
 };
 
-const ILLUSTRATION_CLASS =
-  "rounded-full text-center basis-[40%] h-auto";
+const ILLUSTRATION_CLASS = "rounded-full text-center basis-[40%] h-auto";
 
 export default function About() {
   document.querySelector("title").innerHTML = "About - AR Media House";
@@ -39,9 +38,9 @@ export default function About() {
     OPTS.height *= 0.9;
     OPTS.width *= 0.9;
   }
-  const ref=useRef(null);
+  const ref = useRef(null);
   const handleClick = () => {
-    ref.current?.scrollIntoView({behavior: 'smooth'});
+    ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -55,7 +54,7 @@ export default function About() {
           className="w-full items-center"
         />
         <Button
-        arrow
+          arrow
           onClick={handleClick}
           className="bg-primary-500 text-secondary-500 mx-auto mt-8 md:mt-4 mb-16 md:mb-0"
         >
@@ -109,7 +108,7 @@ export default function About() {
           alt="path"
           className="hidden lg:block absolute top-[1.2%] left-[19%] h-[85%] w-[78%]"
         />
-        
+
         <StoryComponent
           heading="The journey begins"
           text="In 2020, Harish Parihar embarked on a solo journey, offering digital
@@ -214,25 +213,32 @@ export default function About() {
         <Circle className="top-[58%] left-[5%]" />
       </section>
 
-      
       <AnimateIllustrationSection
         heading="We are a team of"
         subHeading="focused Individual"
-        text={"We’ve established a people-focused workplace and their contributions have had a great impact on the company’s overall mission."}
-        list={
-          focusedIndividual.map((item, index)=>{
-            const el = cardList[index];
-            return (
-              {...item, key: index, illustration: <img src={el.iconSrc} alt={`image-${index}`} className={`w-[35vw] ${index===1 && "-translate-y-16"}`}/>}
-            )
-          })
+        text={
+          "We’ve established a people-focused workplace and their contributions have had a great impact on the company’s overall mission."
         }
+        list={focusedIndividual.map((item, index) => {
+          const el = cardList[index];
+          return {
+            ...item,
+            key: index,
+            illustration: (
+              <img
+                src={el.iconSrc}
+                alt={`image-${index}`}
+                className={`w-[35vw] ${index === 1 && "-translate-y-16"}`}
+              />
+            ),
+          };
+        })}
       />
-        
-      <img 
-        className="rotate-180 h-[90%] w-full translate-y-1" 
-        src="./assets/triple-wave-dark-2.svg" 
-        alt="wave" 
+
+      <img
+        className="rotate-180 h-[90%] w-full translate-y-1"
+        src="./assets/triple-wave-dark-2.svg"
+        alt="wave"
       />
 
       <section className="w-full px-screen-padding py-10 md:py-20 bg-secondary-500 flex flex-col items-center justify-center relative">
@@ -252,7 +258,7 @@ export default function About() {
                 from={0}
                 to={22}
                 duration={2.5}
-              />  
+              />
               +
             </h1>
             <p className="text-xl text-center font-semibold">Team Members</p>
@@ -293,24 +299,33 @@ export default function About() {
           <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 mt-6 md:mt-12 text-sm md:text-base leading-[1rem] md:leading-[1.4rem] lg:leading-[1.6rem] lg:font-medium">
             <div className="w-[90%] md:w-[28%] min-h-24 md:min-h-60 lg:min-h-40 p-4 flex items-center rounded-lg bg-primary-500">
               <p className="text-center">
-                We excel in what we do in that we know what it takes for a brand to grow, we focus on delivering quality results rather than quick results and this is what makes us stand out from our rival companies.
+                We excel in what we do in that we know what it takes for a brand
+                to grow, we focus on delivering quality results rather than
+                quick results and this is what makes us stand out from our rival
+                companies.
               </p>
             </div>
             <div className="w-[90%] md:w-[28%] min-h-24 md:min-h-60 lg:min-h-40 p-4 flex items-center rounded-lg bg-tertiary-500">
               <p className="text-center">
-                Incorporate details about your brand’s approach and build a robust marketing portfolio.
+                Incorporate details about your brand’s approach and build a
+                robust marketing portfolio.
               </p>
             </div>
             <div className="w-[90%] md:w-[28%] min-h-24 md:min-h-60 lg:min-h-40 p-4 flex items-center rounded-lg bg-primary-500">
               <p className="text-center">
-                We develop a robust relationship with our clients, keep up commitments, and work together to build a strong outcome.
+                We develop a robust relationship with our clients, keep up
+                commitments, and work together to build a strong outcome.
               </p>
             </div>
           </div>
-        </div>  
+        </div>
       </section>
 
-      <img className="h-[90%] w-full" src="./assets/triple-wave-dark-1.svg" alt="wave" />
+      <img
+        className="h-[90%] w-full"
+        src="./assets/triple-wave-dark-1.svg"
+        alt="wave"
+      />
 
       <section className="w-full px-screen-padding py-12 md:py-16 bg-tertiary-500 flex flex-col items-center justify-center relative">
         <Heading
@@ -321,14 +336,10 @@ export default function About() {
           className="items-center"
         />
 
-        <div className="w-full py-10 flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap items-center md:items-start justify-center lg:justify-between gap-12 sm:gap-8 md:gap-12 xl:gap-16">
-          {
-            founders.map((founder, indx)=>{
-              return (
-                <FounderCard {...founder} key={indx} index={indx}/>
-              )
-            })
-          }         
+        <div className="w-full py-10 flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap items-center md:items-start justify-center gap-12 sm:gap-8 md:gap-12 xl:gap-16">
+          {founders.map((founder, indx) => {
+            return <FounderCard {...founder} key={indx} index={indx} />;
+          })}
         </div>
       </section>
 
@@ -359,45 +370,53 @@ const teamBlogs1 = [
   {
     src: "./assets/about-team.png",
     className: "!w-[100vw] md:!w-[40vw] ",
-  },   {
+  },
+  {
     src: "./assets/about-team.png",
     className: "!w-[100vw] md:!w-[40vw] ",
-  },   {
+  },
+  {
     src: "./assets/about-team.png",
     className: "!w-[100vw] md:!w-[40vw] ",
-  },   {
+  },
+  {
     src: "./assets/about-team.png",
     className: "!w-[100vw] md:!w-[40vw] ",
-  }
-]
+  },
+];
 const teamBlogs2 = [
   {
     src: "./assets/about-team.png",
     className: "!w-[100vw] md:!w-[40vw] ",
-  },   {
+  },
+  {
     src: "./assets/about-team.png",
     className: "!w-[100vw] md:!w-[40vw] ",
-  },   {
+  },
+  {
     src: "./assets/about-team.png",
     className: "!w-[100vw] md:!w-[40vw] ",
-  },   {
+  },
+  {
     src: "./assets/about-team.png",
     className: "!w-[100vw] md:!w-[40vw] ",
-  }
-]
+  },
+];
 
 const focusedIndividual = [
   {
     heading: "Focus On Client Success",
     text: "Ensuring that their goals and satisfaction remain at the forefront of our priorities.",
-  }, {
+  },
+  {
     heading: "Elevate One Another",
-    text: "Fostering a culture where mutual support and encouragement create a foundation for individual and collective growth.", 
-  }, {
+    text: "Fostering a culture where mutual support and encouragement create a foundation for individual and collective growth.",
+  },
+  {
     heading: "Possess the will to win",
     text: "With an indomitable will to win, we approach challenges with determination and resilience",
-  }, 
-]
+  },
+];
 
 function Card({ blobSrc, iconSrc, title, titleClassNames }) {
   const wraperClass = classNames(
@@ -425,33 +444,33 @@ function Card({ blobSrc, iconSrc, title, titleClassNames }) {
 const founders = [
   // {
   //   founderName: "Raj Maheshwari",
-  //   imageSrc: "/assets/founder2.jpg", 
+  //   imageSrc: "/assets/founder2.jpg",
   //   position: "Founder",
   //   description: `Raj Maheshwari is a digital market specialist, portfolio manager, trainer, and stock market trader. In 2018, he founded the AR group and launched his first business, AR Financial Research & Consultancy Services, where he served as a mentor to help others succeed in the worlds of finance and investment.\n
   //   Later on, he discovered that the lack of digitalization is causing issues for a lot of businesses. Subsequently, he devised the concept to establish an additional enterprise, AR Media House, offering digital solutions that facilitate corporate expansion.\n
   //   His goal is to enable people and companies to prosper in the digital and financial spheres. Whether your goal is to become an expert in stock market trading or to increase your web presence, I can help you every step of the way.`,
-  //   facebookLink: "https://www.facebook.com/raj.maheshwari.1238/", 
-  //   twitterLink: "https://www.instagram.com/rajmaheshwari.ai/?hl=en", 
-  //   linkedinLink: "https://www.linkedin.com/in/raj-maheshwari-895778149/", 
-  // }, 
+  //   facebookLink: "https://www.facebook.com/raj.maheshwari.1238/",
+  //   twitterLink: "https://www.instagram.com/rajmaheshwari.ai/?hl=en",
+  //   linkedinLink: "https://www.linkedin.com/in/raj-maheshwari-895778149/",
+  // },
   {
-    founderName: "Harish Parihar", 
-    imageSrc: "/assets/founder3.JPG", 
+    founderName: "Harish Parihar",
+    imageSrc: "/assets/founder3.JPG",
     position: "CEO & CTO",
     description: `Welcome to AR Media House, where innovation intersects with lead generation excellence. I'm Harish Parihar, serving as both CEO and CTO, leveraging extensive expertise in Performance Marketing, Digital Marketing, and Brand Strategy. With a track record managing $250k+ in ad spend and generating over 100k leads via finely-tuned funnels and targeted Facebook Ads, I specialize in elevating businesses across various sectors.At AR Media House, we don't just promise results; we guarantee them. Through strategic planning, data-driven insights, and continuous optimization, we ensure your brand outshines digital clutter and captivates your audience. Whether you're a startup carving your niche or an established enterprise pursuing exponential growth, our customized solutions exceed expectations.`,
-    facebookLink: "https://www.facebook.com/harish.parihar.96592/", 
-    twitterLink: "https://www.instagram.com/harishparihar.ai/", 
-    linkedinLink: "https://www.linkedin.com/in/harish-parihar-ab5086153/", 
-  }, 
+    facebookLink: "https://www.facebook.com/harish.parihar.96592/",
+    twitterLink: "https://www.instagram.com/harishparihar.ai/",
+    linkedinLink: "https://www.linkedin.com/in/harish-parihar-ab5086153/",
+  },
   // {
   //   founderName: "Shailendra Mukati",
-  //   imageSrc: "/assets/founder1.jpeg", 
+  //   imageSrc: "/assets/founder1.jpeg",
   //   position: "Co-Founder",
-  //   description: `Another AR group cofounder is Shailendra Mukati. His area of expertise is computer engineering (CS), and he has developed technical talents that solve technical issues for businesses. 
-  //   It was there that he began applying his managerial and marketing talents to deal with clients. His goal was to help as many businesses as possible go from having low sales to experiencing 10x growth. 
+  //   description: `Another AR group cofounder is Shailendra Mukati. His area of expertise is computer engineering (CS), and he has developed technical talents that solve technical issues for businesses.
+  //   It was there that he began applying his managerial and marketing talents to deal with clients. His goal was to help as many businesses as possible go from having low sales to experiencing 10x growth.
   //   Shailendra, a true leader, is the driving force behind a group of remarkable people that collaborate relentlessly to achieve the shared objective of revolutionising internet marketing. As the leader of AR Media House, Shailendra is leading the company into its next phase of leadership in the market.Under Shailendra's guidance, AR Media House is poised to set new standards and pave the way for innovative approaches in internet marketing.`,
-  //   facebookLink: "", 
-  //   twitterLink: "", 
-  //   linkedinLink: "", 
+  //   facebookLink: "",
+  //   twitterLink: "",
+  //   linkedinLink: "",
   // },
-]
+];
