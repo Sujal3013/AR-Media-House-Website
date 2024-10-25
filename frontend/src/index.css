@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
   scroll-behavior: auto;
 }
 
@@ -10,15 +10,18 @@ html{
   box-sizing: border-box;
 }
 body {
-    font-family: 'Jost', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-h2, h3, h4, h5, h6 {
-    font-family: "Playfair-Display", serif;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair-Display", serif;
 }
-
 
 /* width and height for the scrollbar track */
 ::-webkit-scrollbar {
@@ -28,16 +31,15 @@ h2, h3, h4, h5, h6 {
 
 /* background of the scrollbar track */
 ::-webkit-scrollbar-track {
-  @apply bg-secondary-500
+  @apply bg-secondary-500;
 }
 
 /* color of the scrollbar handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary-500 rounded-xl
+  @apply bg-primary-500 rounded-xl;
 }
 
-
-.slick-slide>div{
+.slick-slide > div {
   margin: 0px 10px;
 }
 
@@ -53,8 +55,7 @@ h2, h3, h4, h5, h6 {
   background-color: #ffffff; /* Alternate color */
 }
 
-
-.navbar{
+.navbar {
   @apply bg-secondary-500 w-full py-3 px-screen-padding flex justify-between items-center;
   position: -webkit-sticky;
   position: sticky;
@@ -62,19 +63,20 @@ h2, h3, h4, h5, h6 {
   z-index: 1000;
 }
 
-.nav_bar::after{
-  @apply content-[''] bg-primary-500 h-[1px] w-[0%] left-0  -bottom-[0px] rounded-xl absolute duration-500
+.nav_bar::after {
+  @apply content-[''] bg-primary-500 h-[1px] w-[0%] left-0  -bottom-[0px] rounded-xl absolute duration-500;
 }
-.nav_bar:hover::after{
-  @apply w-[100%]
+.nav_bar:hover::after {
+  @apply w-[100%];
 }
 
-.ImgResponsive{
-  @apply w-[80vw] sm:w-[65vw] md:w-[35vw]
+.ImgResponsive {
+  @apply w-[80vw] sm:w-[65vw] md:w-[35vw];
 }
 
 .logo-image {
-  width: 100px;
+  width: 100%;
+  height: 100%;
   aspect-ratio: 3/2;
   object-fit: contain;
   mix-blend-mode: color-burn;
@@ -103,6 +105,12 @@ h2, h3, h4, h5, h6 {
 .ceo-container:hover .ceo-image {
   scale: 1.05;
 }
+
+/* For auto-horizonal-infinite scorll */
+.pause-animation {
+  animation-play-state: paused;
+}
+
 @media (max-width: 639px) {
   .max-w-sm-responsive {
     @apply max-w-sm;
@@ -116,34 +124,34 @@ h2, h3, h4, h5, h6 {
   }
 }
 
-.submitted{
-  cursor:none;
+.submitted {
+  cursor: none;
 }
 
-.model{
-  width:100%;
-  height:100vh;
-  position:fixed;
+.model {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: black;
-  transition:opacity .2s ease, visibility .2s ease,transform .2s ease-in-out;
+  transition: opacity 0.2s ease, visibility 0.2s ease,
+    transform 0.2s ease-in-out;
   visibility: hidden;
   opacity: 0;
   transform: scale(0);
   overflow: hidden;
   z-index: 999;
-
 }
-.model.open{
+.model.open {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
 }
-.model img{
+.model img {
   width: auto;
   max-width: 100%;
   height: auto;
@@ -153,10 +161,9 @@ h2, h3, h4, h5, h6 {
   box-sizing: border-box;
   padding: 20px 0 20px;
   margin: 0 auto;
-
 }
 
-.model.open svg{
+.model.open svg {
   position: fixed;
   top: 60px;
   right: -5px;
@@ -168,7 +175,6 @@ h2, h3, h4, h5, h6 {
   cursor: pointer;
   z-index: 999;
 }
-
 
 .myCard {
   background-color: transparent;
