@@ -1,26 +1,27 @@
-import { 
-  Button, 
-  Circle, 
-  CompaniesAnimate, 
-  ClientCards, 
-  ExploreBlog, 
-  Heading, 
-  HeroSectionWrapper, 
-  RoundedCornersSection, 
-  Section, 
-  ServicesCards, 
-  Triangle, 
+import {
+  Button,
+  Circle,
+  CompaniesAnimate,
+  ClientCards,
+  ExploreBlog,
+  Heading,
+  HeroSectionWrapper,
+  RoundedCornersSection,
+  Section,
+  ServicesCards,
+  Triangle,
   Wonder,
   BlackSection,
   FadeInUp,
-  HomePage3StepPath, 
+  HomePage3StepPath,
 } from "../components";
-import { useWinSizeContext } from "../context/winSizeContext";
 
-const SECTION5_HEADING_CLASS = "!text-3xl sm:!text-4xl lg:!text-5xl text-secondary-500"
-const SECTION5_SUB_HEADING_CLASS = "!text-3xl sm:!text-4xl lg:!text-5xl pl-1 mt-[-8px] text-primary-500"
-const SECTION5_ALL_HEADING_CLASS = "mt-16 mb-4 sm:mb-6 md:mb-12"
-const SECTION5_TEXT_CLASS = "mb-8 md:mb-12 lg:mb-16"
+const SECTION5_HEADING_CLASS =
+  "!text-3xl sm:!text-4xl lg:!text-5xl text-secondary-500";
+const SECTION5_SUB_HEADING_CLASS =
+  "!text-3xl sm:!text-4xl lg:!text-5xl pl-1 mt-[-8px] text-primary-500";
+const SECTION5_ALL_HEADING_CLASS = "mt-16 mb-4 sm:mb-6 md:mb-12";
+const SECTION5_TEXT_CLASS = "mb-8 md:mb-12 lg:mb-16";
 
 export default function Home() {
   document.querySelector("title").innerHTML = "AR Media House";
@@ -37,53 +38,75 @@ export default function Home() {
             />
             <FadeInUp downLength={10}>
               <p className="min-w-[172px] md:w-[35vw] md:min-w-0 text-sm my-12">
-                AR Media House works with reputable global brands to deliver data-driven lead
-                generation, customer acquisition, and brand awareness campaigns through 
-                various digital spaces.
+                AR Media House works with reputable global brands to deliver
+                data-driven lead generation, customer acquisition, and brand
+                awareness campaigns through various digital spaces.
               </p>
             </FadeInUp>
             {/* Buttons */}
             <div className="flex gap-6 py-10">
-              <Button arrow className="bg-primary-500 text-secondary-500" to="/contact">
+              <Button
+                arrow
+                className="bg-primary-500 text-secondary-500"
+                to="/contact"
+              >
                 Let's Connect
               </Button>
-               <Button to="/about" className="bg-transparent border-2 border-primary-500 text-primary-500">
+              <Button
+                to="/about"
+                className="bg-transparent border-2 border-primary-500 text-primary-500"
+              >
                 About Us
-              </Button> 
+              </Button>
             </div>
           </div>
           {/* illustraion */}
-          <div  className="hidden w-[38vw] min-w-80 md:block h-auto rounded">
-              <img src="/assets/Banner1.svg" alt="" />
+          <div className="hidden w-[38vw] min-w-80 md:block h-auto rounded">
+            <img src="/assets/Banner1.svg" alt="" />
           </div>
         </div>
 
         {/* Companies */}
         <div className="flex flex-col items-center justify-center ">
-          <h1 className="text-md sm:text-xl lg:text-2xl text-center font-bold font-jost text-slate-200 tracking-wider my-8">Trusted by <span className="text-primary-500">thousands</span> of client worldwide</h1>
-          <div className="w-[98vw] h-28 mb-8 flex justify-center items-center relative overflow-hidden">
-          <CompaniesAnimate className="flex justify-center items-center gap-12 sm:gap-16 md:gap-20 lg:gap-24" length={companiesLogos.length}>
-            {
-              companiesLogos.map((c, index)=>{
-                return (
-                  <li key={index} className={c.className}>
-                    <img src={c.src} alt="company-image" />
-                  </li>
-                )
-              })
-            }
+          <h1 className="text-md sm:text-xl lg:text-2xl text-center font-bold font-jost text-slate-200 tracking-wider my-8">
+            Trusted by <span className="text-primary-500">thousands</span> of
+            client worldwide
+          </h1>
+          <CompaniesAnimate
+            widthComapreToScreen={2}
+            className="h-32 flex justify-center items-center gap-12 sm:gap-16 md:gap-20 lg:gap-24"
+            length={companiesLogos.length}
+          >
+            {companiesLogos.map((c, index) => {
+              return (
+                <li
+                  key={index}
+                  className="w-20 h-24 sm:h-28 sm:w-24 md:w-28 md:h-32"
+                >
+                  <img
+                    src={c.src}
+                    alt="company-image"
+                    className="companies-image"
+                  />
+                </li>
+              );
+            })}
           </CompaniesAnimate>
-          </div>
         </div>
-        
 
         {/* Shapes */}
-        <Circle className="top-[30%] sm:top-[35%] md:top-[4%] right-[2%]" secondary/>
-        <Circle className="top-[50%] left-[25%]" secondary/>
-        <Triangle className="top-[-4%] left-[20%]" secondary/>
-        <Triangle className="bottom-[-8%] right-[10%]" secondary duration={10} />
-      </HeroSectionWrapper>  
-
+        <Circle
+          className="top-[30%] sm:top-[35%] md:top-[4%] right-[2%]"
+          secondary
+        />
+        <Circle className="top-[50%] left-[25%]" secondary />
+        <Triangle className="top-[-4%] left-[20%]" secondary />
+        <Triangle
+          className="bottom-[-8%] right-[10%]"
+          secondary
+          duration={10}
+        />
+      </HeroSectionWrapper>
 
       <Section
         backgroundClassName="bg-tertiary-500 py-10"
@@ -92,12 +115,21 @@ export default function Home() {
         text="We make digital stuff easy for you by finding the perfect solutions. Our goal is to go above and beyond what you expect and what's considered normal. At AR Media, we use online marketing to help Indian and international brands grow a lot. We want to bring that same success to you, showing you how it’s done."
         textClassName="my-10"
         Button1={
-          <Button arrow to="/services" primary className="mt-4 text-secondary-500 bg-primary-500">
+          <Button
+            arrow
+            to="/services"
+            primary
+            className="mt-4 text-secondary-500 bg-primary-500"
+          >
             Learn More
           </Button>
         }
         illustration={
-          <img src="/assets/What_makes_us.png" alt="" className="ImgResponsive h-auto w-[35vw]"/>
+          <img
+            src="/assets/What_makes_us.png"
+            alt=""
+            className="ImgResponsive h-auto w-[35vw]"
+          />
         }
         direction={-1}
         Shapes={
@@ -108,8 +140,6 @@ export default function Home() {
         }
       />
 
-
-
       <Section
         backgroundClassName="bg-tertiary-500 py-10"
         heading="We SkyRocket"
@@ -119,21 +149,29 @@ export default function Home() {
         help brands grow from one stage to the next."
         textClassName="py-10"
         Button1={
-          <Button to="/services" arrow primary className="mt-4 text-secondary-500 bg-primary-500">
+          <Button
+            to="/services"
+            arrow
+            primary
+            className="mt-4 text-secondary-500 bg-primary-500"
+          >
             Learn More
           </Button>
         }
         illustration={
-            <img src="/assets/Growth_curve.svg" alt=""  className="ImgResponsive w-[30vw]"/>
+          <img
+            src="/assets/Growth_curve.svg"
+            alt=""
+            className="ImgResponsive w-[30vw]"
+          />
         }
         Shapes={
           <Triangle className="top-[26%] left-[69%] md:top-[70%] md:left-[25%]" />
         }
       />
 
-
       <BlackSection className="flex flex-col gap-4 py-4 items-center relative">
-        <Heading 
+        <Heading
           heading="We have Got"
           headingClassName="text-primary-500 text-center"
           subHeading="a lot to offer"
@@ -144,7 +182,6 @@ export default function Home() {
         <Services />
       </BlackSection>
 
-
       <Section
         backgroundClassName="py-8 !items-start"
         heading="We Make Your Sales"
@@ -154,12 +191,20 @@ export default function Home() {
         subHeading="through the roof"
         allHeadingClassName="mb-6 sm:mb-12 !w-[40vw] !overflow-visible"
         Button1={
-          <Button to="/contact" className="bg-primary-500 text-secondary-500 mt-3 md:mt-6 mb-6 sm:mb-8 md:mb-12" arrow>
+          <Button
+            to="/contact"
+            className="bg-primary-500 text-secondary-500 mt-3 md:mt-6 mb-6 sm:mb-8 md:mb-12"
+            arrow
+          >
             Let's Connect
           </Button>
         }
         illustration={
-            <img src="/assets/GO_image.svg" alt=""  className="!w-[80vw] md:!w-[45vw]"/>
+          <img
+            src="/assets/GO_image.svg"
+            alt=""
+            className="!w-[80vw] md:!w-[45vw]"
+          />
         }
         Shapes={
           <Circle className="top-[20%] left-[69%] md:top-[56%] md:left-[30%]" />
@@ -181,67 +226,68 @@ export default function Home() {
           subHeadingClassName="text-center"
         />
 
-        <div className="relative"> {/*  1-2-3-path wrapper */}
-        <HomePage3StepPath className="hidden lg:block absolute z-10 top-24 xl:top-36 left-[49%] translate-x-[-60%]" />
-
-        <Section
-          backgroundClassName="bg-tertiary-500 py-4"
-          heading="Diagnosis & Strategy"
-          headingClassName={SECTION5_HEADING_CLASS}
-          subHeadingClassName={SECTION5_SUB_HEADING_CLASS}
-          subHeading="planning"
-          allHeadingClassName={SECTION5_ALL_HEADING_CLASS}
-          text="Analyzing audience online behavior and tendencies to convert and
+        <div className="relative">
+          {" "}
+          {/*  1-2-3-path wrapper */}
+          <HomePage3StepPath className="hidden lg:block absolute z-10 top-24 xl:top-36 left-[49%] translate-x-[-60%]" />
+          <Section
+            backgroundClassName="bg-tertiary-500 py-4"
+            heading="Diagnosis & Strategy"
+            headingClassName={SECTION5_HEADING_CLASS}
+            subHeadingClassName={SECTION5_SUB_HEADING_CLASS}
+            subHeading="planning"
+            allHeadingClassName={SECTION5_ALL_HEADING_CLASS}
+            text="Analyzing audience online behavior and tendencies to convert and
           strategize actions for maximum revenue."
-          textClassName={SECTION5_TEXT_CLASS}
-          illustration={
-            <div className="rounded-full text-center w-auto h-auto">
-            <img src="/assets/Diagnosis.svg" alt=""  className=""/>
-          </div>
-          }
-          direction={-1}
-        />
-
-        <Section
-          backgroundClassName="bg-tertiary-500"
-          heading="Digital Foundations"
-          headingClassName={SECTION5_HEADING_CLASS}
-          subHeadingClassName={SECTION5_SUB_HEADING_CLASS}
-          subHeading="test phase"
-          allHeadingClassName={SECTION5_ALL_HEADING_CLASS}
-          text="Testing multiple creatives with varied target audience settings
+            textClassName={SECTION5_TEXT_CLASS}
+            illustration={
+              <div className="rounded-full text-center w-auto h-auto">
+                <img src="/assets/Diagnosis.svg" alt="" className="" />
+              </div>
+            }
+            direction={-1}
+          />
+          <Section
+            backgroundClassName="bg-tertiary-500"
+            heading="Digital Foundations"
+            headingClassName={SECTION5_HEADING_CLASS}
+            subHeadingClassName={SECTION5_SUB_HEADING_CLASS}
+            subHeading="test phase"
+            allHeadingClassName={SECTION5_ALL_HEADING_CLASS}
+            text="Testing multiple creatives with varied target audience settings
           and narrowing down best-performing creatives based on data
           driven strategy."
-          textClassName={SECTION5_TEXT_CLASS}
-          illustration={
-            <div className="rounded-full text-center w-auto h-auto">
-            <img src="/assets/digitalFoundations.svg" alt=""  className=""/>
-          </div>
-          }
-        />
-
-        <Section
-          backgroundClassName="bg-tertiary-500 py-4 pb-20"
-          heading="Verify Benchmarks"
-          headingClassName={SECTION5_HEADING_CLASS}
-          subHeadingClassName={SECTION5_SUB_HEADING_CLASS}
-          subHeading="scale phase"
-          allHeadingClassName={SECTION5_ALL_HEADING_CLASS}
-          text="Using in-house technology to create AI-driven strategies and increase the frequency,
+            textClassName={SECTION5_TEXT_CLASS}
+            illustration={
+              <div className="rounded-full text-center w-auto h-auto">
+                <img src="/assets/digitalFoundations.svg" alt="" className="" />
+              </div>
+            }
+          />
+          <Section
+            backgroundClassName="bg-tertiary-500 py-4 pb-20"
+            heading="Verify Benchmarks"
+            headingClassName={SECTION5_HEADING_CLASS}
+            subHeadingClassName={SECTION5_SUB_HEADING_CLASS}
+            subHeading="scale phase"
+            allHeadingClassName={SECTION5_ALL_HEADING_CLASS}
+            text="Using in-house technology to create AI-driven strategies and increase the frequency,
           targeting, and budget for the best performing ads in order to improve revenue
           and profit."
-          textClassName={SECTION5_TEXT_CLASS}
-          illustration={
-            <img src="/assets/Benchmark.svg" alt="benchmark-image"  className=""/>
-          }
-          direction={-1}
-        />
+            textClassName={SECTION5_TEXT_CLASS}
+            illustration={
+              <img
+                src="/assets/Benchmark.svg"
+                alt="benchmark-image"
+                className=""
+              />
+            }
+            direction={-1}
+          />
         </div>
       </section>
 
-
-
-      <RoundedCornersSection  
+      <RoundedCornersSection
         className="bg-secondary-500 relative px-screen-padding pb-28"
         behindBackground="bg-tertiary-500"
         bothRounded={true}
@@ -255,122 +301,163 @@ export default function Home() {
         />
 
         <ul className="relative flex flex-col md:flex-row items-center gap-4 justify-between py-4 mb-6">
-          {
-            clients.map((c, index)=>{
-              return (
-                <ClientCards
-                  key={index}
-                  index={index}
-                  {...c}
-                />
-              )
-            }) 
-          }
+          {clients.map((c, index) => {
+            return <ClientCards key={index} index={index} {...c} />;
+          })}
         </ul>
-        
       </RoundedCornersSection>
 
-
-      <ExploreBlog/>
+      <ExploreBlog />
 
       <Wonder />
-      
     </>
-  )
+  );
 }
 
-function Services(){
-    return <div>
-    {/*for large screen*/}
-    <div className="hidden md:block flex flex-col items-center gap-8 md:pb-24">
-      <ul className="w-full flex justify-between gap-[3vw] lg:gap-[6vw] py-8 relative">
-        {
-          services.slice(0,4).map((s, index)=>(
-            <ServicesCards key={index}  {...s} />
-          ))
-        }
-      </ul>
-      <ul className="w-full gap-[3vw] lg:gap-[6vw] flex justify-center relative mb-4">
-        {
-          services.slice(4).map((s, index)=>{
-            return (
-                <ServicesCards key={index}  {...s} />
-            )
-          })
-        }
-      </ul>
-    </div>
-    
-    {/*For middium screens*/}
-    <div className="hidden sm:block md:hidden flex flex-col items-center gap-8">
-      <ul className="w-full flex justify-evenly gap-[3vw] lg:gap-[6vw] py-8 relative">
-        {
-          services.slice(0,2).map((s, index)=>(
-            <ServicesCards key={index}  {...s} />
-          ))
-        }
-      </ul>
-      <ul className="w-full gap-[3vw] lg:gap-[6vw] flex justify-evenly relative mb-4">
-        {
-          services.slice(2,4).map((s, index)=>{
-            return (
-                <ServicesCards key={index}  {...s} />
-            )
-          })
-        }
-      </ul>
-      <ul className="w-full gap-[3vw] lg:gap-[6vw] flex justify-evenly relative mb-4">
-        {
-          services.slice(4,6).map((s, index)=>{
-            return (
-                <ServicesCards key={index}  {...s} />
-            )
-          })
-        }
-      </ul>
-      <ul className="w-full gap-[3vw] lg:gap-[6vw] flex justify-evenly relative mb-4">
-        {
-          services.slice(6).map((s, index)=>{
-            return (
-                <ServicesCards key={index}  {...s} />
-            )
-          })
-        }
-      </ul>
-    </div>
+function Services() {
+  return (
+    <div>
+      {/*for large screen*/}
+      <div className="hidden md:block flex flex-col items-center gap-8 md:pb-24">
+        <ul className="w-full flex justify-between gap-[3vw] lg:gap-[6vw] py-8 relative">
+          {services.slice(0, 4).map((s, index) => (
+            <ServicesCards key={index} {...s} />
+          ))}
+        </ul>
+        <ul className="w-full gap-[3vw] lg:gap-[6vw] flex justify-center relative mb-4">
+          {services.slice(4).map((s, index) => {
+            return <ServicesCards key={index} {...s} />;
+          })}
+        </ul>
+      </div>
 
-    {/*For small screens*/}
-    <div className="sm:hidden flex flex-col items-center gap-8">
-      <ul className="w-full flex flex-col gap-[3vw] py-8 items-center">
-        {
-          services.map((s, index)=>(
-            <ServicesCards key={index}  {...s} />
-          ))
-        }
-      </ul>
+      {/*For middium screens*/}
+      <div className="hidden sm:block md:hidden flex flex-col items-center gap-8">
+        <ul className="w-full flex justify-evenly gap-[3vw] lg:gap-[6vw] py-8 relative">
+          {services.slice(0, 2).map((s, index) => (
+            <ServicesCards key={index} {...s} />
+          ))}
+        </ul>
+        <ul className="w-full gap-[3vw] lg:gap-[6vw] flex justify-evenly relative mb-4">
+          {services.slice(2, 4).map((s, index) => {
+            return <ServicesCards key={index} {...s} />;
+          })}
+        </ul>
+        <ul className="w-full gap-[3vw] lg:gap-[6vw] flex justify-evenly relative mb-4">
+          {services.slice(4, 6).map((s, index) => {
+            return <ServicesCards key={index} {...s} />;
+          })}
+        </ul>
+        <ul className="w-full gap-[3vw] lg:gap-[6vw] flex justify-evenly relative mb-4">
+          {services.slice(6).map((s, index) => {
+            return <ServicesCards key={index} {...s} />;
+          })}
+        </ul>
+      </div>
+
+      {/*For small screens*/}
+      <div className="sm:hidden flex flex-col items-center gap-8">
+        <ul className="w-full flex flex-col gap-[3vw] py-8 items-center">
+          {services.map((s, index) => (
+            <ServicesCards key={index} {...s} />
+          ))}
+        </ul>
+      </div>
     </div>
+  );
+}
+
+const logoicon1 = (
+  <div className="h-32 w-32 rounded-3xl">
+    <img src="./assets/Ecommercelogo.png" alt="" />
   </div>
-}
-
-const logoicon1 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Ecommercelogo.png" alt="" /></div>
-const logoicon2 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Performancelogo.png" alt="" /></div>
-const logoicon3 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Leadgenerationlogo.png" alt="" /></div>
-const logoicon4 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/MediaBuying.png" alt="" /></div>
-const logoicon5 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/Martechlogo.png" alt="" /></div>
-const logoicon6 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/ContentMarketinglogo.png" alt="" /></div>
-const logoicon7 = <div className="h-32 w-32 rounded-3xl"><img src="./assets/webdevlogo.svg" alt="" /></div>
+);
+const logoicon2 = (
+  <div className="h-32 w-32 rounded-3xl">
+    <img src="./assets/Performancelogo.png" alt="" />
+  </div>
+);
+const logoicon3 = (
+  <div className="h-32 w-32 rounded-3xl">
+    <img src="./assets/Leadgenerationlogo.png" alt="" />
+  </div>
+);
+const logoicon4 = (
+  <div className="h-32 w-32 rounded-3xl">
+    <img src="./assets/MediaBuying.png" alt="" />
+  </div>
+);
+const logoicon5 = (
+  <div className="h-32 w-32 rounded-3xl">
+    <img src="./assets/Martechlogo.png" alt="" />
+  </div>
+);
+const logoicon6 = (
+  <div className="h-32 w-32 rounded-3xl">
+    <img src="./assets/ContentMarketinglogo.png" alt="" />
+  </div>
+);
+const logoicon7 = (
+  <div className="h-32 w-32 rounded-3xl">
+    <img src="./assets/webdevlogo.svg" alt="" />
+  </div>
+);
 
 const services = [
-  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32", icon: logoicon1, heading: "E-commerce", text: "Elevating your online store for greater success by innovative outbound strategies to drive more sales and traffic for your brand."},
-  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32", icon: logoicon2, heading: "Performance Marketing", text: "Experts in driving online results through strategic ads. We boost online outcomes with strategic ad tactics."},
-  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32", icon: logoicon3, heading: "Lead Generation", text: "Convert your prospects into delighted clients solely meant for your business."},
-  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32", icon: logoicon4, heading: "Media Buying", text: "Maximising visibility and impact through online ads."},
-  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32",icon: logoicon5, heading: "Martech", text: "Leveraging cutting-edge tech for marketing success. Using tech to drive marketing triumph." },
-  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32",icon: logoicon6, heading: "Content Marketing", text: "Crafting compelling content for your brand's story. We create engaging brand stories." },
-  { className: "md:first:relative md:first:top-32 md:last:relative md:last:top-32",icon: logoicon7, heading: "Web Development", text: "Building platforms that captivate and convert. Creating captivating converting platforms." }
-]
+  {
+    className:
+      "md:first:relative md:first:top-32 md:last:relative md:last:top-32",
+    icon: logoicon1,
+    heading: "E-commerce",
+    text: "Elevating your online store for greater success by innovative outbound strategies to drive more sales and traffic for your brand.",
+  },
+  {
+    className:
+      "md:first:relative md:first:top-32 md:last:relative md:last:top-32",
+    icon: logoicon2,
+    heading: "Performance Marketing",
+    text: "Experts in driving online results through strategic ads. We boost online outcomes with strategic ad tactics.",
+  },
+  {
+    className:
+      "md:first:relative md:first:top-32 md:last:relative md:last:top-32",
+    icon: logoicon3,
+    heading: "Lead Generation",
+    text: "Convert your prospects into delighted clients solely meant for your business.",
+  },
+  {
+    className:
+      "md:first:relative md:first:top-32 md:last:relative md:last:top-32",
+    icon: logoicon4,
+    heading: "Media Buying",
+    text: "Maximising visibility and impact through online ads.",
+  },
+  {
+    className:
+      "md:first:relative md:first:top-32 md:last:relative md:last:top-32",
+    icon: logoicon5,
+    heading: "Martech",
+    text: "Leveraging cutting-edge tech for marketing success. Using tech to drive marketing triumph.",
+  },
+  {
+    className:
+      "md:first:relative md:first:top-32 md:last:relative md:last:top-32",
+    icon: logoicon6,
+    heading: "Content Marketing",
+    text: "Crafting compelling content for your brand's story. We create engaging brand stories.",
+  },
+  {
+    className:
+      "md:first:relative md:first:top-32 md:last:relative md:last:top-32",
+    icon: logoicon7,
+    heading: "Web Development",
+    text: "Building platforms that captivate and convert. Creating captivating converting platforms.",
+  },
+];
 
-const icon2 = <img src="./assets/person.png" alt="person" className="w-16 h-16"/>
+const icon2 = (
+  <img src="./assets/person.png" alt="person" className="w-16 h-16" />
+);
 
 const clients = [
   {
@@ -381,14 +468,14 @@ const clients = [
     className: "first:relative md:first:top-16 last:relative md:last:top-16",
   },
   {
-    icon: "/assets/client3.jpg", 
+    icon: "/assets/client3.jpg",
     heading: "Lokendra",
     subHeading: "Lokmain Technologies",
     text: "I’ve experienced working directly with AR Media House Inc, in the marketing space for many years, and they have been very successful as a multiple channel advertiser — driving thousands of leads and sales to our offers over the years. Some of their most successful sources have been Native and social media (Facebook) marketing. It’s been great to see them build infrastructures and teams to successfully tackle multiple verticals using these media sources.",
     className: "first:relative md:first:top-16 last:relative md:last:top-16",
   },
   {
-    icon: "/assets/client2.jpeg", 
+    icon: "/assets/client2.jpeg",
     heading: "Billy",
     subHeading: "EdTech & Ecommerce Brand",
     text: "Discovering AR Media House was a serendipitous breakthrough! Within a mere 5-6 months, their extraordinary efforts have ingeniously constructed our Direct-to-Consumer (D2C) brand from the very foundation. Presently, we flourish expansively, both in the digital realm and offline, with an astonishing 70% of our online operations streamlined and automated. The unparalleled prowess and expertise exhibited by their team are truly unmatched.",
@@ -396,16 +483,60 @@ const clients = [
   },
 ];
 
-const companiesLogos=[
-  { src:"./assets/angelOnewhite.png", alt:"Angelone", className:"md:w-36 h-auto sm:w-28 w-20", },
-  { src:"./assets/arunika.png", alt:"Arunika", className:"md:w-36 h-auto sm:w-28 w-20", },
-  { src:"./assets/gamezywhite.png", alt:"Gamezy", className:"md:w-32 h-auto sm:w-24 w-16", },
-  { src:"./assets/instaTransferwhite.png", alt:"Instatransfer", className:"md:w-32 h-auto sm:w-24 w-16", },
-  { src:"./assets/marutisuzukiwhite.png", alt:"MarutiSuzuki", className:"md:w-44 h-auto sm:w-36 w-28", },
-  { src:"./assets/nmimswhite.png", alt:"NMIMS", className:"md:w-24 h-auto sm:w-16 w-10", },
-  { src:"./assets/silaiwhite.png", alt:"Silai", className:"md:w-28 h-auto sm:w-20 w-12", },
-  { src:"./assets/Sparklesislogo.png", alt:"Sparklesis", className:"md:w-28 h-auto sm:w-20 w-12", },
-  { src:"./assets/Elkologo.png", alt:"Elko", className:"md:w-32 h-auto sm:w-24 w-16", },
-  { src:"./assets/shikshawhite.png", alt:"Shiksha", className:"md:w-24 h-auto sm:w-16 w-10", },
-  { src:"./assets/manipalmedacewhite.png", alt:"ManipalMedace", className:"md:w-32 h-auto sm:w-24 w-16", },
-]
+const companiesLogos = [
+  {
+    src: "./assets/angelOnewhite.png",
+    alt: "Angelone",
+    className: "md:w-36 h-auto sm:w-28 w-20",
+  },
+  {
+    src: "./assets/arunika.png",
+    alt: "Arunika",
+    className: "md:w-36 h-auto sm:w-28 w-20",
+  },
+  {
+    src: "./assets/gamezywhite.png",
+    alt: "Gamezy",
+    className: "md:w-32 h-auto sm:w-24 w-16",
+  },
+  {
+    src: "./assets/instaTransferwhite.png",
+    alt: "Instatransfer",
+    className: "md:w-32 h-auto sm:w-24 w-16",
+  },
+  {
+    src: "./assets/marutisuzukiwhite.png",
+    alt: "MarutiSuzuki",
+    className: "md:w-44 h-auto sm:w-36 w-28",
+  },
+  {
+    src: "./assets/nmimswhite.png",
+    alt: "NMIMS",
+    className: "md:w-24 h-auto sm:w-16 w-10",
+  },
+  {
+    src: "./assets/silaiwhite.png",
+    alt: "Silai",
+    className: "md:w-28 h-auto sm:w-20 w-12",
+  },
+  {
+    src: "./assets/Sparklesislogo.png",
+    alt: "Sparklesis",
+    className: "md:w-28 h-auto sm:w-20 w-12",
+  },
+  {
+    src: "./assets/Elkologo.png",
+    alt: "Elko",
+    className: "md:w-32 h-auto sm:w-24 w-16",
+  },
+  {
+    src: "./assets/shikshawhite.png",
+    alt: "Shiksha",
+    className: "md:w-24 h-auto sm:w-16 w-10",
+  },
+  {
+    src: "./assets/manipalmedacewhite.png",
+    alt: "ManipalMedace",
+    className: "md:w-32 h-auto sm:w-24 w-16",
+  },
+];
