@@ -223,25 +223,25 @@ const blogsList = [
 
 const section2CardList = [
   {
-    title: "Paid Social",
+    title: "Performance Marketing",
     text: "Maintain and expand brand awareness through effective online marketing strategies across all platforms",
     blobSrc: "./assets/services-blob-1.svg",
     iconSrc: "./assets/services-icon-2-1.svg",
   },
   {
-    title: "Native advertising",
+    title: "Search Engine Optimization",
     text: "Meet all the expectations of your audience and add valueto your brand by creating an influential connection with the advertiser.",
     blobSrc: "./assets/services-blob-1.svg",
     iconSrc: "./assets/services-icon-2-4.svg",
   },
   {
-    title: "Paid Search & Display",
+    title: "Social Media Marketing",
     text: "Reach your target audience proactively across the web and get the right strategy and campaign set-up for your brand.",
     blobSrc: "./assets/services-blob-1.svg",
     iconSrc: "./assets/services-icon-2-2.svg",
   },
   {
-    title: "Conversion Rate Optimization",
+    title: "Website & eCommerce Development",
     text: "Understand your key audience, make a better user experience and get the most out of your acquisition efforts.",
     blobSrc: "./assets/services-blob-1.svg",
     iconSrc: "./assets/services-icon-2-3.svg",

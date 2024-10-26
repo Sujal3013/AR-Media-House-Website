@@ -250,7 +250,7 @@ export default function About() {
               <AnimateNumber
                 className="inline"
                 from={0}
-                to={30}
+                to={22}
                 duration={2.5}
               />  
               +
@@ -262,7 +262,7 @@ export default function About() {
               <AnimateNumber
                 className="inline"
                 from={0}
-                to={5}
+                to={2}
                 duration={2.5}
               />
               +
@@ -274,7 +274,7 @@ export default function About() {
               <AnimateNumber
                 className="inline"
                 from={0}
-                to={300}
+                to={150}
                 duration={2.5}
               />
               +
@@ -423,17 +423,17 @@ function Card({ blobSrc, iconSrc, title, titleClassNames }) {
 }
 
 const founders = [
-  {
-    founderName: "Raj Maheshwari",
-    imageSrc: "/assets/founder2.jpg", 
-    position: "Founder",
-    description: `Raj Maheshwari is a digital market specialist, portfolio manager, trainer, and stock market trader. In 2018, he founded the AR group and launched his first business, AR Financial Research & Consultancy Services, where he served as a mentor to help others succeed in the worlds of finance and investment.\n
-    Later on, he discovered that the lack of digitalization is causing issues for a lot of businesses. Subsequently, he devised the concept to establish an additional enterprise, AR Media House, offering digital solutions that facilitate corporate expansion.\n
-    His goal is to enable people and companies to prosper in the digital and financial spheres. Whether your goal is to become an expert in stock market trading or to increase your web presence, I can help you every step of the way.`,
-    facebookLink: "https://www.facebook.com/raj.maheshwari.1238/", 
-    twitterLink: "https://www.instagram.com/rajmaheshwari.ai/?hl=en", 
-    linkedinLink: "https://www.linkedin.com/in/raj-maheshwari-895778149/", 
-  }, 
+  // {
+  //   founderName: "Raj Maheshwari",
+  //   imageSrc: "/assets/founder2.jpg", 
+  //   position: "Founder",
+  //   description: `Raj Maheshwari is a digital market specialist, portfolio manager, trainer, and stock market trader. In 2018, he founded the AR group and launched his first business, AR Financial Research & Consultancy Services, where he served as a mentor to help others succeed in the worlds of finance and investment.\n
+  //   Later on, he discovered that the lack of digitalization is causing issues for a lot of businesses. Subsequently, he devised the concept to establish an additional enterprise, AR Media House, offering digital solutions that facilitate corporate expansion.\n
+  //   His goal is to enable people and companies to prosper in the digital and financial spheres. Whether your goal is to become an expert in stock market trading or to increase your web presence, I can help you every step of the way.`,
+  //   facebookLink: "https://www.facebook.com/raj.maheshwari.1238/", 
+  //   twitterLink: "https://www.instagram.com/rajmaheshwari.ai/?hl=en", 
+  //   linkedinLink: "https://www.linkedin.com/in/raj-maheshwari-895778149/", 
+  // }, 
   {
     founderName: "Harish Parihar", 
     imageSrc: "/assets/founder3.JPG", 
@@ -443,15 +443,15 @@ const founders = [
     twitterLink: "https://www.instagram.com/harishparihar.ai/", 
     linkedinLink: "https://www.linkedin.com/in/harish-parihar-ab5086153/", 
   }, 
-  {
-    founderName: "Shailendra Mukati",
-    imageSrc: "/assets/founder1.jpeg", 
-    position: "Co-Founder",
-    description: `Another AR group cofounder is Shailendra Mukati. His area of expertise is computer engineering (CS), and he has developed technical talents that solve technical issues for businesses. 
-    It was there that he began applying his managerial and marketing talents to deal with clients. His goal was to help as many businesses as possible go from having low sales to experiencing 10x growth. 
-    Shailendra, a true leader, is the driving force behind a group of remarkable people that collaborate relentlessly to achieve the shared objective of revolutionising internet marketing. As the leader of AR Media House, Shailendra is leading the company into its next phase of leadership in the market.Under Shailendra's guidance, AR Media House is poised to set new standards and pave the way for innovative approaches in internet marketing.`,
-    facebookLink: "", 
-    twitterLink: "", 
-    linkedinLink: "", 
-  },
+  // {
+  //   founderName: "Shailendra Mukati",
+  //   imageSrc: "/assets/founder1.jpeg", 
+  //   position: "Co-Founder",
+  //   description: `Another AR group cofounder is Shailendra Mukati. His area of expertise is computer engineering (CS), and he has developed technical talents that solve technical issues for businesses. 
+  //   It was there that he began applying his managerial and marketing talents to deal with clients. His goal was to help as many businesses as possible go from having low sales to experiencing 10x growth. 
+  //   Shailendra, a true leader, is the driving force behind a group of remarkable people that collaborate relentlessly to achieve the shared objective of revolutionising internet marketing. As the leader of AR Media House, Shailendra is leading the company into its next phase of leadership in the market.Under Shailendra's guidance, AR Media House is poised to set new standards and pave the way for innovative approaches in internet marketing.`,
+  //   facebookLink: "", 
+  //   twitterLink: "", 
+  //   linkedinLink: "", 
+  // },
 ]

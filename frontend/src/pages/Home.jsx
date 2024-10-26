@@ -47,10 +47,9 @@ export default function Home() {
               <Button arrow className="bg-primary-500 text-secondary-500" to="/contact">
                 Let's Connect
               </Button>
-              {/* CHANGE FOR RESUME */}
-              {/* <Button to="/about" className="bg-transparent border-2 border-primary-500 text-primary-500">
+               <Button to="/about" className="bg-transparent border-2 border-primary-500 text-primary-500">
                 About Us
-              </Button> */}
+              </Button> 
             </div>
           </div>
           {/* illustraion */}
@@ -398,16 +397,15 @@ const clients = [
 ];
 
 const companiesLogos=[
-  { src:"./assets/denverwhite.png", alt:"DENVER", className:"md:w-28 h-auto sm:w-20 w-12", },
-  { src:"./assets/angelOnewhite.png", alt:"DENVER", className:"md:w-36 h-auto sm:w-28 w-20", },
-  { src:"./assets/arunika.png", alt:"DENVER", className:"md:w-36 h-auto sm:w-28 w-20", },
-  { src:"./assets/gamezywhite.png", alt:"DENVER", className:"md:w-32 h-auto sm:w-24 w-16", },
-  { src:"./assets/instaTransferwhite.png", alt:"DENVER", className:"md:w-32 h-auto sm:w-24 w-16", },
-  { src:"./assets/marutisuzukiwhite.png", alt:"DENVER", className:"md:w-44 h-auto sm:w-36 w-28", },
-  { src:"./assets/nmimswhite.png", alt:"DENVER", className:"md:w-24 h-auto sm:w-16 w-10", },
-  { src:"./assets/silaiwhite.png", alt:"DENVER", className:"md:w-28 h-auto sm:w-20 w-12", },
-  { src:"./assets/wahlwhite1.png", alt:"DENVER", className:"md:w-28 h-auto sm:w-20 w-12", },
-  { src:"./assets/clickHouse.png", alt:"DENVER", className:"md:w-32 h-auto sm:w-24 w-16", },
-  { src:"./assets/shikshawhite.png", alt:"DENVER", className:"md:w-24 h-auto sm:w-16 w-10", },
-  { src:"./assets/manipalmedacewhite.png", alt:"DENVER", className:"md:w-32 h-auto sm:w-24 w-16", },
+  { src:"./assets/angelOnewhite.png", alt:"Angelone", className:"md:w-36 h-auto sm:w-28 w-20", },
+  { src:"./assets/arunika.png", alt:"Arunika", className:"md:w-36 h-auto sm:w-28 w-20", },
+  { src:"./assets/gamezywhite.png", alt:"Gamezy", className:"md:w-32 h-auto sm:w-24 w-16", },
+  { src:"./assets/instaTransferwhite.png", alt:"Instatransfer", className:"md:w-32 h-auto sm:w-24 w-16", },
+  { src:"./assets/marutisuzukiwhite.png", alt:"MarutiSuzuki", className:"md:w-44 h-auto sm:w-36 w-28", },
+  { src:"./assets/nmimswhite.png", alt:"NMIMS", className:"md:w-24 h-auto sm:w-16 w-10", },
+  { src:"./assets/silaiwhite.png", alt:"Silai", className:"md:w-28 h-auto sm:w-20 w-12", },
+  { src:"./assets/Sparklesislogo.png", alt:"Sparklesis", className:"md:w-28 h-auto sm:w-20 w-12", },
+  { src:"./assets/Elkologo.png", alt:"Elko", className:"md:w-32 h-auto sm:w-24 w-16", },
+  { src:"./assets/shikshawhite.png", alt:"Shiksha", className:"md:w-24 h-auto sm:w-16 w-10", },
+  { src:"./assets/manipalmedacewhite.png", alt:"ManipalMedace", className:"md:w-32 h-auto sm:w-24 w-16", },
 ]
