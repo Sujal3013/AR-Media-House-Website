@@ -81,7 +81,9 @@ export default function Home() {
               return (
                 <li
                   key={index}
-                  className="w-20 h-24 sm:h-28 sm:w-24 md:w-28 md:h-32"
+                  className={
+                    c.className || "w-20 h-20 sm:h-24 sm:w-24 md:w-28 md:h-28"
+                  }
                 >
                   <img
                     src={c.src}
@@ -487,56 +489,48 @@ const companiesLogos = [
   {
     src: "./assets/angelOnewhite.png",
     alt: "Angelone",
-    className: "md:w-36 h-auto sm:w-28 w-20",
   },
   {
     src: "./assets/arunika.png",
     alt: "Arunika",
-    className: "md:w-36 h-auto sm:w-28 w-20",
+    className: "w-24 h-20 sm:h-24 sm:w-28 md:w-32 md:h-28",
   },
   {
     src: "./assets/gamezywhite.png",
     alt: "Gamezy",
-    className: "md:w-32 h-auto sm:w-24 w-16",
+    className: "w-24 h-20 sm:h-24 sm:w-28 md:w-32 md:h-28",
   },
   {
     src: "./assets/instaTransferwhite.png",
     alt: "Instatransfer",
-    className: "md:w-32 h-auto sm:w-24 w-16",
+    className: "w-24 h-20 sm:h-24 sm:w-28 md:w-32 md:h-28",
   },
   {
     src: "./assets/marutisuzukiwhite.png",
     alt: "MarutiSuzuki",
-    className: "md:w-44 h-auto sm:w-36 w-28",
   },
   {
     src: "./assets/nmimswhite.png",
     alt: "NMIMS",
-    className: "md:w-24 h-auto sm:w-16 w-10",
   },
   {
     src: "./assets/silaiwhite.png",
     alt: "Silai",
-    className: "md:w-28 h-auto sm:w-20 w-12",
   },
   {
     src: "./assets/Sparklesislogo.png",
     alt: "Sparklesis",
-    className: "md:w-28 h-auto sm:w-20 w-12",
   },
   {
     src: "./assets/Elkologo.png",
     alt: "Elko",
-    className: "md:w-32 h-auto sm:w-24 w-16",
   },
   {
     src: "./assets/shikshawhite.png",
     alt: "Shiksha",
-    className: "md:w-24 h-auto sm:w-16 w-10",
   },
   {
     src: "./assets/manipalmedacewhite.png",
     alt: "ManipalMedace",
-    className: "md:w-32 h-auto sm:w-24 w-16",
   },
 ];
