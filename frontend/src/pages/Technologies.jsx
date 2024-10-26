@@ -59,15 +59,12 @@ export default function Technologies() {
             Technologies we Use
           </h1>
           {/* <div className="flex justify-center items-center relative overflow-hidden"> */}
-          <CompaniesAnimate
-            className="h-28 mb-2 md:mb-8 flex justify-center items-center gap-8 sm:gap-16 md:gap-20 lg:gap-24"
-            length={7}
-          >
+          <CompaniesAnimate className="h-28 mb-2 md:mb-8 flex justify-center items-center gap-8 sm:gap-16 md:gap-20 lg:gap-24">
             {
               <>
-                <li className="w-14 sm:w-24 md:w-28">
+                <li className="w-14 sm:w-24 md:w-28 md:h-28">
                   <img
-                    className="w-full h-full "
+                    className="companies-image"
                     src="/assets/AWS.png"
                     alt="aws"
                   />
@@ -77,37 +74,37 @@ export default function Technologies() {
                     <img className="w-full h-full" src="/assets/graphql.svg" alt="graph ql" />
                   </li> 
                 */}
-                <li className="h-12 sm:h-20 md:h-20">
+                <li className="h-12 sm:h-20 md:h-28 md:w-32">
                   <img
-                    className="w-full h-full "
-                    src="/assets/react.svg"
+                    className="companies-image"
+                    src="/assets/react.png"
                     alt="react"
                   />
                 </li>
-                <li className="w-24 sm:w-40 md:w-48">
+                <li className="w-24 sm:w-40 md:w-28 md:h-32">
                   <img
-                    className="w-full h-full "
-                    src="/assets/Shopifylogo.webp"
+                    className="companies-image"
+                    src="/assets/Shopifylogo.png"
                     alt="Shopify"
                   />
                 </li>
-                <li className="w-20 sm:w-36 md:w-48">
+                <li className="w-20 sm:w-36 md:w-32 md:h-28">
                   <img
-                    className="w-full h-full "
+                    className="companies-image"
                     src="/assets/Laravel_logo.png"
                     alt="Laravel"
                   />
                 </li>
-                <li className="h-24 w-20 sm:w-36 md:w-32">
+                <li className="h-24 w-20 sm:w-36 md:w-28 md:h-28">
                   <img
-                    className="w-full h-full "
+                    className="companies-image"
                     src="/assets/wordpress.png"
                     alt="wordpress"
                   />
                 </li>
-                <li className="w-14 sm:w-28 md:w-24 md:h-16">
+                <li className="w-14 sm:w-28 md:w-28 md:h-28">
                   <img
-                    className="w-full h-full "
+                    className="companies-image"
                     src="/assets/Pythonlogo.png"
                     alt="Python"
                   />
