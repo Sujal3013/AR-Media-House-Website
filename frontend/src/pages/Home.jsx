@@ -79,8 +79,15 @@ export default function Home() {
           >
             {companiesLogos.map((c, index) => {
               return (
-                <li key={index} className={c.className}>
-                  <img src={c.src} alt="company-image" />
+                <li
+                  key={index}
+                  className="w-20 h-24 sm:h-28 sm:w-24 md:w-28 md:h-32"
+                >
+                  <img
+                    src={c.src}
+                    alt="company-image"
+                    className="companies-image"
+                  />
                 </li>
               );
             })}

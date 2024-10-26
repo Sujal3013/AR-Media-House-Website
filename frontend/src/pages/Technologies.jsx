@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import {
   Button,
   Circle,
@@ -62,7 +61,7 @@ export default function Technologies() {
           <CompaniesAnimate className="h-28 mb-2 md:mb-8 flex justify-center items-center gap-8 sm:gap-16 md:gap-20 lg:gap-24">
             {
               <>
-                <li className="w-14 sm:w-24 md:w-28 md:h-28">
+                <li className="w-20 h-20 sm:h-24 sm:w-24 md:w-28 md:h-28">
                   <img
                     className="companies-image"
                     src="/assets/AWS.png"
@@ -74,35 +73,35 @@ export default function Technologies() {
                     <img className="w-full h-full" src="/assets/graphql.svg" alt="graph ql" />
                   </li> 
                 */}
-                <li className="h-12 sm:h-20 md:h-28 md:w-32">
+                <li className="w-20 h-20 sm:h-24 sm:w-24 md:h-28 md:w-32">
                   <img
                     className="companies-image"
                     src="/assets/react.png"
                     alt="react"
                   />
                 </li>
-                <li className="w-24 sm:w-40 md:w-28 md:h-32">
+                <li className="w-20 h-20 sm:h-24 sm:w-24 md:w-28 md:h-32">
                   <img
                     className="companies-image"
                     src="/assets/Shopifylogo.png"
                     alt="Shopify"
                   />
                 </li>
-                <li className="w-20 sm:w-36 md:w-32 md:h-28">
+                <li className="w-20 h-20 sm:h-24 sm:w-24 md:w-32 md:h-28">
                   <img
                     className="companies-image"
                     src="/assets/Laravel_logo.png"
                     alt="Laravel"
                   />
                 </li>
-                <li className="h-24 w-20 sm:w-36 md:w-28 md:h-28">
+                <li className="w-20 h-20 sm:h-24 sm:w-24 md:w-28 md:h-28">
                   <img
                     className="companies-image"
                     src="/assets/wordpress.png"
                     alt="wordpress"
                   />
                 </li>
-                <li className="w-14 sm:w-28 md:w-28 md:h-28">
+                <li className="w-20 h-20 sm:h-24 sm:w-24 md:w-28 md:h-28">
                   <img
                     className="companies-image"
                     src="/assets/Pythonlogo.png"
@@ -164,11 +163,9 @@ export default function Technologies() {
       />
       <Section
         backgroundClassName="bg-tertiary-500 py-10"
-        heading="DATA"
-        subHeading="collection"
-        text="This technology is loaded with creative intelligence and owns the power
-        of programmatic advertising to reach the right audience through correct
-        placements, engaging adcopies, and focused targeting."
+        heading="Complete "
+        subHeading="E-commerce solutions"
+        text="Empower your online store with secure, scalable, and user-centric eCommerce platforms that drive growth."
         textClassName="py-10"
         Button1={
           <Button
@@ -194,13 +191,9 @@ export default function Technologies() {
       />
       <Section
         backgroundClassName="bg-tertiary-500 py-10"
-        heading="BIG DATA"
-        subHeading="optimization"
-        text="The in-house algorithm analyzes the CPA of the ads running within the
-        campaign and progresses accordingly. It possesses the capabilities to
-        pause the campaigns that have been consistently witnessing a low
-        performance and can even assign appropriate budgets to the
-        best-performing ads within the campaign."
+        heading="End-to-End"
+        subHeading="software development"
+        text="Transform ideas into powerful software solutions with our full-cycle development services for businesses of any scale."
         textClassName="my-10"
         Button1={
           <Button
