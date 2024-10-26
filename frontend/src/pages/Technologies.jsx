@@ -53,12 +53,12 @@ export default function Technologies() {
             {
               <>
                 <li className="w-14 sm:w-28 md:w-36"><img className="w-full h-full" src="/assets/AWS.png" alt="aws" /></li>
-                <li className="h-12 sm:h-24 md:h-32"><img className="w-full h-full" src="/assets/graphql.svg" alt="graph ql" /></li>
+                {/* <li className="h-12 sm:h-24 md:h-32"><img className="w-full h-full" src="/assets/graphql.svg" alt="graph ql" /></li> */}
                 <li className="h-12 sm:h-20 md:h-28"><img className="w-full h-full" src="/assets/react.svg" alt="react" /></li>
-                <li className="w-24 sm:w-40 md:w-48 md:h-12"><img className="w-full h-full" src="/assets/kafka.png" alt="kafta" /></li>
-                <li className="w-20 sm:w-36 md:w-44"><img className="w-full h-full" src="/assets/kubernetes.png" alt="kubernetes" /></li>
-                <li className="w-20 sm:w-36 md:w-44"><img className="w-full h-full" src="/assets/wordpress.png" alt="wordpress" /></li>
-                <li className="w-14 sm:w-28 md:w-36 md:h-auto"><img className="w-full h-full" src="/assets/Pythonlogo.png" alt="Python" /></li>
+                <li className="w-24 sm:w-40 md:w-48"><img className="w-full h-full" src="/assets/Shopifylogo.webp" alt="Shopify" /></li>
+                <li className="w-20 sm:w-36 md:w-44"><img className="w-full h-full" src="/assets/Laravel_logo.png" alt="Laravel" /></li>
+                <li className="h-28 w-20 sm:w-36 md:w-44"><img className="w-full h-full" src="/assets/wordpress.png" alt="wordpress" /></li>
+                <li className="w-14 sm:w-28 md:w-36 md:h-28"><img className="w-full h-full" src="/assets/Pythonlogo.png" alt="Python" /></li>
               </>
             }
           </CompaniesAnimate>
@@ -74,12 +74,9 @@ export default function Technologies() {
       {/* PROCESS SECTION */}
       <Section
         backgroundClassName="bg-tertiary-500 py-10"
-        heading="AUTOMATION MARKETING"
-        subHeading="platform"
-        text="Our in-house marketing platform is backed with Artificial Intelligence
-        and uses data-driven benchmarks to assist our teams and clients while
-        optimizing and scaling campaigns on multiple digital platforms
-        including Facebook and Google."
+        heading="Empowering Brands"
+        subHeading="with Next-Gen Tech Solutions"
+        text="Custom websites tailored for modern brands—crafted with precision, creativity, and performance."
         textClassName="my-10"
         Button1={
           <Button to="/services"

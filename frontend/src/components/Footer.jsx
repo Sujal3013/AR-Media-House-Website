@@ -111,12 +111,12 @@ const Footer = () => {
       </div>
 
       <div className='mt-8 py-1 text-xs flex flex-wrap justify-center gap-1'>
-        <p className='px-2 text-wrap sm:text-nowrap'>Copyrights @2018 are reserved with the ARMEDIAHOUSE.</p>
+        <p className='px-2 text-wrap sm:text-nowrap'>Copyrights @2023 are reserved with the ARMEDIAHOUSE.</p>
         
       </div>
       <div className='text-[10px] flex flex-wrap justify-center gap-1'>
         {/* CHANGE FOR RESUME */}
-      <p className='px-2 text-wrap sm:text-nowrap'>For more details contact +91 9644408803 or business@armediahouse.in</p>
+      <p className='px-2 text-wrap sm:text-nowrap'>For more details contact +91 7470515476 or business@armediahouse.in</p>
       
         
       </div>
@@ -142,7 +142,7 @@ const SITE_MAP_LIST = [
   { title: "Career", to: "/careers" },
   { title: "Case Studies", to: "/case-studies" },
   // CHANGE FOR RESUME
-  // { title: "About", to: "/about" }
+  { title: "About", to: "/about" }
 ];
 
 export default Footer

@@ -6,7 +6,7 @@ import "../index.css";
 export default function Navbar() {
   const location = useLocation().pathname;
 //   CHANGE FOR RESUME
-  const ownerNumber = '+919644408803'; 
+  const ownerNumber = '+917470515476'; 
 
   const handleWhatsappClick = () => {
     const message = encodeURIComponent('Hello! I have a question.');
@@ -44,12 +44,12 @@ export default function Navbar() {
             <Button to="/contact" primary className={`${location==="/contact"?"opacity-0 transition-opacity duration-500":"bg-primary-500 transition-opacity opacity-100 duration-500 text-secondary-500 text-sm"}`}>
                 Let's Connect
             </Button>
-            {/* <img 
+            <img 
                 src="/assets/whatsapp-animated.gif" 
                 onClick={handleWhatsappClick} 
                 alt="whatsapp connect" 
                 className="p-[0.36rem] bg-white rounded-full w-10 h-10 cursor-pointer overflow-visible" 
-            /> */}
+            />
         </div>
     </nav>
   )
@@ -73,12 +73,11 @@ const list = [{
         to: "/services",
         imgSrc:"/assets/icons8-services.png"
     }, 
-    // CHANGE FOR RESUME
-    /*{
+    {
         title: "About",
         to: "/about",
         imgSrc:"/assets/icons8-about-us.svg"
-    }, */{
+    }, {
         title: "Careers",
         to: "/careers",
         imgSrc:"/assets/icons8-career.png"
