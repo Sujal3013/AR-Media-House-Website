@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Button, Circle, Triangle } from "../components";
 import { useState } from "react";
@@ -6,72 +5,93 @@ import { useState } from "react";
 const IndividualCaseStudy = () => {
   const { id } = useParams();
   document.querySelector("title").innerHTML = `Case Study - ${id}`;
-  
+
   const blog = blogs.find((blog) => blog.id == id);
   document.querySelector("title").innerHTML = `Case Study - ${blog.name}`;
   // setTimeout(()=>console.log(blog, id), 2000);
-  const [model,setModel]=useState(false);
-  const [tempimgScr,setTempImgScr]=useState('');
-  const getImage=(image)=>{
+  const [model, setModel] = useState(false);
+  const [tempimgScr, setTempImgScr] = useState("");
+  const getImage = (image) => {
     setTempImgScr(image);
     setModel(true);
-  }
+  };
   return (
     <div className="relative">
       {blog ? (
         <>
-        <div className={model?"model open":"model"}>
-          <img src={tempimgScr} alt={`${tempimgScr}`} />
-          <svg onClick={()=>setModel(false)} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="Close"><path d="M38 12.83 35.17 10 24 21.17 12.83 10 10 12.83 21.17 24 10 35.17 12.83 38 24 26.83 35.17 38 38 35.17 26.83 24z" fill="#ff9356" class="color000000 svgShape"></path><path fill="none" d="M0 0h48v48H0z"></path></svg>
-        </div>
+          <div className={model ? "model open" : "model"}>
+            <img src={tempimgScr} alt={`${tempimgScr}`} />
+            <svg
+              onClick={() => setModel(false)}
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 48 48"
+              id="Close"
+            >
+              <path
+                d="M38 12.83 35.17 10 24 21.17 12.83 10 10 12.83 21.17 24 10 35.17 12.83 38 24 26.83 35.17 38 38 35.17 26.83 24z"
+                fill="#ff9356"
+                className="color000000 svgShape"
+              ></path>
+              <path fill="none" d="M0 0h48v48H0z"></path>
+            </svg>
+          </div>
           <div className="h-[80vh] w-full bg-[url('/assets/Case-study.jpg')] bg-cover bg-top bg-no-repeat relative mb-4">
             <div className="h-full w-full flex flex-col justify-center items-center text-tertiary-500 bg-black bg-opacity-50">
               <p className="mb-4 border border-solid border-white inline-block px-4 text-lg py-2">
                 Content Marketing
               </p>
-              <h1 className="w-[60%] font-bold text-3xl text-center">{blog.name}</h1>
+              <h1 className="w-[60%] font-bold text-3xl text-center">
+                {blog.name}
+              </h1>
             </div>
           </div>
           <div className="px-[2rem] sm:px-[4rem] lg:px-[12rem] py-4">
-            {
-              blog.description.map((content, indx) => (
-                <div className="mb-2" key={indx}>
-                  {
-                    content.heading 
-                    && 
-                    <h2 className="font-semibold font-jost text-2xl my-2">
-                      {content.heading}
-                    </h2>
-                  }
-                  {
-                    content.paragraph && (
-                      <p className=" font-playfair-display text-lg italic">
-                        {content.paragraph}
-                      </p>
-                    ) 
-                  }<div className="">{content.points && (content.points.map((point,idx)=>(<ul className="list-disc block mx-auto" key={idx}><p className=" font-playfair-display text-lg italic">{`${point}`}</p></ul>)))}</div>
-                  
-                  {
-                    content.centerpara && (content.centerpara.map((point,idx)=>(<p className=" font-semibold text-lg font-playfair-display block mx-auto" key={idx}>{point}</p>)))
-                  }
-                  {content.images && (
-                    <div className="w-full mt-3 flex flex-wrap gap-4 justify-between items-center">
-                      {content.images?.map((image, indx) => (
-                        <div onClick={()=>getImage(image)}>
+            {blog.description.map((content, indx) => (
+              <div className="mb-2" key={indx}>
+                {content.heading && (
+                  <h2 className="font-semibold font-jost text-2xl my-2">
+                    {content.heading}
+                  </h2>
+                )}
+                {content.paragraph && (
+                  <p className=" font-playfair-display text-lg italic">
+                    {content.paragraph}
+                  </p>
+                )}
+                <div className="">
+                  {content.points &&
+                    content.points.map((point, idx) => (
+                      <ul className="list-disc block mx-auto" key={idx}>
+                        <p className=" font-playfair-display text-lg italic">{`${point}`}</p>
+                      </ul>
+                    ))}
+                </div>
+
+                {content.centerpara &&
+                  content.centerpara.map((point, idx) => (
+                    <p
+                      className=" font-semibold text-lg font-playfair-display block mx-auto"
+                      key={idx}
+                    >
+                      {point}
+                    </p>
+                  ))}
+                {content.images && (
+                  <div className="w-full mt-3 flex flex-wrap gap-4 justify-between items-center">
+                    {content.images?.map((image, indx) => (
+                      <div onClick={() => getImage(image)}>
                         <img
                           src={image}
                           className="w-[36vw] h-auto py-4 object-cover hover:opacity-80 cursor-zoom-in shadow-md rounded-md"
                           key={indx}
                         />
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                  <hr className=" border-t-2 border-dotted border-tertiary-500" />
-                </div>
-
-              ))
-            }
+                      </div>
+                    ))}
+                  </div>
+                )}
+                <hr className=" border-t-2 border-dotted border-tertiary-500" />
+              </div>
+            ))}
           </div>
           <div className="px-[2rem] sm:px-[4rem] lg:px-[12rem] mb-6">
             <div className="flex gap-2 items-center">
@@ -99,9 +119,9 @@ const IndividualCaseStudy = () => {
         </div>
       )}
 
-      <Circle secondary className="top-[10%] left-[10%]"/>
-      <Circle className="top-[50%] right-[10%]"/>
-      <Triangle className="bottom-[10%] left-[10%]"/>
+      <Circle secondary className="top-[10%] left-[10%]" />
+      <Circle className="top-[50%] right-[10%]" />
+      <Triangle className="bottom-[10%] left-[10%]" />
     </div>
   );
 };
@@ -121,19 +141,21 @@ const blogs = [
           "Once upon a time, in the dynamic realm of financial education, AR Research House of Finance and Consultancy Services, affectionately known as AR Trader, embarked on a transformative journey. As a startup providing stock market education, they envisioned a future with both offline and online models. To materialise this vision, they sought the expertise of AR Media House, a distinguished digital marketing company.",
         images: [],
       },
-      
+
       {
         heading: "Chapter 1 : A Vision Unfolds",
         paragraph:
           "AR Trader, driven by a passion for empowering aspiring traders, aimed to create a dual educational model—offline and online. Their maiden venture would be into the realm of online education. With AR Media House as their guiding beacon, they set sail.AR Media House initiated the journey by focusing on the first objective—Leads Generation. Objectives were clear",
-        
+
         images: [],
       },
       {
         heading: "",
-        paragraph:
-          "Objectives were clear :",
-          points:["Leads Generation (Specific Location-wise)","Brand Awareness"],
+        paragraph: "Objectives were clear :",
+        points: [
+          "Leads Generation (Specific Location-wise)",
+          "Brand Awareness",
+        ],
         images: [],
       },
       {
@@ -173,8 +195,7 @@ const blogs = [
         images: [],
       },
       {
-        heading:
-          "Painting the Digital Canvas",
+        heading: "Painting the Digital Canvas",
         paragraph:
           "With the lead generation mechanism humming efficiently, it was time to paint the canvas of brand awareness.",
         images: [],
@@ -215,7 +236,11 @@ const blogs = [
         heading: "Crafting the WhatsApp Lead Generation Symphony",
         paragraph:
           "AR Media orchestrated a strategic WhatsApp lead generation symphony. The conversion rates unveiled a tale of success:WhatsApp Conversion Rate: 0.25%,Suspect to Prospect Conversion: 8-9%,Prospect Conversion: 3-4%.This chapter unravels the intricacies of the WhatsApp lead generation approach, positioning Real Estate as a frontrunner in the digital realm.",
-          centerpara:["WhatsApp Conversion Rate: 0.25%","Suspect to Prospect Conversion: 8-9%","Prospect to Conversion: 3-4%"],
+        centerpara: [
+          "WhatsApp Conversion Rate: 0.25%",
+          "Suspect to Prospect Conversion: 8-9%",
+          "Prospect to Conversion: 3-4%",
+        ],
         images: [],
       },
       {
