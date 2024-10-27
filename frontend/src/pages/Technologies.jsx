@@ -298,7 +298,7 @@ export default function Technologies() {
       <img
         src="./assets/triple-wave-white-1.svg"
         alt="wave"
-        className="w-full"
+        className="wave-image"
       />
 
       {/* EXPLORE BLOGS SECTION */}

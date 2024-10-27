@@ -1,43 +1,45 @@
-import classNames from "classnames"
+import classNames from "classnames";
 
 export default function BlackSection({
-  children, 
-  className, 
-  topWave = true, 
+  children,
+  className,
+  topWave = true,
   topWaveClassName,
   bottomWave = true,
   bottomWaveClassName,
 }) {
-  const classes = classNames("bg-secondary-500 py-6 pt-0 px-screen-padding relative", {
-    [className]: className,
-  })
-  const topWaveClasses = classNames("w-full bg-tertiary-500", {
+  const classes = classNames(
+    "bg-secondary-500 py-6 pt-0 px-screen-padding relative",
+    {
+      [className]: className,
+    }
+  );
+  const topWaveClasses = classNames("wave-image bg-tertiary-500", {
     [topWaveClassName]: topWaveClassName,
-  })
-  const bottomWaveClasses = classNames("w-full", {
+  });
+  const bottomWaveClasses = classNames("wave-image", {
     [bottomWaveClassName]: bottomWaveClassName,
-  })
+  });
 
   return (
     <>
-      {
-        topWave && 
+      {topWave && (
         <img
           src="./assets/triple-wave-dark-up.svg"
           alt="wave"
           className={topWaveClasses}
         />
-      }
+      )}
 
-      <section className={classes}>
-        {children}
-      </section>
+      <section className={classes}>{children}</section>
 
-      {
-        bottomWave && 
-        <img className={bottomWaveClasses} src="./assets/triple-wave-dark-2.svg" alt="wave" />
-      }
-
+      {bottomWave && (
+        <img
+          className={bottomWaveClasses}
+          src="./assets/triple-wave-dark-2.svg"
+          alt="wave"
+        />
+      )}
     </>
-  )
+  );
 }

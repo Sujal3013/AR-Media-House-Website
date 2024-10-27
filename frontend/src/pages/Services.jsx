@@ -1,7 +1,7 @@
 import {} from "react";
 import {
   Button,
-  CompaniesAnimate, 
+  CompaniesAnimate,
   Heading,
   HeroSectionWrapper,
   Wonder,
@@ -10,7 +10,7 @@ import {
   Triangle,
   AnimateNumber,
   ServicesSec2,
-  FadeInUp
+  FadeInUp,
 } from "../components";
 import classNames from "classnames";
 
@@ -56,29 +56,36 @@ export default function Services() {
         className="flex py-6 gap-4 items-center justify-between !overflow-visible"
         whiteWaveBackground
       >
-          {/* text content right side */}
-          <div className="w-auto my-8">
-            <Heading
-              heading="Multi-Channel"
-              subHeading="digital advertising experts"
-              subHeadingClassName="text-tertiary-500"
-            />
-            <FadeInUp downLength={10} className="min-w-[172px] md:w-[35vw] md:min-w-0 text-sm my-12">
-              Identification of ideal prospects through a potent advertising
-              approach. Gathering highly qualified prospects to boost brand
-              engagement. Turning prospects into high-quality leads and sales.
-            </FadeInUp>
-            {/* Buttons */}
-            <div className="flex gap-6 py-10">
-              <Button to="/contact" arrow className="bg-primary-500 text-secondary-500">
-                Let's Connect
-              </Button>
-            </div>
+        {/* text content right side */}
+        <div className="w-auto my-8">
+          <Heading
+            heading="Multi-Channel"
+            subHeading="digital advertising experts"
+            subHeadingClassName="text-tertiary-500"
+          />
+          <FadeInUp
+            downLength={10}
+            className="min-w-[172px] md:w-[35vw] md:min-w-0 text-sm my-12"
+          >
+            Identification of ideal prospects through a potent advertising
+            approach. Gathering highly qualified prospects to boost brand
+            engagement. Turning prospects into high-quality leads and sales.
+          </FadeInUp>
+          {/* Buttons */}
+          <div className="flex gap-6 py-10">
+            <Button
+              to="/contact"
+              arrow
+              className="bg-primary-500 text-secondary-500"
+            >
+              Let's Connect
+            </Button>
           </div>
-          {/* illustraion */}
-          <div className="hidden w-[38vw] min-w-80 md:block h-auto rounded">
-            <img src="/assets/Services.svg" alt="" />
-          </div>
+        </div>
+        {/* illustraion */}
+        <div className="hidden w-[38vw] min-w-80 md:block h-auto rounded">
+          <img src="/assets/Services.svg" alt="" />
+        </div>
 
         {/* Shapes */}
         <Circle secondary className="top-[20%] sm:top-[10%] right-[5%]" />
@@ -88,7 +95,11 @@ export default function Services() {
 
       <ServicesSec2 Card={Card} list={section2CardList} />
 
-      <img src="./assets/triple-wave-white-1.svg" alt="wave" className="w-full"/>
+      <img
+        src="./assets/triple-wave-white-1.svg"
+        alt="wave"
+        className="wave-image"
+      />
 
       <section className="bg-tertiary-500 py-4 px-screen-padding relative">
         <Heading
@@ -111,40 +122,44 @@ export default function Services() {
       </section>
 
       <section className="bg-tertiary-500 py-4 sm:px-screen-padding relative">
-        
-          <div className="sm:rounded-[3rem] md:rounded-[4rem] my-8 sm:my-12 md:my-16 py-12 md:py-16 px-screen-padding bg-secondary-500">
-            <Heading
-              heading="WE MAKE YOUR SALES GO"
-              subHeading="through the roof"
-              subHeadingClassName="text-tertiary-500"
-            />
-            <Button tp="/about" className="bg-primary-500 mt-14" arrow>
-              Learn More
-            </Button>
-          </div>
+        <div className="sm:rounded-[3rem] md:rounded-[4rem] my-8 sm:my-12 md:my-16 py-12 md:py-16 px-screen-padding bg-secondary-500">
+          <Heading
+            heading="WE MAKE YOUR SALES GO"
+            subHeading="through the roof"
+            subHeadingClassName="text-tertiary-500"
+          />
+          <Button tp="/about" className="bg-primary-500 mt-14" arrow>
+            Learn More
+          </Button>
+        </div>
       </section>
 
       <section className="bg-tertiary-500 py-4 px-screen-padding flex flex-col flex-wrap md:flex-nowrap md:flex-col justify-center md:justify-between items-center pt-4 pb-8">
-        <Heading heading="Platform" subHeading="to help you" className="w-full items-center" />
-        
+        <Heading
+          heading="Platform"
+          subHeading="to help you"
+          className="w-full items-center"
+        />
+
         <div className="mt-12 w-full h-[120px] relative">
-          <CompaniesAnimate className="flex justify-center items-center gap-12 sm:gap-16 md:gap-20 lg:gap-24" length={platforms.length}>
-            {
-              platforms.map((p, index)=>{
-                let listClassName = "h-full flex flex-col items-center justify-between"
-                return (
-                  <li key={index} className={listClassName}>
-                    <img src={p.imgSrc} alt={p.alt} className={p.className} />
-                    { 
-                      p.alt && 
-                      <p className="whitespace-nowrap font-bold text-xl md:text-3xl">
-                        {p.alt}
-                      </p>
-                    }
-                  </li>
-                )
-              })
-            }
+          <CompaniesAnimate
+            className="flex justify-center items-center gap-12 sm:gap-16 md:gap-20 lg:gap-24"
+            length={platforms.length}
+          >
+            {platforms.map((p, index) => {
+              let listClassName =
+                "h-full flex flex-col items-center justify-between";
+              return (
+                <li key={index} className={listClassName}>
+                  <img src={p.imgSrc} alt={p.alt} className={p.className} />
+                  {p.alt && (
+                    <p className="whitespace-nowrap font-bold text-xl md:text-3xl">
+                      {p.alt}
+                    </p>
+                  )}
+                </li>
+              );
+            })}
           </CompaniesAnimate>
         </div>
       </section>

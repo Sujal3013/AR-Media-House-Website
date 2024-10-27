@@ -75,7 +75,6 @@ export default function Home() {
           <CompaniesAnimate
             widthComapreToScreen={2}
             className="h-32 flex justify-center items-center gap-12 sm:gap-16 md:gap-20 lg:gap-24"
-            length={companiesLogos.length}
           >
             {companiesLogos.map((c, index) => {
               return (
@@ -216,7 +215,7 @@ export default function Home() {
       <img
         src="./assets/triple-wave-white-1.svg"
         alt="wave"
-        className="w-full"
+        className="wave-image"
       />
 
       <section className="bg-tertiary-500 py-8 relative">
@@ -457,10 +456,6 @@ const services = [
   },
 ];
 
-const icon2 = (
-  <img src="./assets/person.png" alt="person" className="w-16 h-16" />
-);
-
 const clients = [
   {
     icon: "/assets/Client1.jpeg",
@@ -512,6 +507,7 @@ const companiesLogos = [
   {
     src: "./assets/nmimswhite.png",
     alt: "NMIMS",
+    className: "w-16 h-12 sm:h-16 sm:w-20 md:w-24 md:h-24",
   },
   {
     src: "./assets/silaiwhite.png",

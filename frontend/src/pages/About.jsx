@@ -99,7 +99,7 @@ export default function About() {
       <img
         src="./assets/triple-wave-white-1.svg"
         alt="wave"
-        className="w-full"
+        className="wave-image"
       />
 
       <section ref={ref} id="story" className="bg-tertiary-500 relative">
@@ -204,7 +204,7 @@ export default function About() {
         <img
           src="./assets/triple-wave-white-1.svg"
           alt=""
-          className="w-full bg-white rotate-180"
+          className="wave-image bg-white rotate-180"
         />
 
         <Circle className="top-[18%] left-[5%]" />
@@ -236,7 +236,7 @@ export default function About() {
       />
 
       <img
-        className="rotate-180 h-[90%] w-full translate-y-1"
+        className="wave-image rotate-180 h-[90%] translate-y-1"
         src="./assets/triple-wave-dark-2.svg"
         alt="wave"
       />
@@ -322,7 +322,7 @@ export default function About() {
       </section>
 
       <img
-        className="h-[90%] w-full"
+        className="h-[90%] wave-image"
         src="./assets/triple-wave-dark-1.svg"
         alt="wave"
       />

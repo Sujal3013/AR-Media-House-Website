@@ -128,6 +128,21 @@ h6 {
     border-image: linear-gradient(to bottom, #ff9356, #ffffff);
     border-image-slice: 1;
   }
+
+  .wave-image {
+    max-width: 200vw;
+    width: 180vw;
+  }
+  @screen sm {
+    .wave-image {
+      width: 140vw;
+    }
+  }
+  @screen md {
+    .wave-image {
+      width: 100vw;
+    }
+  }
 }
 
 .submitted {
